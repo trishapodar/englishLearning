@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronouns in English Grammar &mdash; Complete Study Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ===== DESIGN TOKENS (Mirrored from Noun Guide) ===== */
+:root{
+  --parchment:#f7eed8;
+  --parchment-mid:#ede0be;
+  --parchment-deep:#e0cfa0;
+  --parchment-card:#fdf8ef;
+  --ink:#180f02;
+  --ink-mid:#3a2808;
+  --ink-muted:#7a5c30;
+  --gold:#a8780a;
+  --gold-bright:#c99010;
+  --gold-pale:#f0d070;
+  --gold-wash:#fdf6e0;
+  --crimson:#7c1515;
+  --crimson-pale:#faeaea;
+  --forest:#153d22;
+  --forest-pale:#e5f5ea;
+  --cobalt:#1a2f5a;
+  --cobalt-pale:#eaeff8;
+  --amber:#7a4e00;
+  --amber-pale:#fff3e0;
+  --border:#c8a050;
+  --border-light:#ddc070;
+  --border-soft:#e8d8a8;
+  --sidebar-w:260px;
+  --content-max:780px;
+  --r:6px;
+  --tx:all .2s ease;
+}
+
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{
+  font-family:'Source Serif 4',Georgia,serif;
+  background:#1a1004;
+  color:var(--parchment-mid);
+  min-height:100vh;
+}
+
+/* ===== TOP BAR ===== */
+#topbar{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  background:linear-gradient(135deg,#0f0d07 0%,#221808 100%);
+  border-bottom:2px solid var(--gold);
+  padding:0 20px;
+  height:54px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:0 2px 20px rgba(0,0,0,.6);
+}
+.tb-logo{
+  font-family:'Playfair Display',serif;
+  font-size:.85rem;font-weight:700;
+  color:var(--gold-pale);letter-spacing:.06em;
+  white-space:nowrap;
+}
+.tb-sep{width:1px;height:22px;background:rgba(200,160,80,.3);}
+.tb-title{
+  font-family:'Source Serif 4',serif;
+  font-size:.78rem;color:rgba(240,208,112,.6);
+  letter-spacing:.04em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+.tb-right{margin-left:auto;display:flex;align-items:center;gap:10px;}
+#menu-toggle{
+  display:none;
+  background:none;border:1px solid rgba(200,160,80,.4);
+  color:var(--gold-pale);padding:5px 10px;border-radius:4px;
+  font-size:.82rem;cursor:pointer;font-family:'Playfair Display',serif;
+}
+#progress-bar{
+  position:fixed;top:54px;left:0;right:0;z-index:299;
+  height:3px;background:rgba(200,160,80,.15);
+}
+#progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--gold),var(--gold-bright));transition:width .1s linear;}
+
+/* ===== LAYOUT ===== */
+#layout{display:flex;padding-top:57px;min-height:calc(100vh - 57px);}
+
+/* ===== SIDEBAR ===== */
+#sidebar{
+  width:var(--sidebar-w);
+  flex-shrink:0;
+  position:fixed;top:57px;bottom:0;left:0;
+  overflow-y:auto;
+  background:linear-gradient(180deg,#0f0d07 0%,#1c1508 100%);
+  border-right:1px solid rgba(200,160,80,.2);
+  padding:20px 0 40px;
+  transition:transform .3s ease;
+  scrollbar-width:thin;scrollbar-color:rgba(200,160,80,.3) transparent;
+}
+#sidebar::-webkit-scrollbar{width:4px;}
+#sidebar::-webkit-scrollbar-thumb{background:rgba(200,160,80,.3);border-radius:2px;}
+.sid-head{
+  font-family:'Playfair Display',serif;font-size:.65rem;
+  letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(200,160,80,.4);padding:0 20px 12px;
+  border-bottom:1px solid rgba(200,160,80,.12);margin-bottom:10px;
+}
+.sid-item{
+  display:block;padding:8px 20px;
+  font-family:'Source Serif 4',serif;font-size:.82rem;
+  color:rgba(240,215,150,.55);text-decoration:none;
+  border-left:2px solid transparent;
+  transition:var(--tx);line-height:1.4;
+  cursor:pointer;
+}
+.sid-item:hover{color:var(--gold-pale);background:rgba(200,160,80,.07);border-left-color:rgba(200,160,80,.4);}
+.sid-item.active{color:var(--gold-pale);background:rgba(200,160,80,.13);border-left-color:var(--gold);}
+.sid-num{
+  display:inline-block;width:18px;height:18px;border-radius:50%;
+  background:rgba(200,160,80,.15);border:1px solid rgba(200,160,80,.25);
+  font-size:.65rem;text-align:center;line-height:17px;
+  margin-right:7px;flex-shrink:0;font-family:'Playfair Display',serif;font-weight:700;
+  color:rgba(200,160,80,.6);
+}
+.sid-item.active .sid-num{background:var(--gold);color:#fff;border-color:var(--gold);}
+
+/* ===== MAIN CONTENT ===== */
+#main{
+  margin-left:var(--sidebar-w);
+  flex:1;
+  padding:0 32px 80px;
+}
+.content-inner{max-width:var(--content-max);margin:0 auto;}
+
+/* ===== HERO ===== */
+.hero{
+  padding:56px 0 48px;
+  border-bottom:1px solid var(--border-soft);
+  margin-bottom:48px;
+}
+.hero-kicker{
+  font-family:'Playfair Display',serif;font-size:.72rem;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:14px;opacity:.8;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2rem,4vw,3rem);font-weight:900;
+  color:var(--parchment);line-height:1.15;
+  text-shadow:0 2px 20px rgba(0,0,0,.4);
+  margin-bottom:14px;
+}
+.hero-sub{
+  font-size:1.05rem;color:rgba(247,238,216,.6);
+  line-height:1.7;max-width:540px;font-style:italic;
+}
+.hero-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px;}
+.chip{
+  font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  padding:4px 12px;border-radius:20px;border:1px solid;
+  font-family:'Playfair Display',serif;font-weight:600;
+}
+.chip-gold{background:rgba(168,120,10,.15);color:var(--gold-pale);border-color:rgba(168,120,10,.4);}
+.chip-forest{background:rgba(21,61,34,.25);color:#80e0a0;border-color:rgba(21,61,34,.5);}
+.chip-cobalt{background:rgba(26,47,90,.25);color:#a0c0f0;border-color:rgba(26,47,90,.5);}
+
+/* ===== SECTION ===== */
+.topic-section{
+  margin-bottom:64px;
+  padding-bottom:48px;
+  border-bottom:1px solid var(--border-soft);
+  animation:fadeUp .4s ease both;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+.section-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:32px;height:32px;border-radius:50%;
+  background:var(--parchment-deep);border:2px solid var(--border);
+  font-family:'Playfair Display',serif;font-weight:700;font-size:.82rem;
+  color:var(--gold);margin-bottom:10px;
+}
+.topic-section h2{
+  font-family:'Playfair Display',serif;
+  font-size:1.75rem;font-weight:700;
+  color:var(--parchment);line-height:1.2;
+  margin-bottom:6px;
+}
+.topic-section h2 .accent{color:var(--gold);}
+.topic-section .section-subtitle{
+  font-size:.85rem;color:rgba(247,238,216,.6);font-style:italic;
+  margin-bottom:22px;padding-bottom:14px;
+  border-bottom:2px solid var(--border-light);
+}
+
+/* ===== CARDS ===== */
+.card-bg{
+  background:var(--parchment-card);
+  border:1px solid var(--border-soft);
+  border-radius:var(--r);
+  box-shadow:0 4px 20px rgba(26,17,8,.12),0 1px 0 rgba(255,255,255,.7) inset;
+}
+.def-box{
+  padding:20px 24px;
+  border-left:4px solid var(--gold);
+  margin:20px 0;
+}
+.def-box p{font-size:1rem;line-height:1.8;color:var(--ink-mid);}
+.def-box strong{color:var(--ink);font-weight:700;}
+
+.rule-box{
+  padding:18px 22px;
+  border-left:4px solid var(--forest);
+  margin:16px 0;
+}
+.rule-box .rule-title{
+  font-family:'Playfair Display',serif;font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--forest);margin-bottom:8px;
+  display:flex;align-items:center;gap:7px;
+}
+.rule-box p,
+.rule-box li{font-size:.93rem;line-height:1.75;color:var(--ink-mid);}
+.rule-box ul{list-style:none;padding:0;}
+.rule-box li{padding-left:16px;position:relative;margin-bottom:4px;}
+.rule-box li::before{content:'›';position:absolute;left:0;color:var(--forest);font-weight:700;}
+
+.warn-box{
+  padding:18px 22px;
+  border-left:4px solid var(--crimson);
+  margin:16px 0;
+  background:var(--crimson-pale);
+  border-radius:0 var(--r) var(--r) 0;
+}
+.warn-box .warn-title{
+  font-family:'Playfair Display',serif;font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--crimson);margin-bottom:8px;
+  display:flex;align-items:center;gap:7px;
+}
+.warn-box p,
+.warn-box li{font-size:.9rem;line-height:1.75;color:#5a1010;}
+.warn-box ul{list-style:none;padding:0;}
+.warn-box li{padding-left:16px;position:relative;margin-bottom:4px;}
+.warn-box li::before{content:'\2717';position:absolute;left:0;color:var(--crimson);font-size:.75rem;}
+
+.tip-box{
+  padding:18px 22px;
+  border-left:4px solid var(--cobalt);
+  margin:16px 0;
+  background:var(--cobalt-pale);
+  border-radius:0 var(--r) var(--r) 0;
+}
+.tip-box .tip-title{
+  font-family:'Playfair Display',serif;font-size:.72rem;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:var(--cobalt);margin-bottom:8px;
+  display:flex;align-items:center;gap:7px;
+}
+.tip-box p,
+.tip-box li{font-size:.9rem;line-height:1.75;color:#0f1e3a;}
+.tip-box ul{list-style:none;padding:0;}
+.tip-box li{padding-left:16px;position:relative;margin-bottom:4px;}
+.tip-box li::before{content:'\2713';position:absolute;left:0;color:var(--cobalt);font-size:.75rem;}
+
+/* ===== BODY TEXT ===== */
+.body-text{
+  font-size:.97rem;line-height:1.85;color:var(--ink-mid);
+  margin:12px 0;color:var(--parchment-mid);
+}
+.body-text strong{color:var(--parchment);font-weight:700;}
+.body-text em{color:var(--parchment);font-style:italic;}
+
+h3.sub-head{
+  font-family:'Playfair Display',serif;
+  font-size:1.05rem;font-weight:700;
+  color:var(--parchment);margin:26px 0 10px;
+  display:flex;align-items:center;gap:8px;
+}
+h3.sub-head::before{
+  content:'';display:inline-block;
+  width:3px;height:16px;
+  background:var(--gold);border-radius:2px;flex-shrink:0;
+}
+
+/* ===== EXAMPLES ===== */
+.example-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:14px 0;}
+.eg-card{
+  padding:12px 14px;
+  border-radius:var(--r);
+  border:1px solid var(--border-soft);
+  background:var(--parchment-card);
+}
+.eg-label{
+  font-family:'Playfair Display',serif;font-size:.65rem;
+  letter-spacing:.12em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:4px;
+}
+.eg-words{font-size:.88rem;color:var(--ink-mid);line-height:1.6;}
+.eg-words span{
+  display:inline-block;background:var(--parchment-mid);
+  border:1px solid var(--border-soft);
+  padding:1px 7px;border-radius:3px;
+  font-family:'Fira Code',monospace;font-size:.82rem;
+  color:var(--ink);margin:1px;
+}
+
+/* ===== COMPARISON TABLE ===== */
+.cmp-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.88rem;}
+.cmp-table th{
+  font-family:'Playfair Display',serif;font-size:.72rem;
+  letter-spacing:.1em;text-transform:uppercase;
+  background:var(--parchment-mid);color:var(--gold);
+  padding:10px 14px;border:1px solid var(--border-soft);
+  text-align:left;
+}
+.cmp-table td{
+  padding:9px 14px;border:1px solid var(--border-soft);
+  color:var(--ink-mid);line-height:1.6;
+  background:var(--parchment-card);
+  vertical-align:top;
+}
+.cmp-table tr:nth-child(even) td{background:var(--gold-wash);}
+.cmp-table code{
+  font-family:'Fira Code',monospace;font-size:.82rem;
+  background:var(--parchment-mid);padding:1px 5px;border-radius:3px;
+  color:var(--ink);
+}
+.tag-correct{color:var(--forest);font-weight:700;}
+.tag-wrong{color:var(--crimson);font-weight:700;}
+
+/* ===== SENTENCE EXAMPLES ===== */
+.sentence-list{list-style:none;padding:0;margin:12px 0;}
+.sentence-list li{
+  padding:10px 14px 10px 18px;
+  border-left:2px solid var(--border-soft);
+  margin-bottom:8px;background:var(--parchment-card);
+  border-radius:0 var(--r) var(--r) 0;
+  font-size:.93rem;line-height:1.65;color:var(--ink-mid);
+}
+.sentence-list li em{color:var(--ink);font-style:normal;font-weight:700;border-bottom:1px dashed var(--gold);}
+.sentence-list li .note{
+  display:block;font-size:.78rem;color:var(--ink-muted);margin-top:3px;font-style:italic;
+}
+
+/* ===== FORMULA BOX ===== */
+.formula{
+  display:inline-flex;align-items:center;gap:6px;flex-wrap:wrap;
+  background:var(--parchment-mid);border:1px solid var(--border);
+  padding:10px 16px;border-radius:var(--r);
+  font-family:'Fira Code',monospace;font-size:.88rem;
+  color:var(--ink);margin:12px 0;
+}
+.formula .arr{color:var(--gold);font-weight:700;}
+.formula .opt{color:var(--ink-muted);font-size:.78rem;}
+
+/* ===== DIVIDER ===== */
+.ornament{
+  text-align:center;color:var(--border);
+  letter-spacing:.5em;font-size:.8rem;
+  margin:30px 0;opacity:.6;
+}
+
+/* ===== BACK TO TOP ===== */
+#btt{
+  position:fixed;bottom:24px;right:24px;z-index:200;
+  width:40px;height:40px;border-radius:50%;
+  background:var(--gold);color:#fff;
+  border:none;cursor:pointer;font-size:1rem;
+  box-shadow:0 4px 16px rgba(168,120,10,.45);
+  display:flex;align-items:center;justify-content:center;
+  transition:var(--tx);opacity:0;pointer-events:none;
+}
+#btt.visible{opacity:1;pointer-events:all;}
+#btt:hover{background:var(--gold-bright);transform:translateY(-2px);}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:860px){
+  #sidebar{transform:translateX(-100%);}
+  #sidebar.open{transform:translateX(0);}
+  #main{margin-left:0;}
+  #menu-toggle{display:flex;}
+  .hero h1{font-size:1.8rem;}
+}
+@media(max-width:560px){
+  #main{padding:0 16px 60px;}
+  .example-grid{grid-template-columns:1fr 1fr;}
+  .cmp-table{font-size:.8rem;}
+  .cmp-table th,.cmp-table td{padding:7px 10px;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="tb-logo">Grammar Studio</div>
+  <div class="tb-sep"></div>
+  <div class="tb-title">Pronouns in English Grammar &mdash; Complete Study Guide</div>
+  <div class="tb-right">
+    <button id="menu-toggle" onclick="toggleSidebar()">&#9776; Topics</button>
+  </div>
+</div>
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="sid-head">Topics &mdash; 16 Chapters</div>
+  <a class="sid-item active" onclick="goTo('s1')"><span class="sid-num">1</span>What Is a Pronoun?</a>
+  <a class="sid-item" onclick="goTo('s2')"><span class="sid-num">2</span>Personal Pronouns</a>
+  <a class="sid-item" onclick="goTo('s3')"><span class="sid-num">3</span>The Three Cases</a>
+  <a class="sid-item" onclick="goTo('s4')"><span class="sid-num">4</span>Nominative vs. Objective</a>
+  <a class="sid-item" onclick="goTo('s5')"><span class="sid-num">5</span>Possessive Case</a>
+  <a class="sid-item" onclick="goTo('s6')"><span class="sid-num">6</span>Reflexive &amp; Emphatic</a>
+  <a class="sid-item" onclick="goTo('s7')"><span class="sid-num">7</span>Demonstrative Pronouns</a>
+  <a class="sid-item" onclick="goTo('s8')"><span class="sid-num">8</span>Indefinite Pronouns</a>
+  <a class="sid-item" onclick="goTo('s9')"><span class="sid-num">9</span>Relative Pronouns</a>
+  <a class="sid-item" onclick="goTo('s10')"><span class="sid-num">10</span>Interrogative Pronouns</a>
+  <a class="sid-item" onclick="goTo('s11')"><span class="sid-num">11</span>Distributive Pronouns</a>
+  <a class="sid-item" onclick="goTo('s12')"><span class="sid-num">12</span>Reciprocal Pronouns</a>
+  <a class="sid-item" onclick="goTo('s13')"><span class="sid-num">13</span>Antecedent Agreement</a>
+  <a class="sid-item" onclick="goTo('s14')"><span class="sid-num">14</span>Order of Pronouns</a>
+  <a class="sid-item" onclick="goTo('s15')"><span class="sid-num">15</span>Relative Pronoun Traps</a>
+  <a class="sid-item" onclick="goTo('s16')"><span class="sid-num">16</span>Who vs. Whom</a>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+<div class="content-inner">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-kicker">English Grammar &middot;</div>
+  <h1>Pronouns in English<br>Grammar</h1>
+  <div class="hero-sub">Mastering the art of substitution &mdash; a deep dive into pronoun cases, types, and the rare rules that distinguish the average student from the Topper.</div>
+  <div class="hero-chips">
+    <span class="chip chip-gold">16 Topics</span>
+    <span class="chip chip-cobalt">Advanced Level</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ SECTION 1 ═══════════════════════════════ -->
+<section class="topic-section" id="s1">
+  <div class="section-num">1</div>
+  <h2>What Is a <span class="accent">Pronoun</span>?</h2>
+  <div class="section-subtitle">Efficiency in speech and writing</div>
+
+  <div class="def-box card-bg">
+    <p>A <strong>pronoun</strong> is a word used in place of a noun or a noun phrase. Its primary purpose is to avoid repetitive naming and to make language more fluid. The noun that a pronoun replaces is called its <strong>antecedent</strong>.</p>
+  </div>
+
+  <h3 class="sub-head">The Replacement Test</h3>
+  <div class="rule-box card-bg">
+    <div class="rule-title">&#10003; Diagnostic Test</div>
+    <p>If you can replace a word with a specific noun and the sentence still makes sense (though it may become repetitive), that word is a pronoun.</p>
+    <ul>
+      <li><em>"<strong>He</strong> won the race."</em> &rarr; <em>"<strong>Ravi</strong> won the race."</em> (Functional shift confirmed)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 2 ═══════════════════════════════ -->
+<section class="topic-section" id="s2">
+  <div class="section-num">2</div>
+  <h2>Personal <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">The foundation of subject-object relationships</div>
+
+  <p class="body-text">Personal pronouns represent specific people or things. They are categorized by <strong>Person</strong> (1st, 2nd, 3rd), <strong>Number</strong> (Singular, Plural), and <strong>Gender</strong>.</p>
+
+  <table class="cmp-table">
+    <tr><th>Person</th><th>Singular</th><th>Plural</th></tr>
+    <tr><td>1st (Speaker)</td><td><code>I, me</code></td><td><code>we, us</code></td></tr>
+    <tr><td>2nd (Listener)</td><td><code>you</code></td><td><code>you</code></td></tr>
+    <tr><td>3rd (Spoken of)</td><td><code>he, she, it, him, her</code></td><td><code>they, them</code></td></tr>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 3 ═══════════════════════════════ -->
+<section class="topic-section" id="s3">
+  <div class="section-num">3</div>
+  <h2>The Three <span class="accent">Cases</span></h2>
+  <div class="section-subtitle">Understanding Nominative, Objective, and Possessive</div>
+
+  <div class="def-box card-bg">
+    <p>Unlike nouns, most pronouns change their form based on their <strong>grammatical case</strong>. Using the wrong case is the most common error in competitive exams.</p>
+  </div>
+
+  <h3 class="sub-head">The Master Case Chart</h3>
+  <table class="cmp-table">
+    <tr><th>Nominative (Subject)</th><th>Objective (Object)</th><th>Possessive Pronoun</th></tr>
+    <tr><td>I</td><td>me</td><td>mine</td></tr>
+    <tr><td>We</td><td>us</td><td>ours</td></tr>
+    <tr><td>You</td><td>you</td><td>yours</td></tr>
+    <tr><td>He / She</td><td>him / her</td><td>his / hers</td></tr>
+    <tr><td>They</td><td>them</td><td>theirs</td></tr>
+    <tr><td>Who</td><td>whom</td><td>whose</td></tr>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 4 ═══════════════════════════════ -->
+<section class="topic-section" id="s4">
+  <div class="section-num">4</div>
+  <h2>Nominative vs. <span class="accent">Objective</span></h2>
+  <div class="section-subtitle">The "It is I" Rule and prepositional traps</div>
+
+  <div class="rule-box card-bg">
+    <div class="rule-title">&#10003; The Linking Verb Rule</div>
+    <p>In formal grammar, pronouns following a <strong>linking verb</strong> (is, am, are, was, were) must be in the <strong>Nominative Case</strong>.</p>
+    <ul>
+      <li><span class="tag-correct">&#10003;</span> <em>"It is <strong>I</strong>."</em></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>"It is <strong>me</strong>."</em> (Colloquial, but wrong in exams)</li>
+    </ul>
+  </div>
+
+  <div class="warn-box">
+    <div class="warn-title">&#9888; The Between Trap</div>
+    <p>Pronouns following prepositions (like <em>between</em>, <em>for</em>, <em>with</em>) must be in the <strong>Objective Case</strong>.</p>
+    <ul>
+      <li><span class="tag-correct">&#10003;</span> <em>"Between you and <strong>me</strong>..."</em></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>"Between you and <strong>I</strong>..."</em></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 5 ═══════════════════════════════ -->
+<section class="topic-section" id="s5">
+  <div class="section-num">5</div>
+  <h2>Possessive <span class="accent">Case</span></h2>
+  <div class="section-subtitle">Pronouns vs. Adjectives & the "Its" Trap</div>
+
+  <div class="def-box card-bg">
+    <p><strong>Possessive Pronouns</strong> (mine, yours, hers) replace a noun phrase. <strong>Possessive Adjectives</strong> (my, your, her) modify a noun. A topper knows never to use an apostrophe with possessive pronouns.</p>
+  </div>
+
+  <table class="cmp-table">
+    <tr><th>Possessive Adjective</th><th>Possessive Pronoun</th></tr>
+    <tr><td>This is <strong>my</strong> seat.</td><td>This seat is <strong>mine</strong>.</td></tr>
+    <tr><td>Is this <strong>your</strong> pen?</td><td>Is this pen <strong>yours</strong>?</td></tr>
+    <tr><td>That is <strong>their</strong> problem.</td><td>The problem is <strong>theirs</strong>.</td></tr>
+  </table>
+
+  <div class="warn-box">
+    <div class="warn-title">&#9888; The "Its" vs. "It's" Diagnostic</div>
+    <p>The most common error in formal writing. If you can replace it with "It is," use the apostrophe. If it shows possession, DO NOT.</p>
+    <ul>
+      <li><em>"The dog wagged <strong>its</strong> tail."</em> (Possessive)</li>
+      <li><em>"<strong>It's</strong> (It is) a beautiful day."</em> (Contraction)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 6 ═══════════════════════════════ -->
+<section class="topic-section" id="s6">
+  <div class="section-num">6</div>
+  <h2>Reflexive &amp; <span class="accent">Emphatic</span></h2>
+  <div class="section-subtitle">The -self and -selves forms</div>
+
+  <div class="def-box card-bg">
+    <p><strong>Reflexive Pronouns</strong> (myself, himself) are used when the subject and object are the same. <strong>Emphatic Pronouns</strong> are used only to add emphasis to a noun or pronoun.</p>
+  </div>
+
+  <ul class="sentence-list">
+    <li>Reflexive: <em>"He cut <strong>himself</strong> while shaving."</em> <span class="note">Subject 'He' and Object 'himself' are the same.</span></li>
+    <li>Emphatic: <em>"I <strong>myself</strong> saw him do it."</em> <span class="note">Used for emphasis; can be removed without breaking the sentence.</span></li>
+  </ul>
+
+  <div class="rule-box card-bg">
+    <div class="rule-title">★ Topper's Rule: Non-Reflexive Verbs</div>
+    <p>Verbs like <em>keep, stop, bathe, turn, move, rest, hide</em> do not usually take reflexive pronouns in standard English.</p>
+    <ul>
+      <li><span class="tag-correct">&#10003;</span> <em>"He kept away from the fire."</em></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>"He kept himself away from the fire."</em></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 7 ═══════════════════════════════ -->
+<section class="topic-section" id="s7">
+  <div class="section-num">7</div>
+  <h2>Demonstrative <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">Pointing out: This, That, These, Those</div>
+
+  <p class="body-text">These pronouns point to specific objects. <strong>This/These</strong> refer to things near the speaker; <strong>That/Those</strong> refer to things further away.</p>
+
+  <div class="tip-box">
+    <div class="tip-title">&#10003; Pronoun vs. Adjective Test</div>
+    <p>If the word is followed immediately by a noun, it is a <strong>Demonstrative Adjective</strong>. If it stands alone, it is a <strong>Demonstrative Pronoun</strong>.</p>
+    <ul>
+      <li><em>"<strong>This pen</strong> is red."</em> (Adjective)</li>
+      <li><em>"<strong>This</strong> is my pen."</em> (Pronoun)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 8 ═══════════════════════════════ -->
+<section class="topic-section" id="s8">
+  <div class="section-num">8</div>
+  <h2>Indefinite <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">Everyone, Someone, Nobody, All, Few</div>
+
+  <div class="def-box card-bg">
+    <p>Indefinite pronouns do not refer to a specific person or thing. Most singular indefinite pronouns (everyone, anything, nobody) take a <strong>singular verb</strong>.</p>
+  </div>
+
+  <div class="rule-box card-bg">
+    <div class="rule-title">★ Topper's Rule: The "One" Consistency</div>
+    <p>If a sentence starts with the indefinite pronoun <em>One</em>, it must be followed by <em>one's</em>, not <em>his/her</em>.</p>
+    <ul>
+      <li><span class="tag-correct">&#10003;</span> <em>"One should do <strong>one's</strong> duty."</em></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>"One should do <strong>his</strong> duty."</em></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 9 ═══════════════════════════════ -->
+<section class="topic-section" id="s9">
+  <div class="section-num">9</div>
+  <h2>Relative <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">Who, Whom, Whose, Which, That</div>
+
+  <p class="body-text">Relative pronouns relate a subordinate clause to a noun in the main clause. They act as both a pronoun and a conjunction.</p>
+
+  <table class="cmp-table">
+    <tr><th>Pronoun</th><th>Used for</th><th>Example</th></tr>
+    <tr><td>Who / Whom</td><td>Persons only</td><td>The man <strong>who</strong> sang...</td></tr>
+    <tr><td>Which</td><td>Things / Animals</td><td>The book <strong>which</strong> I bought...</td></tr>
+    <tr><td>That</td><td>Both</td><td>The boy <strong>that</strong>/who won...</td></tr>
+  </table>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 10 ═══════════════════════════════ -->
+<section class="topic-section" id="s10">
+  <div class="section-num">10</div>
+  <h2>Interrogative <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">Asking questions with precision</div>
+
+  <div class="example-grid">
+    <div class="eg-card"><div class="eg-label">Subject</div><div class="eg-words"><span>Who</span><span>What</span><span>Which</span></div></div>
+    <div class="eg-card"><div class="eg-label">Object</div><div class="eg-words"><span>Whom</span><span>What</span><span>Which</span></div></div>
+    <div class="eg-card"><div class="eg-label">Possessive</div><div class="eg-words"><span>Whose</span></div></div>
+  </div>
+
+  <div class="tip-box">
+    <div class="tip-title">&#10003; "What" vs "Which"</div>
+    <p>Use <strong>What</strong> for general inquiry and <strong>Which</strong> when there is a limited choice or selection to be made.</p>
+    <ul>
+      <li><em>"<strong>What</strong> is your name?"</em> (General)</li>
+      <li><em>"<strong>Which</strong> of these books is yours?"</em> (Selection)</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 11 ═══════════════════════════════ -->
+<section class="topic-section" id="s11">
+  <div class="section-num">11</div>
+  <h2>Distributive <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">Each, Either, Neither</div>
+
+  <div class="def-box card-bg">
+    <p>Distributive pronouns refer to persons or things one at a time. For this reason, they are <strong>always singular</strong> and must take a singular verb.</p>
+  </div>
+
+  <ul class="sentence-list">
+    <li><em>"<strong>Each</strong> of the students <strong>has</strong> a pen."</em> <span class="note">Subject is 'Each', not 'students'.</span></li>
+    <li><em>"<strong>Neither</strong> of the two accusations <strong>is</strong> true."</em></li>
+  </ul>
+
+  <div class="warn-box">
+    <div class="warn-title">&#9888; Number Limits</div>
+    <p><strong>Either</strong> and <strong>Neither</strong> are used for exactly TWO persons or things. For more than two, use <em>Any</em> or <em>None</em>.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 12 ═══════════════════════════════ -->
+<section class="topic-section" id="s12">
+  <div class="section-num">12</div>
+  <h2>Reciprocal <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">Each other vs. One another</div>
+
+  <div class="rule-box card-bg">
+    <div class="rule-title">★ Topper's Rule: The Count Constraint</div>
+    <ul>
+      <li><strong>Each other:</strong> Use for <strong>two</strong> people (The two brothers hit each other).</li>
+      <li><strong>One another:</strong> Use for <strong>more than two</strong> (The students congratulated one another).</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 13 ═══════════════════════════════ -->
+<section class="topic-section" id="s13">
+  <div class="section-num">13</div>
+  <h2>Antecedent <span class="accent">Agreement</span></h2>
+  <div class="section-subtitle">The Agreement Hierarchy</div>
+
+  <div class="warn-box">
+    <div class="warn-title">&#9888; Pronoun-Noun Mismatch</div>
+    <p>A pronoun must agree with its antecedent in number, gender, and person. In exams, watch out for the plural bias with "Everyone."</p>
+    <ul>
+      <li><span class="tag-wrong">&#10007;</span> <em>"Everyone should love <strong>their</strong> country."</em></li>
+      <li><span class="tag-correct">&#10003;</span> <em>"Everyone should love <strong>his</strong> (or his/her) country."</em></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 14 ═══════════════════════════════ -->
+<section class="topic-section" id="s14">
+  <div class="section-num">14</div>
+  <h2>The Order of <span class="accent">Pronouns</span></h2>
+  <div class="section-subtitle">The 2nd-3rd-1st Etiquette Rule</div>
+
+  <div class="rule-box card-bg">
+    <div class="rule-title">★ Topper's Rule: Sequence of courtesy</div>
+    <p>When multiple personal pronouns are used together in a positive sense, the sequence should be <strong>2nd Person &rarr; 3rd Person &rarr; 1st Person</strong> (2-3-1 Rule).</p>
+    <div class="formula">
+      <span>You (2)</span> <span class="arr">&rarr;</span> <span>He (3)</span> <span class="arr">&rarr;</span> <span>and I (1)</span>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <div class="warn-title">&#9888; The Confession Exception</div>
+    <p>When admitting a mistake, guilt, or in negative contexts, the order reverses to <strong>1-2-3</strong> (I, you, and he are responsible for the loss).</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 15 ═══════════════════════════════ -->
+<section class="topic-section" id="s15">
+  <div class="section-num">15</div>
+  <h2>Relative Pronoun <span class="accent">Traps</span></h2>
+  <div class="section-subtitle">The "But" and "That" nuances</div>
+
+  <div class="rule-box card-bg">
+    <div class="rule-title">★ "That" after Superlatives</div>
+    <p>Use <strong>That</strong> (not who/which) after superlative adjectives, and words like <em>all, only, any, same, none, nothing</em>.</p>
+    <ul>
+      <li><em>"He is the wisest man <strong>that</strong> ever lived."</em></li>
+      <li><em>"All <strong>that</strong> glitters is not gold."</em></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ SECTION 16 ═══════════════════════════════ -->
+<section class="topic-section" id="s16">
+  <div class="section-num">16</div>
+  <h2>Deep Dive: <span class="accent">Who vs. Whom</span></h2>
+  <div class="section-subtitle">The ultimate diagnostic for advanced learners</div>
+
+  <div class="tip-box">
+    <div class="tip-title">&#10003; The He/Him Substitution Test</div>
+    <p>If you aren't sure whether to use <em>Who</em> or <em>Whom</em>, try substituting <em>He</em> or <em>Him</em>.</p>
+    <ul>
+      <li>If <strong>He</strong> works &rarr; Use <strong>Who</strong> (Subject)</li>
+      <li>If <strong>Him</strong> works &rarr; Use <strong>Whom</strong> (Object)</li>
+    </ul>
+  </div>
+
+  <ul class="sentence-list">
+    <li><em>Who/Whom</em> shall I say is calling? <span class="note">He is calling &rarr; Who is calling.</span></li>
+    <li>To <em>who/whom</em> should I address the letter? <span class="note">Address it to him &rarr; To whom.</span></li>
+  </ul>
+
+  <div class="ornament">&#10022; &nbsp;&nbsp; End of Pronoun Guide &nbsp;&nbsp; &#10022;</div>
+</section>
+
+</div><!-- content-inner -->
+</div><!-- main -->
+</div><!-- layout -->
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+
+<script>
+/* Mirrored Sidebar/Progress Logic */
+window.addEventListener('scroll', function() {
+  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('progress-fill').style.width = pct + '%';
+  var btt = document.getElementById('btt');
+  if (scrollTop > 400) btt.classList.add('visible');
+  else btt.classList.remove('visible');
+  updateActiveSidebar();
+});
+
+var sectionIds = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16'];
+function updateActiveSidebar() {
+  var scrollTop = window.pageYOffset + 100;
+  var active = sectionIds[0];
+  for (var i = 0; i < sectionIds.length; i++) {
+    var el = document.getElementById(sectionIds[i]);
+    if (el && el.offsetTop <= scrollTop) active = sectionIds[i];
+  }
+  var items = document.querySelectorAll('.sid-item');
+  for (var j = 0; j < items.length; j++) {
+    var onclick = items[j].getAttribute('onclick') || '';
+    if (onclick.indexOf("'" + active + "'") !== -1) items[j].classList.add('active');
+    else items[j].classList.remove('active');
+  }
+}
+
+function goTo(id) {
+  var el = document.getElementById(id);
+  if (!el) return;
+  var top = el.getBoundingClientRect().top + window.pageYOffset - 72;
+  window.scrollTo({ top: top, behavior: 'smooth' });
+  if (window.innerWidth <= 860) document.getElementById('sidebar').classList.remove('open');
+}
+
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+}
+
+document.addEventListener('click', function(e) {
+  if (window.innerWidth > 860) return;
+  var sb = document.getElementById('sidebar');
+  var btn = document.getElementById('menu-toggle');
+  if (!sb.contains(e.target) && e.target !== btn) sb.classList.remove('open');
+});
+</script>
+</body>
+</html>
