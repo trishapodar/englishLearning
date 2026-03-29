@@ -3,13 +3,803 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Work in Progress</title>
+<title>Pronouns in English Grammar — Foundational Test</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style/mcq_style.css">
 </head>
-
 <body>
 
-<h1>Work in Progress</h1>
-<p>This page is under construction.</p>
+<script type="application/json" id="qdata">
+[
+  {
+    "id": 1,
+    "subtopic": "Pronoun Case",
+    "difficulty": "Topper",
+    "stem": "Choose the grammatically correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "No one other than he and I was responsible.",
+        "explanation": "'He and I' are nominative, but after 'other than', objective case is required. Hence incorrect."
+      },
+      {
+        "label": "B",
+        "text": "No one other than him and me was responsible.",
+        "explanation": "Correct. After 'other than', pronouns take objective case: 'him and me'."
+      },
+      {
+        "label": "C",
+        "text": "No one other than he and me was responsible.",
+        "explanation": "Mixed case error — pronouns must be parallel."
+      },
+      {
+        "label": "D",
+        "text": "No one other than him and I was responsible.",
+        "explanation": "'I' is nominative and incorrect here."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "After 'other than', 'but', 'except' → use OBJECTIVE case.",
+    "commonMistake": "Using 'he and I' everywhere to sound formal."
+  },
 
+  {
+    "id": 2,
+    "subtopic": "Relative Pronouns",
+    "difficulty": "Topper",
+    "stem": "Identify the correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "He is one of those writers who writes regularly.",
+        "explanation": "'Who' refers to 'writers' (plural), so verb must be 'write'."
+      },
+      {
+        "label": "B",
+        "text": "He is one of those writers who write regularly.",
+        "explanation": "Correct. Verb agrees with 'writers', not 'one'."
+      },
+      {
+        "label": "C",
+        "text": "He is one of those writers who writes regular.",
+        "explanation": "Incorrect agreement and wrong adverb form."
+      },
+      {
+        "label": "D",
+        "text": "He is one of those writers which write regularly.",
+        "explanation": "'Which' cannot refer to people."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "'One of those who...' → verb agrees with plural noun.",
+    "commonMistake": "Matching verb with 'one'."
+  },
+
+  {
+    "id": 3,
+    "subtopic": "Pronoun Reference",
+    "difficulty": "Topper",
+    "stem": "Find the correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Ravi told Amit that he was wrong.",
+        "explanation": "Ambiguous pronoun reference."
+      },
+      {
+        "label": "B",
+        "text": "Ravi told Amit that Amit was wrong.",
+        "explanation": "Clear reference — correct."
+      },
+      {
+        "label": "C",
+        "text": "Ravi told Amit that he himself was wrong.",
+        "explanation": "Still ambiguous."
+      },
+      {
+        "label": "D",
+        "text": "Ravi told Amit that himself was wrong.",
+        "explanation": "Incorrect reflexive usage."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Avoid ambiguity → repeat noun if needed.",
+    "commonMistake": "Assuming context resolves ambiguity."
+  },
+
+  {
+    "id": 4,
+    "subtopic": "Indefinite Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose the correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Each of the players have given their best.",
+        "explanation": "'Each' is singular → verb must be 'has'."
+      },
+      {
+        "label": "B",
+        "text": "Each of the players has given his best.",
+        "explanation": "Correct. Singular agreement maintained."
+      },
+      {
+        "label": "C",
+        "text": "Each of the players have given his best.",
+        "explanation": "Verb disagreement."
+      },
+      {
+        "label": "D",
+        "text": "Each of the players has given their best.",
+        "explanation": "Modern usage but not strict exam standard."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "'Each' is always singular.",
+    "commonMistake": "Agreeing with 'players'."
+  },
+
+  {
+    "id": 5,
+    "subtopic": "Pronoun Case",
+    "difficulty": "Topper",
+    "stem": "Select the correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "It is me who is responsible.",
+        "explanation": "Informal; formal requires 'I'."
+      },
+      {
+        "label": "B",
+        "text": "It is I who am responsible.",
+        "explanation": "Correct — nominative case + correct verb."
+      },
+      {
+        "label": "C",
+        "text": "It is me who am responsible.",
+        "explanation": "Both case and agreement incorrect."
+      },
+      {
+        "label": "D",
+        "text": "It is I who is responsible.",
+        "explanation": "Verb disagreement."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Predicate nominative → nominative case.",
+    "commonMistake": "Using spoken English in formal tests."
+  },
+
+  {
+    "id": 6,
+    "subtopic": "Pronoun Case",
+    "difficulty": "Topper",
+    "stem": "Choose the correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Between you and I, this is wrong.",
+        "explanation": "After preposition → objective case needed."
+      },
+      {
+        "label": "B",
+        "text": "Between you and me, this is wrong.",
+        "explanation": "Correct — 'me' is objective."
+      },
+      {
+        "label": "C",
+        "text": "Between you and myself, this is wrong.",
+        "explanation": "Reflexive misused."
+      },
+      {
+        "label": "D",
+        "text": "Between you and mine, this is wrong.",
+        "explanation": "'Mine' incorrect form."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "After prepositions → objective case.",
+    "commonMistake": "'Between you and I' trap."
+  },
+
+  {
+    "id": 7,
+    "subtopic": "Reflexive Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose the correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Myself completed the work.",
+        "explanation": "Reflexive cannot be subject."
+      },
+      {
+        "label": "B",
+        "text": "I completed the work myself.",
+        "explanation": "Correct emphatic use."
+      },
+      {
+        "label": "C",
+        "text": "Please contact myself.",
+        "explanation": "Incorrect formal misuse."
+      },
+      {
+        "label": "D",
+        "text": "He himselfs did it.",
+        "explanation": "Invalid form."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Reflexive = emphasis OR same subject-object.",
+    "commonMistake": "Using 'myself' instead of 'me'."
+  },
+
+  {
+    "id": 8,
+    "subtopic": "Relative Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose correct usage of 'whom'.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Who did you meet?",
+        "explanation": "Informal but not strict grammar."
+      },
+      {
+        "label": "B",
+        "text": "Whom did you meet?",
+        "explanation": "Correct — object position."
+      },
+      {
+        "label": "C",
+        "text": "Whom is coming?",
+        "explanation": "'Whom' cannot be subject."
+      },
+      {
+        "label": "D",
+        "text": "Who did you spoke to?",
+        "explanation": "Incorrect verb form + case."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "WHOM = object.",
+    "commonMistake": "Avoiding 'whom'."
+  },
+
+  {
+    "id": 9,
+    "subtopic": "Pronoun Agreement",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Everyone must bring their books.",
+        "explanation": "Modern usage; not strict exam standard."
+      },
+      {
+        "label": "B",
+        "text": "Everyone must bring his or her book.",
+        "explanation": "Correct formal usage."
+      },
+      {
+        "label": "C",
+        "text": "Everyone must bring its book.",
+        "explanation": "'Its' cannot refer to persons."
+      },
+      {
+        "label": "D",
+        "text": "Everyone must bring their bookss.",
+        "explanation": "Incorrect form."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Singular antecedent → singular pronoun.",
+    "commonMistake": "Using 'their'."
+  },
+
+  {
+    "id": 10,
+    "subtopic": "Comparison Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "She is taller than him.",
+        "explanation": "Informal."
+      },
+      {
+        "label": "B",
+        "text": "She is taller than he.",
+        "explanation": "Correct — implied clause 'he is'."
+      },
+      {
+        "label": "C",
+        "text": "She is taller than he is tall.",
+        "explanation": "Redundant."
+      },
+      {
+        "label": "D",
+        "text": "She is taller than himself.",
+        "explanation": "Incorrect reflexive."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Complete implied clause mentally.",
+    "commonMistake": "Always using objective after 'than'."
+  },
+
+  {
+    "id": 11,
+    "subtopic": "Demonstrative Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "These is the reason.",
+        "explanation": "Plural subject → singular verb mismatch."
+      },
+      {
+        "label": "B",
+        "text": "This is the reason.",
+        "explanation": "Correct agreement."
+      },
+      {
+        "label": "C",
+        "text": "This are the reasons.",
+        "explanation": "Mismatch."
+      },
+      {
+        "label": "D",
+        "text": "Those is the reason.",
+        "explanation": "Mismatch."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "This/That = singular; These/Those = plural.",
+    "commonMistake": "Matching with noun instead of pronoun."
+  },
+
+  {
+    "id": 12,
+    "subtopic": "Possessive Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The book is her's.",
+        "explanation": "No apostrophe."
+      },
+      {
+        "label": "B",
+        "text": "The book is hers.",
+        "explanation": "Correct."
+      },
+      {
+        "label": "C",
+        "text": "The book is her.",
+        "explanation": "Incorrect form."
+      },
+      {
+        "label": "D",
+        "text": "The book is she's.",
+        "explanation": "Invalid."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Possessives never take apostrophe.",
+    "commonMistake": "'her's' error."
+  },
+
+  {
+    "id": 13,
+    "subtopic": "Relative Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Everything which he said was correct.",
+        "explanation": "'That' preferred after 'everything'."
+      },
+      {
+        "label": "B",
+        "text": "Everything that he said was correct.",
+        "explanation": "Correct usage."
+      },
+      {
+        "label": "C",
+        "text": "Everything who he said was correct.",
+        "explanation": "'Who' incorrect."
+      },
+      {
+        "label": "D",
+        "text": "Everything whom he said was correct.",
+        "explanation": "Incorrect."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "After 'everything' → use 'that'.",
+    "commonMistake": "Using 'which'."
+  },
+
+  {
+    "id": 14,
+    "subtopic": "It Usage",
+    "difficulty": "Topper",
+    "stem": "Identify anticipatory 'it'.",
+    "options": [
+      {
+        "label": "A",
+        "text": "It is raining.",
+        "explanation": "Dummy 'it'."
+      },
+      {
+        "label": "B",
+        "text": "It is important to study.",
+        "explanation": "Correct anticipatory 'it'."
+      },
+      {
+        "label": "C",
+        "text": "I saw it.",
+        "explanation": "Regular pronoun."
+      },
+      {
+        "label": "D",
+        "text": "It broke.",
+        "explanation": "Regular pronoun."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Anticipatory 'it' → real subject comes later.",
+    "commonMistake": "Confusing with dummy 'it'."
+  },
+
+  {
+    "id": 15,
+    "subtopic": "Indefinite Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Neither of the boys are present.",
+        "explanation": "'Neither' is singular."
+      },
+      {
+        "label": "B",
+        "text": "Neither of the boys is present.",
+        "explanation": "Correct."
+      },
+      {
+        "label": "C",
+        "text": "Neither of the boys were present.",
+        "explanation": "Incorrect."
+      },
+      {
+        "label": "D",
+        "text": "Neither boys is present.",
+        "explanation": "Incorrect structure."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Neither/Either → singular.",
+    "commonMistake": "Agreeing with plural noun."
+  },
+
+  {
+    "id": 16,
+    "subtopic": "Pronoun Reference",
+    "difficulty": "Topper",
+    "stem": "Find error-free sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The teacher told the student that he was wrong.",
+        "explanation": "Ambiguous."
+      },
+      {
+        "label": "B",
+        "text": "The teacher told the student that the student was wrong.",
+        "explanation": "Clear — correct."
+      },
+      {
+        "label": "C",
+        "text": "The teacher told the student that himself was wrong.",
+        "explanation": "Incorrect reflexive."
+      },
+      {
+        "label": "D",
+        "text": "The teacher told the student that he himself was wrong.",
+        "explanation": "Still ambiguous."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Avoid ambiguity at all cost.",
+    "commonMistake": "Accepting vague clarity."
+  },
+
+  {
+    "id": 17,
+    "subtopic": "Pronoun Case",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Let you and I go.",
+        "explanation": "After 'let' → objective case."
+      },
+      {
+        "label": "B",
+        "text": "Let you and me go.",
+        "explanation": "Correct."
+      },
+      {
+        "label": "C",
+        "text": "Let we go.",
+        "explanation": "Incorrect."
+      },
+      {
+        "label": "D",
+        "text": "Let I go.",
+        "explanation": "Incorrect."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "'Let' takes object → objective case.",
+    "commonMistake": "Using 'I'."
+  },
+
+  {
+    "id": 18,
+    "subtopic": "Relative Pronouns",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The man which came is here.",
+        "explanation": "'Which' incorrect."
+      },
+      {
+        "label": "B",
+        "text": "The man who came is here.",
+        "explanation": "Correct."
+      },
+      {
+        "label": "C",
+        "text": "The man whom came is here.",
+        "explanation": "'Whom' cannot be subject."
+      },
+      {
+        "label": "D",
+        "text": "The man whose came is here.",
+        "explanation": "Incorrect."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "WHO = subject.",
+    "commonMistake": "Using 'whom' incorrectly."
+  },
+
+  {
+    "id": 19,
+    "subtopic": "Pronoun Agreement",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "The jury gave their verdict.",
+        "explanation": "Acceptable (British), but ambiguous."
+      },
+      {
+        "label": "B",
+        "text": "The jury gave its verdict.",
+        "explanation": "Correct — collective noun singular."
+      },
+      {
+        "label": "C",
+        "text": "The jury gave his verdict.",
+        "explanation": "Incorrect."
+      },
+      {
+        "label": "D",
+        "text": "The jury gave her verdict.",
+        "explanation": "Incorrect."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Collective noun → singular (formal).",
+    "commonMistake": "Using plural unnecessarily."
+  },
+
+  {
+    "id": 20,
+    "subtopic": "Pronoun Case",
+    "difficulty": "Topper",
+    "stem": "Choose correct sentence.",
+    "options": [
+      {
+        "label": "A",
+        "text": "Who do you think will win?",
+        "explanation": "'Who' is subject of 'will win' → correct."
+      },
+      {
+        "label": "B",
+        "text": "Whom do you think will win?",
+        "explanation": "Incorrect — subject needed."
+      },
+      {
+        "label": "C",
+        "text": "Whom do you think will wins?",
+        "explanation": "Incorrect verb."
+      },
+      {
+        "label": "D",
+        "text": "Who do you think will wins?",
+        "explanation": "Incorrect verb."
+      }
+    ],
+    "correct": "A",
+    "topperRule": "Inside clause determines case, not outer sentence.",
+    "commonMistake": "Looking only at main clause."
+  }
+]
+</script>
+
+<script type="application/json" id="rddata">
+{
+  "Pronoun Case": {
+    "w": "18-20%",
+    "tips": [
+      "After prepositions → objective case (me, him, her).",
+      "After linking verbs → nominative case (I, he, she).",
+      "Test by isolating pronoun.",
+      "In comparisons, complete implied clause."
+    ],
+    "traps": [
+      "'Between you and I' hypercorrection.",
+      "Using nominative after prepositions.",
+      "Ignoring implied clause after 'than'."
+    ]
+  },
+
+  "Relative Pronouns": {
+    "w": "18-20%",
+    "tips": [
+      "WHO = subject, WHOM = object.",
+      "Verb agrees with antecedent.",
+      "'One of those who...' → plural verb.",
+      "'That' vs 'Which' based on restriction."
+    ],
+    "traps": [
+      "Using 'whom' as subject.",
+      "Using 'which' for people.",
+      "Wrong verb agreement with 'one'."
+    ]
+  },
+
+  "Pronoun Reference": {
+    "w": "12-15%",
+    "tips": [
+      "Always ensure one clear antecedent.",
+      "Repeat noun if ambiguity exists.",
+      "Avoid vague 'it', 'they'."
+    ],
+    "traps": [
+      "Ambiguous pronouns.",
+      "Vague references.",
+      "Assuming context is enough."
+    ]
+  },
+
+  "Indefinite Pronouns": {
+    "w": "12-15%",
+    "tips": [
+      "Each, Every, Either, Neither → singular.",
+      "Everyone, Someone → singular.",
+      "Verb agrees with pronoun, not nearby noun."
+    ],
+    "traps": [
+      "Matching with plural noun.",
+      "Using plural verbs."
+    ]
+  },
+
+  "Reflexive Pronouns": {
+    "w": "8-10%",
+    "tips": [
+      "Use only for emphasis or same subject-object.",
+      "Never use as subject."
+    ],
+    "traps": [
+      "'Myself' instead of 'me'.",
+      "Using reflexive unnecessarily."
+    ]
+  },
+
+  "Comparison Pronouns": {
+    "w": "8-10%",
+    "tips": [
+      "Complete implied clause after 'than'.",
+      "Case depends on role in implied clause."
+    ],
+    "traps": [
+      "Always using objective case.",
+      "Ignoring hidden verb."
+    ]
+  },
+
+  "It — Special Uses": {
+    "w": "5-7%",
+    "tips": [
+      "Anticipatory 'it' → real subject later.",
+      "Dummy 'it' → weather/time."
+    ],
+    "traps": [
+      "Confusing dummy vs anticipatory."
+    ]
+  }
+}
+</script>
+
+<div id="score-bar">
+  <div class="sb-inner">
+    <span class="sb-label">Live Score</span>
+    <div class="pill p-score">Score <span class="pn" id="lv-s">0.00</span></div>
+    <div class="pill p-ok">✓ <span class="pn" id="lv-ok">0</span></div>
+    <div class="pill p-bad">✗ <span class="pn" id="lv-bad">0</span></div>
+    <div class="pill p-skip">— <span class="pn" id="lv-sk">0</span></div>
+  </div>
+</div>
+
+<div id="app">
+  <div class="masthead">
+    <div class="mast-rule top"></div>
+    <h1>Pronouns in English Grammar</h1>
+    <div class="mast-sub">Topper Examination</div>
+    <div class="mast-meta">20 Questions · Topper Difficulty · +1 / −0.25 Marking</div>
+    <div class="mast-rule bot"></div>
+  </div>
+
+  <div class="dots-wrap" id="dots-wrap"></div>
+  <div id="quiz-wrap"></div>
+
+  <div class="finish-wrap">
+    <button class="btn-finish" onclick="finishTest()">Finish Test &amp; See Results</button>
+  </div>
+
+  <div id="results">
+    <div class="res-card">
+      <div class="res-hdr">
+        <h2>Examination Complete</h2>
+        <div class="orn">✶ ✶ ✶</div>
+        <div class="grade" id="r-grade">—</div>
+        <div class="grade-lbl" id="r-lbl"></div>
+        <div class="stats">
+          <div class="stat s-score">  <span class="stat-n" id="r-sc">0</span>  <span class="stat-l">Score</span></div>
+          <div class="stat s-correct"><span class="stat-n" id="r-ok">0</span>  <span class="stat-l">Correct</span></div>
+          <div class="stat s-wrong">  <span class="stat-n" id="r-bad">0</span> <span class="stat-l">Wrong</span></div>
+          <div class="stat s-skip">   <span class="stat-n" id="r-skip">0</span><span class="stat-l">Skipped</span></div>
+        </div>
+      </div>
+      <div class="res-body">
+        <h3 class="sec-hdr">Subtopic Performance</h3>
+        <div class="st-bars" id="st-bars"></div>
+        <h3 class="sec-hdr">Personalised Study Roadmap</h3>
+        <div class="roadmap" id="roadmap"></div>
+        <div class="restart-wrap"><button class="btn-restart" onclick="location.reload()">Retake Examination</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../../js/mcq_core.js"></script>
 </body>
 </html>
