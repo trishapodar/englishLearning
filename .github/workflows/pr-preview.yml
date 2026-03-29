@@ -1,0 +1,38 @@
+name: Deploy PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+
+jobs:
+  deploy-preview:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to Subfolder
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # The folder where your HTML files are
+          target-folder: previews/pr-${{ github.event.number }}
+          branch: gh-pages
+          clean: false # Important: prevents deleting your main site files
+
+  cleanup-preview:
+    if: github.event.action == 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Delete Preview Folder
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # Dummy folder
+          target-folder: previews/pr-${{ github.event.number }}
+          branch: gh-pages
+          clean: true # This will wipe the specific target-folder
