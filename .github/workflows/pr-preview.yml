@@ -1,6 +1,8 @@
 name: Deploy PR Preview
 
 on:
+  push:
+    branches: ${{ github.ref_name }}
   pull_request:
     types: [opened, synchronize, reopened, closed]
 
