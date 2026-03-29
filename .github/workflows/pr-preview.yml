@@ -38,22 +38,33 @@ jobs:
           clean: false
 
   cleanup:
-    # This runs only when the PR is merged or closed
-    if: github.event_name == 'pull_request' && github.event.action == 'closed'
+    if: github.event.action == 'closed'
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
-      - name: Checkout
+      - name: Checkout gh-pages
         uses: actions/checkout@v4
-
-      - name: Create Empty Directory
-        run: mkdir empty_dir
-
-      - name: Delete Preview Folder
-        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: empty_dir       # Deploying an empty folder...
-          target-folder: previews/pr-${{ github.event.number }} # ...to the PR path
-          branch: gh-pages
-          clean: true             # ...wipes that path clean
+          ref: gh-pages # Specifically check out the deployment branch
+
+      - name: Delete PR folder
+        run: |
+          # Define the target path
+          PR_FOLDER="previews/pr-${{ github.event.number }}"
+          
+          if [ -d "$PR_FOLDER" ]; then
+            echo "Deleting $PR_FOLDER..."
+            rm -rf "$PR_FOLDER"
+            
+            # Configure Git
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            
+            # Commit and Push the deletion
+            git add .
+            git commit -m "chore: remove preview folder for PR ${{ github.event.number }}"
+            git push origin gh-pages
+          else
+            echo "Folder $PR_FOLDER does not exist. Nothing to delete."
+          fi
