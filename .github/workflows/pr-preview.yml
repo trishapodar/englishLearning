@@ -5,15 +5,12 @@ env:
 on:
   push:
     branches:
-      - main              # Triggers when you merge a PR into main
+      - main
   pull_request:
     types: [opened, synchronize, reopened, closed]
-    branches:
-      - main              # Optional: Only run for PRs targeting the main branch
 
 jobs:
-  deploy-preview:
-    # Only run this job if the PR is NOT being closed
+  deploy:
     if: github.event.action != 'closed'
     runs-on: ubuntu-latest
     permissions:
@@ -22,19 +19,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # STEP A: Deploy to Main Site (Root)
-      # This runs ONLY when code is merged into main or pushed to main
       - name: Deploy Main to Root
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: . 
           branch: gh-pages
-          target-folder: .      # Puts files in the root for the public site
-          clean: false          # CRITICAL: prevents deleting your /previews folder
+          target-folder: .
+          clean: false
 
-      # STEP B: Deploy PR Preview (Sub-folder)
-      # This runs ONLY when a Pull Request is active
       - name: Deploy PR Preview
         if: github.event_name == 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
@@ -44,9 +37,9 @@ jobs:
           target-folder: previews/pr-${{ github.event.number }}
           clean: false
 
-  cleanup-preview:
-    # Only run this job when a PR is closed
-    if: github.event.action == 'closed'
+  cleanup:
+    # This runs only when the PR is merged or closed
+    if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -54,10 +47,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Create Empty Directory
+        run: mkdir empty_dir
+
       - name: Delete Preview Folder
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: .             # Dummy folder for the action logic
-          target-folder: previews/pr-${{ github.event.number }}
+          folder: empty_dir       # Deploying an empty folder...
+          target-folder: previews/pr-${{ github.event.number }} # ...to the PR path
           branch: gh-pages
-          clean: true           # This wipes the specific target-folder upon closing PR
+          clean: true             # ...wipes that path clean
