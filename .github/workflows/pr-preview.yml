@@ -1,8 +1,6 @@
 name: Deploy PR Preview
 
 on:
-  push:
-    branches: refactoringCode
   pull_request:
     types: [opened, synchronize, reopened, closed]
 
