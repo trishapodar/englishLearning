@@ -151,7 +151,7 @@ function renderExp(qi, ch, ok, q) {
         const ico = isCor ? '✓' : (isWrg ? '✗' : '·');
         oh += `<div class="${cls}"><div class="oe-lbl"><span class="oe-ltr">${ico} ${o.label}.</span> 
                 ${xe(o.text)}</div><div style="margin-top:3px">${xe(o.explanation)}</div></div>`;
-    }
+}
     document.getElementById('exp-' + qi).innerHTML =
         `<div class="exp-wrap"><div class="exp-hdr">
         <span class="exp-verdict">${verdict}</span>
