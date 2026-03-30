@@ -54,7 +54,7 @@
 </head>
 <body>
 
-    <button id="toggle-btn">☰ Menu</button>
+    <button id="toggle-btn" aria-expanded="true" aria-controls="left-panel">☰ Menu</button>
 
     <nav id="left-panel">
         <div class="nav-group">
@@ -88,10 +88,18 @@
     <script>
         const toggleBtn = document.getElementById('toggle-btn');
         const leftPanel = document.getElementById('left-panel');
+        const menuIcon = '☰ Menu';
+        const closeIcon = '✕ Close';
 
         toggleBtn.addEventListener('click', () => {
             leftPanel.classList.toggle('collapsed');
+            const isCollapsed = leftPanel.classList.contains('collapsed');
+            toggleBtn.setAttribute('aria-expanded', !isCollapsed);
+            toggleBtn.textContent = isCollapsed ? menuIcon : closeIcon;
         });
+
+        // Set initial button text based on panel's initial state (expanded)
+        toggleBtn.textContent = leftPanel.classList.contains('collapsed') ? menuIcon : closeIcon;
     </script>
 
 </body>
