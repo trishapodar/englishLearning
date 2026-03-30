@@ -13,8 +13,16 @@ window.addEventListener('DOMContentLoaded', function() {
     const qDataEl = document.getElementById('qdata');
     const rdDataEl = document.getElementById('rddata');
     
-    if (qDataEl) QUESTIONS = JSON.parse(qDataEl.textContent);
-    if (rdDataEl) RD = JSON.parse(rdDataEl.textContent);
+    try {
+        if (qDataEl && qDataEl.textContent.trim()) {
+            QUESTIONS = JSON.parse(qDataEl.textContent);
+        }
+        if (rdDataEl && rdDataEl.textContent.trim()) {
+            RD = JSON.parse(rdDataEl.textContent);
+        }
+    } catch (e) {
+        console.error("MCQ Core: Failed to parse JSON data. Ensure #qdata and #rddata contain valid JSON.", e);
+    }
     
     if (QUESTIONS.length > 0) {
         S.chosen = new Array(QUESTIONS.length).fill(null);
