@@ -38,6 +38,42 @@
             width: 0;
         }
 
+        /* 4.5 Nav Group Collapsible Logic */
+        .nav-group.group-collapsed .nav-item:not(.indent-1),
+        .nav-group.group-collapsed .nav-subgroup {
+            display: none;
+        }
+
+        /* 4.6 Nav Sub-group Collapsible Logic */
+        .nav-subgroup.subgroup-collapsed .nav-item:not(.indent-2) {
+            display: none;
+        }
+
+        .nav-item.indent-1, 
+        .nav-item.indent-2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-item.indent-1::after {
+            content: '▾';
+        }
+
+        .nav-group.group-collapsed .nav-item.indent-1::after {
+            content: '▸';
+        }
+
+        .nav-item.indent-2::after {
+            content: '▾';
+            font-size: 0.85em;
+        }
+
+        .nav-subgroup.subgroup-collapsed .nav-item.indent-2::after {
+            content: '▸';
+        }
+
         /* 5. Main content fills the rest of the space */
         #main-panel {
             flex-grow: 1; 
@@ -59,23 +95,33 @@
     <nav id="left-panel">
         <div class="nav-group">
             <a href="./subject.html" target="content-frame" class="nav-item indent-1">English</a>
-            <a href="./english/noun/noun_learn_guide.html" target="content-frame" class="nav-item indent-2">Noun</a>
-            <a href="./english/noun/noun_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
-            <a href="./english/noun/noun_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
-            <a href="./english/noun/noun_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
-            <a href="./english/noun/noun_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/noun/noun_learn_guide.html" target="content-frame" class="nav-item indent-2">Noun</a>
+                <a href="./english/noun/noun_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
+                <a href="./english/noun/noun_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
+                <a href="./english/noun/noun_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
+                <a href="./english/noun/noun_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            </div>
 
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/pronoun/pronoun_learn_guide.html" target="content-frame" class="nav-item indent-2">Pronoun</a>
+                <a href="./english/pronoun/pronoun_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
+                <a href="./english/pronoun/pronoun_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
+                <a href="./english/pronoun/pronoun_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
+                <a href="./english/pronoun/pronoun_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            </div>
 
-            <a href="./english/pronoun/pronoun_learn_guide.html" target="content-frame" class="nav-item indent-2">Pronoun</a>
-            <a href="./english/pronoun/pronoun_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
-            <a href="./english/pronoun/pronoun_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
-            <a href="./english/pronoun/pronoun_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
-            <a href="./english/pronoun/pronoun_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/adjective/adjective_learn_guide.html" target="content-frame" class="nav-item indent-2">Adjectives</a>
+            </div>
            
         </div>
         <div class="nav-group">
             <a href="./subject.html" target="content-frame" class="nav-item indent-1">General Affairs</a>
-            <a href="./general_affairs/CLAT_Weekly_Digest_March_17_23_2026.html" target="content-frame" class="nav-item indent-2">Weekly 17 to 23 March 2026</a>
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./general_affairs/CLAT_Weekly_Digest_March_17_23_2026.html" target="content-frame" class="nav-item indent-2">Weekly 17 to 23 March 2026</a>
+                <a href="./general_affairs/CLAT_Weekly_Digest_March_24_30_2026.html" target="content-frame" class="nav-item indent-2">Weekly 24 to 30 March 2026</a>
+            </div>
             
         </div>
     </nav>
@@ -100,6 +146,20 @@
 
         // Set initial button text based on panel's initial state (expanded)
         toggleBtn.textContent = leftPanel.classList.contains('collapsed') ? menuIcon : closeIcon;
+
+        // Handle sub-group collapsing (indent-1 items)
+        document.querySelectorAll('.nav-item.indent-1').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('group-collapsed');
+            });
+        });
+
+        // Handle sub-sub-group collapsing (indent-2 items)
+        document.querySelectorAll('.nav-item.indent-2').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('subgroup-collapsed');
+            });
+        });
     </script>
 
 </body>
