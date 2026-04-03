@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mixed Mock Test — English Grammar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../style/mcq_style.css">
+</head>
+<body>
+
+<!-- Empty data islands for core compatibility -->
+<script type="application/json" id="qdata">[]</script>
+<script type="application/json" id="rddata">{}</script>
+
+<div id="score-bar">
+  <div class="sb-inner">
+    <span class="sb-label">Mock Exam Score</span>
+    <div class="pill p-score">Score <span class="pn" id="lv-s">0.00</span></div>
+    <div class="pill p-ok">✓ <span class="pn" id="lv-ok">0</span></div>
+    <div class="pill p-bad">✗ <span class="pn" id="lv-bad">0</span></div>
+    <div class="pill p-skip">— <span class="pn" id="lv-sk">0</span></div>
+  </div>
+</div>
+
+<div id="app">
+  <div class="masthead">
+    <h1>Full Syllabus Mock Test</h1>
+    <div class="mast-sub">Randomized from all topics</div>
+    <div class="mast-meta">25 Random Questions · Mixed Difficulty · +1 / −0.25</div>
+  </div>
+
+  <div id="loading-status" style="text-align:center; padding: 40px; color: var(--gold);">Loading random questions from database...</div>
+
+  <div class="dots-wrap" id="dots-wrap"></div>
+  <div id="quiz-wrap"></div>
+
+  <div class="finish-wrap" style="display:none;">
+    <button class="btn-finish" onclick="finishTest()">Finish Mock Exam</button>
+  </div>
+
+  <!-- Standard results div used by mcq_core.js -->
+  <div id="results">...</div> 
+</div>
+
+<script src="../../js/mcq_core.js"></script>
+<script>
+async function startMixedMock() {
+    // List of your JSON data files
+    const files = ['../data/nouns.json', '../data/pronouns.json', '../data/articles.json'];
+    let pool = [];
+    let roadmapPool = {};
+
+    for (const f of files) {
+        const res = await fetch(f);
+        const data = await res.json();
+        pool = pool.concat(data.questions);
+        Object.assign(roadmapPool, data.rddata);
+    }
+
+    // Shuffle and pick 25 questions
+    const shuffled = pool.sort(() => 0.5 - Math.random()).slice(0, 25);
+    
+    document.getElementById('loading-status').style.display = 'none';
+    document.querySelector('.finish-wrap').style.display = 'block';
+    
+    initQuiz(shuffled, roadmapPool);
+}
+startMixedMock();
+</script>
+</body>
+</html>
