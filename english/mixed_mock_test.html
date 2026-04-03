@@ -66,6 +66,23 @@
   </div>
 </div>
 
+// TO DO Work in progress
+<script>window.initQuiz = function(questions, roadmap) {
+    QUESTIONS = questions || [];
+    RD = roadmap || {};
+
+    S = {
+        chosen: new Array(QUESTIONS.length).fill(null),
+        checked: new Array(QUESTIONS.length).fill(false),
+        skipped: new Array(QUESTIONS.length).fill(false),
+        score: 0, ok: 0, bad: 0, skip: 0
+    };
+
+    buildDots();
+    buildCards();
+    bar();
+};</script>
+
 <script src="../js/mcq_core.js"></script>
 <script>
 async function startMixedMock() {
@@ -73,9 +90,17 @@ async function startMixedMock() {
     // List of the HTML files containing your MCQ data
     const files = [
         './noun/noun_mcq_foundational.html',
+        './noun/noun_mcq_advanced.html',
+        './noun/noun_mcq_topper.html',
         './pronoun/pronoun_mcq_foundational.html',
+        './pronoun/pronoun_mcq_advanced.html',
+        './pronoun/pronoun_mcq_topper.html',
         './articles/article_mcq_foundational.html',
-        './adjectives/adjective_mcq_foundational.html'
+        './articles/article_mcq_advanced.html',
+        './articles/article_mcq_topper.html',
+        './adjectives/adjective_mcq_foundational.html',
+        './adjectives/adjective_mcq_advanced.html',
+        './adjectives/adjective_mcq_topper.html'
     ];
     let pool = [];
     let roadmapPool = {};
