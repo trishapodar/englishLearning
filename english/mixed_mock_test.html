@@ -1,94 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mixed Mock Test — English Grammar</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style/mcq_style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixed Mock Test — English Grammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style/mcq_style.css">
 </head>
+
 <body>
 
-<!-- Empty data islands for core compatibility -->
-<script type="application/json" id="qdata">[]</script>
-<script type="application/json" id="rddata">{}</script>
+  <!-- Empty data islands for core compatibility -->
+  <script type="application/json" id="qdata">[]</script>
+  <script type="application/json" id="rddata">{}</script>
 
-<div id="score-bar">
-  <div class="sb-inner">
-    <span class="sb-label">Mock Exam Score</span>
-    <div class="pill p-score">Score <span class="pn" id="lv-s">0.00</span></div>
-    <div class="pill p-ok">✓ <span class="pn" id="lv-ok">0</span></div>
-    <div class="pill p-bad">✗ <span class="pn" id="lv-bad">0</span></div>
-    <div class="pill p-skip">— <span class="pn" id="lv-sk">0</span></div>
-  </div>
-</div>
-
-<div id="app">
-  <div class="masthead">
-    <h1>Full Syllabus Mock Test</h1>
-    <div class="mast-sub">Randomized from all topics</div>
-    <div class="mast-meta">25 Random Questions · Mixed Difficulty · +1 / −0.25</div>
+  <div id="score-bar">
+    <div class="sb-inner">
+      <span class="sb-label">Mock Exam Score</span>
+      <div class="pill p-score">Score <span class="pn" id="lv-s">0.00</span></div>
+      <div class="pill p-ok">✓ <span class="pn" id="lv-ok">0</span></div>
+      <div class="pill p-bad">✗ <span class="pn" id="lv-bad">0</span></div>
+      <div class="pill p-skip">— <span class="pn" id="lv-sk">0</span></div>
+    </div>
   </div>
 
-  <div id="loading-status" style="text-align:center; padding: 40px; color: var(--gold);">Loading random questions from database...</div>
+  <div id="app">
+    <div class="masthead">
+      <h1>Full Syllabus Mock Test</h1>
+      <div class="mast-sub">Randomized from all topics</div>
+      <div class="mast-meta">25 Random Questions · Mixed Difficulty · +1 / −0.25</div>
+    </div>
 
-  <div class="dots-wrap" id="dots-wrap"></div>
-  <div id="quiz-wrap"></div>
+    <div id="loading-status" style="text-align:center; padding: 40px; color: var(--gold);">Loading random questions from
+      database...</div>
 
-  <div class="finish-wrap" style="display:none;">
-    <button class="btn-finish" onclick="finishTest()">Finish Mock Exam</button>
-  </div>
+    <div class="dots-wrap" id="dots-wrap"></div>
+    <div id="quiz-wrap"></div>
 
-  <!-- Standard results div used by mcq_core.js -->
-  <div id="results">
-    <div class="res-card">
-      <div class="res-hdr">
-        <h2>Examination Complete</h2>
-        <div class="orn">✶ ✶ ✶</div>
-        <div class="grade" id="r-grade">—</div>
-        <div class="grade-lbl" id="r-lbl"></div>
-        <div class="stats">
-          <div class="stat s-score">  <span class="stat-n" id="r-sc">0</span>  <span class="stat-l">Score</span></div>
-          <div class="stat s-correct"><span class="stat-n" id="r-ok">0</span>  <span class="stat-l">Correct</span></div>
-          <div class="stat s-wrong">  <span class="stat-n" id="r-bad">0</span> <span class="stat-l">Wrong</span></div>
-          <div class="stat s-skip">   <span class="stat-n" id="r-skip">0</span><span class="stat-l">Skipped</span></div>
+    <div class="finish-wrap" style="display:none;">
+      <button class="btn-finish" onclick="finishTest()">Finish Mock Exam</button>
+    </div>
+
+    <!-- Standard results div used by mcq_core.js -->
+    <div id="results">
+      <div class="res-card">
+        <div class="res-hdr">
+          <h2>Examination Complete</h2>
+          <div class="orn">✶ ✶ ✶</div>
+          <div class="grade" id="r-grade">—</div>
+          <div class="grade-lbl" id="r-lbl"></div>
+          <div class="stats">
+            <div class="stat s-score"> <span class="stat-n" id="r-sc">0</span> <span class="stat-l">Score</span></div>
+            <div class="stat s-correct"><span class="stat-n" id="r-ok">0</span> <span class="stat-l">Correct</span>
+            </div>
+            <div class="stat s-wrong"> <span class="stat-n" id="r-bad">0</span> <span class="stat-l">Wrong</span></div>
+            <div class="stat s-skip"> <span class="stat-n" id="r-skip">0</span><span class="stat-l">Skipped</span></div>
+          </div>
         </div>
-      </div>
-      <div class="res-body">
-        <h3 class="sec-hdr">Subtopic Performance</h3>
-        <div class="st-bars" id="st-bars"></div>
-        <h3 class="sec-hdr">Personalised Study Roadmap</h3>
-        <div class="roadmap" id="roadmap"></div>
-        <div class="restart-wrap"><button class="btn-restart" onclick="location.reload()">Retake Examination</button></div>
+        <div class="res-body">
+          <h3 class="sec-hdr">Subtopic Performance</h3>
+          <div class="st-bars" id="st-bars"></div>
+          <h3 class="sec-hdr">Personalised Study Roadmap</h3>
+          <div class="roadmap" id="roadmap"></div>
+          <div class="restart-wrap"><button class="btn-restart" onclick="location.reload()">Retake Examination</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
- <!-- TODO Think of moving this function to the mcq_core.js -->
-<script>window.initQuiz = function(questions, roadmap) {
-    QUESTIONS = questions || [];
-    RD = roadmap || {};
+  <!-- TODO Think of moving this function to the mcq_core.js -->
+  <script>window.initQuiz = function (questions, roadmap) {
+      QUESTIONS = questions || [];
+      RD = roadmap || {};
 
-    S = {
+      S = {
         chosen: new Array(QUESTIONS.length).fill(null),
         checked: new Array(QUESTIONS.length).fill(false),
         skipped: new Array(QUESTIONS.length).fill(false),
         score: 0, ok: 0, bad: 0, skip: 0
-    };
+      };
 
-    buildDots();
-    buildCards();
-    bar();
-};</script>
+      buildDots();
+      buildCards();
+      bar();
+    };</script>
 
-<script src="../js/mcq_core.js"></script>
-<script>
-async function startMixedMock() {
-    const loadingEl = document.getElementById('loading-status');
-    // List of the HTML files containing your MCQ data
-    const files = [
+  <script src="../js/mcq_core.js"></script>
+  <script>
+    function pickBalancedQuestions(fileQuestionMap, total = 25, minPerFile = 2) {
+      let finalQuestions = [];
+
+      // Step 1: Take minimum required from each file
+      for (const file in fileQuestionMap) {
+        const arr = [...fileQuestionMap[file]].sort(() => 0.5 - Math.random());
+        finalQuestions = finalQuestions.concat(arr.slice(0, minPerFile));
+      }
+
+      // Step 2: Fill remaining slots randomly from all questions
+      let remainingPool = [];
+      for (const file in fileQuestionMap) {
+        remainingPool = remainingPool.concat(fileQuestionMap[file]);
+      }
+
+      // Remove already selected questions
+      const selectedSet = new Set(finalQuestions);
+      remainingPool = remainingPool.filter(q => !selectedSet.has(q));
+
+      // Shuffle remaining and fill
+      remainingPool.sort(() => 0.5 - Math.random());
+      const remainingNeeded = total - finalQuestions.length;
+
+      finalQuestions = finalQuestions.concat(remainingPool.slice(0, remainingNeeded));
+
+      // Final shuffle (so pattern not predictable)
+      return finalQuestions.sort(() => 0.5 - Math.random());
+    }
+
+    async function startMixedMock() {
+      const loadingEl = document.getElementById('loading-status');
+      // List of the HTML files containing your MCQ data
+      const files = [
         './noun/noun_mcq_foundational.html',
         './noun/noun_mcq_advanced.html',
         './noun/noun_mcq_topper.html',
@@ -101,52 +137,54 @@ async function startMixedMock() {
         './adjectives/adjective_mcq_foundational.html',
         './adjectives/adjective_mcq_advanced.html',
         './adjectives/adjective_mcq_topper.html'
-    ];
-    let pool = [];
-    let roadmapPool = {};
+      ];
+      let fileQuestionMap = {};
+      let roadmapPool = {};
 
-    try {
+      try {
         const parser = new DOMParser();
 
         for (const f of files) {
-            const res = await fetch(f);
-            if (!res.ok) throw new Error(`Could not find file: ${f}`);
-            
-            const htmlText = await res.text();
-            const doc = parser.parseFromString(htmlText, 'text/html');
-            
-            const qEl = doc.getElementById('qdata');
-            const rdEl = doc.getElementById('rddata');
+          const res = await fetch(f);
+          const htmlText = await res.text();
+          const doc = parser.parseFromString(htmlText, 'text/html');
 
-            if (qEl) {
-                const questions = JSON.parse(qEl.textContent);
-                pool = pool.concat(questions);
-            }
-            if (rdEl) {
-                const roadmap = JSON.parse(rdEl.textContent);
-                Object.assign(roadmapPool, roadmap);
-            }
+          const qEl = doc.getElementById('qdata');
+          const rdEl = doc.getElementById('rddata');
+
+          if (qEl) {
+            const questions = JSON.parse(qEl.textContent);
+
+            // Store per file
+            fileQuestionMap[f] = questions;
+          }
+
+          if (rdEl) {
+            const roadmap = JSON.parse(rdEl.textContent);
+            Object.assign(roadmapPool, roadmap);
+          }
         }
 
-        if (pool.length === 0) throw new Error("No questions found in the selected files.");
+        if (fileQuestionMap.length === 0) throw new Error("No questions found in the selected files.");
 
         // Shuffle and pick 25 random questions
-        const shuffled = pool.sort(() => 0.5 - Math.random()).slice(0, 25);
-        
+        const shuffled = pickBalancedQuestions(fileQuestionMap, 25, 2);
+
         loadingEl.style.display = 'none';
         document.querySelector('.finish-wrap').style.display = 'block';
-        
+
         initQuiz(shuffled, roadmapPool);
-    } catch (err) {
+      } catch (err) {
         let msg = err.message;
         if (window.location.protocol === 'file:') {
-            msg = "Browsers block local file fetching for security. <br><strong>Please run this using a Local Server (e.g., VS Code Live Server) to fix this.</strong>";
+          msg = "Browsers block local file fetching for security. <br><strong>Please run this using a Local Server (e.g., VS Code Live Server) to fix this.</strong>";
         }
         loadingEl.innerHTML = `<span style="color:#8b1a1a;">Error: ${msg}</span>`;
         console.error(err);
+      }
     }
-}
-startMixedMock();
-</script>
+    startMixedMock();
+  </script>
 </body>
+
 </html>
