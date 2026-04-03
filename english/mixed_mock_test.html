@@ -29,6 +29,16 @@
   </div>
 
   <div id="app">
+    <div class="topic-select">
+      <h3>Select Topics</h3>
+      <div class="topic-list">
+        <label><input type="checkbox" value="noun"> Nouns</label>
+        <label><input type="checkbox" value="pronoun"> Pronouns</label>
+        <label><input type="checkbox" value="articles"> Articles</label>
+        <label><input type="checkbox" value="adjectives"> Adjectives</label>
+      </div>
+      <button onclick="startSelectedMock()" class="btn-start">Start Test</button>
+    </div>
     <div class="masthead">
       <h1>Full Syllabus Mock Test</h1>
       <div class="mast-sub">Randomized from all topics</div>
@@ -74,7 +84,8 @@
   </div>
 
   <!-- TODO Think of moving this function to the mcq_core.js -->
-  <script>window.initQuiz = function (questions, roadmap) {
+  <script>
+    window.initQuiz = function (questions, roadmap) {
       QUESTIONS = questions || [];
       RD = roadmap || {};
 
@@ -88,10 +99,132 @@
       buildDots();
       buildCards();
       bar();
-    };</script>
+    };
+  </script>
+
+  <script>
+    const TOPIC_FILES = {
+      noun: [
+        './noun/noun_mcq_foundational.html',
+        './noun/noun_mcq_advanced.html',
+        './noun/noun_mcq_topper.html'
+      ],
+      pronoun: [
+        './pronoun/pronoun_mcq_foundational.html',
+        './pronoun/pronoun_mcq_advanced.html',
+        './pronoun/pronoun_mcq_topper.html'
+      ],
+      adjectives: [
+        './adjectives/adjective_mcq_foundational.html',
+        './adjectives/adjective_mcq_advanced.html',
+        './adjectives/adjective_mcq_topper.html'
+      ],
+      articles: [
+        './articles/article_mcq_foundational.html',
+        './articles/article_mcq_advanced.html',
+        './articles/article_mcq_topper.html'
+
+      ]
+    };
+  </script>
 
   <script src="../js/mcq_core.js"></script>
   <script>
+    function getSelectedTopics() {
+      return Array.from(document.querySelectorAll('.topic-list input:checked'))
+        .map(el => el.value);
+    }
+    async function startSelectedMock() {
+      const selectedTopics = getSelectedTopics();
+
+      if (selectedTopics.length === 0) {
+        alert("Please select at least one topic");
+        return;
+      }
+
+      const parser = new DOMParser();
+      let fileQuestionMap = {};
+      let roadmapPool = {};
+
+      // Collect all files from selected topics
+      let files = [];
+      selectedTopics.forEach(t => {
+        files = files.concat(TOPIC_FILES[t] || []);
+      });
+
+      try {
+        for (const f of files) {
+          const res = await fetch(f);
+          const htmlText = await res.text();
+          const doc = parser.parseFromString(htmlText, 'text/html');
+
+          const qEl = doc.getElementById('qdata');
+          const rdEl = doc.getElementById('rddata');
+
+          if (qEl) {
+            const questions = JSON.parse(qEl.textContent);
+            fileQuestionMap[f] = questions;
+          }
+
+          if (rdEl) {
+            const roadmap = JSON.parse(rdEl.textContent);
+            Object.assign(roadmapPool, roadmap);
+          }
+        }
+
+        const finalQuestions = buildBalancedSet(fileQuestionMap, 25);
+
+        // Hide selector UI
+        document.querySelector('.topic-select').style.display = 'none';
+        document.getElementById('loading-status').style.display = 'none';
+        document.querySelector('.finish-wrap').style.display = 'block';
+
+        // IMPORTANT
+        window.__USE_EXTERNAL_DATA__ = true;
+        initQuiz(finalQuestions, roadmapPool);
+
+      } catch (err) {
+        console.error(err);
+        alert("Error loading questions");
+      }
+    }
+
+    function buildBalancedSet(fileQuestionMap, total = 25) {
+      const files = Object.keys(fileQuestionMap);
+      const minPerFile = Math.ceil(total / files.length);
+
+      let selected = [];
+
+      // Step 1: Minimum from each file (but DO NOT exceed total)
+      for (const f of files) {
+        if (selected.length >= total) break;
+
+        const arr = [...fileQuestionMap[f]].sort(() => 0.5 - Math.random());
+
+        const remainingSlots = total - selected.length;
+        const take = Math.min(minPerFile, arr.length, remainingSlots);
+
+        selected = selected.concat(arr.slice(0, take));
+      }
+
+      // Step 2: If still less than total → fill randomly
+      if (selected.length < total) {
+        let pool = [];
+        files.forEach(f => pool = pool.concat(fileQuestionMap[f]));
+
+        const selectedSet = new Set(selected);
+        pool = pool.filter(q => !selectedSet.has(q));
+
+        pool.sort(() => 0.5 - Math.random());
+
+        const remaining = total - selected.length;
+        selected = selected.concat(pool.slice(0, remaining));
+      }
+
+      // Step 3: FINAL HARD LIMIT (safety)
+      return selected.slice(0, total).sort(() => 0.5 - Math.random());
+    }
+
     function pickBalancedQuestions(fileQuestionMap, total = 25, minPerFile = 2) {
       let finalQuestions = [];
 
@@ -183,7 +316,8 @@
         console.error(err);
       }
     }
-    startMixedMock();
+    // startMixedMock();
+    startSelectedMock();
   </script>
 </body>
 
