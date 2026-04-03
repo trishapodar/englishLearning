@@ -47,25 +47,34 @@
 <script src="../../js/mcq_core.js"></script>
 <script>
 async function startMixedMock() {
+    const loadingEl = document.getElementById('loading-status');
     // List of your JSON data files
-    const files = ['../data/nouns.json', '../data/pronouns.json', '../data/articles.json'];
+    const files = ['../data/nouns.json', '../data/pronouns.json', '../data/articles.json', '../data/adjectives.json'];
     let pool = [];
     let roadmapPool = {};
 
-    for (const f of files) {
-        const res = await fetch(f);
-        const data = await res.json();
-        pool = pool.concat(data.questions);
-        Object.assign(roadmapPool, data.rddata);
-    }
+    try {
+        for (const f of files) {
+            const res = await fetch(f);
+            if (!res.ok) throw new Error(`Could not find file: ${f}`);
+            const data = await res.json();
+            pool = pool.concat(data.questions);
+            if (data.rddata) Object.assign(roadmapPool, data.rddata);
+        }
 
-    // Shuffle and pick 25 questions
-    const shuffled = pool.sort(() => 0.5 - Math.random()).slice(0, 25);
-    
-    document.getElementById('loading-status').style.display = 'none';
-    document.querySelector('.finish-wrap').style.display = 'block';
-    
-    initQuiz(shuffled, roadmapPool);
+        if (pool.length === 0) throw new Error("No questions found in any of the data files.");
+
+        // Shuffle and pick 25 questions
+        const shuffled = pool.sort(() => 0.5 - Math.random()).slice(0, 25);
+        
+        loadingEl.style.display = 'none';
+        document.querySelector('.finish-wrap').style.display = 'block';
+        
+        initQuiz(shuffled, roadmapPool);
+    } catch (err) {
+        loadingEl.innerHTML = `<span style="color:#8b1a1a;">Error: ${err.message}<br>Check if your JSON files are correctly placed in the /data folder.</span>`;
+        console.error(err);
+    }
 }
 startMixedMock();
 </script>
