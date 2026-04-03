@@ -6,7 +6,7 @@
 <title>Mixed Mock Test — English Grammar</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../style/mcq_style.css">
+<link rel="stylesheet" href="../style/mcq_style.css">
 </head>
 <body>
 
@@ -41,30 +41,71 @@
   </div>
 
   <!-- Standard results div used by mcq_core.js -->
-  <div id="results">...</div> 
+  <div id="results">
+    <div class="res-card">
+      <div class="res-hdr">
+        <h2>Examination Complete</h2>
+        <div class="orn">✶ ✶ ✶</div>
+        <div class="grade" id="r-grade">—</div>
+        <div class="grade-lbl" id="r-lbl"></div>
+        <div class="stats">
+          <div class="stat s-score">  <span class="stat-n" id="r-sc">0</span>  <span class="stat-l">Score</span></div>
+          <div class="stat s-correct"><span class="stat-n" id="r-ok">0</span>  <span class="stat-l">Correct</span></div>
+          <div class="stat s-wrong">  <span class="stat-n" id="r-bad">0</span> <span class="stat-l">Wrong</span></div>
+          <div class="stat s-skip">   <span class="stat-n" id="r-skip">0</span><span class="stat-l">Skipped</span></div>
+        </div>
+      </div>
+      <div class="res-body">
+        <h3 class="sec-hdr">Subtopic Performance</h3>
+        <div class="st-bars" id="st-bars"></div>
+        <h3 class="sec-hdr">Personalised Study Roadmap</h3>
+        <div class="roadmap" id="roadmap"></div>
+        <div class="restart-wrap"><button class="btn-restart" onclick="location.reload()">Retake Examination</button></div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<script src="../../js/mcq_core.js"></script>
+<script src="../js/mcq_core.js"></script>
 <script>
 async function startMixedMock() {
     const loadingEl = document.getElementById('loading-status');
-    // List of your JSON data files
-    const files = ['../data/nouns.json', '../data/pronouns.json', '../data/articles.json', '../data/adjectives.json'];
+    // List of the HTML files containing your MCQ data
+    const files = [
+        './noun/noun_mcq_foundational.html',
+        './pronoun/pronoun_mcq_foundational.html',
+        './articles/article_mcq_foundational.html',
+        './adjectives/adjective_mcq_foundational.html'
+    ];
     let pool = [];
     let roadmapPool = {};
 
     try {
+        const parser = new DOMParser();
+
         for (const f of files) {
             const res = await fetch(f);
             if (!res.ok) throw new Error(`Could not find file: ${f}`);
-            const data = await res.json();
-            pool = pool.concat(data.questions);
-            if (data.rddata) Object.assign(roadmapPool, data.rddata);
+            
+            const htmlText = await res.text();
+            const doc = parser.parseFromString(htmlText, 'text/html');
+            
+            const qEl = doc.getElementById('qdata');
+            const rdEl = doc.getElementById('rddata');
+
+            if (qEl) {
+                const questions = JSON.parse(qEl.textContent);
+                pool = pool.concat(questions);
+            }
+            if (rdEl) {
+                const roadmap = JSON.parse(rdEl.textContent);
+                Object.assign(roadmapPool, roadmap);
+            }
         }
 
-        if (pool.length === 0) throw new Error("No questions found in any of the data files.");
+        if (pool.length === 0) throw new Error("No questions found in the selected files.");
 
-        // Shuffle and pick 25 questions
+        // Shuffle and pick 25 random questions
         const shuffled = pool.sort(() => 0.5 - Math.random()).slice(0, 25);
         
         loadingEl.style.display = 'none';
@@ -72,7 +113,11 @@ async function startMixedMock() {
         
         initQuiz(shuffled, roadmapPool);
     } catch (err) {
-        loadingEl.innerHTML = `<span style="color:#8b1a1a;">Error: ${err.message}<br>Check if your JSON files are correctly placed in the /data folder.</span>`;
+        let msg = err.message;
+        if (window.location.protocol === 'file:') {
+            msg = "Browsers block local file fetching for security. <br><strong>Please run this using a Local Server (e.g., VS Code Live Server) to fix this.</strong>";
+        }
+        loadingEl.innerHTML = `<span style="color:#8b1a1a;">Error: ${msg}</span>`;
         console.error(err);
     }
 }
