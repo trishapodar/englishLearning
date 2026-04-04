@@ -9,6 +9,7 @@ let S = {
     score: 0, ok: 0, bad: 0, skip: 0
 };
 
+
 window.addEventListener('DOMContentLoaded', function() {
     const qDataEl = document.getElementById('qdata');
     const rdDataEl = document.getElementById('rddata');
