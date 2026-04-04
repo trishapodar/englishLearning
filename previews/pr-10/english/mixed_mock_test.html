@@ -29,16 +29,129 @@
   </div>
 
   <div id="app">
-    <div class="topic-select">
-      <h3>Select Topics</h3>
-      <div class="topic-list">
-        <label><input type="checkbox" value="noun"> Nouns</label>
-        <label><input type="checkbox" value="pronoun"> Pronouns</label>
-        <label><input type="checkbox" value="articles"> Articles</label>
-        <label><input type="checkbox" value="adjectives"> Adjectives</label>
+    <div class="topic-select" style="
+  max-width:860px;
+  margin:40px auto;
+  background:#f7eed8;
+  border:1px solid #c8a050;
+  border-radius:8px;
+  box-shadow:0 8px 40px rgba(24,16,2,.3);
+  padding:24px;
+  font-family:'Source Serif 4', serif;
+">
+
+      <h3 style="
+    font-family:'Playfair Display', serif;
+    color:#180f02;
+    margin-bottom:16px;
+    font-size:1.3rem;
+  ">
+        Select Topics
+      </h3>
+
+      <div class="topic-list" style="
+    display:grid;
+    gap:10px;
+    margin-bottom:18px;
+  ">
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="noun" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Nouns</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="pronoun" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Pronouns</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="articles" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Articles</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="adjectives" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Adjectives</span>
+        </label>
+
       </div>
-      <button onclick="startSelectedMock()" class="btn-start">Start Test</button>
+
+      <button onclick="startSelectedMock()" id="start-btn" style="
+    padding:10px 28px;
+    border-radius:6px;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    background:linear-gradient(135deg,#a87a0a,#8a6205);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    opacity:.6;
+  ">
+        Start Test
+      </button>
+
     </div>
+
+    <script>
+      /* Selection styling + enable button */
+      document.querySelectorAll('.topic-select label').forEach(label => {
+        const input = label.querySelector('input');
+        const span = label.querySelector('span');
+
+        label.addEventListener('click', () => {
+          setTimeout(() => {
+            if (input.checked) {
+              span.style.background = '#ede0b8';
+              span.style.borderColor = '#a87a0a';
+              span.style.boxShadow = '0 0 0 2px rgba(168,122,10,.2)';
+            } else {
+              span.style.background = '#ede0be';
+              span.style.borderColor = '#e8d8a8';
+              span.style.boxShadow = 'none';
+            }
+
+            const anyChecked = document.querySelectorAll('.topic-select input:checked').length > 0;
+            const btn = document.getElementById('start-btn');
+            btn.style.opacity = anyChecked ? '1' : '.6';
+            btn.disabled = !anyChecked;
+
+          }, 0);
+        });
+      });
+    </script>
     <div class="masthead">
       <h1>Full Syllabus Mock Test</h1>
       <div class="mast-sub">Randomized from all topics</div>
@@ -134,6 +247,7 @@
       return Array.from(document.querySelectorAll('.topic-list input:checked'))
         .map(el => el.value);
     }
+
     async function startSelectedMock() {
       const selectedTopics = getSelectedTopics();
 
@@ -146,11 +260,17 @@
       let fileQuestionMap = {};
       let roadmapPool = {};
 
+      // Create a mapping to remember which file belongs to which topic
+      let fileToTopicMap = {};
+
       // Collect all files from selected topics
-      let files = [];
       selectedTopics.forEach(t => {
-        files = files.concat(TOPIC_FILES[t] || []);
+        (TOPIC_FILES[t] || []).forEach(filePath => {
+          fileToTopicMap[filePath] = t;
+        });
       });
+
+      const files = Object.keys(fileToTopicMap);
 
       try {
         for (const f of files) {
@@ -162,24 +282,52 @@
           const rdEl = doc.getElementById('rddata');
 
           if (qEl) {
-            const questions = JSON.parse(qEl.textContent);
-            fileQuestionMap[f] = questions;
+            fileQuestionMap[f] = JSON.parse(qEl.textContent);
           }
-
           if (rdEl) {
-            const roadmap = JSON.parse(rdEl.textContent);
-            Object.assign(roadmapPool, roadmap);
+            Object.assign(roadmapPool, JSON.parse(rdEl.textContent));
           }
         }
 
+        // Use the balanced logic to get the final array
         const finalQuestions = buildBalancedSet(fileQuestionMap, 25);
 
-        // Hide selector UI
+        // --- NEW: Calculate counts per topic for the Masthead ---
+        const topicCounts = {};
+        // Initialize selected topics with 0
+        selectedTopics.forEach(t => topicCounts[t] = 0);
+
+        // Identify where each question came from
+        // (Note: This assumes your question objects don't already have a 'topic' key. 
+        // If they do, you can just count that directly.)
+        finalQuestions.forEach(q => {
+          // Find which file this question belongs to in our map
+          for (let filePath in fileQuestionMap) {
+            if (fileQuestionMap[filePath].includes(q)) {
+              const topic = fileToTopicMap[filePath];
+              topicCounts[topic]++;
+              break;
+            }
+          }
+        });
+
+        // Format the string: Noun(6), Pronoun(7)...
+        const countStrings = selectedTopics.map(t => {
+          const label = t.charAt(0).toUpperCase() + t.slice(1);
+          return `${label}(${topicCounts[t]})`;
+        });
+
+        const mastSub = document.querySelector('.mast-sub');
+        if (mastSub) {
+          mastSub.textContent = `Randomized from: ${countStrings.join(', ')}`;
+        }
+        // -------------------------------------------------------
+
+        // UI Updates
         document.querySelector('.topic-select').style.display = 'none';
         document.getElementById('loading-status').style.display = 'none';
         document.querySelector('.finish-wrap').style.display = 'block';
 
-        // IMPORTANT
         window.__USE_EXTERNAL_DATA__ = true;
         initQuiz(finalQuestions, roadmapPool);
 
@@ -191,132 +339,49 @@
 
     function buildBalancedSet(fileQuestionMap, total = 25) {
       const files = Object.keys(fileQuestionMap);
-      const minPerFile = Math.ceil(total / files.length);
+      const numFiles = files.length;
+
+      if (numFiles === 0) return [];
+
+      // Calculate base questions per file and the remainder
+      const basePerFile = Math.floor(total / numFiles);
+      let remainder = total % numFiles;
 
       let selected = [];
 
-      // Step 1: Minimum from each file (but DO NOT exceed total)
-      for (const f of files) {
-        if (selected.length >= total) break;
+      files.forEach((f, index) => {
+        // Determine how many questions THIS specific file needs to contribute
+        // We add 1 from the remainder pool until the remainder is exhausted
+        let countToTake = basePerFile + (remainder > 0 ? 1 : 0);
+        if (remainder > 0) remainder--;
 
+        // Shuffle this file's specific questions
         const arr = [...fileQuestionMap[f]].sort(() => 0.5 - Math.random());
 
-        const remainingSlots = total - selected.length;
-        const take = Math.min(minPerFile, arr.length, remainingSlots);
-
+        // Take the calculated amount (or all available if file is too small)
+        const take = Math.min(countToTake, arr.length);
         selected = selected.concat(arr.slice(0, take));
-      }
+      });
 
-      // Step 2: If still less than total → fill randomly
+      // Emergency Fallback: If some files had fewer questions than requested 
+      // and we haven't reached 'total', fill from the general pool.
       if (selected.length < total) {
         let pool = [];
-        files.forEach(f => pool = pool.concat(fileQuestionMap[f]));
-
-        const selectedSet = new Set(selected);
-        pool = pool.filter(q => !selectedSet.has(q));
+        files.forEach(f => {
+          const selectedIds = new Set(selected.map(q => q.id || JSON.stringify(q)));
+          const extras = fileQuestionMap[f].filter(q => !selectedIds.has(q.id || JSON.stringify(q)));
+          pool = pool.concat(extras);
+        });
 
         pool.sort(() => 0.5 - Math.random());
-
-        const remaining = total - selected.length;
-        selected = selected.concat(pool.slice(0, remaining));
+        const gap = total - selected.length;
+        selected = selected.concat(pool.slice(0, gap));
       }
 
-      // Step 3: FINAL HARD LIMIT (safety)
-      return selected.slice(0, total).sort(() => 0.5 - Math.random());
+      // Final shuffle so the test doesn't appear grouped by topic
+      return selected.sort(() => 0.5 - Math.random());
     }
 
-    function pickBalancedQuestions(fileQuestionMap, total = 25, minPerFile = 2) {
-      let finalQuestions = [];
-
-      // Step 1: Take minimum required from each file
-      for (const file in fileQuestionMap) {
-        const arr = [...fileQuestionMap[file]].sort(() => 0.5 - Math.random());
-        finalQuestions = finalQuestions.concat(arr.slice(0, minPerFile));
-      }
-
-      // Step 2: Fill remaining slots randomly from all questions
-      let remainingPool = [];
-      for (const file in fileQuestionMap) {
-        remainingPool = remainingPool.concat(fileQuestionMap[file]);
-      }
-
-      // Remove already selected questions
-      const selectedSet = new Set(finalQuestions);
-      remainingPool = remainingPool.filter(q => !selectedSet.has(q));
-
-      // Shuffle remaining and fill
-      remainingPool.sort(() => 0.5 - Math.random());
-      const remainingNeeded = total - finalQuestions.length;
-
-      finalQuestions = finalQuestions.concat(remainingPool.slice(0, remainingNeeded));
-
-      // Final shuffle (so pattern not predictable)
-      return finalQuestions.sort(() => 0.5 - Math.random());
-    }
-
-    async function startMixedMock() {
-      const loadingEl = document.getElementById('loading-status');
-      // List of the HTML files containing your MCQ data
-      const files = [
-        './noun/noun_mcq_foundational.html',
-        './noun/noun_mcq_advanced.html',
-        './noun/noun_mcq_topper.html',
-        './pronoun/pronoun_mcq_foundational.html',
-        './pronoun/pronoun_mcq_advanced.html',
-        './pronoun/pronoun_mcq_topper.html',
-        './articles/article_mcq_foundational.html',
-        './articles/article_mcq_advanced.html',
-        './articles/article_mcq_topper.html',
-        './adjectives/adjective_mcq_foundational.html',
-        './adjectives/adjective_mcq_advanced.html',
-        './adjectives/adjective_mcq_topper.html'
-      ];
-      let fileQuestionMap = {};
-      let roadmapPool = {};
-
-      try {
-        const parser = new DOMParser();
-
-        for (const f of files) {
-          const res = await fetch(f);
-          const htmlText = await res.text();
-          const doc = parser.parseFromString(htmlText, 'text/html');
-
-          const qEl = doc.getElementById('qdata');
-          const rdEl = doc.getElementById('rddata');
-
-          if (qEl) {
-            const questions = JSON.parse(qEl.textContent);
-
-            // Store per file
-            fileQuestionMap[f] = questions;
-          }
-
-          if (rdEl) {
-            const roadmap = JSON.parse(rdEl.textContent);
-            Object.assign(roadmapPool, roadmap);
-          }
-        }
-
-        if (fileQuestionMap.length === 0) throw new Error("No questions found in the selected files.");
-
-        // Shuffle and pick 25 random questions
-        const shuffled = pickBalancedQuestions(fileQuestionMap, 25, 2);
-
-        loadingEl.style.display = 'none';
-        document.querySelector('.finish-wrap').style.display = 'block';
-
-        initQuiz(shuffled, roadmapPool);
-      } catch (err) {
-        let msg = err.message;
-        if (window.location.protocol === 'file:') {
-          msg = "Browsers block local file fetching for security. <br><strong>Please run this using a Local Server (e.g., VS Code Live Server) to fix this.</strong>";
-        }
-        loadingEl.innerHTML = `<span style="color:#8b1a1a;">Error: ${msg}</span>`;
-        console.error(err);
-      }
-    }
-    // startMixedMock();
     startSelectedMock();
   </script>
 </body>
