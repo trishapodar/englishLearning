@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subject Dashboard</title>
+    
+    <style>
+        /* 1. Essential Layout structure */
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 2. Bare-minimum Toggle Button positioning (No custom colors) */
+        #toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            cursor: pointer;
+            background-color: #36393f;
+            color: #ffffff;
+            border: 1px solid #7289da;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
+
+        /* 3. Panel mechanics (No background colors or borders added) */
+        #left-panel {
+            width: 250px; /* You can adjust this if your style.css uses a different width */
+            transition: width 0.3s ease; 
+            overflow-x: hidden; 
+            white-space: normal; 
+            padding-top: 40px; /* Just to ensure the top link isn't hidden behind the button */
+        }
+
+        /* 4. The "Collapsed" state */
+        #left-panel.collapsed {
+            width: 0;
+        }
+
+        /* 4.5 Nav Group Collapsible Logic */
+        .nav-group.group-collapsed .nav-item:not(.indent-1),
+        .nav-group.group-collapsed .nav-subgroup {
+            display: none;
+        }
+
+        /* 4.6 Nav Sub-group Collapsible Logic */
+        .nav-subgroup.subgroup-collapsed .nav-item:not(.indent-2) {
+            display: none;
+        }
+
+        .nav-item.indent-1, 
+        .nav-item.indent-2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .nav-item.indent-1::after {
+            content: '▾';
+        }
+
+        .nav-group.group-collapsed .nav-item.indent-1::after {
+            content: '▸';
+        }
+
+        .nav-item.indent-2::after {
+            content: '▾';
+            font-size: 0.85em;
+        }
+
+        .nav-subgroup.subgroup-collapsed .nav-item.indent-2::after {
+            content: '▸';
+        }
+
+        /* 5. Main content fills the rest of the space */
+        #main-panel {
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="toggle-btn" aria-expanded="true" aria-controls="left-panel">☰ Menu</button>
+
+    <nav id="left-panel">
+        <div class="nav-group">
+            <a href="./subject.html" target="content-frame" class="nav-item indent-1">English</a>
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/noun/noun_learn_guide.html" target="content-frame" class="nav-item indent-2">Noun</a>
+                <a href="./english/noun/noun_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
+                <a href="./english/noun/noun_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
+                <a href="./english/noun/noun_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
+                <a href="./english/noun/noun_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            </div>
+
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/pronoun/pronoun_learn_guide.html" target="content-frame" class="nav-item indent-2">Pronoun</a>
+                <a href="./english/pronoun/pronoun_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
+                <a href="./english/pronoun/pronoun_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
+                <a href="./english/pronoun/pronoun_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
+                <a href="./english/pronoun/pronoun_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            </div>
+
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/adjectives/adjective_learn_guide.html" target="content-frame" class="nav-item indent-2">Adjectives</a>
+                <a href="./english/adjectives/adjective_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
+                <a href="./english/adjectives/adjective_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
+                <a href="./english/adjectives/adjective_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
+                <a href="./english/adjectives/adjective_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            </div>
+
+             <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/articles/article_learn_guide.html" target="content-frame" class="nav-item indent-2">Articles</a>
+                <a href="./english/articles/article_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
+                <a href="./english/articles/article_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
+                <a href="./english/articles/article_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
+                <a href="./english/articles/article_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            </div>
+
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/verbs/verb_learn_guide.html" target="content-frame" class="nav-item indent-2">Verbs</a>
+                <a href="./english/verbs/verb_mcq_foundational.html" target="content-frame" class="nav-item indent-3">Foundational MCQ</a>
+                <a href="./english/verbs/verb_mcq_advanced.html" target="content-frame" class="nav-item indent-3">Advanced MCQ</a>
+                <a href="./english/verbs/verb_mcq_topper.html" target="content-frame" class="nav-item indent-3">Topper MCQ</a>
+                <a href="./english/verbs/verb_mcq_mixed_difficulty.html" target="content-frame" class="nav-item indent-3">Mixed Difficulty MCQ</a>
+            </div>
+
+             <div class="nav-subgroup subgroup-collapsed">
+                <a href="./english/mixed_mock_test.html" target="content-frame" class="nav-item indent-2">Mixed Test</a>
+            </div>
+           
+        </div>
+        <div class="nav-group">
+            <a href="./subject.html" target="content-frame" class="nav-item indent-1">General Affairs</a>
+            <div class="nav-subgroup subgroup-collapsed">
+                <a href="./general_affairs/CLAT_Weekly_Digest_March_17_23_2026.html" target="content-frame" class="nav-item indent-2">Weekly 17 to 23 March 2026</a>
+                <a href="./general_affairs/CLAT_Weekly_Digest_March_24_30_2026.html" target="content-frame" class="nav-item indent-2">Weekly 24 to 30 March 2026</a>
+                <a href="./general_affairs/CLAT_Weekly_Digest_March_31_April_6_2026.html" target="content-frame" class="nav-item indent-2">Weekly 31 March to 6 April 2026</a>
+            </div>
+            
+        </div>
+    </nav>
+
+    <main id="main-panel">
+        <iframe name="content-frame" src="./subject.html">
+        </iframe>
+    </main>
+
+    <script>
+        const toggleBtn = document.getElementById('toggle-btn');
+        const leftPanel = document.getElementById('left-panel');
+        const menuIcon = '☰ Menu';
+        const closeIcon = '✕ Close';
+
+        toggleBtn.addEventListener('click', () => {
+            leftPanel.classList.toggle('collapsed');
+            const isCollapsed = leftPanel.classList.contains('collapsed');
+            toggleBtn.setAttribute('aria-expanded', !isCollapsed);
+            toggleBtn.textContent = isCollapsed ? menuIcon : closeIcon;
+        });
+
+        // Set initial button text based on panel's initial state (expanded)
+        toggleBtn.textContent = leftPanel.classList.contains('collapsed') ? menuIcon : closeIcon;
+
+        // Handle sub-group collapsing (indent-1 items)
+        document.querySelectorAll('.nav-item.indent-1').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('group-collapsed');
+            });
+        });
+
+        // Handle sub-sub-group collapsing (indent-2 items)
+        document.querySelectorAll('.nav-item.indent-2').forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentElement.classList.toggle('subgroup-collapsed');
+            });
+        });
+    </script>
+
+</body>
+</html>
