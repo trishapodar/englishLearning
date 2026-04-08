@@ -108,7 +108,7 @@
         </label>
 
         <label style="display:block; cursor:pointer;">
-          <input type="checkbox" value="adjectives" style="display:none;">
+          <input type="checkbox" value="verbs" style="display:none;">
           <span style="
         display:flex;
         justify-content:center;
@@ -275,7 +275,7 @@
       }
 
       const parser = new DOMParser();
-      let fileQuestionMap = {};
+      let topicFileMap = {};
       let roadmapPool = {};
 
       // Create a mapping to remember which file belongs to which topic
@@ -283,6 +283,7 @@
 
       // Collect all files from selected topics
       selectedTopics.forEach(t => {
+        topicFileMap[t] = {};
         (TOPIC_FILES[t] || []).forEach(filePath => {
           fileToTopicMap[filePath] = t;
         });
@@ -300,32 +301,33 @@
           const rdEl = doc.getElementById('rddata');
 
           if (qEl) {
-            fileQuestionMap[f] = JSON.parse(qEl.textContent);
+            const topic = fileToTopicMap[f];
+            topicFileMap[topic][f] = JSON.parse(qEl.textContent);
           }
           if (rdEl) {
             Object.assign(roadmapPool, JSON.parse(rdEl.textContent));
           }
         }
 
-        // Use the balanced logic to get the final array
-        const finalQuestions = buildBalancedSet(fileQuestionMap, 25);
+        // Use the two-tier balanced logic to get the final array
+        const finalQuestions = buildBalancedSet(topicFileMap, 25);
 
         // --- NEW: Calculate counts per topic for the Masthead ---
         const topicCounts = {};
-        // Initialize selected topics with 0
         selectedTopics.forEach(t => topicCounts[t] = 0);
 
         // Identify where each question came from
-        // (Note: This assumes your question objects don't already have a 'topic' key. 
-        // If they do, you can just count that directly.)
         finalQuestions.forEach(q => {
-          // Find which file this question belongs to in our map
-          for (let filePath in fileQuestionMap) {
-            if (fileQuestionMap[filePath].includes(q)) {
-              const topic = fileToTopicMap[filePath];
-              topicCounts[topic]++;
-              break;
+          let found = false;
+          for (let topic in topicFileMap) {
+            for (let f in topicFileMap[topic]) {
+              if (topicFileMap[topic][f].includes(q)) {
+                topicCounts[topic]++;
+                found = true;
+                break;
+              }
             }
+            if (found) break;
           }
         });
 
@@ -355,52 +357,76 @@
       }
     }
 
-    function buildBalancedSet(fileQuestionMap, total = 25) {
-      const files = Object.keys(fileQuestionMap);
-      const numFiles = files.length;
+    function buildBalancedSet(topicFileMap, total = 25) {
+      const topics = Object.keys(topicFileMap);
+      const numTopics = topics.length;
 
-      if (numFiles === 0) return [];
+      if (numTopics === 0) return [];
 
-      // Calculate base questions per file and the remainder
-      const basePerFile = Math.floor(total / numFiles);
-      let remainder = total % numFiles;
+      const basePerTopic = Math.floor(total / numTopics);
+      let remainderTopic = total % numTopics;
 
-      let selected = [];
+      let finalSelected = [];
 
-      files.forEach((f, index) => {
-        // Determine how many questions THIS specific file needs to contribute
-        // We add 1 from the remainder pool until the remainder is exhausted
-        let countToTake = basePerFile + (remainder > 0 ? 1 : 0);
-        if (remainder > 0) remainder--;
+      topics.forEach((topic) => {
+        let countForThisTopic = basePerTopic + (remainderTopic > 0 ? 1 : 0);
+        if (remainderTopic > 0) remainderTopic--;
 
-        // Shuffle this file's specific questions
-        const arr = [...fileQuestionMap[f]].sort(() => 0.5 - Math.random());
+        const filesMap = topicFileMap[topic];
+        const files = Object.keys(filesMap);
+        const numFiles = files.length;
 
-        // Take the calculated amount (or all available if file is too small)
-        const take = Math.min(countToTake, arr.length);
-        selected = selected.concat(arr.slice(0, take));
-      });
+        if (numFiles === 0) return;
 
-      // Emergency Fallback: If some files had fewer questions than requested 
-      // and we haven't reached 'total', fill from the general pool.
-      if (selected.length < total) {
-        let pool = [];
-        files.forEach(f => {
-          const selectedIds = new Set(selected.map(q => q.id || JSON.stringify(q)));
-          const extras = fileQuestionMap[f].filter(q => !selectedIds.has(q.id || JSON.stringify(q)));
-          pool = pool.concat(extras);
+        const basePerFile = Math.floor(countForThisTopic / numFiles);
+        let remainderFile = countForThisTopic % numFiles;
+
+        let topicSelected = [];
+
+        files.forEach((f) => {
+          let countForThisFile = basePerFile + (remainderFile > 0 ? 1 : 0);
+          if (remainderFile > 0) remainderFile--;
+
+          const arr = [...filesMap[f]].sort(() => 0.5 - Math.random());
+          const take = Math.min(countForThisFile, arr.length);
+          topicSelected = topicSelected.concat(arr.slice(0, take));
         });
 
-        pool.sort(() => 0.5 - Math.random());
-        const gap = total - selected.length;
-        selected = selected.concat(pool.slice(0, gap));
+        // Emergency Fallback for this topic
+        if (topicSelected.length < countForThisTopic) {
+          let pool = [];
+          files.forEach(f => {
+            const selectedIds = new Set(topicSelected.map(q => q.id || JSON.stringify(q)));
+            const extras = filesMap[f].filter(q => !selectedIds.has(q.id || JSON.stringify(q)));
+            pool = pool.concat(extras);
+          });
+
+          pool.sort(() => 0.5 - Math.random());
+          const gap = countForThisTopic - topicSelected.length;
+          topicSelected = topicSelected.concat(pool.slice(0, gap));
+        }
+
+        finalSelected = finalSelected.concat(topicSelected);
+      });
+
+      // Global Fallback
+      if (finalSelected.length < total) {
+        let globalPool = [];
+        topics.forEach(t => {
+          Object.values(topicFileMap[t]).forEach(arr => {
+            const selectedIds = new Set(finalSelected.map(q => q.id || JSON.stringify(q)));
+            const extras = arr.filter(q => !selectedIds.has(q.id || JSON.stringify(q)));
+            globalPool = globalPool.concat(extras);
+          });
+        });
+
+        globalPool.sort(() => 0.5 - Math.random());
+        const gap = total - finalSelected.length;
+        finalSelected = finalSelected.concat(globalPool.slice(0, gap));
       }
 
-      // Final shuffle so the test doesn't appear grouped by topic
-      return selected.sort(() => 0.5 - Math.random());
+      return finalSelected.sort(() => 0.5 - Math.random());
     }
-
-    startSelectedMock();
   </script>
 </body>
 
