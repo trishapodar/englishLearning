@@ -1,0 +1,1177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tenses in English Grammar — Complete Study Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+/* ═══════════════════════════════════════════════════
+   GRAMMAR STUDIO — EMBEDDED GUIDE STYLESHEET v1.0
+   ═══════════════════════════════════════════════════ */
+:root {
+  --bg:           #FAF8F4;
+  --surface:      #FFFFFF;
+  --topbar-bg:    #16162A;
+  --topbar-text:  #F0ECE4;
+  --accent:       #C8963E;
+  --accent-light: #F5E9D3;
+  --cobalt:       #2A52BE;
+  --cobalt-light: #E8EEFF;
+  --text-main:    #1C1C2E;
+  --text-sub:     #5A5A7A;
+  --text-muted:   #8888A8;
+  --border:       #E2DDD4;
+  --sidebar-w:    262px;
+  --topbar-h:     54px;
+  --def-bg:       #EEF4FF;
+  --def-border:   #7BA7E0;
+  --rule-bg:      #F0FAF0;
+  --rule-border:  #5CAD6A;
+  --warn-bg:      #FFF8EC;
+  --warn-border:  #E8A020;
+  --tip-bg:       #F0FAFA;
+  --tip-border:   #3AACAC;
+  --correct:      #2D8A4E;
+  --wrong:        #C0392B;
+  --code-bg:      #F2EFE8;
+  --radius:       8px;
+  --shadow:       0 2px 12px rgba(0,0,0,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--text-main);line-height:1.75}
+#topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--topbar-h);background:var(--topbar-bg);display:flex;align-items:center;gap:16px;padding:0 20px;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.tb-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--accent);white-space:nowrap;flex-shrink:0}
+.tb-sep{width:1px;height:24px;background:rgba(255,255,255,0.15);flex-shrink:0}
+.tb-title{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--topbar-text);opacity:0.75;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-right{flex-shrink:0}
+#menu-toggle{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:var(--topbar-text);font-size:0.8rem;padding:5px 12px;border-radius:4px;cursor:pointer;transition:background 0.2s}
+#menu-toggle:hover{background:rgba(255,255,255,0.2)}
+#progress-bar{position:fixed;top:var(--topbar-h);left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:199}
+#progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#E8C06A);transition:width 0.1s linear}
+#sidebar{position:fixed;top:var(--topbar-h);left:0;bottom:0;width:var(--sidebar-w);z-index:150;background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;padding:12px 0 40px;transform:translateX(-100%);transition:transform 0.25s cubic-bezier(0.4,0,0.2,1);box-shadow:4px 0 20px rgba(0,0,0,0.06)}
+#sidebar.open{transform:translateX(0)}
+.sid-head{font-family:'Playfair Display',serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);padding:8px 20px 12px;border-bottom:1px solid var(--border);margin-bottom:6px}
+.sid-item{display:flex;align-items:center;gap:10px;padding:8px 20px;cursor:pointer;font-size:0.82rem;color:var(--text-sub);text-decoration:none;transition:background 0.15s,color 0.15s;border-left:3px solid transparent}
+.sid-item:hover,.sid-item.active{background:var(--accent-light);color:var(--text-main);border-left-color:var(--accent)}
+.sid-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--code-bg);border-radius:50%;font-size:0.72rem;font-family:'Fira Code',monospace;color:var(--text-sub);flex-shrink:0;font-weight:500}
+.sid-item.active .sid-num{background:var(--accent);color:#fff}
+#main{margin-top:calc(var(--topbar-h) + 3px);min-height:calc(100vh - var(--topbar-h) - 3px)}
+.content-inner{max-width:800px;margin:0 auto;padding:0 28px 80px}
+.hero{padding:60px 0 50px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.hero-kicker{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);font-family:'Fira Code',monospace;margin-bottom:12px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;color:var(--text-main);margin-bottom:16px}
+.hero-sub{font-size:1.05rem;color:var(--text-sub);max-width:540px;line-height:1.65;margin-bottom:24px}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;font-family:'Fira Code',monospace;letter-spacing:0.04em}
+.chip-gold{background:var(--accent-light);color:#7A5A10;border:1px solid #D4A84B}
+.chip-cobalt{background:var(--cobalt-light);color:#1A3A8A;border:1px solid #6A8ADE}
+.topic-section{padding:52px 0 20px;border-bottom:1px solid var(--border);position:relative}
+.topic-section:last-child{border-bottom:none}
+.section-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:var(--border);line-height:1;margin-bottom:-10px;letter-spacing:-0.02em}
+.topic-section h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--text-main);margin-bottom:4px;line-height:1.25}
+.accent{color:var(--accent)}
+.section-subtitle{font-size:0.85rem;color:var(--text-muted);font-style:italic;margin-bottom:24px;padding-bottom:16px;border-bottom:1px dashed var(--border)}
+.sub-head{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--text-main);margin:28px 0 12px}
+.body-text{color:var(--text-sub);font-size:0.97rem;line-height:1.8;margin-bottom:14px}
+.card-bg{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow)}
+.def-box{border-left:4px solid var(--def-border);background:var(--def-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.95rem}
+.rule-box{border-left:4px solid var(--rule-border);background:var(--rule-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.warn-box{border-left:4px solid var(--warn-border);background:var(--warn-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.tip-box{border-left:4px solid var(--tip-border);background:var(--tip-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.rule-title,.warn-title,.tip-title{font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;letter-spacing:0.03em;margin-bottom:10px}
+.rule-title{color:#2A6A35}
+.warn-title{color:#8A5010}
+.tip-title{color:#1A7A7A}
+.rule-box ul,.warn-box ul,.tip-box ul,.def-box ul{margin:8px 0 0 16px;line-height:2}
+.rule-box p,.warn-box p,.tip-box p,.def-box p{margin-bottom:4px}
+.sentence-list{list-style:none;padding:0;margin:12px 0}
+.sentence-list li{padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:6px;font-size:0.93rem}
+.note{font-size:0.8rem;color:var(--text-muted);font-style:italic;margin-left:8px}
+.cmp-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:0.88rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.cmp-table th{background:var(--topbar-bg);color:var(--topbar-text);padding:10px 14px;text-align:left;font-family:'Fira Code',monospace;font-weight:500;font-size:0.8rem;letter-spacing:0.04em}
+.cmp-table td{padding:9px 14px;border-bottom:1px solid var(--border);background:var(--surface);vertical-align:top}
+.cmp-table tr:last-child td{border-bottom:none}
+.cmp-table tr:nth-child(even) td{background:#F7F4EE}
+.example-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:16px 0}
+.eg-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 12px;box-shadow:var(--shadow)}
+.eg-label{font-family:'Fira Code',monospace;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:8px}
+.eg-words{display:flex;flex-wrap:wrap;gap:5px}
+.eg-words span{background:var(--code-bg);padding:2px 8px;border-radius:4px;font-size:0.82rem;color:var(--text-main);font-family:'Source Serif 4',serif;font-style:italic}
+.tag-correct{color:var(--correct);font-weight:600}
+.tag-wrong{color:var(--wrong);font-weight:600}
+code{font-family:'Fira Code',monospace;font-size:0.85em;background:var(--code-bg);padding:1px 6px;border-radius:3px;color:var(--text-main)}
+code.tag-correct{background:#E8F8EE;color:var(--correct)}
+code.tag-wrong{background:#FEE8E8;color:var(--wrong)}
+.formula{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 0;font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--text-main)}
+.formula span{background:var(--accent-light);padding:4px 14px;border-radius:20px}
+.arr{background:none!important;padding:0!important;color:var(--accent);font-size:1.2rem}
+.ornament{text-align:center;color:var(--accent);font-size:1.1rem;padding:30px 0 10px;letter-spacing:0.2em}
+#btt{position:fixed;bottom:28px;right:24px;width:40px;height:40px;background:var(--topbar-bg);color:var(--accent);border:none;border-radius:50%;font-size:1.1rem;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;z-index:180}
+#btt.visible{opacity:1;pointer-events:auto}
+#btt:hover{transform:translateY(-2px)}
+@media(max-width:640px){
+  .content-inner{padding:0 16px 60px}
+  .hero{padding:36px 0 32px}
+  .cmp-table{font-size:0.8rem}
+  .cmp-table th,.cmp-table td{padding:7px 10px}
+  .section-num{font-size:3.5rem}
+}
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="tb-logo">Grammar Studio</div>
+  <div class="tb-sep"></div>
+  <div class="tb-title">Tenses in English Grammar &mdash; Complete Study Guide</div>
+  <div class="tb-right">
+    <button id="menu-toggle" onclick="toggleSidebar()">&#9776; Topics</button>
+  </div>
+</div>
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="sid-head">Topics &mdash; 17 Chapters</div>
+  <a class="sid-item active" onclick="goTo('s1')"><span class="sid-num">1</span>What Is a Tense?</a>
+  <a class="sid-item" onclick="goTo('s2')"><span class="sid-num">2</span>Simple Present</a>
+  <a class="sid-item" onclick="goTo('s3')"><span class="sid-num">3</span>Present Continuous</a>
+  <a class="sid-item" onclick="goTo('s4')"><span class="sid-num">4</span>Present Perfect</a>
+  <a class="sid-item" onclick="goTo('s5')"><span class="sid-num">5</span>Present Perfect Continuous</a>
+  <a class="sid-item" onclick="goTo('s6')"><span class="sid-num">6</span>Simple Past</a>
+  <a class="sid-item" onclick="goTo('s7')"><span class="sid-num">7</span>Past Continuous</a>
+  <a class="sid-item" onclick="goTo('s8')"><span class="sid-num">8</span>Past Perfect</a>
+  <a class="sid-item" onclick="goTo('s9')"><span class="sid-num">9</span>Past Perfect Continuous</a>
+  <a class="sid-item" onclick="goTo('s10')"><span class="sid-num">10</span>Simple Future</a>
+  <a class="sid-item" onclick="goTo('s11')"><span class="sid-num">11</span>Future Continuous</a>
+  <a class="sid-item" onclick="goTo('s12')"><span class="sid-num">12</span>Future Perfect</a>
+  <a class="sid-item" onclick="goTo('s13')"><span class="sid-num">13</span>Future Perfect Continuous</a>
+  <a class="sid-item" onclick="goTo('s14')"><span class="sid-num">14</span>Tense Concord &amp; Sequence</a>
+  <a class="sid-item" onclick="goTo('s15')"><span class="sid-num">15</span>Tense vs. Aspect</a>
+  <a class="sid-item" onclick="goTo('s16')"><span class="sid-num">16</span>Stative vs. Dynamic Verbs</a>
+  <a class="sid-item" onclick="goTo('s17')"><span class="sid-num">17</span>Common Errors &amp; Traps</a>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+<div class="content-inner">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-kicker">English Grammar &middot; Complete Reference</div>
+    <h1>Tenses in English<br>Grammar</h1>
+    <div class="hero-sub">A foundation-to-topper guide covering all 12 tenses, the tense&ndash;aspect distinction, sequence of tenses, stative verbs, and every trap that has ever appeared in competitive examinations.</div>
+    <div class="hero-chips">
+      <span class="chip chip-gold">17 Topics</span>
+      <span class="chip chip-cobalt">Foundation &rarr; Topper Level</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ SECTION 1 ═══════════════ -->
+  <section class="topic-section" id="s1">
+    <div class="section-num">1</div>
+    <h2>What Is a <span class="accent">Tense?</span></h2>
+    <div class="section-subtitle">The grammatical category that locates events in time &mdash; a foundation concept.</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>tense</strong> is a grammatical category expressed through verb inflection (or auxiliary + main-verb construction) that signals the <em>time</em> at which an action, event, or state occurs relative to a reference point &mdash; typically the moment of utterance. Tense is a <strong>deictic</strong> feature: it points outward from the utterance to a position on the time-line.</p>
+    </div>
+
+    <p class="body-text">English grammarians traditionally recognise <strong>three primary time-frames</strong> &mdash; past, present, and future &mdash; each subdivided into four <strong>aspects</strong>: simple, continuous (progressive), perfect, and perfect continuous. This yields the canonical twelve-tense matrix taught in schools and tested in examinations.</p>
+
+    <h3 class="sub-head">The Twelve-Tense Matrix</h3>
+
+    <table class="cmp-table">
+      <tr><th>Aspect</th><th>Past</th><th>Present</th><th>Future</th></tr>
+      <tr><td><strong>Simple</strong></td><td><em>worked</em></td><td><em>work / works</em></td><td><em>will work</em></td></tr>
+      <tr><td><strong>Continuous</strong></td><td><em>was working</em></td><td><em>am / is / are working</em></td><td><em>will be working</em></td></tr>
+      <tr><td><strong>Perfect</strong></td><td><em>had worked</em></td><td><em>have / has worked</em></td><td><em>will have worked</em></td></tr>
+      <tr><td><strong>Perf. Continuous</strong></td><td><em>had been working</em></td><td><em>have / has been working</em></td><td><em>will have been working</em></td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Prescriptive vs. Descriptive View of Tense</div>
+      <ul>
+        <li><strong>Prescriptive grammar</strong> (school/exam tradition): twelve tenses formed by time &times; aspect.</li>
+        <li><strong>Descriptive/formal linguistics</strong>: English has only <em>two</em> morphological tenses (present and past); &ldquo;future&rdquo; is expressed through modals, not inflection. For examination purposes, always follow the prescriptive twelve-tense model unless the paper explicitly invokes linguistics.</li>
+        <li><strong>Aspect</strong> encodes the <em>internal temporal structure</em> of the event; tense encodes <em>location on the time-line</em>. Conflating the two is the most common topper-level error.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; The Three Questions That Identify Any Tense</div>
+      <p>Ask three questions in order to name any verb form:</p>
+      <ul>
+        <li><strong>Time:</strong> Is the action past, present, or future?</li>
+        <li><strong>Completion:</strong> Is the action complete (<em>perfect</em>) or in progress (<em>continuous</em>) or neither (<em>simple</em>)?</li>
+        <li><strong>Duration into another time:</strong> Does it continue up to another time-point (<em>perfect continuous</em>)?</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; &ldquo;Tense&rdquo; Does Not Always Equal &ldquo;Time&rdquo;</div>
+      <p>The present simple can refer to future events (<em>&ldquo;The flight leaves at noon tomorrow.&rdquo;</em>) and habitual truths (<em>&ldquo;Water boils at 100&deg;C.&rdquo;</em>). The grammatical tense label is determined by <em>form</em>, not always by the real-world time being described.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Since &lsquo;leaves&rsquo; is about the future, it is the future tense.&rdquo;</em> <span class="note">Wrong &mdash; the form is present simple; the temporal reading is future.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;&lsquo;Leaves&rsquo; is present simple used with a future time-adverb.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 2 ═══════════════ -->
+  <section class="topic-section" id="s2">
+    <div class="section-num">2</div>
+    <h2>The <span class="accent">Simple Present</span> Tense</h2>
+    <div class="section-subtitle">Habits, universal truths, scheduled events, and performatives &mdash; the most versatile tense.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>simple present</strong> is formed with the base form of the verb (<code>V1</code>), adding <code>-s / -es</code> for third-person singular subjects. It expresses habitual actions, permanent states, general truths, and &mdash; in several modal uses &mdash; future-scheduled events and performative speech acts.</p>
+    </div>
+
+    <div class="formula">
+      <span>Subject</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 (+ s/es for he/she/it)</span>
+      <span class="arr">&rarr;</span>
+      <span>Simple Present</span>
+    </div>
+
+    <h3 class="sub-head">The Six Core Uses</h3>
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; When to Use the Simple Present</div>
+      <ul>
+        <li><strong>Habitual/Repeated actions:</strong> <em>&ldquo;She walks to school every day.&rdquo;</em> &mdash; signal words: <em>always, usually, often, sometimes, never, every&hellip;</em></li>
+        <li><strong>Universal truths &amp; scientific facts:</strong> <em>&ldquo;The sun rises in the east.&rdquo;</em> &mdash; true at all times.</li>
+        <li><strong>Permanent states:</strong> <em>&ldquo;He lives in Mumbai.&rdquo;</em> &mdash; state verbs (see Chapter 16).</li>
+        <li><strong>Scheduled future events:</strong> <em>&ldquo;The train departs at 6 a.m. tomorrow.&rdquo;</em> &mdash; fixed timetable.</li>
+        <li><strong>Performative acts:</strong> <em>&ldquo;I hereby declare the meeting open.&rdquo;</em> &mdash; the utterance IS the action.</li>
+        <li><strong>Narrative / Historic present:</strong> <em>&ldquo;Caesar crosses the Rubicon and changes history.&rdquo;</em> &mdash; vivid retelling.</li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Spelling Rules for Third-Person Singular</h3>
+    <table class="cmp-table">
+      <tr><th>Condition</th><th>Rule</th><th>Example</th></tr>
+      <tr><td>Ends in <code>-s, -sh, -ch, -x, -o</code></td><td>Add <code>-es</code></td><td><em>passes, watches, boxes, goes</em></td></tr>
+      <tr><td>Ends in consonant + <code>y</code></td><td>Drop <code>y</code>, add <code>-ies</code></td><td><em>carry &rarr; carries</em></td></tr>
+      <tr><td>Ends in vowel + <code>y</code></td><td>Add <code>-s</code></td><td><em>play &rarr; plays</em></td></tr>
+      <tr><td>All other verbs</td><td>Add <code>-s</code></td><td><em>run &rarr; runs</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Missing the Third-Person &ldquo;-s&rdquo;</div>
+      <p>The most penalised error in competitive exams is omitting the <code>-s / -es</code> suffix on third-person singular verbs in the simple present.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She go to the market daily.&rdquo;</em> <span class="note">Subject is third-person singular; verb must be <em>goes</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She goes to the market daily.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He do not understand.&rdquo;</em> <span class="note">Auxiliary must agree: <em>does not</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He does not understand.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Signal Words Checklist</div>
+      <p>The following adverbs almost always accompany the simple present:</p>
+      <div class="example-grid">
+        <div class="eg-card">
+          <div class="eg-label">Frequency</div>
+          <div class="eg-words"><span>always</span><span>usually</span><span>often</span><span>rarely</span><span>never</span></div>
+        </div>
+        <div class="eg-card">
+          <div class="eg-label">Regularity</div>
+          <div class="eg-words"><span>every day</span><span>on Sundays</span><span>twice a week</span></div>
+        </div>
+        <div class="eg-card">
+          <div class="eg-label">Truth markers</div>
+          <div class="eg-words"><span>generally</span><span>universally</span><span>as a rule</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 3 ═══════════════ -->
+  <section class="topic-section" id="s3">
+    <div class="section-num">3</div>
+    <h2>The <span class="accent">Present Continuous</span> Tense</h2>
+    <div class="section-subtitle">Actions in progress at the moment of speaking, temporary situations, and planned futures.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>present continuous</strong> (also called the <em>present progressive</em>) is formed with the present tense of <code>be</code> (<em>am / is / are</em>) + the present participle (<code>V1 + -ing</code>). It encodes an action as <em>ongoing</em> at or around the time of utterance, or a temporary state, or a future arrangement.</p>
+    </div>
+
+    <div class="formula">
+      <span>am / is / are</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 + -ing</span>
+      <span class="arr">&rarr;</span>
+      <span>Present Continuous</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Four Uses of the Present Continuous</div>
+      <ul>
+        <li><strong>Action happening now:</strong> <em>&ldquo;She is writing a letter at this moment.&rdquo;</em></li>
+        <li><strong>Temporary situations:</strong> <em>&ldquo;I am staying at a hotel this week.&rdquo;</em> &mdash; contrasts with a permanent state.</li>
+        <li><strong>Future personal arrangement:</strong> <em>&ldquo;We are meeting the client tomorrow.&rdquo;</em> &mdash; planned and confirmed.</li>
+        <li><strong>Changing / developing situation:</strong> <em>&ldquo;The global temperature is rising.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Spelling Rules for the Present Participle (-ing)</h3>
+    <table class="cmp-table">
+      <tr><th>Condition</th><th>Rule</th><th>Example</th></tr>
+      <tr><td>Ends in silent <code>-e</code></td><td>Drop <code>e</code>, add <code>-ing</code></td><td><em>make &rarr; making</em></td></tr>
+      <tr><td>One syllable, CVC pattern</td><td>Double final consonant, add <code>-ing</code></td><td><em>run &rarr; running</em></td></tr>
+      <tr><td>Stress on final syllable, CVC</td><td>Double final consonant, add <code>-ing</code></td><td><em>begin &rarr; beginning</em></td></tr>
+      <tr><td>Ends in <code>-ie</code></td><td>Change to <code>y</code>, add <code>-ing</code></td><td><em>lie &rarr; lying</em></td></tr>
+      <tr><td>All other cases</td><td>Simply add <code>-ing</code></td><td><em>read &rarr; reading</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Using Continuous with Stative Verbs</div>
+      <p>Verbs of <em>state, perception, and cognition</em> cannot normally be used in the continuous aspect because they describe <em>conditions</em>, not deliberate, ongoing activities. This is the single most-tested trap in competitive examinations.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I am knowing the answer.&rdquo;</em> <span class="note"><em>Know</em> is a stative verb; continuous is ungrammatical.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I know the answer.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is having a car.&rdquo;</em> <span class="note"><em>Have</em> (= possess) is stative.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She has a car.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Signal Words for Present Continuous</div>
+      <p>Look for these time expressions to identify the present continuous:</p>
+      <ul>
+        <li><em>now, at the moment, right now, currently, at present, today, this week, look! listen!</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 4 ═══════════════ -->
+  <section class="topic-section" id="s4">
+    <div class="section-num">4</div>
+    <h2>The <span class="accent">Present Perfect</span> Tense</h2>
+    <div class="section-subtitle">The bridge between past events and the present moment &mdash; the most misused tense in English.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>present perfect</strong> is formed with <code>have / has</code> + the <strong>past participle</strong> (<code>V3</code>). It expresses the <em>current relevance</em> of a past event: the event happened at an unspecified or psychologically &ldquo;open&rdquo; past time, and its result or significance persists into the present. The precise past moment is either unknown, unimportant, or deliberately left vague.</p>
+    </div>
+
+    <div class="formula">
+      <span>have / has</span>
+      <span class="arr">&rarr;</span>
+      <span>Past Participle (V3)</span>
+      <span class="arr">&rarr;</span>
+      <span>Present Perfect</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Five Core Uses of the Present Perfect</div>
+      <ul>
+        <li><strong>Unspecified past with present relevance:</strong> <em>&ldquo;I have lost my keys.&rdquo;</em> (I don&rsquo;t have them now.)</li>
+        <li><strong>Life experience up to now:</strong> <em>&ldquo;She has visited Paris three times.&rdquo;</em></li>
+        <li><strong>Change over time:</strong> <em>&ldquo;Prices have risen sharply.&rdquo;</em></li>
+        <li><strong>With &ldquo;just&rdquo; (very recent past):</strong> <em>&ldquo;He has just arrived.&rdquo;</em></li>
+        <li><strong>With &ldquo;since / for&rdquo; (duration to present):</strong> <em>&ldquo;We have lived here for ten years.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Since vs. For &mdash; The Classic Trap</h3>
+    <table class="cmp-table">
+      <tr><th>Word</th><th>Followed by&hellip;</th><th>Correct Example</th></tr>
+      <tr><td><code>since</code></td><td>A <em>point in time</em> (when the action started)</td><td><em>&ldquo;I have worked here since 2015.&rdquo;</em></td></tr>
+      <tr><td><code>for</code></td><td>A <em>period of time</em> (how long)</td><td><em>&ldquo;I have worked here for nine years.&rdquo;</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Present Perfect vs. Simple Past &mdash; The Most-Tested Distinction</div>
+      <p>Use the <strong>simple past</strong> when the time of the event is specified or implied. Use the <strong>present perfect</strong> when the time is unspecified and the present relevance matters.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I have seen that film yesterday.&rdquo;</em> <span class="note"><em>Yesterday</em> specifies a closed past time &mdash; use simple past.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I saw that film yesterday.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She went to Paris three times in her life.&rdquo;</em> <span class="note">Life experience up to now requires present perfect.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She has been to Paris three times in her life.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Signal Words for Present Perfect</div>
+      <ul>
+        <li><em>just, already, yet, ever, never, recently, lately, so far, up to now, since, for, this week/month/year, still (negative)</em></li>
+        <li>Key rule: if <strong>when</strong> + past time appears, switch to simple past.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 5 ═══════════════ -->
+  <section class="topic-section" id="s5">
+    <div class="section-num">5</div>
+    <h2>The <span class="accent">Present Perfect Continuous</span> Tense</h2>
+    <div class="section-subtitle">Ongoing actions that started in the past and continue &mdash; or have just stopped &mdash; with a present result.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>present perfect continuous</strong> is formed with <code>have / has been</code> + the present participle (<code>V1 + -ing</code>). It emphasises the <em>duration</em> and <em>continuity</em> of an activity that began in the past and either still continues or has very recently ended, leaving a visible result in the present.</p>
+    </div>
+
+    <div class="formula">
+      <span>have / has been</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 + -ing</span>
+      <span class="arr">&rarr;</span>
+      <span>Present Perfect Continuous</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Distinguishing Present Perfect from Present Perfect Continuous</div>
+      <ul>
+        <li><strong>Present Perfect:</strong> emphasises the <em>completion</em> or <em>result</em> of an action &mdash; <em>&ldquo;I have written three chapters.&rdquo;</em> (three chapters exist).</li>
+        <li><strong>Present Perfect Continuous:</strong> emphasises <em>duration</em> or <em>activity in progress</em> &mdash; <em>&ldquo;I have been writing all morning.&rdquo;</em> (the writing activity is foregrounded).</li>
+        <li>When a <strong>number/quantity</strong> appears, prefer the present perfect: <em>&ldquo;She has sent twenty emails today.&rdquo;</em></li>
+        <li>When <strong>how long</strong> or a visible <strong>present result</strong> is stressed, prefer the continuous: <em>&ldquo;You look tired &mdash; have you been running?&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;It has been raining since morning.&rdquo;</em> <span class="note">Duration up to now &mdash; activity still ongoing.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She has been waiting for two hours.&rdquo;</em> <span class="note">Emphasises the length of the waiting activity.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He has been knowing French for five years.&rdquo;</em> <span class="note"><em>Know</em> is stative; use present perfect: <em>has known</em>.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He has known French for five years.&rdquo;</em></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Stative Verbs Cannot Take the Continuous Aspect</div>
+      <p>This rule applies to the present perfect continuous as much as to the present continuous. Verbs like <em>know, love, believe, belong, contain, seem, consist</em> never take <code>-ing</code> in standard prescriptive usage, regardless of the time-frame.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 6 ═══════════════ -->
+  <section class="topic-section" id="s6">
+    <div class="section-num">6</div>
+    <h2>The <span class="accent">Simple Past</span> Tense</h2>
+    <div class="section-subtitle">Completed actions at a definite past time &mdash; the backbone of narration.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>simple past</strong> is formed with the <strong>past form of the verb</strong> (<code>V2</code>) &mdash; either a regular <code>-ed</code> inflection or an irregular form. It expresses a completed action, event, or state at a definite, specified, or implied past time that is now closed and separate from the present.</p>
+    </div>
+
+    <div class="formula">
+      <span>Subject</span>
+      <span class="arr">&rarr;</span>
+      <span>V2 (past form)</span>
+      <span class="arr">&rarr;</span>
+      <span>Simple Past</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; When to Use the Simple Past</div>
+      <ul>
+        <li><strong>Single completed action in the past:</strong> <em>&ldquo;She left the office at five.&rdquo;</em></li>
+        <li><strong>Series of completed actions:</strong> <em>&ldquo;He entered, sat down, and opened his laptop.&rdquo;</em></li>
+        <li><strong>Past habit or state:</strong> <em>&ldquo;When I was young, I played cricket every evening.&rdquo;</em></li>
+        <li><strong>Past condition in second conditional:</strong> <em>&ldquo;If I had more time, I would travel.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Spelling Rules for Regular Past Forms</h3>
+    <table class="cmp-table">
+      <tr><th>Condition</th><th>Rule</th><th>Example</th></tr>
+      <tr><td>Most verbs</td><td>Add <code>-ed</code></td><td><em>walk &rarr; walked</em></td></tr>
+      <tr><td>Ends in <code>-e</code></td><td>Add <code>-d</code></td><td><em>live &rarr; lived</em></td></tr>
+      <tr><td>Consonant + <code>y</code></td><td>Change <code>y</code> to <code>i</code>, add <code>-ed</code></td><td><em>try &rarr; tried</em></td></tr>
+      <tr><td>Short verb, CVC pattern</td><td>Double consonant, add <code>-ed</code></td><td><em>stop &rarr; stopped</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Using &ldquo;Did&rdquo; + V1 in Questions &amp; Negatives</div>
+      <p>A classic error is combining the auxiliary <em>did</em> with <code>V2</code> instead of <code>V1</code>. Because <em>did</em> carries all the past tense marking, the main verb must revert to its base form.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Did she went to school?&rdquo;</em> <span class="note"><em>Did</em> already marks past; main verb must be base form <em>go</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Did she go to school?&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He didn&rsquo;t finished his work.&rdquo;</em> <span class="note">Same principle: <em>didn&rsquo;t</em> + base form.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He didn&rsquo;t finish his work.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Signal Words for Simple Past</div>
+      <ul>
+        <li><em>yesterday, last week/month/year, ago, in 2010, then, at that time, once, when (+ specified time), in the past, formerly</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 7 ═══════════════ -->
+  <section class="topic-section" id="s7">
+    <div class="section-num">7</div>
+    <h2>The <span class="accent">Past Continuous</span> Tense</h2>
+    <div class="section-subtitle">The ongoing background of a past moment &mdash; interrupted actions, parallel activities, and scene-setting.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>past continuous</strong> is formed with <code>was / were</code> + the present participle (<code>V1 + -ing</code>). It describes an action that was <em>in progress</em> at a specific moment in the past, or that formed the ongoing background against which another shorter action occurred.</p>
+    </div>
+
+    <div class="formula">
+      <span>was / were</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 + -ing</span>
+      <span class="arr">&rarr;</span>
+      <span>Past Continuous</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The Four Uses of the Past Continuous</div>
+      <ul>
+        <li><strong>Action in progress at a past moment:</strong> <em>&ldquo;At midnight, she was still reading.&rdquo;</em></li>
+        <li><strong>Background action interrupted by a shorter event:</strong> <em>&ldquo;I was cooking when the phone rang.&rdquo;</em> &mdash; cooking = ongoing (past continuous); rang = short interruption (simple past).</li>
+        <li><strong>Two parallel past actions:</strong> <em>&ldquo;While she was singing, he was playing the guitar.&rdquo;</em></li>
+        <li><strong>Annoying habit in the past (with &ldquo;always&rdquo;):</strong> <em>&ldquo;He was always losing his keys.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Confusing &ldquo;When&rdquo; and &ldquo;While&rdquo;</div>
+      <p><code>when</code> typically introduces the <em>shorter, interrupting action</em> (simple past); <code>while</code> typically introduces the <em>longer, ongoing action</em> (past continuous). Mixing them up reverses the narrative logic.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;While the phone rang, I was cooking.&rdquo;</em> <span class="note">Ringing is instantaneous &mdash; use <em>when</em> for the interruption.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;When the phone rang, I was cooking.&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;While I was cooking, the phone rang.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;They were watching TV when the power went out.&rdquo;</em> <span class="note">Past continuous (background) + simple past (interruption).</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He was driving to work at 8 a.m. yesterday.&rdquo;</em> <span class="note">Action in progress at a specific past time.</span></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════ SECTION 8 ═══════════════ -->
+  <section class="topic-section" id="s8">
+    <div class="section-num">8</div>
+    <h2>The <span class="accent">Past Perfect</span> Tense</h2>
+    <div class="section-subtitle">The &ldquo;past of the past&rdquo; &mdash; establishing which of two past events happened first.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>past perfect</strong> is formed with <code>had</code> + the past participle (<code>V3</code>). It describes a past action that was <em>completed before</em> another specified past action or past time-point. It is essential for establishing chronological priority within a narrative.</p>
+    </div>
+
+    <div class="formula">
+      <span>had</span>
+      <span class="arr">&rarr;</span>
+      <span>Past Participle (V3)</span>
+      <span class="arr">&rarr;</span>
+      <span>Past Perfect</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Rules for Using the Past Perfect</div>
+      <ul>
+        <li><strong>Two past events:</strong> the earlier uses past perfect, the later uses simple past. <em>&ldquo;By the time the ambulance arrived, the patient had died.&rdquo;</em></li>
+        <li><strong>Reported speech back-shift:</strong> <em>&ldquo;She said she had finished the report.&rdquo;</em></li>
+        <li><strong>Third conditional:</strong> <em>&ldquo;If I had studied harder, I would have passed.&rdquo;</em></li>
+        <li><strong>After conjunctions of time:</strong> <em>after, as soon as, before, when, once, by the time</em> &mdash; use past perfect for the prior event.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Unnecessary Past Perfect (Over-Use)</div>
+      <p>The past perfect is required only when two past events are mentioned and sequence must be clarified. If <em>before</em> or <em>after</em> already makes the order unambiguous, the simple past may be used in informal contexts &mdash; but in formal/exam writing, use the past perfect for the earlier event.</p>
+      <ul>
+        <li><em>&ldquo;I finished before he arrived.&rdquo;</em> &mdash; acceptable informally (order clear from <em>before</em>).</li>
+        <li><em>&ldquo;I had finished before he arrived.&rdquo;</em> &mdash; preferred in formal / exam contexts.</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;After he had arrived, we had eaten dinner.&rdquo;</em> <span class="note">The later event (<em>eating</em>) should be simple past, not past perfect.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;After he had arrived, we ate dinner.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Signal Words for Past Perfect</div>
+      <ul>
+        <li><em>before, after, already, by the time, just, never&hellip;before, once, as soon as, when (with two past events), no sooner&hellip;than, hardly&hellip;when</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 9 ═══════════════ -->
+  <section class="topic-section" id="s9">
+    <div class="section-num">9</div>
+    <h2>The <span class="accent">Past Perfect Continuous</span> Tense</h2>
+    <div class="section-subtitle">An ongoing action that had been in progress up to a past moment &mdash; the rarest and most nuanced past tense.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>past perfect continuous</strong> is formed with <code>had been</code> + the present participle (<code>V1 + -ing</code>). It describes an action that had been <em>continuously in progress</em> up to a specific past point, or whose duration explains a past situation. It combines the &ldquo;priority&rdquo; of the past perfect with the &ldquo;duration&rdquo; of the continuous aspect.</p>
+    </div>
+
+    <div class="formula">
+      <span>had been</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 + -ing</span>
+      <span class="arr">&rarr;</span>
+      <span>Past Perfect Continuous</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; When to Use the Past Perfect Continuous</div>
+      <ul>
+        <li><strong>Duration up to a past moment:</strong> <em>&ldquo;She had been working for twelve hours when she finally stopped.&rdquo;</em></li>
+        <li><strong>Cause of a past state:</strong> <em>&ldquo;His eyes were red because he had been crying.&rdquo;</em></li>
+        <li><strong>Activity interrupted in the past:</strong> <em>&ldquo;They had been playing for an hour when it started to rain.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Past Perfect Continuous vs. Past Perfect</div>
+      <p>Choosing between them depends on whether <em>duration</em> or <em>completion</em> is the focus.</p>
+      <ul>
+        <li><em>&ldquo;She had written the letter.&rdquo;</em> &mdash; the letter was <strong>completed</strong> before the past reference point (past perfect).</li>
+        <li><em>&ldquo;She had been writing the letter for an hour.&rdquo;</em> &mdash; the <strong>duration</strong> of writing is emphasised (past perfect continuous).</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He had been knowing her for years when they met again.&rdquo;</em> <span class="note"><em>Know</em> is stative; use past perfect: <em>had known</em>.</span></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The ground was wet because it had been raining all night.&rdquo;</em> <span class="note">Past result explained by prior continuous activity.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;By 2010, scientists had been studying the virus for a decade.&rdquo;</em> <span class="note">Duration of research up to a past date.</span></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════ SECTION 10 ═══════════════ -->
+  <section class="topic-section" id="s10">
+    <div class="section-num">10</div>
+    <h2>The <span class="accent">Simple Future</span> Tense</h2>
+    <div class="section-subtitle">Predictions, spontaneous decisions, promises, and offers &mdash; and the many ways English expresses futurity.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>simple future</strong> is most commonly formed with the modal auxiliary <code>will</code> + base form of the verb (<code>V1</code>). It expresses a future event viewed as a whole, covering spontaneous decisions, predictions based on opinion, promises, offers, and requests. The construction <code>be going to + V1</code> is a closely related future form with distinct uses.</p>
+    </div>
+
+    <div class="formula">
+      <span>will / shall</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 (base form)</span>
+      <span class="arr">&rarr;</span>
+      <span>Simple Future</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Will vs. Be Going To &mdash; The Critical Distinction</div>
+      <ul>
+        <li><strong>Will &mdash; Spontaneous decision:</strong> <em>&ldquo;The phone is ringing &mdash; I&rsquo;ll get it.&rdquo;</em> (decided at the moment of speaking).</li>
+        <li><strong>Will &mdash; Prediction based on opinion:</strong> <em>&ldquo;I think it will rain tomorrow.&rdquo;</em></li>
+        <li><strong>Will &mdash; Promises / offers / requests / threats:</strong> <em>&ldquo;I will always love you.&rdquo;</em></li>
+        <li><strong>Be going to &mdash; Prior intention:</strong> <em>&ldquo;We are going to visit Paris next summer.&rdquo;</em> (planned before speaking).</li>
+        <li><strong>Be going to &mdash; Prediction from present evidence:</strong> <em>&ldquo;Look at those clouds &mdash; it is going to rain.&rdquo;</em> (visible evidence).</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Shall vs. Will &mdash; Formal Register Trap</div>
+      <p>In prescriptive British English, <em>shall</em> is used with first person (<em>I / We</em>) for simple future; <em>will</em> with second and third person. Reversing them adds emphasis (determination or command). In modern usage, <em>will</em> has largely displaced <em>shall</em> in all persons. Exam papers testing formal grammar may still penalise misuse.</p>
+      <ul>
+        <li><em>&ldquo;I will go&rdquo;</em> (modern neutral) vs. <em>&ldquo;I shall go&rdquo;</em> (formal British).</li>
+        <li><em>&ldquo;You shall not pass!&rdquo;</em> &mdash; <em>shall</em> with second person = strong command/determination.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Other Ways English Expresses the Future</div>
+      <ul>
+        <li><strong>Present continuous:</strong> <em>&ldquo;I am meeting her tomorrow.&rdquo;</em> (personal arrangement).</li>
+        <li><strong>Simple present:</strong> <em>&ldquo;The train leaves at noon.&rdquo;</em> (scheduled timetable).</li>
+        <li><strong>Be about to + V1:</strong> <em>&ldquo;The film is about to begin.&rdquo;</em> (imminent future).</li>
+        <li><strong>Be due to + V1:</strong> <em>&ldquo;The Prime Minister is due to speak at six.&rdquo;</em> (formal/expected).</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 11 ═══════════════ -->
+  <section class="topic-section" id="s11">
+    <div class="section-num">11</div>
+    <h2>The <span class="accent">Future Continuous</span> Tense</h2>
+    <div class="section-subtitle">Actions that will be in progress at a specific future moment or over a future period.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>future continuous</strong> is formed with <code>will be</code> + the present participle (<code>V1 + -ing</code>). It describes an action that will be <em>ongoing or in progress</em> at a particular moment in the future, or an action that will happen as part of a routine or natural course of events (without special arrangement).</p>
+    </div>
+
+    <div class="formula">
+      <span>will be</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 + -ing</span>
+      <span class="arr">&rarr;</span>
+      <span>Future Continuous</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Three Uses of the Future Continuous</div>
+      <ul>
+        <li><strong>Action in progress at a future moment:</strong> <em>&ldquo;At this time tomorrow, I will be flying to London.&rdquo;</em></li>
+        <li><strong>Politely enquiring about plans (neutral future):</strong> <em>&ldquo;Will you be attending the meeting?&rdquo;</em> &mdash; softer than <em>Will you attend?</em></li>
+        <li><strong>Action expected as part of a normal routine:</strong> <em>&ldquo;The manager will be reviewing the files shortly.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;When you arrive, I will be waiting at the gate.&rdquo;</em> <span class="note">Action ongoing at the future arrival moment.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;At noon, I will be knowing the results.&rdquo;</em> <span class="note"><em>Know</em> is stative; use simple future: <em>will know</em>.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;At noon, I will know the results.&rdquo;</em></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Future Continuous vs. Future Simple</div>
+      <p>The difference is one of <em>perspective</em>: the future simple views the event from outside as a complete whole; the future continuous views it from <em>inside</em>, as an activity in progress. This often creates a difference in politeness or tone in questions.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 12 ═══════════════ -->
+  <section class="topic-section" id="s12">
+    <div class="section-num">12</div>
+    <h2>The <span class="accent">Future Perfect</span> Tense</h2>
+    <div class="section-subtitle">Actions that will be completed before a specified future moment &mdash; the &ldquo;future looking back.&rdquo;</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>future perfect</strong> is formed with <code>will have</code> + the past participle (<code>V3</code>). It describes an action that will be <em>completed before</em> a stated future time-point. It invites the speaker to mentally project forward to a future moment and look <em>back</em> at something that will be finished by then.</p>
+    </div>
+
+    <div class="formula">
+      <span>will have</span>
+      <span class="arr">&rarr;</span>
+      <span>Past Participle (V3)</span>
+      <span class="arr">&rarr;</span>
+      <span>Future Perfect</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Key Rule for Future Perfect</div>
+      <ul>
+        <li>Always used with a future deadline: <em>by, by the time, before, by then, by next year</em>.</li>
+        <li><em>&ldquo;By Friday, she will have submitted the report.&rdquo;</em> &mdash; submission precedes Friday.</li>
+        <li><em>&ldquo;By the time you read this, I will have left.&rdquo;</em> &mdash; leaving precedes your reading.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Clause After &ldquo;By the Time&rdquo; Must Be Present Tense</div>
+      <p>In the subordinate clause introduced by <em>by the time</em>, use <strong>present simple</strong> (not future) to refer to the future action, because English does not normally use a future form inside a time clause.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;By the time you will arrive, I will have cooked.&rdquo;</em> <span class="note">Future form inside a time clause is non-standard.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;By the time you arrive, I will have cooked.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Signal Words for Future Perfect</div>
+      <ul>
+        <li><em>by, by the time, before, by then, by [future date/time], in [duration] from now</em></li>
+        <li>Example: <em>&ldquo;In three years, he will have graduated.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 13 ═══════════════ -->
+  <section class="topic-section" id="s13">
+    <div class="section-num">13</div>
+    <h2>The <span class="accent">Future Perfect Continuous</span> Tense</h2>
+    <div class="section-subtitle">The duration of an ongoing action up to a future moment &mdash; the most advanced tense in the matrix.</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>future perfect continuous</strong> is formed with <code>will have been</code> + the present participle (<code>V1 + -ing</code>). It expresses the <em>duration</em> of an activity that will still be in progress at a specified future time &mdash; emphasising how long the activity will have continued by that point.</p>
+    </div>
+
+    <div class="formula">
+      <span>will have been</span>
+      <span class="arr">&rarr;</span>
+      <span>V1 + -ing</span>
+      <span class="arr">&rarr;</span>
+      <span>Future Perfect Continuous</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; When to Use the Future Perfect Continuous</div>
+      <ul>
+        <li>Emphasises the <em>uninterrupted duration</em> of an activity up to a future point: <em>&ldquo;By December, she will have been working here for twenty years.&rdquo;</em></li>
+        <li>Stresses <em>cause</em> at a future moment: <em>&ldquo;When you meet him, he will have been travelling for thirty hours &mdash; he will be exhausted.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Future Perfect Continuous vs. Future Perfect</div>
+      <p>The difference mirrors that between present perfect and present perfect continuous:</p>
+      <ul>
+        <li><em>&ldquo;By noon, I will have written the essay.&rdquo;</em> &mdash; <strong>completion</strong> is emphasised (future perfect).</li>
+        <li><em>&ldquo;By noon, I will have been writing for six hours.&rdquo;</em> &mdash; <strong>duration</strong> is emphasised (future perfect continuous).</li>
+        <li><span class="tag-wrong">&#10007;</span> Stative verbs cannot take this form: <em>&ldquo;By then, I will have been knowing her for years.&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;By then, I will have known her for years.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 14 ═══════════════ -->
+  <section class="topic-section" id="s14">
+    <div class="section-num">14</div>
+    <h2>Tense Concord &amp; <span class="accent">Sequence of Tenses</span></h2>
+    <div class="section-subtitle">The systematic back-shifting of tenses in reported speech and complex sentences &mdash; an examination favourite.</div>
+
+    <div class="def-box card-bg">
+      <p><strong>Sequence of tenses</strong> (also called <em>tense harmony</em> or <em>concordance of tenses</em>) is the grammatical principle that the tense of a subordinate clause is determined &mdash; or attracted &mdash; by the tense of the main (reporting) clause. When the main verb is in the past, subordinate verbs are generally shifted one step back in time.</p>
+    </div>
+
+    <h3 class="sub-head">The Back-Shifting Chart for Reported Speech</h3>
+    <table class="cmp-table">
+      <tr><th>Direct Speech Tense</th><th>Reported Speech Tense</th><th>Example</th></tr>
+      <tr><td>Simple present</td><td>Simple past</td><td><em>&ldquo;I work here.&rdquo; &rarr; He said he worked there.</em></td></tr>
+      <tr><td>Present continuous</td><td>Past continuous</td><td><em>&ldquo;I am working.&rdquo; &rarr; He said he was working.</em></td></tr>
+      <tr><td>Present perfect</td><td>Past perfect</td><td><em>&ldquo;I have finished.&rdquo; &rarr; He said he had finished.</em></td></tr>
+      <tr><td>Simple past</td><td>Past perfect</td><td><em>&ldquo;I went.&rdquo; &rarr; He said he had gone.</em></td></tr>
+      <tr><td>Will</td><td>Would</td><td><em>&ldquo;I will come.&rdquo; &rarr; He said he would come.</em></td></tr>
+      <tr><td>Can</td><td>Could</td><td><em>&ldquo;I can swim.&rdquo; &rarr; He said he could swim.</em></td></tr>
+      <tr><td>May</td><td>Might</td><td><em>&ldquo;I may leave.&rdquo; &rarr; He said he might leave.</em></td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Exceptions to Back-Shifting</div>
+      <ul>
+        <li><strong>Universal / scientific truths:</strong> <em>&ldquo;She said the earth revolves around the sun.&rdquo;</em> &mdash; never back-shift a permanent fact.</li>
+        <li><strong>Historical facts:</strong> <em>&ldquo;He said that Shakespeare was born in 1564.&rdquo;</em> &mdash; fact unchanged.</li>
+        <li><strong>Modal &ldquo;would, could, might, should, ought to&rdquo;:</strong> these do not back-shift further &mdash; they are already the back-shifted forms.</li>
+        <li><strong>Present reporting verb:</strong> if the main verb is present (<em>says, tells</em>), no back-shift is required: <em>&ldquo;She says she is tired.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Failing to Back-Shift When Required</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He said that he is tired.&rdquo;</em> <span class="note">Reporting verb <em>said</em> is past; back-shift to <em>was</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He said that he was tired.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She told me she will finish by noon.&rdquo;</em> <span class="note"><em>Will</em> must back-shift to <em>would</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She told me she would finish by noon.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Tense Concord in Conditional Sentences</h3>
+    <table class="cmp-table">
+      <tr><th>Type</th><th>If-Clause</th><th>Main Clause</th><th>Use</th></tr>
+      <tr><td><strong>Zero</strong></td><td>Simple present</td><td>Simple present</td><td>Universal truths</td></tr>
+      <tr><td><strong>First</strong></td><td>Simple present</td><td>Will + V1</td><td>Real / likely future</td></tr>
+      <tr><td><strong>Second</strong></td><td>Simple past</td><td>Would + V1</td><td>Unreal present/future</td></tr>
+      <tr><td><strong>Third</strong></td><td>Past perfect</td><td>Would have + V3</td><td>Unreal past</td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Using &ldquo;Would&rdquo; in the If-Clause</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;If you would help me, I would finish sooner.&rdquo;</em> <span class="note">Standard conditionals never use <em>would</em> in the <em>if</em>-clause.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;If you helped me, I would finish sooner.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 15 ═══════════════ -->
+  <section class="topic-section" id="s15">
+    <div class="section-num">15</div>
+    <h2>Tense vs. <span class="accent">Aspect</span> &mdash; The Formal Distinction</h2>
+    <div class="section-subtitle">A topper-level theoretical framework that underpins every tense question in advanced examinations.</div>
+
+    <div class="def-box card-bg">
+      <p><strong>Tense</strong> is the grammatical encoding of <em>time location</em> relative to a deictic centre (usually the utterance time). <strong>Aspect</strong> is a grammatical feature that encodes the <em>internal temporal structure</em> of the event or situation &mdash; how the event unfolds over time, regardless of when it occurs. In English, tense and aspect interact to produce the twelve-tense matrix.</p>
+    </div>
+
+    <h3 class="sub-head">The Two Aspects in English</h3>
+    <table class="cmp-table">
+      <tr><th>Aspect</th><th>Technical Name</th><th>Auxiliary Marker</th><th>Meaning</th></tr>
+      <tr><td><strong>Perfective</strong></td><td>Perfect aspect</td><td><code>have/has/had + V3</code></td><td>Completed action with current relevance; retrospective view</td></tr>
+      <tr><td><strong>Progressive</strong></td><td>Continuous aspect</td><td><code>be + V-ing</code></td><td>Ongoing, in-progress activity; internal view of event</td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Formal Principles of Aspect</div>
+      <ul>
+        <li><strong>Perfective aspect</strong> (<em>have + V3</em>) creates a <em>retrospective</em> viewpoint &mdash; the speaker looks back from one time-point to an earlier event. This is why the present perfect can never co-occur with a closed past-time adverb like <em>yesterday</em>.</li>
+        <li><strong>Progressive aspect</strong> (<em>be + V-ing</em>) creates an <em>internal</em> viewpoint &mdash; the speaker is, metaphorically, inside the event watching it unfold. This is why it cannot describe states (which have no internal structure to observe).</li>
+        <li><strong>Both aspects combined</strong> (<em>have been + V-ing</em>) gives the perfect continuous, encoding both retrospective view AND internal progressive structure.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; The Aspectual Viewpoint Test for Toppers</div>
+      <p>To verify the correct aspect, ask: <em>&ldquo;Am I looking at the event from inside (progressive) or from outside/after completion (perfect)?&rdquo;</em></p>
+      <ul>
+        <li><em>&ldquo;I was reading&rdquo;</em> &mdash; inside the event; progressive (continuous) viewpoint.</li>
+        <li><em>&ldquo;I had read&rdquo;</em> &mdash; outside, after completion; perfect viewpoint.</li>
+        <li><em>&ldquo;I had been reading&rdquo;</em> &mdash; inside a duration that itself precedes another past point; perfect progressive viewpoint.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; &ldquo;English Has Only Two Tenses&rdquo; &mdash; The Linguist&rsquo;s Claim</div>
+      <p>Advanced linguistics papers sometimes state that English has only <em>two morphological tenses</em>: present (<em>works</em>) and past (<em>worked</em>). The &ldquo;future&rdquo; is not a tense by this definition because English verbs do not inflect for futurity &mdash; instead, future meaning is achieved by modals (<em>will, shall</em>) or periphrastic constructions (<em>be going to</em>). In examinations, unless the question is from a university-level linguistics paper, use the prescriptive twelve-tense model.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════ SECTION 16 ═══════════════ -->
+  <section class="topic-section" id="s16">
+    <div class="section-num">16</div>
+    <h2><span class="accent">Stative</span> vs. Dynamic Verbs</h2>
+    <div class="section-subtitle">The semantic distinction that governs which verbs can take the continuous aspect &mdash; and when &ldquo;rules&rdquo; can be broken.</div>
+
+    <div class="def-box card-bg">
+      <p><strong>Stative verbs</strong> describe <em>states</em> &mdash; conditions, mental attitudes, perceptions, and relationships that simply exist rather than being actively performed. Because they describe unchanging states with no internal temporal structure, they resist the progressive aspect. <strong>Dynamic verbs</strong> describe deliberate, ongoing activities or events with an internal structure, and freely take the continuous aspect.</p>
+    </div>
+
+    <h3 class="sub-head">Categories of Stative Verbs</h3>
+    <div class="example-grid">
+      <div class="eg-card">
+        <div class="eg-label">Cognition</div>
+        <div class="eg-words"><span>know</span><span>believe</span><span>think</span><span>understand</span><span>realise</span><span>remember</span><span>forget</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Emotion</div>
+        <div class="eg-words"><span>love</span><span>hate</span><span>like</span><span>prefer</span><span>fear</span><span>want</span><span>wish</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Perception</div>
+        <div class="eg-words"><span>see</span><span>hear</span><span>smell</span><span>taste</span><span>feel</span><span>sound</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Possession</div>
+        <div class="eg-words"><span>have</span><span>own</span><span>possess</span><span>belong</span><span>contain</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Being / Relation</div>
+        <div class="eg-words"><span>be</span><span>seem</span><span>appear</span><span>consist</span><span>include</span><span>resemble</span></div>
+      </div>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Dual-Use Verbs &mdash; Stative and Dynamic</div>
+      <p>Several high-frequency verbs can be either stative OR dynamic, depending on meaning. This is a premium topper-level trap:</p>
+      <ul>
+        <li><strong>Think:</strong> <em>&ldquo;I think you are right.&rdquo;</em> (stative = opinion) vs. <em>&ldquo;I am thinking about the problem.&rdquo;</em> (dynamic = mental process in progress).</li>
+        <li><strong>Have:</strong> <em>&ldquo;She has a car.&rdquo;</em> (stative = possession) vs. <em>&ldquo;We are having dinner.&rdquo;</em> (dynamic = experiencing an activity).</li>
+        <li><strong>See:</strong> <em>&ldquo;I see what you mean.&rdquo;</em> (stative = understand) vs. <em>&ldquo;I am seeing the doctor today.&rdquo;</em> (dynamic = meeting/visiting).</li>
+        <li><strong>Smell / Taste:</strong> <em>&ldquo;The soup tastes wonderful.&rdquo;</em> (stative = property) vs. <em>&ldquo;The chef is tasting the soup.&rdquo;</em> (dynamic = deliberate action).</li>
+        <li><strong>Feel:</strong> <em>&ldquo;The fabric feels soft.&rdquo;</em> (stative) vs. <em>&ldquo;She is feeling better.&rdquo;</em> (dynamic = gradually improving).</li>
+        <li><strong>Be:</strong> <em>&ldquo;He is rude.&rdquo;</em> (stative = permanent characteristic) vs. <em>&ldquo;He is being rude.&rdquo;</em> (dynamic = behaving rudely right now, possibly atypically).</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; The &ldquo;I Am Loving It&rdquo; Controversy</div>
+      <p>Certain advertising campaigns (<em>&ldquo;I&rsquo;m lovin&rsquo; it&rdquo;</em>) use stative verbs in the progressive for <em>stylistic effect</em> &mdash; suggesting an intensified, in-the-moment emotional experience. This is a deliberate deviation from prescriptive rules for rhetorical effect. It is accepted in descriptive/colloquial English but should <strong>never</strong> be replicated in formal writing or examinations.</p>
+    </div>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I am belonging to this club.&rdquo;</em> <span class="note"><em>Belong</em> is stative &mdash; cannot take progressive.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I belong to this club.&rdquo;</em></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He is resembling his father.&rdquo;</em> <span class="note"><em>Resemble</em> is a state, not an activity.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He resembles his father.&rdquo;</em></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She is thinking about the proposal.&rdquo;</em> <span class="note"><em>Think</em> used dynamically (= actively considering) &mdash; progressive is correct.</span></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════ SECTION 17 ═══════════════ -->
+  <section class="topic-section" id="s17">
+    <div class="section-num">17</div>
+    <h2>Common Errors, <span class="accent">Traps &amp; Pitfalls</span></h2>
+    <div class="section-subtitle">A consolidated catalogue of every major tense error found in competitive examinations &mdash; Foundation to Topper level.</div>
+
+    <p class="body-text">This chapter consolidates the most frequently penalised tense errors in grammar examinations from SSC, IBPS, CAT, UPSC, IELTS, and school board papers. Each error is classified, explained, and corrected.</p>
+
+    <h3 class="sub-head">Group 1 &mdash; Present Tense Traps</h3>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 1: Using Present Continuous for Habits</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He is going to school every day.&rdquo;</em> <span class="note">Habitual action requires simple present, not continuous.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He goes to school every day.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 2: Present Perfect with Specific Past Time Adverbs</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I have met him last Monday.&rdquo;</em> <span class="note"><em>Last Monday</em> closes the past time-frame; present perfect is invalid.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I met him last Monday.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She has joined the company in 2019.&rdquo;</em> <span class="note">Year specified &mdash; use simple past.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She joined the company in 2019.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 3: &ldquo;Since&rdquo; with a Period vs. &ldquo;For&rdquo; with a Point</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I have been here since three hours.&rdquo;</em> <span class="note"><em>Three hours</em> is a duration &mdash; use <em>for</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I have been here for three hours.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;We have known each other for 2010.&rdquo;</em> <span class="note">2010 is a point in time &mdash; use <em>since</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;We have known each other since 2010.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Group 2 &mdash; Past Tense Traps</h3>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 4: Simple Past Instead of Past Perfect for Prior Events</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;When I arrived, she left already.&rdquo;</em> <span class="note">Leaving preceded arriving; the prior action needs past perfect.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;When I arrived, she had already left.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 5: &ldquo;No Sooner&hellip;Than&rdquo; and &ldquo;Hardly&hellip;When&rdquo;</div>
+      <p>These inverted structures always require the <strong>past perfect</strong> in the main clause and the <strong>simple past</strong> in the subordinate clause. The incorrect pairing is tested heavily.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;No sooner did he leave than she arrived.&rdquo;</em> <span class="note">Main clause should have past perfect with inversion.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;No sooner had he left than she arrived.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Hardly had she spoken when he interrupted her.&rdquo;</em> &mdash; this is <strong>correct</strong>. The wrong version is:</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Hardly she spoke when he interrupted her.&rdquo;</em> <span class="note">Inversion after <em>hardly</em> is mandatory: <em>had + subject + V3</em>.</span></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 6: Using Past Tense in Reported Speech Without Back-Shifting</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The teacher told us that the exam will be hard.&rdquo;</em> <span class="note"><em>Will</em> must back-shift to <em>would</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The teacher told us that the exam would be hard.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Group 3 &mdash; Future Tense Traps</h3>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 7: Future Tense in Time &amp; Conditional Clauses</div>
+      <p>After conjunctions of time (<em>when, as soon as, until, after, before, by the time</em>) and condition (<em>if, unless, provided that</em>), the future is expressed with the <strong>present simple</strong>, not with <em>will</em>.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Call me when you will arrive.&rdquo;</em> <span class="note">Future tense inside a time clause is non-standard.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Call me when you arrive.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;If it will rain, we will stay home.&rdquo;</em> <span class="note">Future in <em>if</em>-clause of first conditional is incorrect.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;If it rains, we will stay home.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 8: Misusing &ldquo;Would&rdquo; for All Past References</div>
+      <p>Students over-generalise <em>would</em> as &ldquo;the past of will&rdquo; and use it even in direct past narration. <em>Would</em> in past context is only valid in conditional clauses, reported speech, and habitual past actions.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Yesterday, he would go to the market and would buy vegetables.&rdquo;</em> <span class="note">Simple narration of specific past events requires simple past, not <em>would</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Yesterday, he went to the market and bought vegetables.&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;As a child, he would go to the market every Saturday.&rdquo;</em> &mdash; this is correct because it expresses habitual past.</li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Group 4 &mdash; Advanced / Topper-Level Traps</h3>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 9: Continuous Form with Stative Verbs (All Tenses)</div>
+      <p>This trap applies across all twelve tenses. No stative verb may take the <em>-ing</em> progressive form in standard formal English.</p>
+      <table class="cmp-table">
+        <tr><th>Stative Verb</th><th>Wrong Form</th><th>Correct Form</th></tr>
+        <tr><td><em>know</em></td><td><code class="tag-wrong">is knowing &#10007;</code></td><td><code class="tag-correct">knows &#10003;</code></td></tr>
+        <tr><td><em>own</em></td><td><code class="tag-wrong">was owning &#10007;</code></td><td><code class="tag-correct">owned &#10003;</code></td></tr>
+        <tr><td><em>consist</em></td><td><code class="tag-wrong">has been consisting &#10007;</code></td><td><code class="tag-correct">has consisted &#10003;</code></td></tr>
+        <tr><td><em>believe</em></td><td><code class="tag-wrong">will be believing &#10007;</code></td><td><code class="tag-correct">will believe &#10003;</code></td></tr>
+      </table>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 10: Conditional Tense Mismatch</div>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;If I would have studied, I would have passed.&rdquo;</em> <span class="note">Third conditional: <em>if</em>-clause requires past perfect, not <em>would have</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;If I had studied, I would have passed.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;If she works harder, she would succeed.&rdquo;</em> <span class="note">Mixing first (present in <em>if</em>) and second (would) conditionals creates a type mismatch.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;If she works harder, she will succeed.&rdquo;</em> (First conditional)</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 11: &ldquo;Used to&rdquo; vs. &ldquo;Would&rdquo; for Past Habits</div>
+      <p><em>Used to</em> can describe both <em>past habitual actions</em> AND <em>past states</em>. <em>Would</em> can describe past habitual actions <em>only</em> &mdash; never past states.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She used to live near the river.&rdquo;</em> (past state &mdash; <em>used to</em> correct).</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She would live near the river.&rdquo;</em> <span class="note"><em>Would</em> cannot replace <em>used to</em> for states.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She would go for a walk every morning.&rdquo;</em> (past habit &mdash; <em>would</em> correct).</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 12: &ldquo;It Is Time&rdquo; Construction</div>
+      <p>The expression <em>it is (high) time</em> is followed by a <strong>past tense</strong> clause (technically a past subjunctive) even though the meaning is present or future.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;It is time you go to bed.&rdquo;</em> <span class="note">After <em>it is time + subject</em>, use past tense (subjunctive).</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;It is time you went to bed.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;It is high time we will leave.&rdquo;</em> <span class="note">Future is never used here.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;It is high time we left.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 13: &ldquo;Wish&rdquo; + Tense Selection</div>
+      <p>The verb <em>wish</em> requires a specific tense pattern in each subordinate clause:</p>
+      <ul>
+        <li><strong>Wish for an unreal present:</strong> <em>wish + past simple</em> &mdash; <em>&ldquo;I wish I knew the answer.&rdquo;</em></li>
+        <li><strong>Wish for an unreal past:</strong> <em>wish + past perfect</em> &mdash; <em>&ldquo;I wish I had studied harder.&rdquo;</em></li>
+        <li><strong>Wish for a future change:</strong> <em>wish + would + V1</em> &mdash; <em>&ldquo;I wish it would stop raining.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I wish I know the answer.&rdquo;</em> <span class="note">Present tense after <em>wish</em> for unreal present is incorrect; use past simple.</span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">The Master Error-Spotter Table</h3>
+    <table class="cmp-table">
+      <tr><th>Signal / Trigger</th><th>Correct Tense Required</th><th>Common Error</th></tr>
+      <tr><td><em>since</em> + point in time</td><td>Present perfect / past perfect</td><td>Using simple present or past</td></tr>
+      <tr><td><em>for</em> + duration</td><td>Present perfect / past perfect</td><td>Using <em>since</em></td></tr>
+      <tr><td><em>yesterday / ago / last</em></td><td>Simple past</td><td>Using present perfect</td></tr>
+      <tr><td><em>just / already / yet / recently</em></td><td>Present perfect</td><td>Using simple past</td></tr>
+      <tr><td><em>when</em> + two past events</td><td>Earlier = past perfect; later = simple past</td><td>Both in simple past</td></tr>
+      <tr><td><em>if</em> / time clause + future reference</td><td>Present simple in subordinate</td><td>Future (<em>will</em>) in subordinate</td></tr>
+      <tr><td><em>it is time + subject</em></td><td>Past simple (subjunctive)</td><td>Present or future in subordinate</td></tr>
+      <tr><td>Stative verb in any tense</td><td>Simple (not continuous) aspect</td><td>Progressive form</td></tr>
+      <tr><td><em>no sooner&hellip;than / hardly&hellip;when</em></td><td>Past perfect + inversion</td><td>Simple past without inversion</td></tr>
+    </table>
+
+    <div class="ornament">&#10022; &nbsp;&nbsp; End of Study Guide &nbsp;&nbsp; &#10022;</div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; You Are Ready to Attempt the MCQ Tests</div>
+      <p>You have now covered all seventeen chapters of the <strong>Tenses in English Grammar</strong> study guide &mdash; from the foundational definition of tense through every one of the twelve tenses, the tense&ndash;aspect distinction, the stative/dynamic verb split, sequence of tenses in reported speech and conditionals, and a curated catalogue of thirteen examination traps. Proceed to the <strong>MCQ Engine</strong> to test your mastery under timed, exam-style conditions. Review any chapter where your accuracy falls below 80&nbsp;%.</p>
+    </div>
+
+  </section>
+
+</div><!-- content-inner -->
+</div><!-- main -->
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open')}
+function goTo(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const h=document.getElementById('topbar').offsetHeight+6;
+  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-h,behavior:'smooth'});
+  document.getElementById('sidebar').classList.remove('open');
+}
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progress-fill').style.width=(d>0?(window.scrollY/d)*100:0)+'%';
+  const b=document.getElementById('btt');
+  window.scrollY>300?b.classList.add('visible'):b.classList.remove('visible');
+});
+const secs=Array.from(document.querySelectorAll('.topic-section'));
+const items=Array.from(document.querySelectorAll('.sid-item'));
+secs.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      items.forEach(i=>i.classList.remove('active'));
+      const a=items.find(i=>(i.getAttribute('onclick')||'').includes(e.target.id));
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px',threshold:0}).observe(s));
+</script>
+</body>
+</html>
