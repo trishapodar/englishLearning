@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class 9 CBSE Mathematics — Weekly Test 01</title>
+  <style>
+    /* ── Print / DOCX-friendly base ── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12pt;
+      color: #000;
+      background: #fff;
+      max-width: 21cm;
+      margin: 0 auto;
+      padding: 2cm 2.2cm;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    .school-header {
+      text-align: center;
+      border-bottom: 3px double #000;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
+    .school-header h1 { font-size: 16pt; font-weight: bold; letter-spacing: 1px; }
+    .school-header h2 { font-size: 13pt; font-weight: bold; margin-top: 4px; }
+    .school-header p  { font-size: 11pt; margin-top: 2px; }
+
+    /* ── Meta info table ── */
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0 16px;
+      font-size: 11pt;
+    }
+    .meta-table td { padding: 3px 6px; vertical-align: top; }
+    .meta-table .meta-left  { width: 50%; }
+    .meta-table .meta-right { width: 50%; text-align: right; }
+
+    /* ── General Instructions ── */
+    .instructions {
+      border: 1px solid #000;
+      padding: 8px 12px;
+      margin-bottom: 18px;
+      font-size: 10.5pt;
+    }
+    .instructions h3 { font-size: 11pt; margin-bottom: 4px; text-transform: uppercase; }
+    .instructions ol  { margin-left: 20px; }
+    .instructions li  { margin-bottom: 2px; }
+
+    /* ── Section headings ── */
+    .section-head {
+      background: #000;
+      color: #fff;
+      padding: 5px 10px;
+      font-size: 11.5pt;
+      font-weight: bold;
+      margin: 20px 0 10px;
+      page-break-after: avoid;
+    }
+    .section-sub {
+      font-size: 10pt;
+      font-style: italic;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    /* ── Question block ── */
+    .question {
+      margin-bottom: 14px;
+      page-break-inside: avoid;
+    }
+    .q-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .q-num {
+      font-weight: bold;
+      min-width: 32px;
+      flex-shrink: 0;
+    }
+    .q-body { flex: 1; }
+    .q-marks {
+      font-weight: bold;
+      white-space: nowrap;
+      min-width: 60px;
+      text-align: right;
+      flex-shrink: 0;
+      font-size: 10.5pt;
+    }
+    .q-tag {
+      display: inline-block;
+      font-size: 8.5pt;
+      background: #eee;
+      border: 1px solid #bbb;
+      border-radius: 3px;
+      padding: 0 4px;
+      margin-left: 4px;
+      vertical-align: middle;
+      font-style: italic;
+      color: #555;
+    }
+
+    /* ── MCQ options ── */
+    .opts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2px 20px;
+      margin-top: 4px;
+      margin-left: 10px;
+    }
+    .opts span { display: block; }
+
+    /* ── Answer space ── */
+    .ans-space {
+      border-bottom: 1px dashed #aaa;
+      margin-top: 6px;
+      margin-left: 0;
+    }
+    .ans-lines-1  { height: 28px; }
+    .ans-lines-2  { height: 52px; }
+    .ans-lines-3  { height: 78px; }
+    .ans-lines-4  { height: 104px; }
+    .ans-lines-6  { height: 150px; }
+    .ans-lines-10 { height: 240px; }
+
+    /* ── Sub-parts ── */
+    .sub-part { margin-left: 16px; margin-top: 3px; }
+
+    /* ── Divider ── */
+    hr.thin { border: none; border-top: 1px solid #ccc; margin: 18px 0; }
+
+    /* ──────────────────────────────────────────
+       ANSWER KEY — separate visual style
+    ────────────────────────────────────────── */
+    .answer-key {
+      page-break-before: always;
+      border-top: 4px double #000;
+      padding-top: 18px;
+      margin-top: 30px;
+    }
+    .answer-key h2 {
+      text-align: center;
+      font-size: 15pt;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .answer-key .ak-subtitle {
+      text-align: center;
+      font-size: 10pt;
+      font-style: italic;
+      color: #444;
+      margin-bottom: 16px;
+    }
+    .ak-section { margin-top: 18px; }
+    .ak-section h3 {
+      font-size: 12pt;
+      border-bottom: 1.5px solid #000;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+    }
+    .ak-q {
+      margin-bottom: 14px;
+      padding-left: 10px;
+      border-left: 3px solid #ccc;
+    }
+    .ak-q-head {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .ak-step { margin-left: 20px; margin-top: 2px; }
+    .ak-step::before { content: "→ "; }
+    .rubric {
+      margin-top: 6px;
+      font-size: 10pt;
+      background: #f5f5f5;
+      border: 1px solid #ddd;
+      padding: 5px 10px;
+    }
+    .rubric strong { display: block; margin-bottom: 2px; }
+    table.mark-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5pt;
+      margin-top: 6px;
+    }
+    table.mark-table th, table.mark-table td {
+      border: 1px solid #999;
+      padding: 4px 8px;
+      text-align: left;
+    }
+    table.mark-table th { background: #ddd; }
+
+    /* Print tweaks */
+    @media print {
+      body { padding: 1.2cm 1.5cm; }
+      .q-tag { -webkit-print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     QUESTION PAPER
+═══════════════════════════════════════════ -->
+
+<div class="school-header">
+  <h1>CLASS IX — MATHEMATICS</h1>
+  <h2>WEEKLY TEST — 01</h2>
+  <p>Topics: Coordinate Geometry &amp; Triangles (Congruence)</p>
+</div>
+
+<table class="meta-table">
+  <tr>
+    <td class="meta-left">
+      <strong>Date:</strong> ___________________________<br>
+      <strong>Name:</strong> ___________________________<br>
+      <strong>Roll No.:</strong> ________________________
+    </td>
+    <td class="meta-right">
+      <strong>Class &amp; Section:</strong> IX — ___<br>
+      <strong>Maximum Marks:</strong> 56<br>
+      <strong>Time Allowed:</strong> 1 Hour 30 Minutes
+    </td>
+  </tr>
+</table>
+
+<div class="instructions">
+  <h3>General Instructions</h3>
+  <ol>
+    <li>All questions are compulsory.</li>
+    <li>The question paper is divided into <strong>three sections</strong>: Section A, B, and C.</li>
+    <li>Section A contains 4 questions of <strong>1 mark</strong> each.</li>
+    <li>Section B contains 4 questions of <strong>2 marks</strong> each and 8 questions of <strong>3 marks</strong> each.</li>
+    <li>Section C contains 4 questions of <strong>5 marks</strong> each.</li>
+    <li>Draw neat and labelled figures wherever required.</li>
+    <li>Answers to Section A must be written in the space provided. For Sections B and C, show all working clearly.</li>
+  </ol>
+</div>
+
+<!-- ══════════════════════
+     SECTION A — 1 Mark
+══════════════════════ -->
+<div class="section-head">SECTION — A &nbsp;|&nbsp; Very Short Answer &nbsp;|&nbsp; (4 × 1 = 4 Marks)</div>
+<p class="section-sub">Questions 1–4 carry <strong>1 mark</strong> each. Circle / write the correct answer.</p>
+
+<!-- Q1 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q1.</div>
+    <div class="q-body">
+      The point (0, −5) lies on: <span class="q-tag">Coordinate Geometry</span>
+      <div class="opts">
+        <span>(A) the x-axis</span>
+        <span>(B) the y-axis</span>
+        <span>(C) the second quadrant</span>
+        <span>(D) the fourth quadrant</span>
+      </div>
+      <div class="ans-space ans-lines-1"></div>
+    </div>
+    <div class="q-marks">[1 Mark]</div>
+  </div>
+</div>
+
+<!-- Q2 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q2.</div>
+    <div class="q-body">
+      The abscissa of a point is its perpendicular distance from: <span class="q-tag">Coordinate Geometry</span>
+      <div class="opts">
+        <span>(A) the origin</span>
+        <span>(B) the x-axis</span>
+        <span>(C) the y-axis</span>
+        <span>(D) the point (1, 1)</span>
+      </div>
+      <div class="ans-space ans-lines-1"></div>
+    </div>
+    <div class="q-marks">[1 Mark]</div>
+  </div>
+</div>
+
+<!-- Q3 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q3.</div>
+    <div class="q-body">
+      State the name of the congruence criterion when all three sides of one triangle are equal to the corresponding three sides of another triangle. <span class="q-tag">Congruent Triangles</span>
+      <div class="ans-space ans-lines-1"></div>
+    </div>
+    <div class="q-marks">[1 Mark]</div>
+  </div>
+</div>
+
+<!-- Q4 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q4.</div>
+    <div class="q-body">
+      In △ABC ≅ △DEF, the angle corresponding to ∠B is: <span class="q-tag">Congruent Triangles</span>
+      <div class="opts">
+        <span>(A) ∠D</span>
+        <span>(B) ∠E</span>
+        <span>(C) ∠F</span>
+        <span>(D) ∠A</span>
+      </div>
+      <div class="ans-space ans-lines-1"></div>
+    </div>
+    <div class="q-marks">[1 Mark]</div>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     SECTION B — 2 Marks
+══════════════════════ -->
+<div class="section-head">SECTION — B (Part I) &nbsp;|&nbsp; Short Answer &nbsp;|&nbsp; (4 × 2 = 8 Marks)</div>
+<p class="section-sub">Questions 5–8 carry <strong>2 marks</strong> each.</p>
+
+<!-- Q5 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q5.</div>
+    <div class="q-body">
+      Name the quadrant in which each of the following points lies: <span class="q-tag">Coordinate Geometry</span>
+      <div class="sub-part">(i) (3, −5) &nbsp;&nbsp; (ii) (−2, −7) &nbsp;&nbsp; (iii) (4, 6) &nbsp;&nbsp; (iv) (−1, 8)</div>
+      <div class="ans-space ans-lines-3"></div>
+    </div>
+    <div class="q-marks">[2 Marks]</div>
+  </div>
+</div>
+
+<!-- Q6 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q6.</div>
+    <div class="q-body">
+      Write the coordinates of: <span class="q-tag">Coordinate Geometry</span>
+      <div class="sub-part">
+        (i) the point that lies on <em>both</em> the x-axis and the y-axis.<br>
+        (ii) any one point that lies on the positive x-axis.<br>
+        (iii) any one point that lies on the negative y-axis.
+      </div>
+      <div class="ans-space ans-lines-3"></div>
+    </div>
+    <div class="q-marks">[2 Marks]</div>
+  </div>
+</div>
+
+<!-- Q7 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q7.</div>
+    <div class="q-body">
+      In △ABC, AB = AC. If ∠BAC = 50°, find ∠ABC and ∠ACB. State the property you have used. <span class="q-tag">Congruent Triangles</span>
+      <div class="ans-space ans-lines-4"></div>
+    </div>
+    <div class="q-marks">[2 Marks]</div>
+  </div>
+</div>
+
+<!-- Q8 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q8.</div>
+    <div class="q-body">
+      In △PQR and △LMN, PQ = LM, QR = MN, and PR = LN. Write all the corresponding parts and state the congruence with the correct criterion. <span class="q-tag">Congruent Triangles</span>
+      <div class="ans-space ans-lines-4"></div>
+    </div>
+    <div class="q-marks">[2 Marks]</div>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     SECTION B — 3 Marks
+══════════════════════ -->
+<div class="section-head">SECTION — B (Part II) &nbsp;|&nbsp; Short Answer &nbsp;|&nbsp; (8 × 3 = 24 Marks)</div>
+<p class="section-sub">Questions 9–16 carry <strong>3 marks</strong> each.</p>
+
+<!-- Q9 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q9.</div>
+    <div class="q-body">
+      Three points are given: A(1, 3), B(2, 3), C(−1, 3). <span class="q-tag">Coordinate Geometry</span>
+      <div class="sub-part">
+        (i) Plot the three points on a coordinate plane in the space provided.<br>
+        (ii) Are the points A, B, and C collinear? Justify your answer by observation.<br>
+        (iii) What is the y-coordinate of all three points, and what does this tell you about the line on which they lie?
+      </div>
+      <div class="ans-space ans-lines-10"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q10 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q10.</div>
+    <div class="q-body">
+      The coordinates of the foot of perpendicular from a point P to the x-axis is (4, 0), and to the y-axis is (0, −3). <span class="q-tag">Coordinate Geometry</span>
+      <div class="sub-part">
+        (i) Write the coordinates of point P.<br>
+        (ii) In which quadrant does P lie?<br>
+        (iii) What is the distance of P from each axis?
+      </div>
+      <div class="ans-space ans-lines-4"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q11 CG — APPLICATION -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q11.</div>
+    <div class="q-body">
+      <strong>Application:</strong> A city planner marks a school at S(2, 3) and a hospital at H(2, −3) on a coordinate grid (each unit = 100 metres). <span class="q-tag">Coordinate Geometry</span> <span class="q-tag" style="background:#fff0cc; border-color:#cc9900; color:#806000;">Application</span>
+      <div class="sub-part">
+        (i) Plot both points on a coordinate plane and name the quadrant each lies in.<br>
+        (ii) A park P is to be built exactly halfway between S and H. Find the coordinates of P.<br>
+        (iii) The governing body decides that the park at P should be on an axis. On which axis does P lie? Justify.
+      </div>
+      <div class="ans-space ans-lines-10"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q12 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q12.</div>
+    <div class="q-body">
+      The points A and B are reflections of each other about the y-axis. If A = (5, −2): <span class="q-tag">Coordinate Geometry</span>
+      <div class="sub-part">
+        (i) Write the coordinates of B.<br>
+        (ii) In which quadrant does A lie? In which quadrant does B lie?<br>
+        (iii) Plot both points. What is the distance between A and B (count units on the grid)?
+      </div>
+      <div class="ans-space ans-lines-6"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q13 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q13.</div>
+    <div class="q-body">
+      In △ABC, D is the midpoint of BC and AD ⊥ BC. Prove that △ABC is isosceles (i.e., AB = AC). <span class="q-tag">Congruent Triangles</span>
+      <div class="ans-space ans-lines-6"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q14 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q14.</div>
+    <div class="q-body">
+      ABC is an isosceles triangle in which AB = AC. Side BA is produced to D such that AD = AB. Show that ∠BCD is a right angle. <span class="q-tag">Congruent Triangles</span>
+      <div class="ans-space ans-lines-6"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q15 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q15.</div>
+    <div class="q-body">
+      In quadrilateral ABCD, AD = BC and ∠DAB = ∠CBA. Prove that: <span class="q-tag">Congruent Triangles</span>
+      <div class="sub-part">
+        (i) △ABD ≅ △BAC<br>
+        (ii) BD = AC<br>
+        (iii) ∠ABD = ∠BAC
+      </div>
+      <div class="ans-space ans-lines-6"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q16 CT — APPLICATION -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q16.</div>
+    <div class="q-body">
+      <strong>Application:</strong> Two garden paths in a park meet at point O. Path-1 goes from O to A and Path-2 goes from O to B, such that OA = OB. A gardener places flower pots at point C on Path-1 and point D on Path-2 such that OC = OD. <span class="q-tag">Congruent Triangles</span> <span class="q-tag" style="background:#fff0cc; border-color:#cc9900; color:#806000;">Application</span>
+      <div class="sub-part">
+        (i) Prove that △OAD ≅ △OBC.<br>
+        (ii) Hence show that AD = BC.<br>
+        (iii) What does this result tell you about the symmetry of the two paths?
+      </div>
+      <div class="ans-space ans-lines-6"></div>
+    </div>
+    <div class="q-marks">[3 Marks]</div>
+  </div>
+</div>
+
+<!-- ══════════════════════
+     SECTION C — 5 Marks
+══════════════════════ -->
+<div class="section-head">SECTION — C &nbsp;|&nbsp; Long Answer &nbsp;|&nbsp; (4 × 5 = 20 Marks)</div>
+<p class="section-sub">Questions 17–20 carry <strong>5 marks</strong> each. Show all working clearly.</p>
+
+<!-- Q17 CG -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q17.</div>
+    <div class="q-body">
+      Plot the points P(2, 4), Q(−2, 4), R(−2, −4), and S(2, −4) on a coordinate plane. <span class="q-tag">Coordinate Geometry</span>
+      <div class="sub-part">
+        (i) Join the points in order to form the figure PQRS. Name the figure formed.<br>
+        (ii) Name the quadrant in which each vertex lies.<br>
+        (iii) Find the length and width of the figure by counting grid units.<br>
+        (iv) Calculate the perimeter of the figure.<br>
+        (v) One diagonal of the figure is drawn from P to R. In which two quadrants does this diagonal pass?
+      </div>
+      <div class="ans-space ans-lines-10"></div>
+    </div>
+    <div class="q-marks">[5 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q18 CG — APPLICATION -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q18.</div>
+    <div class="q-body">
+      <strong>Application:</strong> A surveyor is mapping a small town on a coordinate grid (1 unit = 50 m). The Town Hall is at T(0, 0), the Library is at L(4, 3), the Market is at M(4, −3), and the Post Office is at P(−3, 2). <span class="q-tag">Coordinate Geometry</span> <span class="q-tag" style="background:#fff0cc; border-color:#cc9900; color:#806000;">Application</span>
+      <div class="sub-part">
+        (i) Plot all four locations on a coordinate plane.<br>
+        (ii) For each location, state the quadrant it lies in (or the axis, if applicable).<br>
+        (iii) Which two locations are mirror images of each other about the x-axis? Justify with coordinates.<br>
+        (iv) The surveyor needs to place a bus stop B at the reflection of P about the y-axis. Find B's coordinates and state which quadrant B lies in.<br>
+        (v) What is the perpendicular distance of the Library from the x-axis?
+      </div>
+      <div class="ans-space ans-lines-10"></div>
+    </div>
+    <div class="q-marks">[5 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q19 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q19.</div>
+    <div class="q-body">
+      In △ABC, the bisectors of ∠B and ∠C intersect each other at point O. Prove that: <span class="q-tag">Congruent Triangles</span>
+      <div class="sub-part" style="margin-top:4px;">
+        ∠BOC = 90° + ½∠A
+      </div>
+      <div class="sub-part" style="margin-top:6px;">
+        [<em>Hint: In △BOC, express ∠OBC and ∠OCB in terms of ∠B and ∠C. Use the angle sum in △ABC.</em>]
+      </div>
+      <div class="ans-space ans-lines-10"></div>
+    </div>
+    <div class="q-marks">[5 Marks]</div>
+  </div>
+</div>
+
+<hr class="thin">
+
+<!-- Q20 CT -->
+<div class="question">
+  <div class="q-row">
+    <div class="q-num">Q20.</div>
+    <div class="q-body">
+      In △PQR, PS ⊥ QR with foot S on QR, and S is the midpoint of QR. <span class="q-tag">Congruent Triangles</span>
+      <div class="sub-part">
+        (i) Prove that △PQS ≅ △PRS. State the congruence criterion used.<br>
+        (ii) Hence show that PQ = PR (i.e., △PQR is isosceles).<br>
+        (iii) Prove that ∠QPR = 2∠QPS.<br>
+        (iv) If ∠Q = 55°, find all remaining angles of △PQR.<br>
+        (v) Write the full congruence statement and list all corresponding parts.
+      </div>
+      <div class="ans-space ans-lines-10"></div>
+    </div>
+    <div class="q-marks">[5 Marks]</div>
+  </div>
+</div>
+
+<!-- Marks Summary Footer -->
+<div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+  <strong>Section Summary:</strong>
+  &nbsp;|&nbsp; Section A: 4 × 1 = <strong>4 Marks</strong>
+  &nbsp;|&nbsp; Section B (Part I): 4 × 2 = <strong>8 Marks</strong>
+  &nbsp;|&nbsp; Section B (Part II): 8 × 3 = <strong>24 Marks</strong>
+  &nbsp;|&nbsp; Section C: 4 × 5 = <strong>20 Marks</strong>
+  &nbsp;|&nbsp; <strong>Total: 56 Marks</strong>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ANSWER KEY & CBSE MARKING RUBRIC
+═══════════════════════════════════════════ -->
+<div class="answer-key">
+  <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+  <p class="ak-subtitle">Class IX Mathematics — Weekly Test 01 &nbsp;|&nbsp; CBSE Marking Scheme</p>
+  <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+    <em>Award marks as indicated. For proof-based questions, marks are awarded stepwise even if the final result is not reached, provided the reasoning is correct.</em>
+  </p>
+
+  <!-- ─── Section A ─── -->
+  <div class="ak-section">
+    <h3>SECTION A — 1 Mark Each</h3>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q1. &nbsp; Answer: (B) the y-axis &nbsp; [1 mark]</div>
+      <p>Any point of the form (0, k) lies on the y-axis. Since the x-coordinate is 0, the point (0, −5) lies on the y-axis.</p>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct option selected — 1 mark. No partial marks for this question.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q2. &nbsp; Answer: (C) the y-axis &nbsp; [1 mark]</div>
+      <p>The abscissa (x-coordinate) is the perpendicular distance of a point from the y-axis (measured parallel to the x-axis).</p>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct option — 1 mark.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q3. &nbsp; Answer: SSS (Side-Side-Side) Congruence Criterion &nbsp; [1 mark]</div>
+      <p>If three sides of one triangle are equal to the three corresponding sides of another triangle, the triangles are congruent by the SSS criterion.</p>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Writing "SSS" alone — 1 mark. Writing an incorrect criterion — 0 marks.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q4. &nbsp; Answer: (B) ∠E &nbsp; [1 mark]</div>
+      <p>If △ABC ≅ △DEF, then A↔D, B↔E, C↔F. Therefore ∠B corresponds to ∠E.</p>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct option — 1 mark.
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Section B Part I ─── -->
+  <div class="ak-section">
+    <h3>SECTION B (Part I) — 2 Marks Each</h3>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q5 — Quadrants of given points &nbsp; [2 marks]</div>
+      <table class="mark-table">
+        <tr><th>Point</th><th>Quadrant</th><th>Reason</th></tr>
+        <tr><td>(3, −5)</td><td>Quadrant IV</td><td>x &gt; 0, y &lt; 0</td></tr>
+        <tr><td>(−2, −7)</td><td>Quadrant III</td><td>x &lt; 0, y &lt; 0</td></tr>
+        <tr><td>(4, 6)</td><td>Quadrant I</td><td>x &gt; 0, y &gt; 0</td></tr>
+        <tr><td>(−1, 8)</td><td>Quadrant II</td><td>x &lt; 0, y &gt; 0</td></tr>
+      </table>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        ½ mark per correct quadrant (4 × ½) = 2 marks. Wrong quadrant = 0 for that part. No partial for a quadrant.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q6 — Coordinates on axes &nbsp; [2 marks]</div>
+      <div class="ak-step">Point on both axes: <strong>(0, 0)</strong> — the Origin. [1 mark]</div>
+      <div class="ak-step">Point on positive x-axis: any (a, 0) with a &gt; 0 e.g., <strong>(3, 0)</strong>. [½ mark]</div>
+      <div class="ak-step">Point on negative y-axis: any (0, −b) with b &gt; 0 e.g., <strong>(0, −2)</strong>. [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Accept any correct coordinate satisfying the condition. Origin must be written as (0, 0).
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q7 — Isosceles triangle angles &nbsp; [2 marks]</div>
+      <div class="ak-step">Property used: Angles opposite to equal sides of an isosceles triangle are equal (Base angles theorem). [½ mark]</div>
+      <div class="ak-step">Since AB = AC: ∠ABC = ∠ACB [½ mark]</div>
+      <div class="ak-step">Angle sum: ∠BAC + ∠ABC + ∠ACB = 180° &nbsp;⟹&nbsp; 50° + 2∠ABC = 180° [½ mark]</div>
+      <div class="ak-step">∴ ∠ABC = ∠ACB = <strong>65°</strong> [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Property stated — ½ mark | Setting up equation — ½ mark | Each correct angle — ½ mark each.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q8 — Congruence criterion &nbsp; [2 marks]</div>
+      <div class="ak-step">△PQR ≅ △LMN by <strong>SSS congruence</strong> (all three sides equal). [1 mark]</div>
+      <div class="ak-step">Corresponding parts: P↔L, Q↔M, R↔N; PQ=LM, QR=MN, PR=LN; ∠P=∠L, ∠Q=∠M, ∠R=∠N. [1 mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct criterion named — 1 mark. All six CPCT pairs correctly listed — 1 mark (accept any 3 pairs for full credit here).
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Section B Part II ─── -->
+  <div class="ak-section">
+    <h3>SECTION B (Part II) — 3 Marks Each</h3>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q9 — Collinear points &nbsp; [3 marks]</div>
+      <div class="ak-step">Correct plotting of A(1,3), B(2,3), C(−1,3) on the coordinate plane. [1 mark]</div>
+      <div class="ak-step">Yes, A, B, C are collinear — all three points lie on the horizontal line y = 3. [1 mark]</div>
+      <div class="ak-step">The y-coordinate of all three points is 3. They lie on a line parallel to the x-axis at a height of 3 units. [1 mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct graph — 1 mark | Correct conclusion with justification — 1 mark | Observation about y = 3 — 1 mark.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q10 — Coordinates from feet of perpendiculars &nbsp; [3 marks]</div>
+      <div class="ak-step">Foot on x-axis = (4, 0) ⟹ x-coordinate of P is 4. [½ mark]</div>
+      <div class="ak-step">Foot on y-axis = (0, −3) ⟹ y-coordinate of P is −3. [½ mark]</div>
+      <div class="ak-step">∴ P = <strong>(4, −3)</strong> [1 mark]</div>
+      <div class="ak-step">Quadrant: x &gt; 0, y &lt; 0 ⟹ <strong>Quadrant IV</strong>. [½ mark]</div>
+      <div class="ak-step">Distance from x-axis = |y| = 3 units; Distance from y-axis = |x| = 4 units. [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct x — ½ | Correct y — ½ | Coordinates written — 1 | Quadrant — ½ | Distances — ½.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q11 — Application (City planner) &nbsp; [3 marks]</div>
+      <div class="ak-step">S(2,3) is in Quadrant I (x&gt;0, y&gt;0). H(2,−3) is in Quadrant IV (x&gt;0, y&lt;0). [1 mark]</div>
+      <div class="ak-step">Midpoint P = ((2+2)/2, (3+(−3))/2) = (2, 0). ∴ P = <strong>(2, 0)</strong>. [1 mark]</div>
+      <div class="ak-step">P = (2, 0): its y-coordinate is 0, so P lies on the <strong>x-axis</strong>. Justified because any point of the form (a, 0) lies on the x-axis. [1 mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct quadrants for both — 1 mark | Correct midpoint — 1 mark | Axis identification with reason — 1 mark.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q12 — Reflection about y-axis &nbsp; [3 marks]</div>
+      <div class="ak-step">Reflection of (5, −2) about y-axis: change sign of x-coordinate. B = <strong>(−5, −2)</strong>. [1 mark]</div>
+      <div class="ak-step">A = (5,−2): x&gt;0, y&lt;0 ⟹ Quadrant IV. B = (−5,−2): x&lt;0, y&lt;0 ⟹ Quadrant III. [1 mark]</div>
+      <div class="ak-step">Both A and B have the same y-coordinate (−2). Horizontal distance = |5−(−5)| = <strong>10 units</strong>. [1 mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct B — 1 mark | Correct quadrants for both — 1 mark | Distance 10 units — 1 mark. Accept answer shown on graph if clearly indicated.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q13 — Prove △ABC isosceles (D midpoint, AD⊥BC) &nbsp; [3 marks]</div>
+      <div class="ak-step">In △ADB and △ADC:</div>
+      <div class="ak-step">DB = DC &nbsp; (D is midpoint of BC) &nbsp; [½ mark]</div>
+      <div class="ak-step">AD = AD &nbsp; (Common side) &nbsp; [½ mark]</div>
+      <div class="ak-step">∠ADB = ∠ADC = 90° &nbsp; (AD ⊥ BC) &nbsp; [½ mark]</div>
+      <div class="ak-step">∴ △ADB ≅ △ADC &nbsp; by <strong>SAS</strong> congruence &nbsp; [½ mark]</div>
+      <div class="ak-step">∴ AB = AC &nbsp; (CPCT) &nbsp; ∴ △ABC is isosceles. &nbsp; [1 mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Each pair of corresponding equal parts — ½ mark each | SAS named — ½ mark | AB = AC by CPCT — 1 mark.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q14 — ∠BCD = 90° &nbsp; [3 marks]</div>
+      <div class="ak-step">Given: AB = AC (isosceles), AD = AB. ∴ AC = AD. [½ mark]</div>
+      <div class="ak-step">In △ABC: AB = AC ⟹ ∠ABC = ∠ACB. Let ∠ABC = ∠ACB = x. [½ mark]</div>
+      <div class="ak-step">In △ACD: AC = AD ⟹ ∠ADC = ∠ACD = y. [½ mark]</div>
+      <div class="ak-step">In △BCD: ∠DBC + ∠BCD + ∠BDC = 180°. [½ mark]</div>
+      <div class="ak-step">∠BCD = ∠ACB + ∠ACD = x + y. &nbsp; ∠DBC = x, ∠BDC = y. [½ mark]</div>
+      <div class="ak-step">x + (x + y) + y = 180° ⟹ 2x + 2y = 180° ⟹ x + y = 90°. ∴ ∠BCD = <strong>90°</strong>. [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Each correct logical step — ½ mark (6 steps × ½ = 3 marks). Award marks for correct reasoning even if final line is not reached.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q15 — Quadrilateral ABCD, AD=BC, ∠DAB=∠CBA &nbsp; [3 marks]</div>
+      <div class="ak-step"><strong>(i)</strong> In △ABD and △BAC:</div>
+      <div class="ak-step">AD = BC (given) | AB = BA (common) | ∠DAB = ∠CBA (given). [1 mark for identifying all 3 pairs]</div>
+      <div class="ak-step">∴ △ABD ≅ △BAC by <strong>SAS</strong>. [½ mark]</div>
+      <div class="ak-step"><strong>(ii)</strong> BD = AC (CPCT). [½ mark]</div>
+      <div class="ak-step"><strong>(iii)</strong> ∠ABD = ∠BAC (CPCT). [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct three pairs — 1 mark | SAS criterion — ½ | BD=AC — ½ | Angles equal — ½ | Correct congruence statement — ½.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q16 — Application (Garden paths) &nbsp; [3 marks]</div>
+      <div class="ak-step"><strong>(i)</strong> In △OAD and △OBC:</div>
+      <div class="ak-step">OA = OB (given) | OC = OD (given) | ∠AOD = ∠BOC (Vertically opposite angles / common angle). [1 mark]</div>
+      <div class="ak-step">∴ △OAD ≅ △OBC by <strong>SAS</strong>. [1 mark]</div>
+      <div class="ak-step"><strong>(ii)</strong> AD = BC (by CPCT). [½ mark]</div>
+      <div class="ak-step"><strong>(iii)</strong> The result shows the two paths are symmetric: equal segments on each path from O produce equal diagonal distances, reflecting bilateral symmetry about point O. [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Correct three pairs in △OAD and △OBC — 1 mark | SAS + congruence — 1 mark | AD=BC by CPCT — ½ | Symmetry observation — ½. Accept ∠AOD = ∠BOC as either vertically opposite or same angle if paths are straight.
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Section C ─── -->
+  <div class="ak-section">
+    <h3>SECTION C — 5 Marks Each</h3>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q17 — Rectangle PQRS on coordinate plane &nbsp; [5 marks]</div>
+      <table class="mark-table">
+        <tr><th>Part</th><th>Answer</th><th>Marks</th></tr>
+        <tr><td>(i) Figure formed</td><td>Rectangle (PQRS) — all angles 90°, opposite sides equal</td><td>1</td></tr>
+        <tr><td>(ii) Quadrants</td><td>P(2,4)→Q.I | Q(−2,4)→Q.II | R(−2,−4)→Q.III | S(2,−4)→Q.IV</td><td>1</td></tr>
+        <tr><td>(iii) Dimensions</td><td>Length (PQ or RS) = 4 units; Width (QR or PS) = 8 units</td><td>1</td></tr>
+        <tr><td>(iv) Perimeter</td><td>2(4 + 8) = <strong>24 units</strong></td><td>1</td></tr>
+        <tr><td>(v) Diagonal PR</td><td>PR goes from Q.I (P) through origin region to Q.III (R) — passes through Q.I &amp; Q.III</td><td>1</td></tr>
+      </table>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        1 mark per part. For (iii), accept length=8, width=4 (interchangeable). Correct plotting is a prerequisite — deduct ½ mark if plot is absent but answers are correct.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q18 — Application (Surveyor mapping a town) &nbsp; [5 marks]</div>
+      <table class="mark-table">
+        <tr><th>Part</th><th>Answer</th><th>Marks</th></tr>
+        <tr><td>(i) Plotting</td><td>All 4 points correctly plotted on coordinate axes</td><td>1</td></tr>
+        <tr><td>(ii) Quadrants</td><td>T(0,0)→Origin | L(4,3)→Q.I | M(4,−3)→Q.IV | P(−3,2)→Q.II</td><td>1</td></tr>
+        <tr><td>(iii) Mirror images</td><td>L(4,3) and M(4,−3): same x, opposite y ⟹ mirror images about x-axis</td><td>1</td></tr>
+        <tr><td>(iv) Bus stop B</td><td>Reflection of P(−3,2) about y-axis: B = (3, 2) → Quadrant I</td><td>1</td></tr>
+        <tr><td>(v) Distance of L from x-axis</td><td>Perpendicular distance = |y-coordinate| = |3| = <strong>3 units</strong> = 150 m</td><td>1</td></tr>
+      </table>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        1 mark per part. For (iii), must state both the reason (same x, opposite y) and name the correct pair for full mark. For (v), accept "3 units" or "150 metres" (1 unit = 50 m).
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q19 — ∠BOC = 90° + ½∠A &nbsp; [5 marks]</div>
+      <div class="ak-step">Let ∠A = 2α, ∠B = 2β, ∠C = 2γ (since OB and OC are angle bisectors). [1 mark — setting up notation]</div>
+      <div class="ak-step">In △ABC: ∠A + ∠B + ∠C = 180° ⟹ 2α + 2β + 2γ = 180° ⟹ α + β + γ = 90°. [1 mark]</div>
+      <div class="ak-step">∠OBC = ½∠B = β &nbsp; and &nbsp; ∠OCB = ½∠C = γ. [1 mark]</div>
+      <div class="ak-step">In △BOC: ∠BOC + ∠OBC + ∠OCB = 180°. [½ mark]</div>
+      <div class="ak-step">∠BOC = 180° − β − γ. [½ mark]</div>
+      <div class="ak-step">Since α + β + γ = 90°, we have β + γ = 90° − α. [½ mark]</div>
+      <div class="ak-step">∴ ∠BOC = 180° − (90° − α) = 90° + α = <strong>90° + ½∠A</strong>. &nbsp; ∎ [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Setting up bisector angles — 1 mark | Using angle sum in △ABC — 1 mark | Expressing ∠OBC, ∠OCB — 1 mark | Angle sum in △BOC — ½ mark | Substitution and final result — 1½ marks. Award marks for method even if subscript notation differs.
+      </div>
+    </div>
+
+    <div class="ak-q">
+      <div class="ak-q-head">Q20 — △PQR with PS⊥QR, S midpoint &nbsp; [5 marks]</div>
+      <div class="ak-step"><strong>(i)</strong> In △PQS and △PRS:</div>
+      <div class="ak-step">QS = RS (S midpoint) | PS = PS (common) | ∠PSQ = ∠PSR = 90° (PS⊥QR) [1 mark]</div>
+      <div class="ak-step">∴ △PQS ≅ △PRS by <strong>SAS</strong> (two sides and included right angle). [½ mark]</div>
+      <div class="ak-step"><strong>(ii)</strong> PQ = PR (CPCT) ∴ △PQR is isosceles. [½ mark]</div>
+      <div class="ak-step"><strong>(iii)</strong> ∠QPR = ∠QPS + ∠RPS. By CPCT, ∠QPS = ∠RPS. ∴ ∠QPR = 2∠QPS. [1 mark]</div>
+      <div class="ak-step"><strong>(iv)</strong> ∠Q = ∠R = 55° (base angles, isosceles). ∠QPR = 180° − 55° − 55° = <strong>70°</strong>. [1 mark]</div>
+      <div class="ak-step"><strong>(v)</strong> △PQS ≅ △PRS. Corresponding parts: PQ=PR, QS=RS, PS=PS, ∠Q=∠R, ∠QPS=∠RPS, ∠PSQ=∠PSR. [½ mark]</div>
+      <div class="rubric">
+        <strong>Marking:</strong>
+        Three pairs for congruence — 1 mark | SAS + congruence statement — ½ | PQ=PR — ½ | Proof ∠QPR = 2∠QPS — 1 mark | All angles in (iv) — 1 mark | CPCT list — ½ mark.
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Final Marks Summary ─── -->
+  <div class="ak-section" style="margin-top:24px;">
+    <h3>Marks Distribution Summary</h3>
+    <table class="mark-table">
+      <tr>
+        <th>Section</th><th>Questions</th><th>Topics (CG / CT)</th><th>Marks per Q</th><th>Total Marks</th>
+      </tr>
+      <tr>
+        <td>A</td><td>Q1–Q4 (4 Q)</td><td>2 CG + 2 CT</td><td>1</td><td>4</td>
+      </tr>
+      <tr>
+        <td>B (Part I)</td><td>Q5–Q8 (4 Q)</td><td>2 CG + 2 CT</td><td>2</td><td>8</td>
+      </tr>
+      <tr>
+        <td>B (Part II)</td><td>Q9–Q16 (8 Q)</td><td>4 CG + 4 CT</td><td>3</td><td>24</td>
+      </tr>
+      <tr>
+        <td>C</td><td>Q17–Q20 (4 Q)</td><td>2 CG + 2 CT</td><td>5</td><td>20</td>
+      </tr>
+      <tr style="font-weight:bold; background:#f0f0f0;">
+        <td>Total</td><td>20 Questions</td><td>10 CG + 10 CT</td><td>—</td><td><strong>56 Marks</strong></td>
+      </tr>
+    </table>
+
+    <br>
+    <table class="mark-table">
+      <tr><th colspan="3" style="text-align:center;">Application Questions</th></tr>
+      <tr><th>Q No.</th><th>Topic</th><th>Context</th></tr>
+      <tr><td>Q11</td><td>Coordinate Geometry</td><td>City planner placing school, hospital, and park on a coordinate grid</td></tr>
+      <tr><td>Q16</td><td>Congruent Triangles</td><td>Garden paths with flower pots at equidistant points — symmetry proof</td></tr>
+      <tr><td>Q18</td><td>Coordinate Geometry</td><td>Surveyor mapping a town with real-world landmark coordinates</td></tr>
+    </table>
+
+    <p style="margin-top:12px; font-size:10pt; font-style:italic;">
+      <strong>CBSE General Marking Policy:</strong> In proof-based questions, marks are awarded for each correct step of reasoning even if the final conclusion is not reached. Writing only the result without proof carries no marks. For coordinate questions, a labelled diagram/plot should be rewarded with the allocated graph mark even if subsequent numerical answers are wrong, provided the plot itself is correct.
+    </p>
+  </div>
+</div>
+
+</body>
+</html>
