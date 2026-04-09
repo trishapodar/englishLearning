@@ -120,6 +120,19 @@
       ">Verbs</span>
         </label>
 
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="tenses" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Tenses</span>
+        </label>
+
       </div>
 
       <button onclick="startSelectedMock()" id="start-btn" style="
@@ -255,6 +268,11 @@
         './verbs/verb_mcq_foundational.html',
         './verbs/verb_mcq_advanced.html',
         './verbs/verb_mcq_topper.html'
+      ],
+      tenses: [
+        './tenses/tenses_mcq_foundational.html',
+        './tenses/tenses_mcq_advanced.html',
+        './tenses/tenses_mcq_topper.html'
       ]
     };
   </script>
