@@ -353,19 +353,21 @@
     //   topics   — array of topic strings
     //   marks    — number or null
     //   date     — "DD MMM YYYY" or null
+    //   model    — e.g. "Gemini 3.1 Pro", "Claude Sonnet 4.6" (optional)
     //   url      — relative path from this file's location
     // ══════════════════════════════════════════════════════════════
     const TESTS = [
 
       // ── Science ───────────────────────────────────────────────
       {
-        title: "Plants, Seeds & Agriculture — Weekly Test (Gemini Pro 3.1)",
+        title: "Plants, Seeds & Agriculture — Weekly Test",
         subject: "Science",
         class: "Class 5",
         type: "Weekly Test",
         topics: ["Plants and their Reproduction", "Structure of Seed", "Dispersal of Seed", "Agriculture and Crops"],
         marks: 20,
         date: "12 Apr 2026",
+        model: "Gemini 3.1 Pro",
         url: "../science_tests/class5_science_plants_agriculture_20260412.html"
       },
       {
@@ -376,26 +378,29 @@
         topics: ["Parts of a Plant", "Photosynthesis", "Plant Adaptations", "Parasitic Plants"],
         marks: 20,
         date: "10 Apr 2026",
+        model: "Claude Sonnet 4.6",
         url: "../science_tests/class5_science_plants_20260410.html"
       },
       {
-        title: "Cell Biology — Weekly Test (Gemini Pro 3.1)",
+        title: "Cell Biology — Weekly Test",
         subject: "Science",
         class: "Class 9",
         type: "Weekly Test",
         topics: ["Introduction to Cell", "Discovery of Cell", "Cell Theory", "Cell Shape Size and Number", "Plasma Membrane", "Transport Across Plasma Membrane", "Osmosis", "Active Transport", "Diffusion", "Endocytosis and Exocytosis", "Nucleus", "Prokaryotic vs Eukaryotic Cells", "Cytoplasm"],
         marks: 40,
         date: "11 Apr 2026",
+        model: "Gemini 3.1 Pro",
         url: "../science_tests/class9_science_cell_20260411.html"
       },
       {
-        title: "Cell Biology — Weekly Test (Claude Sonnet 4.6)",
+        title: "Cell Biology — Weekly Test",
         subject: "Science",
         class: "Class 9",
         type: "Weekly Test",
         topics: ["Introduction to Cell", "Discovery of Cell", "Cell Theory", "Cell Shape Size and Number", "Plasma Membrane", "Transport Across Plasma Membrane", "Osmosis", "Active Transport", "Diffusion", "Endocytosis and Exocytosis", "Nucleus", "Prokaryotic vs Eukaryotic Cells", "Cytoplasm"],
         marks: 40,
         date: "12 Apr 2026",
+        model: "Claude Sonnet 4.6",
         url: "../science_tests/class9_science_cell_20260412.html"
       },
 
@@ -408,6 +413,7 @@
         topics: ["Shapes & Sides", "Perimeter", "Real-life Application"],
         marks: 20,
         date: "09 Apr 2026",
+        model: "Claude Sonnet 4.6",
         url: "../math_tests/class4_mathematics_geometry_20260409.html"
       },
       {
@@ -418,6 +424,7 @@
         topics: ["Coordinate Geometry", "Congruent Triangles"],
         marks: 56,
         date: "09 Apr 2026",
+        model: "Claude Sonnet 4.6",
         url: "../math_tests/class9_mathematics_coordinate_geometry_congruent_triangles_20260409.html"
       },
 
@@ -430,6 +437,7 @@
         topics: ["Nouns", "Pronouns", "Articles", "Adjectives", "Verbs", "Tenses"],
         marks: null,
         date: null,
+        model: "Claude Sonnet 4.6",
         url: "../english/mixed_mock_test.html"
       },
       {
@@ -812,6 +820,7 @@
       filtered.forEach(t => {
         const topicTags = t.topics.map(tp => `<span>${tp}</span>`).join("");
         const metaItems = [
+          t.model ? `<span class="meta-item">🤖 ${t.model}</span>` : "",
           t.marks ? `<span class="meta-item">📝 ${t.marks} marks</span>` : "",
           t.date ? `<span class="meta-item">📅 ${t.date}</span>` : "",
         ].filter(Boolean).join("");
