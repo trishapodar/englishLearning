@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CLAT Digest | 6–12 April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --ink:#0e0c0a; --paper:#faf6f0; --accent:#c8390a; --gold:#c9970a;
+  --navy:#0d2240; --cream:#f5eed8; --muted:#5a5650; --border:#ddd5c8;
+  --green:#1a6640; --teal:#0a5c6e; --purple:#5b2b8a;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.75;
+}
+
+/* ── MASTHEAD ── */
+.masthead{
+  background:var(--navy);
+  padding:56px 32px 48px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.masthead::before{
+  content:'';
+  position:absolute;inset:0;
+  background:
+    repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 48px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 48px);
+}
+.issue-label{
+  display:inline-block;
+  border:1px solid rgba(201,151,10,.5);
+  color:var(--gold);
+  font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;
+  padding:4px 16px;border-radius:2px;
+  margin-bottom:22px;position:relative;z-index:1;
+}
+.masthead h1{
+  font-family:'Fraunces',serif;
+  font-size:clamp(32px,6vw,58px);
+  font-weight:900;
+  color:#fff;
+  line-height:1.05;
+  position:relative;z-index:1;
+}
+.masthead h1 span{color:var(--accent);}
+.masthead .dateline{
+  font-size:13px;color:rgba(255,255,255,.55);
+  margin-top:10px;letter-spacing:.5px;
+  position:relative;z-index:1;
+}
+.kicker-strip{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:8px;
+  margin-top:28px;position:relative;z-index:1;
+}
+.kicker{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);
+  color:rgba(255,255,255,.8);font-size:11px;font-weight:500;
+  padding:5px 14px;border-radius:20px;letter-spacing:.4px;
+}
+.stats-row{
+  display:flex;justify-content:center;gap:36px;flex-wrap:wrap;
+  margin-top:32px;position:relative;z-index:1;
+}
+.stat-n{font-size:30px;font-weight:700;font-family:'Fraunces',serif;color:var(--accent);}
+.stat-l{font-size:10px;color:rgba(255,255,255,.5);letter-spacing:1.2px;text-transform:uppercase;}
+
+/* ── ALERT BAR ── */
+.alert-bar{
+  background:var(--accent);color:#fff;text-align:center;
+  padding:10px 16px;font-size:12.5px;font-weight:600;letter-spacing:.3px;
+}
+
+/* ── BODY LAYOUT ── */
+.body-wrap{max-width:1000px;margin:0 auto;padding:48px 18px;}
+
+/* ── SECTION HEADING ── */
+.sec{margin-top:60px;}
+.sec-title{
+  display:flex;align-items:center;gap:14px;
+  margin-bottom:6px;
+}
+.sec-num{
+  font-family:'Fraunces',serif;font-size:32px;font-weight:900;
+  color:var(--border);line-height:1;
+}
+.sec-title h2{
+  font-family:'Fraunces',serif;font-size:22px;font-weight:700;color:var(--navy);
+}
+.sec-rule{height:2px;background:linear-gradient(to right,var(--accent),transparent);margin-bottom:24px;}
+
+/* ── LEAD STORY ── */
+.lead{
+  background:var(--navy);color:#fff;border-radius:14px;
+  padding:32px 36px;margin-bottom:22px;position:relative;overflow:hidden;
+}
+.lead::after{
+  content:'';position:absolute;right:-30px;top:-30px;
+  width:200px;height:200px;border-radius:50%;
+  background:rgba(200,57,10,.15);
+}
+.lead-eyebrow{
+  display:inline-block;
+  background:var(--accent);color:#fff;
+  font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:3px 12px;border-radius:2px;margin-bottom:12px;
+}
+.lead h3{font-family:'Fraunces',serif;font-size:20px;font-weight:700;margin-bottom:10px;line-height:1.35;}
+.lead p{font-size:13.5px;opacity:.88;margin-bottom:10px;}
+.lead .facts-dark{
+  background:rgba(255,255,255,.08);border-radius:8px;
+  padding:14px 18px;margin-top:12px;
+}
+.lead .facts-dark li{
+  list-style:none;font-size:13px;padding-left:18px;
+  position:relative;margin-bottom:5px;
+}
+.lead .facts-dark li::before{content:'◆';position:absolute;left:0;color:var(--gold);font-size:9px;top:4px;}
+.lead .tip{
+  background:rgba(201,151,10,.18);border:1px solid rgba(201,151,10,.35);
+  border-radius:7px;padding:10px 14px;font-size:12.5px;color:rgba(255,245,200,.95);margin-top:12px;
+}
+.lead .tip strong{color:var(--gold);}
+
+/* ── STANDARD CARD ── */
+.card{
+  background:#fff;border-radius:12px;
+  padding:24px 28px;margin-bottom:18px;
+  border-left:3px solid var(--accent);
+  box-shadow:0 1px 8px rgba(14,12,10,.07);
+  transition:transform .15s,box-shadow .15s;
+}
+.card:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(14,12,10,.1);}
+.card.navy{border-left-color:var(--navy);}
+.card.green{border-left-color:var(--green);}
+.card.teal{border-left-color:var(--teal);}
+.card.gold{border-left-color:var(--gold);}
+.card.purple{border-left-color:var(--purple);}
+
+.pill{
+  display:inline-block;font-size:9.5px;font-weight:700;
+  letter-spacing:1.3px;text-transform:uppercase;
+  padding:3px 10px;border-radius:2px;margin-bottom:10px;
+}
+.p-red{background:#fce8e4;color:#9b2a0d;}
+.p-navy{background:#e4eaf3;color:#0d2240;}
+.p-green{background:#e4f0ea;color:#144d2e;}
+.p-gold{background:#fdf5e0;color:#7a5800;}
+.p-teal{background:#e0f2f6;color:#074450;}
+.p-purple{background:#efe6f8;color:#3d1a68;}
+.p-grey{background:#efefef;color:#444;}
+
+.card h3{font-family:'Fraunces',serif;font-size:17px;font-weight:700;color:var(--ink);margin-bottom:8px;line-height:1.4;}
+.card p{font-size:13.5px;color:var(--muted);margin-bottom:8px;}
+.facts{background:#f8f5f0;border-radius:8px;padding:12px 16px;margin-top:10px;}
+.facts ul{list-style:none;padding:0;}
+.facts li{font-size:12.5px;color:#3a3632;padding-left:16px;position:relative;margin-bottom:5px;}
+.facts li::before{content:'›';position:absolute;left:0;color:var(--accent);font-weight:700;font-size:14px;line-height:1.2;}
+.clat{
+  background:#fef9ec;border-left:3px solid var(--gold);
+  border-radius:0 7px 7px 0;padding:10px 14px;
+  font-size:12.5px;color:#5a4500;margin-top:12px;
+}
+.clat strong{color:#3d2e00;}
+
+/* ── TWO-COL GRID ── */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+@media(max-width:640px){.grid2{grid-template-columns:1fr;}}
+
+/* ── COURT ITEM ── */
+.court-item{
+  background:#fff;border-radius:10px;padding:18px 20px;
+  border-top:3px solid var(--navy);
+  box-shadow:0 1px 8px rgba(0,0,0,.06);
+}
+.court-label{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.court-item h4{font-family:'Fraunces',serif;font-size:15px;font-weight:700;color:var(--ink);margin-bottom:5px;line-height:1.35;}
+.court-item p{font-size:12.5px;color:var(--muted);}
+
+/* ── DAYS STRIP ── */
+.days-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-bottom:6px;}
+.day-card{
+  background:#fff;border-radius:10px;padding:16px;
+  border-bottom:3px solid var(--accent);
+  box-shadow:0 1px 8px rgba(0,0,0,.06);
+}
+.day-date{font-size:10px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:5px;}
+.day-card h4{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px;}
+.day-card p{font-size:12px;color:var(--muted);}
+
+/* ── QUIZ ── */
+.quiz{
+  background:var(--navy);color:#fff;
+  border-radius:14px;padding:36px;margin:56px 0;
+}
+.quiz-head{
+  display:flex;align-items:baseline;gap:12px;margin-bottom:8px;
+}
+.quiz-head h2{font-family:'Fraunces',serif;font-size:26px;font-weight:900;color:var(--gold);}
+.quiz-subhead{font-size:13px;opacity:.6;margin-bottom:24px;}
+.q-item{
+  background:rgba(255,255,255,.07);border-radius:9px;
+  padding:16px 20px;margin-bottom:14px;
+  border-left:3px solid var(--accent);
+}
+.q-num{font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;}
+.q-text{font-size:14px;font-weight:600;margin-bottom:8px;line-height:1.5;}
+.q-ans{
+  font-size:13px;color:#b8d4f0;
+  background:rgba(255,255,255,.06);border-radius:6px;
+  padding:10px 14px;display:none;margin-top:6px;line-height:1.6;
+}
+.rev{
+  font-size:11.5px;color:var(--gold);font-weight:700;
+  background:none;border:none;cursor:pointer;
+  font-family:'DM Sans',sans-serif;letter-spacing:.5px;padding:2px 0;
+}
+.rev:hover{text-decoration:underline;}
+
+/* ── PREP BOX ── */
+.prep{
+  background:var(--cream);border:2px solid var(--border);
+  border-radius:14px;padding:28px 32px;margin:44px 0 8px;
+}
+.prep h3{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--navy);margin-bottom:14px;}
+.prep ul{list-style:none;padding:0;}
+.prep li{
+  font-size:13.5px;color:#2a2520;
+  padding-left:22px;position:relative;margin-bottom:9px;
+}
+.prep li::before{content:'✦';position:absolute;left:0;color:var(--accent);}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--navy);color:rgba(255,255,255,.4);
+  text-align:center;padding:28px;font-size:12.5px;
+  margin-top:12px;
+}
+footer strong{color:var(--accent);}
+</style>
+</head>
+<body>
+
+<!-- ══ MASTHEAD ══ -->
+<div class="masthead">
+  <div class="issue-label">CLAT Prep · Issue #4 · Weekly Digest</div>
+  <h1>General Affairs<br><span>6 – 12 April 2026</span></h1>
+  <p class="dateline">The Sabarimala Bench Convenes · Sathankulam Justice · India's Nuclear Triad Completes</p>
+  <div class="kicker-strip">
+    <span class="kicker">⚖️ 9-Judge Constitution Bench Begins</span>
+    <span class="kicker">🔴 Custodial Death Penalty</span>
+    <span class="kicker">🚀 INS Aridhaman · Nuclear Triad</span>
+    <span class="kicker">🌐 GST 2.0 · SHANTI Bill</span>
+    <span class="kicker">🌍 West Asia Crisis Update</span>
+  </div>
+  <div class="stats-row">
+    <div class="stat"><div class="stat-n">12</div><div class="stat-l">Key Stories</div></div>
+    <div class="stat"><div class="stat-n">6</div><div class="stat-l">Quiz Questions</div></div>
+    <div class="stat"><div class="stat-n">5</div><div class="stat-l">Themes</div></div>
+    <div class="stat"><div class="stat-n">~25%</div><div class="stat-l">GK Weightage</div></div>
+  </div>
+</div>
+<div class="alert-bar">📅 World Health Day (Apr 7) · International Day of Human Space Flight (Apr 12) · Sabarimala 9-Judge Bench Day 1 (Apr 7)</div>
+
+<div class="body-wrap">
+
+<!-- ══ IMPORTANT DAYS ══ -->
+<div class="sec">
+  <div class="sec-title"><span class="sec-num">01</span><h2>Important Days This Week</h2></div>
+  <div class="sec-rule"></div>
+  <div class="days-grid">
+    <div class="day-card">
+      <div class="day-date">April 7</div>
+      <h4>World Health Day</h4>
+      <p>Theme 2026: <em>"Healthy Beginnings, Hopeful Futures."</em> Organised by WHO (est. 1948). India focus: maternal &amp; child health, universal health coverage.</p>
+    </div>
+    <div class="day-card">
+      <div class="day-date">April 7</div>
+      <h4>Rongali / Bohag Bihu</h4>
+      <p>Assam's New Year — one of three Bihu festivals. Marks onset of the Assamese solar new year and the agricultural cycle.</p>
+    </div>
+    <div class="day-card" style="border-bottom-color:var(--navy);">
+      <div class="day-date" style="color:var(--navy);">April 12</div>
+      <h4>International Day of Human Space Flight</h4>
+      <p>Marks Yuri Gagarin's historic first human spaceflight (April 12, 1961 — Vostok 1 mission). Declared by UN in 2011.</p>
+    </div>
+    <div class="day-card" style="border-bottom-color:var(--green);">
+      <div class="day-date" style="color:var(--green);">April 11</div>
+      <h4>National Safe Motherhood Day</h4>
+      <p>India-specific observance on the birthday of Kasturba Gandhi — focuses on maternal health, safe deliveries, and reducing MMR.</p>
+    </div>
+    <div class="day-card" style="border-bottom-color:var(--gold);">
+      <div class="day-date" style="color:var(--gold);">April 10</div>
+      <h4>World Homeopathy Day</h4>
+      <p>Birth anniversary of Dr. Samuel Hahnemann (founder of homeopathy). India is the world's largest homeopathy market under the AYUSH ministry.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 1: CONSTITUTIONAL & LEGAL ══ -->
+<div class="sec">
+  <div class="sec-title"><span class="sec-num">02</span><h2>Constitutional &amp; Legal Developments</h2></div>
+  <div class="sec-rule"></div>
+
+  <!-- Sabarimala LEAD -->
+  <div class="lead">
+    <div class="lead-eyebrow">★ CONSTITUTION BENCH · 7 APRIL — THE CASE OF THE DECADE</div>
+    <h3>9-Judge Constitution Bench Begins Sabarimala Hearing — Seven Core Questions on Religious Freedom</h3>
+    <p>India's largest Constitutional Bench in recent memory — 9 judges, led by CJI Surya Kant — commenced hearing on April 7 in <em>Kantaru Rajeevaru v. Indian Young Lawyers Association</em>. The bench is reviewing the landmark 2018 judgment that allowed women of all ages into the Sabarimala temple, and will settle 7 foundational questions on the scope of religious freedom under Articles 25–26 vis-à-vis equality rights under Articles 14–17. Crucially, the bench has expanded the reference to cover 66 connected matters across multiple faiths.</p>
+    <p>On Day 1, Solicitor General Tushar Mehta (for Union of India, supporting review) argued that the "Essential Religious Practices" test was first articulated without noticing the Constituent Assembly Debates, and that sub-denominations within a religion deserve independent Article 26 protection.</p>
+    <div class="facts-dark">
+      <ul>
+        <li>Original 2018 ruling (4:1): Women of all ages allowed into Sabarimala; the bar on women aged 10–50 was unconstitutional</li>
+        <li>2019 Review Reference (3:2 majority): Referred broad religion-vs-equality questions to a larger bench</li>
+        <li>66 connected matters include: (i) Muslim women's entry into mosques; (ii) Parsi women married to non-Parsis entering Fire Temples; (iii) Female Genital Mutilation (FGM) in Dawoodi Bohra community</li>
+        <li>7 Questions framed: Scope of ERP test; meaning of 'morality' in Arts. 25–26; whether Art. 26 rights override other Part III rights; meaning of 'sections of Hindus' (Art. 25(2)(b)); scope of judicial review in religious matters</li>
+        <li>Bench: CJI Surya Kant + Justices BV Nagarathna, MM Sundresh, Ahsanuddin Amanullah, Aravind Kumar, AG Masih, R Mahadevan, Prasanna B Varale, Joymalya Bagchi</li>
+        <li>Schedule: Apr 7–9 (Review petitioners); Apr 14–16 (Opposing parties); Apr 21 (Rejoinder); Apr 22 (Amicus)</li>
+      </ul>
+    </div>
+    <div class="tip"><strong>CLAT Angle:</strong> This is the single most important pending constitutional case for CLAT 2026 preparation. Master Articles 25–28 (religion), Articles 14–17 (equality), the Essential Religious Practices test (Shirur Mutt, 1954), the doctrine of constitutional morality (Navtej Singh Johar, 2018), and Article 26 (religious denominations). CLAT will almost certainly set a comprehension passage on this topic.</div>
+  </div>
+
+  <!-- Sathankulam -->
+  <div class="lead" style="background:linear-gradient(135deg,#1a0800,#3d0e00);">
+    <div class="lead-eyebrow" style="background:var(--gold);color:var(--ink);">★ LANDMARK VERDICT · 6 APRIL — RAREST OF RARE</div>
+    <h3>Sathankulam Custodial Death Case: 9 Policemen Sentenced to Death — "Rarest of Rare"</h3>
+    <p>In a historic and emotionally charged verdict, the First Additional District and Sessions Court in Madurai on April 6, 2026, awarded the <strong>death penalty to all 9 police officers</strong> convicted of custodial torture and murder of father-son duo P. Jeyaraj (58) and J. Bennix (31) in June 2020. Judge G. Muthukumaran held the case fell within the <em>"rarest of rare"</em> doctrine, noting: <em>"If ordinary citizens had committed the same crime, ordinary punishment could have been given, but the police themselves have committed the crime."</em> The court drew a parallel to the killing of George Floyd in the US.</p>
+    <div class="facts-dark">
+      <ul>
+        <li>Case: CBI v. Sridhar &amp; Ors. | First Additional Sessions Court, Madurai | Decided 6-4-2026</li>
+        <li>Background: Father and son picked up on June 19, 2020 for allegedly violating COVID-19 lockdown curfew; CBI later found no actual violation occurred</li>
+        <li>CBI involvement: TN government transferred case to CBI after Madras HC took suo motu cognisance; 2,027-page chargesheet; 52 of 135 witnesses examined</li>
+        <li>"Rarest of Rare" doctrine: First articulated in Bachan Singh v. State of Punjab (1980) — death penalty only when life imprisonment is "unquestionably foreclosed"</li>
+        <li>Charges: Sections 302 (murder), 342 (wrongful confinement), 120-B (criminal conspiracy), 201 (destruction of evidence) of IPC, 1860</li>
+        <li>Additional penalty: ₹1.4 crore compensation ordered to victims' family</li>
+        <li>What's next: Convicts expected to appeal in Madras High Court; confirmation required by HC for death sentences under Section 413 CrPC/BNSS</li>
+        <li>Data context: India recorded 170 custodial deaths Jan–mid-March 2026 alone (Lok Sabha data)</li>
+      </ul>
+    </div>
+    <div class="tip"><strong>CLAT Angle:</strong> This case is a goldmine for CLAT — "rarest of rare" doctrine (Bachan Singh v. Punjab), custodial rights under Articles 21 & 22, D.K. Basu guidelines (1997), CBI's role as a federal investigative agency, and the debate around abolition of death penalty. Also connects to the persistent question: India has never ratified UNCAT against torture.</div>
+  </div>
+
+  <!-- POCSO + Article 32 -->
+  <div class="grid2">
+    <div class="court-item">
+      <div class="court-label">SC · POCSO Act</div>
+      <h4>SC Challenges Allahabad HC Bail to Religious Figure in POCSO Case</h4>
+      <p>An SLP was filed in SC challenging anticipatory bail granted to Swami Avimukteshwaranand in a POCSO case, arguing bail in grave offences against children must be exceptional. Raises question of special courts under POCSO Act, 2012 and S.439 CrPC bail powers.</p>
+      <div class="clat" style="margin-top:10px;"><strong>CLAT:</strong> POCSO Act, 2012 creates special courts; "child" defined as any person under 18. Sessions courts and special courts have concurrent jurisdiction on bail.</div>
+    </div>
+    <div class="court-item">
+      <div class="court-label">SC · CBI PROBE · ARUNACHAL</div>
+      <h4>SC Orders CBI Probe into Allegations Against Arunachal CM Pema Khandu</h4>
+      <p>The Supreme Court ordered a CBI investigation into allegations of favouritism in allotment of public works contracts in Arunachal Pradesh to firms linked to CM Pema Khandu. Raises important questions about Article 194 (legislative privileges) and anti-corruption investigations of sitting CMs.</p>
+      <div class="clat" style="margin-top:10px;"><strong>CLAT:</strong> Prevention of Corruption Act, 1988; SC's powers under Article 32 to direct CBI; and constitutional protections for elected representatives are key angles here.</div>
+    </div>
+    <div class="court-item">
+      <div class="court-label">DELHI HC · FREE SPEECH</div>
+      <h4>Delhi HC Restores Satirical X Account — Tweets Against PM to Stay Blocked</h4>
+      <p>Delhi HC ordered restoration of a blocked satirical X (Twitter) account "Dr. Nimo Yadav," but directed that specific tweets critical of PM Modi remain blocked. The ruling highlights the complex interplay between Article 19(1)(a) (free speech) and reasonable restrictions under Article 19(2).</p>
+      <div class="clat" style="margin-top:10px;"><strong>CLAT:</strong> Section 69A IT Act (government blocking orders), Shreya Singhal (2015), Article 19(1)(a) vs. 19(2) reasonable restrictions — a recurring CLAT passage theme.</div>
+    </div>
+    <div class="court-item">
+      <div class="court-label">CHINA · ARUNACHAL</div>
+      <h4>China Renames Locations in Arunachal Pradesh — India Rejects as "Fictitious"</h4>
+      <p>China released another list renaming locations in Arunachal Pradesh, which it calls "Zangnan." India firmly rejected the move, reiterating that Arunachal Pradesh is and will remain an integral part of India. China has now carried out four such renaming exercises since 2017.</p>
+      <div class="clat" style="margin-top:10px;"><strong>CLAT:</strong> India's territorial integrity under Article 1 (India is a Union of States), McMahon Line, and bilateral disputes under international law including UN Charter principles on territorial integrity.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 2: DEFENCE & SPACE ══ -->
+<div class="sec">
+  <div class="sec-title"><span class="sec-num">03</span><h2>Defence, Space &amp; Technology</h2></div>
+  <div class="sec-rule"></div>
+
+  <div class="lead" style="background:linear-gradient(135deg,#0d2a1a,#0a4428);">
+    <div class="lead-eyebrow" style="background:#2d8a4e;">★ NUCLEAR TRIAD COMPLETE · APRIL 2026</div>
+    <h3>INS Aridhaman Inducted — India Completes Nuclear Triad with 3rd SSBN</h3>
+    <p>India's <strong>third nuclear-powered ballistic missile submarine (SSBN), INS Aridhaman</strong>, was handed over to the Indian Navy in April 2026, completing India's <em>nuclear triad</em> — the ability to deliver nuclear weapons from land, air, and sea. Defence Minister Rajnath Singh attended the handover ceremony. INS Aridhaman, built under India's classified Advanced Technology Vessel (ATV) project, belongs to the Arihant class and can launch K-4 and K-15 (Kalam series) nuclear-capable ballistic missiles.</p>
+    <div class="facts-dark">
+      <ul>
+        <li>Nuclear Triad: Land (ICBMs/Agni series) + Air (Su-30 MKI/Rafale with nuclear delivery) + Sea (SSBN submarines) = credible second-strike capability</li>
+        <li>Arihant Class SSBNs: INS Arihant (2016) → INS Arighat (2024) → INS Aridhaman (2026)</li>
+        <li>K-4 Missile: Range ~3,500 km (submarine-launched); K-15 (Sagarika): Range ~750 km</li>
+        <li>India's No First Use (NFU) Policy: India will not use nuclear weapons first; but promises "massive retaliation" if hit</li>
+        <li>Make in India: Built at Ship Building Centre, Visakhapatnam — demonstrates indigenous defence manufacturing</li>
+        <li>INS Taragiri (Apr 3): 4th stealth frigate of Nilgiri Class (Project 17A) also handed over; names reflect India's mountain ranges</li>
+      </ul>
+    </div>
+    <div class="tip"><strong>CLAT Angle:</strong> India's nuclear doctrine (NFU), Make in India in defence, DRDO's role, and maritime security as part of India's strategic autonomy are important GK areas. The nuclear triad completes India's minimum credible deterrence posture.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card teal">
+      <span class="pill p-teal">NUCLEAR ENERGY · SHANTI BILL</span>
+      <h3>SHANTI Bill: India Opens Nuclear Sector to Private Players</h3>
+      <p>The SHANTI (Sustainable Harnessing and Advancement of Nuclear Technology for India) Bill, passed in December 2025 and now in implementation phase, repeals the Atomic Energy Act, 1962 to allow private companies to build, own, and operate nuclear plants — targeting 100 GW of nuclear capacity by 2047.</p>
+      <div class="facts"><ul>
+        <li>Earlier regime: Only NPCIL (state-owned) could operate nuclear plants under the Atomic Energy Act, 1962</li>
+        <li>India currently: 24 reactors; PHWR (Pressurised Heavy Water Reactor) is India's indigenous design</li>
+        <li>Target: 100 GW nuclear by 2047 (Viksit Bharat) — from current ~7 GW</li>
+        <li>Strategic: Nuclear = baseload power; 10x less land-intensive than solar/wind</li>
+      </ul></div>
+      <div class="clat"><strong>CLAT:</strong> Atomic Energy Act (Union List, Entry 58), Parliament's exclusive power over nuclear energy, and India's nuclear liability framework (Civil Liability for Nuclear Damage Act, 2010) are important GK topics.</div>
+    </div>
+    <div class="card green">
+      <span class="pill p-green">ISRO · SPACE</span>
+      <h3>ISRO Conducts 2nd Air Drop Test for Gaganyaan Mission at Sriharikota</h3>
+      <p>ISRO successfully conducted the second air drop test of the Crew Escape System for the Gaganyaan human spaceflight mission at Sriharikota. The test ensures astronaut safety during emergency abort scenarios. On the occasion of the International Day of Human Space Flight (April 12), ISRO also unveiled a progress update on Mission MITRA (its reusable launch vehicle programme).</p>
+      <div class="facts"><ul>
+        <li>Gaganyaan: India's first crewed spaceflight mission; target: send 3 astronauts to 400 km orbit for 3 days</li>
+        <li>Crew Escape System (CES): Fires rockets to pull crew module away from launch vehicle if emergency occurs</li>
+        <li>ISRO founded: 1969 by Dr. Vikram Sarabhai; statutory body under Dept. of Space</li>
+        <li>April 12, 1961: Yuri Gagarin's Vostok 1 — first human in space (Soviet Union)</li>
+      </ul></div>
+      <div class="clat"><strong>CLAT:</strong> ISRO's missions, India's Space Policy 2023 (opens space to private players), and significant space dates are frequently tested in CLAT GK passages.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 3: ECONOMY & GOVERNANCE ══ -->
+<div class="sec">
+  <div class="sec-title"><span class="sec-num">04</span><h2>Economy, Tax &amp; Governance</h2></div>
+  <div class="sec-rule"></div>
+
+  <div class="card gold">
+    <span class="pill p-gold">GST 2.0 · TAX REFORM</span>
+    <h3>GST 2.0: Three-Slab Structure Approved; Compensation Cess Ends March 31, 2026</h3>
+    <p>The GST Council approved a transition to a simplified <strong>three-slab GST structure: 5%, 18%, and 40%</strong> (replacing the earlier 4-tier system of 5%, 12%, 18%, 28%). The <strong>GST Compensation Cess</strong> — extended to service Union borrowings during COVID-19 — formally ended on March 31, 2026. The revised structure aims to reduce classification disputes and ease compliance.</p>
+    <div class="facts"><ul>
+      <li>GST launched: July 1, 2017 — "One Nation, One Tax"; Constitutional basis: Article 246A (inserted by 101st Amendment, 2016)</li>
+      <li>GST Council: Article 279A — chaired by Union Finance Minister; states have 2/3 voting weight</li>
+      <li>Compensation Cess: States guaranteed 14% revenue growth for 5 years; cess extended post-2022 for COVID borrowings</li>
+      <li>New apparel/footwear threshold: Tax-free up to ₹2,500 (from ₹1,000) — relief for lower-income consumers</li>
+      <li>GST revenue: India collected record ₹2.37 lakh crore in March 2026 (FY-end month)</li>
+    </ul></div>
+    <div class="clat"><strong>CLAT Angle:</strong> Article 246A and the 101st Constitutional Amendment (GST), the GST Council's composition and powers, fiscal federalism, and India's indirect tax reforms are high-priority constitutional-economic CLAT topics.</div>
+  </div>
+
+  <div class="card navy">
+    <span class="pill p-navy">PM MODI · CONSTITUTIONAL RECORD</span>
+    <h3>PM Modi Becomes India's Longest-Serving Prime Minister — Constitutional Debate on Term Limits</h3>
+    <p>In April 2026, PM Narendra Modi surpassed the tenure record of Jawaharlal Nehru to become India's <strong>longest-serving Prime Minister</strong>. This milestone has renewed the debate over whether India should codify executive term limits, as the Constitution provides no fixed cap on PM tenure.</p>
+    <div class="facts"><ul>
+      <li>Article 75: PM holds office at the pleasure of the President but must enjoy confidence of the Lok Sabha</li>
+      <li>No fixed term: Dr. Ambedkar argued continuous parliamentary accountability (questions, no-confidence motions) is more effective than fixed terms</li>
+      <li>Collective responsibility: Under Article 75(3), Council of Ministers is collectively responsible to Lok Sabha</li>
+      <li>UK analogy: No term limits in UK Westminster model either — India follows parliamentary supremacy</li>
+      <li>Nehru's tenure: May 1947 – May 1964 (17 years)</li>
+    </ul></div>
+    <div class="clat"><strong>CLAT Angle:</strong> Article 74–75 (PM's appointment and tenure), collective responsibility vs. individual responsibility, and the no-confidence motion mechanism are standard CLAT polity questions.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card green">
+      <span class="pill p-green">EDUCATION · NCERT</span>
+      <h3>NCERT Granted Deemed University Status</h3>
+      <p>The National Council of Educational Research and Training (NCERT) has been granted Deemed University status under Section 3 of the UGC Act, 1956. This allows NCERT to award degrees and conduct research programmes independently, strengthening India's school education research capacity.</p>
+      <div class="clat"><strong>CLAT:</strong> UGC Act, 1956; Entry 66 of Union List (coordination and standards in higher education); and the NEP 2020's vision for integrated education institutions.</div>
+    </div>
+    <div class="card">
+      <span class="pill p-red">SKILLS · EMPLOYMENT</span>
+      <h3>MSDE Launches Skills Outcomes Fund for Low-Income Youth</h3>
+      <p>The Ministry of Skill Development &amp; Entrepreneurship launched the Skills Outcomes Fund to mobilise public, private, and philanthropic capital linked directly to verified employment outcomes. Operationalised through NSDC; targets high-growth sectors including green jobs, semiconductors, and healthcare.</p>
+      <div class="clat"><strong>CLAT:</strong> Article 41 (DPSP — right to work and education) and Article 21A (right to education) connect to India's skilling agenda. NSDC, PMKVY are frequently tested GK topics.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SECTION 4: INTERNATIONAL ══ -->
+<div class="sec">
+  <div class="sec-title"><span class="sec-num">05</span><h2>International Affairs</h2></div>
+  <div class="sec-rule"></div>
+
+  <div class="card purple">
+    <span class="pill p-purple">WEST ASIA · ENERGY · CRITICAL</span>
+    <h3>OPEC+ Raises Production Quotas Amid US–Iran–Israel Conflict; Stagflation Risk for India</h3>
+    <p>OPEC+ (Organisation of Petroleum Exporting Countries + allies including Russia) raised production quotas amid ongoing conflict in West Asia, attempting to stabilise global oil markets. Despite the hike, crude oil remains above $100/barrel, pushing India into stagflation risk territory — a rare economic condition combining high inflation with slow growth triggered by an oil shock.</p>
+    <div class="facts"><ul>
+      <li>OPEC founded: 1960 by Iraq, Iran, Kuwait, Saudi Arabia, Venezuela</li>
+      <li>Stagflation: High inflation + economic slowdown simultaneously — difficult to address (rate hike cures inflation but deepens slowdown)</li>
+      <li>India's GDP: Q3 FY2025-26 grew at ~7.8%; but oil shock threatens growth in Q4 and FY2026-27</li>
+      <li>India's SPRs: Only ~9.5 days of import cover — dangerously low for a prolonged crisis</li>
+      <li>Energy alternatives gaining traction: Ethanol blending (20% by 2025-26), solar push, green hydrogen under NGHM</li>
+    </ul></div>
+    <div class="clat"><strong>CLAT Angle:</strong> India's energy security, OPEC's role in global oil pricing, India's economic impact of oil shocks, and India's green energy transition connect to economic law and international relations topics.</div>
+  </div>
+
+  <div class="grid2">
+    <div class="card teal">
+      <span class="pill p-teal">INDIA-BHUTAN · HYDRO</span>
+      <h3>India Signs Punatsangchhu-II Hydropower Tariff Agreement with Bhutan</h3>
+      <p>India and Bhutan signed the tariff agreement for the 1,020 MW Punatsangchhu-II Hydropower Project, a flagship bilateral project. India is Bhutan's largest development partner; hydropower exports to India constitute Bhutan's primary source of export revenue under the Friendship Treaty framework.</p>
+      <div class="clat"><strong>CLAT:</strong> India-Bhutan Treaty of Friendship (1949, renewed 2007), Neighbourhood First Policy, and international river water agreements are tested GK topics.</div>
+    </div>
+    <div class="card navy">
+      <span class="pill p-navy">INDIA-AZERBAIJAN · DIPLOMACY</span>
+      <h3>India-Azerbaijan Diplomatic Reset — Trade &amp; Energy Focus</h3>
+      <p>India and Azerbaijan held talks in Baku and agreed to reset diplomatic relations, which had been strained over India's ties with Armenia (Nagorno-Karabakh dispute) and Azerbaijan's alleged frustration over its SCO membership bid. Future cooperation is expected in trade, energy, and counter-terrorism.</p>
+      <div class="clat"><strong>CLAT:</strong> SCO (Shanghai Cooperation Organisation) — India is a full member since 2017; India's multi-alignment foreign policy.</div>
+    </div>
+    <div class="card green">
+      <span class="pill p-green">SPORTS · INDIA</span>
+      <h3>Khelo India Tribal Games 2026 Concludes — Karnataka Tops Medal Tally</h3>
+      <p>The inaugural Khelo India Tribal Games (hosted by Chhattisgarh, Raipur) concluded with Karnataka topping the medal tally (23 Gold, 7 Silver, 8 Bronze). Key sports: Malkhamb (gymnastics martial art) and Kabaddi. 30 States and UTs participated; mascot was "Morvi." Chief guests: Mary Kom and Bhaichung Bhutia.</p>
+      <div class="clat"><strong>CLAT:</strong> Khelo India Scheme (2018); tribal communities' constitutional protection under Part X (Fifth &amp; Sixth Schedules); Article 51A(g) — fundamental duty to develop scientific temper and spirit of inquiry (sports).</div>
+    </div>
+    <div class="card">
+      <span class="pill p-red">WIND ENERGY · RECORD</span>
+      <h3>India Adds Highest-Ever Wind Power Capacity in FY 2025–26</h3>
+      <p>India added its highest-ever annual wind power capacity in FY 2025–26, driven by installations in Tamil Nadu, Gujarat, Rajasthan, and Karnataka. This record addition strengthens India's progress toward its Paris Agreement commitment of 500 GW of non-fossil fuel electricity capacity by 2030.</p>
+      <div class="clat"><strong>CLAT:</strong> India's NDC commitments, National Action Plan on Climate Change (NAPCC), and India's National Wind-Solar Hybrid Energy Policy are relevant for CLAT's environment law passages.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ══ QUIZ ══ -->
+<div class="quiz">
+  <div class="quiz-head"><h2>🎯 Weekly CLAT Quiz</h2></div>
+  <p class="quiz-subhead">Attempt each question mentally — then reveal the answer to check.</p>
+
+  <div class="q-item">
+    <div class="q-num">Question 01 — Sabarimala / ERP Test</div>
+    <p class="q-text">The 9-judge Constitution Bench hearing the Sabarimala review is examining the "Essential Religious Practices" (ERP) test. In which landmark case was this test first articulated? What does the test determine?</p>
+    <button class="rev" onclick="reveal(this)">Reveal Answer ▾</button>
+    <div class="q-ans">The ERP test was first articulated in <strong>Commissioner, Hindu Religious Endowments v. Sri Lakshmindra Thirtha Swamiar of Sri Shirur Mutt (1954)</strong> — commonly called the <em>Shirur Mutt case</em>. The test determines which religious practices are "essential" or "integral" to a religion and thereby protected under Article 25(1) of the Constitution. Only practices that pass this test get constitutional protection from State regulation. Critics argue that courts — not religious communities — end up deciding what is "essential" to a faith, which itself raises concerns about judicial overreach into religious matters.</div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-num">Question 02 — Sathankulam / Death Penalty</div>
+    <p class="q-text">The Sathankulam verdict applied the "rarest of rare" doctrine to award death penalty. In which case did the Supreme Court establish this doctrine, and what two-step test must a court apply before awarding capital punishment?</p>
+    <button class="rev" onclick="reveal(this)">Reveal Answer ▾</button>
+    <div class="q-ans">The "rarest of rare" doctrine was established in <strong>Bachan Singh v. State of Punjab (1980)</strong> — a five-judge Constitution Bench upheld the constitutional validity of the death penalty but held it can only be imposed when: (1) the alternative of life imprisonment is "unquestionably foreclosed," and (2) the crime is so heinous that it shocks the collective conscience of society. Courts must balance aggravating vs. mitigating circumstances. Additionally, under Section 413 of the BNSS (formerly CrPC), every death sentence must be confirmed by the <strong>High Court</strong> before execution.</div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-num">Question 03 — Nuclear Triad / INS Aridhaman</div>
+    <p class="q-text">What is India's nuclear doctrine, and how does the completion of the nuclear triad with INS Aridhaman strengthen it?</p>
+    <button class="rev" onclick="reveal(this)">Reveal Answer ▾</button>
+    <div class="q-ans">India's nuclear doctrine, adopted in 2003, is based on: (1) <strong>No First Use (NFU)</strong> — India will not use nuclear weapons first against any state; (2) <strong>Credible Minimum Deterrence</strong> — maintaining only enough nuclear weapons to deter adversaries; and (3) <strong>Massive Retaliation</strong> — if attacked with nuclear weapons, India will respond with overwhelming force. The nuclear triad — land (Agni missiles), air (fighter aircraft), and sea (SSBNs like INS Aridhaman) — ensures India's <strong>second-strike capability</strong>: even if land and air bases are destroyed in a first strike, submarine-based missiles survive to retaliate. This makes India's NFU policy more credible and stabilises deterrence.</div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-num">Question 04 — GST / Constitutional Amendment</div>
+    <p class="q-text">GST was introduced through a constitutional amendment. Which amendment inserted Article 246A, what does it provide, and how is the GST Council constituted under the Constitution?</p>
+    <button class="rev" onclick="reveal(this)">Reveal Answer ▾</button>
+    <div class="q-ans">GST was introduced by the <strong>101st Constitutional Amendment Act, 2016</strong>, which inserted <strong>Article 246A</strong> — granting Parliament <em>and</em> State Legislatures concurrent power to legislate on GST (except on petroleum, alcohol, and tobacco, which remain outside GST). The <strong>GST Council</strong> is established under <strong>Article 279A</strong> and consists of the Union Finance Minister (Chairperson), the Union Minister of State for Finance, and Finance Ministers of all States. Voting: Union government has 1/3 weight; States collectively have 2/3 weight. Decisions require a 3/4 majority. The GST Council is a quasi-federal institution — a cooperative federalism mechanism.</div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-num">Question 05 — PM's Tenure / Article 75</div>
+    <p class="q-text">PM Modi has become India's longest-serving PM. Under which Articles of the Constitution is the PM appointed? Can Parliament fix term limits for the PM by a simple amendment?</p>
+    <button class="rev" onclick="reveal(this)">Reveal Answer ▾</button>
+    <div class="q-ans">The PM is appointed under <strong>Article 75</strong> — the President appoints the PM, and other ministers on the PM's advice. The PM holds office at the pleasure of the President but, by constitutional convention, continues as long as they command the confidence of the Lok Sabha (<strong>Article 75(3)</strong> — collective responsibility to Lok Sabha). Parliament <em>cannot</em> fix term limits for PM by a simple amendment — any such change would alter the basic structure of parliamentary democracy (which is part of the <strong>Basic Structure Doctrine</strong> from <em>Kesavananda Bharati v. State of Kerala, 1973</em>). Parliamentary accountability — through no-confidence motions and Question Hour — is the constitutional check on PM tenure.</div>
+  </div>
+
+  <div class="q-item">
+    <div class="q-num">Question 06 — India-Bhutan / Neighbourhood Policy</div>
+    <p class="q-text">India signed the Punatsangchhu-II hydropower agreement with Bhutan. Name India's overarching foreign policy for neighbouring nations, and explain Bhutan's unique constitutional status vis-à-vis India.</p>
+    <button class="rev" onclick="reveal(this)">Reveal Answer ▾</button>
+    <div class="q-ans">India's policy is called the <strong>Neighbourhood First Policy</strong>, prioritising relations with South Asian and Indian Ocean neighbours. Bhutan has a unique status: under the <strong>India-Bhutan Friendship Treaty of 1949</strong> (renewed and updated in 2007), Bhutan agreed to be guided by India in its foreign policy in exchange for India's guarantee of Bhutan's security. Bhutan is not a SAARC founding member but joined in 1985. Hydropower is the backbone of Bhutan's economy — exports to India generate ~30% of Bhutan's GDP. The Punatsangchhu-II (1,020 MW) and Mangdechhu (720 MW) projects are joint India-Bhutan ventures. Bhutan also features in CLAT passages due to its unique Gross National Happiness (GNH) constitutional framework — the world's only constitution based on happiness rather than GDP.</div>
+  </div>
+</div>
+
+<!-- ══ PREP BOX ══ -->
+<div class="prep">
+  <h3>📌 CLAT Prep Strategy — Week of 6–12 April 2026</h3>
+  <ul>
+    <li>The Sabarimala 9-judge bench is actively hearing arguments — follow the hearing schedule (Apr 7–9 and Apr 14–16) and note new arguments daily. The judgment, when delivered, will redefine Articles 25–28 jurisprudence</li>
+    <li>Make a comparison table: Bachan Singh (1980) "rarest of rare" → Machhi Singh (1983) criteria → Sathankulam (2026) application. CLAT loves testing the evolution of capital punishment law</li>
+    <li>Nuclear triad story = Make in India + defence indigenisation + nuclear doctrine — link to DRDO, ATV project, and India's nuclear liability law (Civil Liability for Nuclear Damage Act, 2010)</li>
+    <li>GST 2.0 is a must-revise: Article 246A (101st Amendment) + Article 279A (GST Council) + new 3-slab structure + end of compensation cess = a full CLAT GK passage worth 5 questions</li>
+    <li>Important Days: April 7 (World Health Day — theme: "Healthy Beginnings, Hopeful Futures"), April 12 (Human Space Flight Day — Gagarin 1961). These date-theme pairs appear every year</li>
+    <li>Scan: India's wind power record (FY26) → links to India's NDC under Paris Agreement → India pledged 500 GW non-fossil fuel by 2030 → connect to INDCs and COP26/COP28 outcomes</li>
+  </ul>
+</div>
+
+</div><!-- end body-wrap -->
+
+<footer>
+  <p>📰 <strong>CLAT Weekly General Affairs Digest</strong> · Issue #4 · 6–12 April 2026</p>
+  <p style="margin-top:6px;">Sources: Live Law · SC Observer · The Wire · Outlook India · Insights on India · PMF IAS · GKToday · PW Live · Wikipedia 2026 in India · ANI · The Week</p>
+  <p style="margin-top:6px;font-size:11px;">For educational use only · Cross-verify from primary sources · Not legal advice</p>
+</footer>
+
+<script>
+function reveal(btn){
+  const a=btn.nextElementSibling;
+  if(a.style.display==='block'){a.style.display='none';btn.textContent='Reveal Answer ▾';}
+  else{a.style.display='block';btn.textContent='Hide Answer ▴';}
+}
+</script>
+</body>
+</html>
