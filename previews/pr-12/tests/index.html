@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --card: #1f2235;
+      --border: #2a2f45;
+      --gold: #c9a84c;
+      --gold-dim: #8a6a28;
+      --text: #e8e4d9;
+      --muted: #8a8fa8;
+      --chip-bg: #252840;
+      --chip-act: #c9a84c;
+      --chip-act-text: #0f1117;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(0, 0, 0, .45);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      padding: 32px 28px 60px;
+    }
+
+    /* ── Header ───────────────────────────────────────────── */
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .page-header h1 {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: -.5px;
+    }
+
+    .page-header p {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .nav-btn {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    /* ── Search ───────────────────────────────────────────── */
+    .search-wrap {
+      position: relative;
+      max-width: 480px;
+      margin-bottom: 20px;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      padding: 10px 16px 10px 40px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: var(--text);
+      font-family: inherit;
+      font-size: .9rem;
+      outline: none;
+      transition: border-color .2s;
+    }
+
+    .search-wrap input:focus {
+      border-color: var(--gold-dim);
+    }
+
+    .search-wrap input::placeholder {
+      color: var(--muted);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      font-size: .9rem;
+      pointer-events: none;
+    }
+
+    /* ── Filter Row ───────────────────────────────────────── */
+    .filter-section {
+      margin-bottom: 28px;
+    }
+
+    .filter-label {
+      font-size: .7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .chip {
+      padding: 5px 14px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--chip-bg);
+      color: var(--muted);
+      font-size: .8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all .18s;
+      user-select: none;
+    }
+
+    .chip:hover {
+      border-color: var(--gold-dim);
+      color: var(--text);
+    }
+
+    .chip.active {
+      background: var(--chip-act);
+      border-color: var(--chip-act);
+      color: var(--chip-act-text);
+      font-weight: 600;
+    }
+
+    /* ── Stats bar ────────────────────────────────────────── */
+    .stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+    }
+
+    .stats-bar .count {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+
+    .stats-bar .count strong {
+      color: var(--text);
+    }
+
+    /* ── Grid ─────────────────────────────────────────────── */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 18px;
+    }
+
+    /* ── Card ─────────────────────────────────────────────── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: var(--shadow);
+      transition: border-color .2s, transform .18s;
+    }
+
+    .card:hover {
+      border-color: var(--gold-dim);
+      transform: translateY(-2px);
+    }
+
+    .card-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      font-size: .7rem;
+      font-weight: 600;
+      padding: 2px 9px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: .4px;
+    }
+
+    .badge-subject {
+      background: #1e3a5f;
+      color: #7ab3e0;
+    }
+
+    .badge-class {
+      background: #2a1f40;
+      color: #b08de8;
+    }
+
+    .badge-weekly {
+      background: #1a3028;
+      color: #6ec99a;
+    }
+
+    .badge-mcq {
+      background: #3a2010;
+      color: #e8a86e;
+    }
+
+    .badge-guide {
+      background: #1a2a3a;
+      color: #6eb5e8;
+    }
+
+    .card-title {
+      font-size: .95rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.35;
+    }
+
+    .card-topics {
+      font-size: .78rem;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .card-topics span {
+      display: inline-block;
+      background: #252840;
+      border-radius: 4px;
+      padding: 1px 6px;
+      margin: 1px 2px 1px 0;
+      font-size: .73rem;
+    }
+
+    .card-meta {
+      display: flex;
+      gap: 14px;
+      font-size: .75rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+
+    .card-meta .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .card-footer {
+      margin-top: 4px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .btn-open {
+      padding: 7px 18px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dim));
+      color: #0f1117;
+      font-family: inherit;
+      font-size: .8rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity .18s;
+    }
+
+    .btn-open:hover {
+      opacity: .85;
+    }
+
+    /* ── Empty state ──────────────────────────────────────── */
+    .empty {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+
+    .empty .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+    }
+
+    .empty p {
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header-flex">
+    <div class="page-header">
+      <h1>📋 Test Library</h1>
+      <p>Browse all available tests and practice materials by subject and class.</p>
+    </div>
+    <a href="report_card.html" class="nav-btn">📊 View Report Card</a>
+  </div>
+
+  <!-- Search -->
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="search-input" placeholder="Search by topic, class, or test name…">
+  </div>
+
+  <!-- Subject Filter -->
+  <div class="filter-section">
+    <div class="filter-label">Subject</div>
+    <div class="chips" id="subject-chips"></div>
+  </div>
+
+  <!-- Class Filter -->
+  <div class="filter-section">
+    <div class="filter-label">Class</div>
+    <div class="chips" id="class-chips"></div>
+  </div>
+
+  <!-- Type Filter -->
+  <div class="filter-section">
+    <div class="filter-label">Type</div>
+    <div class="chips" id="type-chips"></div>
+  </div>
+
+  <!-- Stats + Grid -->
+  <div class="stats-bar">
+    <div class="count">Showing <strong id="count-display">0</strong> items</div>
+  </div>
+
+  <div class="grid" id="card-grid"></div>
+
+  <script>
+    // ══════════════════════════════════════════════════════════════
+    // TEST REGISTRY
+    // To add a new test: add one object to this array.
+    // Fields:
+    //   title    — display name
+    //   subject  — e.g. "Mathematics", "English"
+    //   class    — e.g. "Class 4", "Class 9" (use "All" for cross-class)
+    //   type     — "Weekly Test" | "MCQ" | "Study Guide" | "Mock Test"
+    //   topics   — array of topic strings
+    //   marks    — number or null
+    //   date     — "DD MMM YYYY" or null
+    //   model    — e.g. "Gemini 3.1 Pro", "Claude Sonnet 4.6" (optional)
+    //   url      — relative path from this file's location
+    // ══════════════════════════════════════════════════════════════
+    const TESTS = [
+
+      // ── Science ───────────────────────────────────────────────
+      {
+        id: "SCI-001",
+        title: "Plants, Seeds & Agriculture — Weekly Test",
+        subject: "Science",
+        class: "Class 5",
+        type: "Weekly Test",
+        topics: ["Plants and their Reproduction", "Structure of Seed", "Dispersal of Seed", "Agriculture and Crops"],
+        marks: 20,
+        date: "12 Apr 2026",
+        model: "Gemini 3.1 Pro",
+        url: "../science_tests/class5_science_plants_agriculture_20260412.html"
+      },
+      {
+        id: "SCI-002",
+        title: "Plants — Weekly Test",
+        subject: "Science",
+        class: "Class 5",
+        type: "Weekly Test",
+        topics: ["Parts of a Plant", "Photosynthesis", "Plant Adaptations", "Parasitic Plants"],
+        marks: 20,
+        date: "10 Apr 2026",
+        model: "Claude Sonnet 4.6",
+        url: "../science_tests/class5_science_plants_20260410.html"
+      },
+      {
+        id: "SCI-003",
+        title: "Cell Biology — Weekly Test",
+        subject: "Science",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Introduction to Cell", "Discovery of Cell", "Cell Theory", "Cell Shape Size and Number", "Plasma Membrane", "Transport Across Plasma Membrane", "Osmosis", "Active Transport", "Diffusion", "Endocytosis and Exocytosis", "Nucleus", "Prokaryotic vs Eukaryotic Cells", "Cytoplasm"],
+        marks: 40,
+        date: "11 Apr 2026",
+        model: "Gemini 3.1 Pro",
+        url: "../science_tests/class9_science_cell_20260411.html"
+      },
+      {
+        id: "SCI-004",
+        title: "Cell Biology — Weekly Test",
+        subject: "Science",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Introduction to Cell", "Discovery of Cell", "Cell Theory", "Cell Shape Size and Number", "Plasma Membrane", "Transport Across Plasma Membrane", "Osmosis", "Active Transport", "Diffusion", "Endocytosis and Exocytosis", "Nucleus", "Prokaryotic vs Eukaryotic Cells", "Cytoplasm"],
+        marks: 40,
+        date: "12 Apr 2026",
+        model: "Claude Sonnet 4.6",
+        url: "../science_tests/class9_science_cell_20260412.html"
+      },
+
+      // ── Mathematics ───────────────────────────────────────────
+      {
+        id: "MAT-001",
+        title: "Congruent Triangles — Weekly Test",
+        subject: "Mathematics",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Congruent Triangles"],
+        marks: 20,
+        date: "13 Apr 2026",
+        model: "Gemini 3.1 Pro",
+        url: "../math_tests/class9_mathematics_congruent_triangles_20260413.html"
+      },
+      {
+        id: "MAT-002",
+        title: "Coordinate Geometry — Weekly Test",
+        subject: "Mathematics",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Coordinate Geometry"],
+        marks: 20,
+        date: "13 Apr 2026",
+        model: "Gemini 3.1 Pro",
+        url: "../math_tests/class9_mathematics_coordinate_geometry_20260413.html"
+      },
+      {
+        id: "MAT-003",
+        title: "Geometry — Weekly Test",
+        subject: "Mathematics",
+        class: "Class 4",
+        type: "Weekly Test",
+        topics: ["Shapes & Sides", "Perimeter", "Real-life Application"],
+        marks: 20,
+        date: "09 Apr 2026",
+        model: "Claude Sonnet 4.6",
+        url: "../math_tests/class4_mathematics_geometry_20260409.html"
+      },
+      {
+        id: "MAT-004",
+        title: "Coordinate Geometry & Congruent Triangles — Weekly Test 01",
+        subject: "Mathematics",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Coordinate Geometry", "Congruent Triangles"],
+        marks: 56,
+        date: "09 Apr 2026",
+        model: "Claude Sonnet 4.6",
+        url: "../math_tests/class9_mathematics_coordinate_geometry_congruent_triangles_20260409.html"
+      },
+
+      // ── English — MCQ Tests ───────────────────────────────────
+      {
+        title: "Mixed Mock Test",
+        subject: "English",
+        class: "All Classes",
+        type: "Mock Test",
+        topics: ["Nouns", "Pronouns", "Articles", "Adjectives", "Verbs", "Tenses"],
+        marks: null,
+        date: null,
+        model: "Claude Sonnet 4.6",
+        url: "../english/mixed_mock_test.html"
+      },
+      {
+        title: "Nouns — Foundational MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Nouns"],
+        marks: null,
+        date: null,
+        url: "../english/noun/noun_mcq_foundational.html"
+      },
+      {
+        title: "Nouns — Advanced MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Nouns"],
+        marks: null,
+        date: null,
+        url: "../english/noun/noun_mcq_advanced.html"
+      },
+      {
+        title: "Nouns — Topper MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Nouns"],
+        marks: null,
+        date: null,
+        url: "../english/noun/noun_mcq_topper.html"
+      },
+      {
+        title: "Nouns — Mixed Difficulty MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Nouns"],
+        marks: null,
+        date: null,
+        url: "../english/noun/noun_mcq_mixed_difficulty.html"
+      },
+      {
+        title: "Pronouns — Foundational MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Pronouns"],
+        marks: null,
+        date: null,
+        url: "../english/pronoun/pronoun_mcq_foundational.html"
+      },
+      {
+        title: "Pronouns — Advanced MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Pronouns"],
+        marks: null,
+        date: null,
+        url: "../english/pronoun/pronoun_mcq_advanced.html"
+      },
+      {
+        title: "Pronouns — Topper MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Pronouns"],
+        marks: null,
+        date: null,
+        url: "../english/pronoun/pronoun_mcq_topper.html"
+      },
+      {
+        title: "Pronouns — Mixed Difficulty MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Pronouns"],
+        marks: null,
+        date: null,
+        url: "../english/pronoun/pronoun_mcq_mixed_difficulty.html"
+      },
+      {
+        title: "Articles — Foundational MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Articles"],
+        marks: null,
+        date: null,
+        url: "../english/articles/article_mcq_foundational.html"
+      },
+      {
+        title: "Articles — Advanced MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Articles"],
+        marks: null,
+        date: null,
+        url: "../english/articles/article_mcq_advanced.html"
+      },
+      {
+        title: "Articles — Topper MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Articles"],
+        marks: null,
+        date: null,
+        url: "../english/articles/article_mcq_topper.html"
+      },
+      {
+        title: "Articles — Mixed Difficulty MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Articles"],
+        marks: null,
+        date: null,
+        url: "../english/articles/article_mcq_mixed_difficulty.html"
+      },
+      {
+        title: "Adjectives — Foundational MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Adjectives"],
+        marks: null,
+        date: null,
+        url: "../english/adjectives/adjective_mcq_foundational.html"
+      },
+      {
+        title: "Adjectives — Advanced MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Adjectives"],
+        marks: null,
+        date: null,
+        url: "../english/adjectives/adjective_mcq_advanced.html"
+      },
+      {
+        title: "Adjectives — Topper MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Adjectives"],
+        marks: null,
+        date: null,
+        url: "../english/adjectives/adjective_mcq_topper.html"
+      },
+      {
+        title: "Adjectives — Mixed Difficulty MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Adjectives"],
+        marks: null,
+        date: null,
+        url: "../english/adjectives/adjective_mcq_mixed_difficulty.html"
+      },
+      {
+        title: "Verbs — Foundational MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Verbs"],
+        marks: null,
+        date: null,
+        url: "../english/verbs/verb_mcq_foundational.html"
+      },
+      {
+        title: "Verbs — Advanced MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Verbs"],
+        marks: null,
+        date: null,
+        url: "../english/verbs/verb_mcq_advanced.html"
+      },
+      {
+        title: "Verbs — Topper MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Verbs"],
+        marks: null,
+        date: null,
+        url: "../english/verbs/verb_mcq_topper.html"
+      },
+      {
+        title: "Verbs — Mixed Difficulty MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Verbs"],
+        marks: null,
+        date: null,
+        url: "../english/verbs/verb_mcq_mixed_difficulty.html"
+      },
+      {
+        title: "Tenses — Foundational MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Tenses"],
+        marks: null,
+        date: null,
+        url: "../english/tenses/tenses_mcq_foundational.html"
+      },
+      {
+        title: "Tenses — Advanced MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Tenses"],
+        marks: null,
+        date: null,
+        url: "../english/tenses/tenses_mcq_advanced.html"
+      },
+      {
+        title: "Tenses — Topper MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Tenses"],
+        marks: null,
+        date: null,
+        url: "../english/tenses/tenses_mcq_topper.html"
+      },
+      {
+        title: "Tenses — Mixed Difficulty MCQ",
+        subject: "English",
+        class: "All Classes",
+        type: "MCQ",
+        topics: ["Tenses"],
+        marks: null,
+        date: null,
+        url: "../english/tenses/tenses_mcq_mixed_difficulty.html"
+      },
+
+      // ── English — Study Guides ────────────────────────────────
+      {
+        title: "Nouns — Study Guide",
+        subject: "English",
+        class: "All Classes",
+        type: "Study Guide",
+        topics: ["Nouns"],
+        marks: null,
+        date: null,
+        url: "../english/noun/noun_learn_guide.html"
+      },
+      {
+        title: "Pronouns — Study Guide",
+        subject: "English",
+        class: "All Classes",
+        type: "Study Guide",
+        topics: ["Pronouns"],
+        marks: null,
+        date: null,
+        url: "../english/pronoun/pronoun_learn_guide.html"
+      },
+      {
+        title: "Articles — Study Guide",
+        subject: "English",
+        class: "All Classes",
+        type: "Study Guide",
+        topics: ["Articles"],
+        marks: null,
+        date: null,
+        url: "../english/articles/article_learn_guide.html"
+      },
+      {
+        title: "Adjectives — Study Guide",
+        subject: "English",
+        class: "All Classes",
+        type: "Study Guide",
+        topics: ["Adjectives"],
+        marks: null,
+        date: null,
+        url: "../english/adjectives/adjective_learn_guide.html"
+      },
+      {
+        title: "Verbs — Study Guide",
+        subject: "English",
+        class: "All Classes",
+        type: "Study Guide",
+        topics: ["Verbs"],
+        marks: null,
+        date: null,
+        url: "../english/verbs/verb_learn_guide.html"
+      },
+      {
+        title: "Tenses — Study Guide",
+        subject: "English",
+        class: "All Classes",
+        type: "Study Guide",
+        topics: ["Tenses"],
+        marks: null,
+        date: null,
+        url: "../english/tenses/tenses_learn_guide.html"
+      },
+    ];
+
+    // ══════════════════════════════════════════════════════════════
+    // FILTER STATE
+    // ══════════════════════════════════════════════════════════════
+    const state = { subject: "All", class: "All", type: "All", search: "" };
+
+    function unique(key) {
+      return ["All", ...new Set(TESTS.map(t => t[key]).sort())];
+    }
+
+    function badgeClass(subject) {
+      const map = {
+        "Mathematics": "badge-subject",
+        "English": "badge-subject",
+        "Science": "badge-subject",
+      };
+      return map[subject] || "badge-subject";
+    }
+
+    function typeBadgeClass(type) {
+      const map = {
+        "Weekly Test": "badge-weekly",
+        "MCQ": "badge-mcq",
+        "Study Guide": "badge-guide",
+        "Mock Test": "badge-weekly",
+      };
+      return map[type] || "badge-weekly";
+    }
+
+    // ── Build chip groups ──────────────────────────────────────
+    function buildChips(containerId, values, stateKey) {
+      const wrap = document.getElementById(containerId);
+      wrap.innerHTML = "";
+      values.forEach(v => {
+        const c = document.createElement("div");
+        c.className = "chip" + (state[stateKey] === v ? " active" : "");
+        c.textContent = v;
+        c.addEventListener("click", () => {
+          state[stateKey] = v;
+          buildChips(containerId, values, stateKey);
+          render();
+        });
+        wrap.appendChild(c);
+      });
+    }
+
+    // ── Copy Link Utility ──────────────────────────────────────
+    function copyLink(relativeUrl, el) {
+      // Resolves to absolute URL based on the current page's domain/path
+      const absoluteUrl = new URL(relativeUrl, window.location.href).href;
+      navigator.clipboard.writeText(absoluteUrl).then(() => {
+        const originalText = el.innerHTML;
+        el.innerHTML = "Copied!";
+        setTimeout(() => el.innerHTML = originalText, 1500);
+      });
+    }
+
+    // ── Render cards ──────────────────────────────────────────
+    function render() {
+      const q = state.search.toLowerCase();
+      const filtered = TESTS.filter(t => {
+        if (state.subject !== "All" && t.subject !== state.subject) return false;
+        if (state.class !== "All" && t.class !== state.class) return false;
+        if (state.type !== "All" && t.type !== state.type) return false;
+        if (q && !t.title.toLowerCase().includes(q) &&
+          !(t.id && t.id.toLowerCase().includes(q)) &&
+          !t.topics.join(" ").toLowerCase().includes(q) &&
+          !t.subject.toLowerCase().includes(q) &&
+          !t.class.toLowerCase().includes(q)) return false;
+        return true;
+      });
+
+      document.getElementById("count-display").textContent = filtered.length;
+
+      const grid = document.getElementById("card-grid");
+      grid.innerHTML = "";
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+      <div class="empty">
+        <div class="emoji">🔍</div>
+        <p>No tests match your filters. Try adjusting the selection above.</p>
+      </div>`;
+        return;
+      }
+
+      filtered.forEach(t => {
+        const topicTags = t.topics.map(tp => `<span>${tp}</span>`).join("");
+        const metaItems = [
+          t.model ? `<span class="meta-item">🤖 ${t.model}</span>` : "",
+          t.marks ? `<span class="meta-item">📝 ${t.marks} marks</span>` : "",
+          t.date ? `<span class="meta-item">📅 ${t.date}</span>` : "",
+        ].filter(Boolean).join("");
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+      <div class="card-badges">
+        ${t.id ? `<span class="badge" onclick="copyLink('${t.url}', this)" title="Click to copy direct link" style="background:var(--accent);color:#fff;cursor:pointer">#${t.id} <span style="font-size:0.75rem;margin-left:2px">🔗</span></span>` : ""}
+        <span class="badge ${badgeClass(t.subject)}">${t.subject}</span>
+        <span class="badge badge-class">${t.class}</span>
+        <span class="badge ${typeBadgeClass(t.type)}">${t.type}</span>
+      </div>
+      <div class="card-title">${t.title}</div>
+      <div class="card-topics">${topicTags}</div>
+      ${metaItems ? `<div class="card-meta">${metaItems}</div>` : ""}
+      <div class="card-footer">
+        <a class="btn-open" href="${t.url}" target="content-frame">Open →</a>
+      </div>`;
+        grid.appendChild(card);
+      });
+    }
+
+    // ── Init ──────────────────────────────────────────────────
+    buildChips("subject-chips", unique("subject"), "subject");
+    buildChips("class-chips", unique("class"), "class");
+    buildChips("type-chips", unique("type"), "type");
+
+    document.getElementById("search-input").addEventListener("input", e => {
+      state.search = e.target.value;
+      render();
+    });
+
+    render();
+  </script>
+</body>
+
+</html>
