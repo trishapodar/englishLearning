@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Premium Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scores.js"></script>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0a0c10; --surface: rgba(22, 25, 36, 0.6); --glass-border: rgba(255, 255, 255, 0.08);
+      --gold: #dfba5c; --gold-dark: #b8923a; --gold-light: #f5d886;
+      --text: #e8e4d9; --muted: #8a8fa8;
+      --success: #67e887; --warning: #ffbd59; --danger: #ff5e5e;
+      --radius: 16px; --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top left, #1b2031, #0a0c10 50%);
+      color: var(--text);
+      min-height: 100vh; padding: 32px 3vw 60px;
+    }
+    h1, h2, h3 { font-family: 'Outfit', sans-serif; }
+
+    /* ── Header ───────────────────────────────────────────── */
+    .header-flex { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; }
+    .page-header h1 { font-size: 2rem; font-weight: 700; background: linear-gradient(90deg, var(--gold-light), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .page-header p { font-size: .95rem; color: var(--muted); margin-top: 4px; }
+    .nav-btn {
+      background: rgba(223, 186, 92, 0.1); color: var(--gold); border: 1px solid var(--gold-dark);
+      padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.95rem; font-weight: 600;
+      transition: all 0.3s ease; backdrop-filter: blur(10px);
+    }
+    .nav-btn:hover { background: var(--gold); color: var(--bg); box-shadow: 0 0 15px rgba(223, 186, 92, 0.4); }
+    
+    /* ── Filters ──────────────────────────────────────────── */
+    .filters {
+      display: flex; gap: 20px; margin-bottom: 32px; background: var(--surface); backdrop-filter: blur(12px);
+      padding: 20px 24px; border-radius: var(--radius); border: 1px solid var(--glass-border); box-shadow: var(--shadow);
+    }
+    .filter-group { display: flex; flex-direction: column; gap: 8px; flex: 1; min-width: 150px; }
+    .filter-group label { font-size: 0.75rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+    .filter-group select {
+      background: rgba(0,0,0,0.3); color: var(--text); border: 1px solid var(--glass-border);
+      padding: 12px; border-radius: 8px; font-family: inherit; font-size: 1rem; outline: none; transition: 0.2s;
+    }
+    .filter-group select:focus { border-color: var(--gold); box-shadow: 0 0 0 2px rgba(223, 186, 92, 0.2); }
+
+    /* ── KPI Widgets ──────────────────────────────────────── */
+    .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 32px; }
+    .kpi-card {
+      background: var(--surface); backdrop-filter: blur(12px); border: 1px solid var(--glass-border);
+      border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .kpi-title { font-size: 0.85rem; color: var(--muted); text-transform: uppercase; font-weight: 600; margin-bottom: 8px; }
+    .kpi-value { font-size: 2.5rem; font-weight: 700; color: #fff; font-family: 'Outfit', sans-serif; display: flex; align-items: baseline; gap: 8px; }
+    .kpi-sub { font-size: 0.9rem; font-weight: 500; }
+    .trend-up { color: var(--success); }
+    .trend-down { color: var(--danger); }
+    .trend-flat { color: var(--muted); }
+    
+    /* ── Dashboard Grid ───────────────────────────────────── */
+    .dashboard-charts { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-bottom: 32px; }
+    @media (max-width: 1100px) { .dashboard-charts { grid-template-columns: 1fr; } }
+    .panel {
+      background: var(--surface); backdrop-filter: blur(12px); border: 1px solid var(--glass-border);
+      border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+    }
+    .panel h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 20px; color: #fff; }
+    .chart-container-line { position: relative; height: 320px; width: 100%; }
+    .chart-container-radar { position: relative; height: 320px; width: 100%; display: flex; justify-content: center; }
+    
+    /* ── Visual Table ─────────────────────────────────────── */
+    .table-container { overflow-x: auto; }
+    table { width: 100%; border-collapse: separate; border-spacing: 0 8px; text-align: left; }
+    th { padding: 0 16px 8px; color: var(--muted); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--glass-border); }
+    td { padding: 16px; background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.02); border-bottom: 1px solid rgba(255,255,255,0.02); }
+    tr td:first-child { border-left: 1px solid rgba(255,255,255,0.02); border-top-left-radius: 12px; border-bottom-left-radius: 12px; }
+    tr td:last-child { border-right: 1px solid rgba(255,255,255,0.02); border-top-right-radius: 12px; border-bottom-right-radius: 12px; }
+    
+    .date-cell { font-family: 'Outfit'; font-weight: 500; color: #e8e4d9; white-space: nowrap; }
+    .topic-cell { font-weight: 500; }
+    
+    /* Progress Bars */
+    .pb-wrap { width: 100%; display: flex; align-items: center; gap: 12px; }
+    .pb-track { flex: 1; height: 8px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; position: relative; }
+    .pb-fill { height: 100%; border-radius: 4px; transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); }
+    .pb-text { font-family: 'Outfit'; font-weight: 700; width: 45px; text-align: right; }
+    
+    .bg-high { background: linear-gradient(90deg, #4ade80, #22c55e); }
+    .bg-med { background: linear-gradient(90deg, #facc15, #eab308); }
+    .bg-low { background: linear-gradient(90deg, #f87171, #ef4444); }
+    .c-high { color: #4ade80; }
+    .c-med { color: #facc15; }
+    .c-low { color: #f87171; }
+    
+    /* Pill Link */
+    .pill-link { 
+      display: inline-block; padding: 6px 14px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border);
+      border-radius: 20px; text-decoration: none; font-size: 0.8rem; color: var(--gold-light); font-weight: 500; transition: 0.2s; white-space: nowrap;
+    }
+    .pill-link:hover { background: rgba(223, 186, 92, 0.15); border-color: var(--gold); }
+    .empty-msg { color: var(--muted); font-style: italic; text-align: center; padding: 40px; font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+
+  <div class="header-flex">
+    <div class="page-header">
+      <h1>Premium Intelligence Dashboard</h1>
+      <p>Multi-dimensional analysis of student performance and topic mastery.</p>
+    </div>
+    <a href="index.html" class="nav-btn">← Test Library</a>
+  </div>
+
+  <div class="filters">
+    <div class="filter-group">
+      <label>Student Profile</label>
+      <select id="filter-student"></select>
+    </div>
+    <div class="filter-group">
+      <label>Subject Focus</label>
+      <select id="filter-subject"></select>
+    </div>
+    <div class="filter-group">
+      <label>Topic Focus</label>
+      <select id="filter-topic"></select>
+    </div>
+  </div>
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-title">Assessments Taken</div>
+      <div class="kpi-value" id="kpi-total">-</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Average Score</div>
+      <div class="kpi-value"><span id="kpi-avg">-</span><span style="font-size:1.2rem;color:var(--muted)">%</span></div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-title">Recent Trend (vs Avg)</div>
+      <div class="kpi-value" id="kpi-trend">-</div>
+    </div>
+  </div>
+
+  <div class="dashboard-charts">
+    <div class="panel">
+      <h2>Temporal Progress</h2>
+      <div class="chart-container-line">
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Topic Mastery Matrix</h2>
+      <div class="chart-container-radar">
+        <canvas id="radarChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-bottom:0;">
+    <h2>Action History</h2>
+    <div class="table-container" id="table-container"></div>
+  </div>
+
+  <script>
+    let lineChartInstance = null;
+    let radarChartInstance = null;
+
+    Chart.defaults.color = '#8a8fa8';
+    Chart.defaults.font.family = 'Inter';
+
+    function unique(arr, key) {
+      return [...new Set(arr.filter(item => item[key]).map(item => item[key]))].sort();
+    }
+
+    const studentSelect = document.getElementById('filter-student');
+    const subjectSelect = document.getElementById('filter-subject');
+    const topicSelect = document.getElementById('filter-topic');
+
+    function populateSelect(selectEl, values) {
+      selectEl.innerHTML = '<option value="All">All Entities</option>' + values.map(v => `<option value="${v}">${v}</option>`).join('');
+    }
+
+    function init() {
+      if(typeof SCORES === 'undefined') return;
+
+      const students = unique(SCORES, 'student');
+      populateSelect(studentSelect, students);
+      populateSelect(subjectSelect, ['Mathematics', 'Science', 'English']); // Keep it static for logical consistency
+
+      if (students.length > 0) studentSelect.value = students[0];
+
+      [studentSelect, subjectSelect, topicSelect].forEach(el => el.addEventListener('change', renderDashboard));
+      
+      subjectSelect.addEventListener('change', updateTopicDropdown);
+      updateTopicDropdown();
+      renderDashboard();
+    }
+
+    function updateTopicDropdown() {
+      const selectedSub = subjectSelect.value;
+      const validTopics = unique(SCORES.filter(s => selectedSub === "All" || s.subject === selectedSub), 'topic');
+      populateSelect(topicSelect, validTopics);
+    }
+
+    function renderDashboard() {
+      const student = studentSelect.value;
+      const subject = subjectSelect.value;
+      const topic = topicSelect.value;
+
+      // Filter Data
+      const filtered = SCORES.filter(s => {
+        if (student !== "All" && s.student !== student) return false;
+        if (subject !== "All" && s.subject !== subject) return false;
+        if (topic !== "All" && s.topic !== topic) return false;
+        return true;
+      });
+
+      // Sort chronological
+      filtered.sort((a, b) => new Date(a.dateAttempted || a.date) - new Date(b.dateAttempted || b.date));
+
+      updateKPIs(filtered);
+      updateLineChart(filtered);
+      updateRadarChart(filtered);
+      updateTable(filtered);
+    }
+
+    function updateKPIs(data) {
+      const elTotal = document.getElementById('kpi-total');
+      const elAvg = document.getElementById('kpi-avg');
+      const elTrend = document.getElementById('kpi-trend');
+
+      if (data.length === 0) {
+        elTotal.textContent = '0';
+        elAvg.textContent = '0';
+        elTrend.innerHTML = '-';
+        return;
+      }
+
+      elTotal.textContent = data.length;
+
+      const avgPercent = Math.round(data.reduce((sum, d) => sum + (d.score / d.total * 100), 0) / data.length);
+      elAvg.textContent = avgPercent;
+
+      // Trend Calculation
+      const latest = (data[data.length - 1].score / data[data.length - 1].total) * 100;
+      const diff = Math.round(latest - avgPercent);
+
+      if (diff > 0) {
+        elTrend.innerHTML = `<span class="trend-up">▲ +${diff}%</span>`;
+      } else if (diff < 0) {
+        elTrend.innerHTML = `<span class="trend-down">▼ ${diff}%</span>`;
+      } else {
+        elTrend.innerHTML = `<span class="trend-flat">▬ 0%</span>`;
+      }
+    }
+
+    function getLevelParams(perc) {
+      if (perc >= 80) return { bg: 'bg-high', c: 'c-high' };
+      if (perc >= 50) return { bg: 'bg-med', c: 'c-med' };
+      return { bg: 'bg-low', c: 'c-low' };
+    }
+
+    function updateTable(data) {
+      const container = document.getElementById('table-container');
+      if (data.length === 0) {
+        container.innerHTML = '<div class="empty-msg">No diagnostic data found for this profile.</div>';
+        return;
+      }
+
+      const recent = [...data].reverse().slice(0, 10); // Show last 10
+      let html = `<table>
+        <tr>
+          <th style="width:15%">Date</th>
+          <th style="width:25%">Topic Assessed</th>
+          <th style="width:20%">Evaluation Form</th>
+          <th style="width:40%">Mastery Index</th>
+        </tr>`;
+
+      recent.forEach(row => {
+        const perc = Math.round((row.score / row.total) * 100);
+        const style = getLevelParams(perc);
+        const folder = (row.subject || "").toLowerCase() === "science" ? "science_tests" : "math_tests";
+        const testLink = row.testFile 
+          ? `<a href="../${folder}/${row.testFile}" class="pill-link" target="_blank">View Test Paper</a>` 
+          : `<span class="pill-link" style="opacity:0.3;border-color:transparent">N/A</span>`;
+        
+        let dStr = row.dateAttempted || row.date || 'Unknown';
+        
+        html += `<tr>
+          <td class="date-cell">${dStr}</td>
+          <td class="topic-cell">${row.topic}</td>
+          <td>${testLink}</td>
+          <td>
+            <div class="pb-wrap">
+              <div class="pb-track"><div class="pb-fill ${style.bg}" style="width: ${perc}%"></div></div>
+              <div class="pb-text ${style.c}">${perc}%</div>
+            </div>
+          </td>
+        </tr>`;
+      });
+      html += `</table>`;
+      container.innerHTML = html;
+    }
+
+    function updateLineChart(data) {
+      const ctx = document.getElementById('lineChart').getContext('2d');
+      if (lineChartInstance) lineChartInstance.destroy();
+
+      if (data.length === 0) return;
+
+      const labels = data.map(d => d.dateAttempted || d.date);
+      const percentages = data.map(d => (d.score / d.total) * 100);
+
+      // Create gradient
+      const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+      gradient.addColorStop(0, 'rgba(223, 186, 92, 0.4)');
+      gradient.addColorStop(1, 'rgba(223, 186, 92, 0.0)');
+
+      lineChartInstance = new Chart(ctx, {
+        type: 'line',
+        data: { labels, datasets: [{
+            data: percentages, borderColor: '#dfba5c', backgroundColor: gradient,
+            borderWidth: 3, pointBackgroundColor: '#0a0c10', pointBorderColor: '#dfba5c',
+            pointRadius: 5, pointHoverRadius: 7, fill: true, tension: 0.4
+        }]},
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { mode: 'index', intersect: false } },
+          scales: {
+            y: { min: 0, max: 100, grid: { color: 'rgba(255,255,255,0.05)' } },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+    }
+
+    function updateRadarChart(data) {
+      const ctx = document.getElementById('radarChart').getContext('2d');
+      if (radarChartInstance) radarChartInstance.destroy();
+      
+      if (data.length === 0) return;
+
+      // Group scores by topic to find average mastery
+      const topicStats = {};
+      data.forEach(d => {
+        if (!topicStats[d.topic]) topicStats[d.topic] = { sum: 0, count: 0 };
+        topicStats[d.topic].sum += (d.score / d.total) * 100;
+        topicStats[d.topic].count += 1;
+      });
+
+      const labels = Object.keys(topicStats);
+      const averages = labels.map(l => Math.round(topicStats[l].sum / topicStats[l].count));
+
+      // Need at least 3 points for a good radar chart visually, but Chart.js handles 2 fine.
+      radarChartInstance = new Chart(ctx, {
+        type: 'radar',
+        data: { labels, datasets: [{
+            data: averages,
+            backgroundColor: 'rgba(223, 186, 92, 0.3)',
+            borderColor: '#dfba5c',
+            pointBackgroundColor: '#dfba5c',
+            borderWidth: 2,
+        }]},
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            r: {
+              min: 0, max: 100,
+              ticks: { display: false, stepSize: 20 },
+              grid: { color: 'rgba(255,255,255,0.1)' },
+              pointLabels: { color: '#e8e4d9', font: { size: 11, family: 'Inter' } },
+              angleLines: { color: 'rgba(255,255,255,0.1)' }
+            }
+          }
+        }
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
+</body>
+</html>
