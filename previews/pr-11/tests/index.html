@@ -42,7 +42,10 @@
     }
 
     /* ── Header ───────────────────────────────────────────── */
-    .page-header {
+    .header-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       margin-bottom: 28px;
     }
 
@@ -57,6 +60,23 @@
       font-size: .85rem;
       color: var(--muted);
       margin-top: 4px;
+    }
+
+    .nav-btn {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+      padding: 8px 16px;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--gold);
+      color: var(--bg);
     }
 
     /* ── Search ───────────────────────────────────────────── */
@@ -305,9 +325,12 @@
 
 <body>
 
-  <div class="page-header">
-    <h1>📋 Test Library</h1>
-    <p>Browse all available tests and practice materials by subject and class.</p>
+  <div class="header-flex">
+    <div class="page-header">
+      <h1>📋 Test Library</h1>
+      <p>Browse all available tests and practice materials by subject and class.</p>
+    </div>
+    <a href="report_card.html" class="nav-btn">📊 View Report Card</a>
   </div>
 
   <!-- Search -->
