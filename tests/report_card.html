@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Report Card</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="scores.js"></script>
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0f1117; --surface: #1a1d27; --card: #1f2235; --border: #2a2f45;
+      --gold: #c9a84c; --gold-dim: #8a6a28; --text: #e8e4d9; --muted: #8a8fa8;
+      --radius: 10px; --shadow: 0 4px 24px rgba(0, 0, 0, .45);
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; padding: 32px 28px 60px;
+    }
+    /* ── Header ───────────────────────────────────────────── */
+    .header-flex { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+    .page-header h1 { font-size: 1.65rem; font-weight: 700; color: var(--gold); letter-spacing: -.5px; }
+    .page-header p { font-size: .85rem; color: var(--muted); margin-top: 4px; }
+    .nav-btn {
+      background: transparent; color: var(--gold);
+      border: 1px solid var(--gold); padding: 8px 16px;
+      border-radius: var(--radius); text-decoration: none;
+      font-size: 0.9rem; font-weight: 600; transition: all 0.2s;
+    }
+    .nav-btn:hover { background: var(--gold); color: var(--bg); }
+    
+    /* ── Filters ──────────────────────────────────────────── */
+    .filters {
+      display: flex; gap: 16px; margin-bottom: 30px; flex-wrap: wrap; background: var(--surface);
+      padding: 16px; border-radius: var(--radius); border: 1px solid var(--border);
+    }
+    .filter-group { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 150px; }
+    .filter-group label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; color: var(--muted); }
+    .filter-group select {
+      background: var(--card); color: var(--text); border: 1px solid var(--border);
+      padding: 10px; border-radius: 6px; font-family: inherit; font-size: 0.9rem;
+      outline: none;
+    }
+    .filter-group select:focus { border-color: var(--gold); }
+    
+    /* ── Dashboard Content ────────────────────────────────── */
+    .dashboard { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+    @media (max-width: 900px) { .dashboard { grid-template-columns: 1fr; } }
+    .panel {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow);
+    }
+    .panel h2 { font-size: 1.1rem; color: var(--gold); margin-bottom: 16px; }
+    
+    /* ── Chart Container ──────────────────────────────────── */
+    .chart-container { position: relative; height: 350px; width: 100%; }
+    
+    /* ── Table ────────────────────────────────────────────── */
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    th, td { padding: 10px; text-align: left; border-bottom: 1px solid var(--border); }
+    th { color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 0.7rem; }
+    .score-badge {
+      display: inline-block; padding: 3px 8px; border-radius: 12px;
+      font-weight: 600; font-size: 0.75rem;
+    }
+    .score-high { background: rgba(76, 175, 80, 0.2); color: #81c784; }
+    .score-med { background: rgba(255, 152, 0, 0.2); color: #ffb74d; }
+    .score-low { background: rgba(244, 67, 54, 0.2); color: #e57373; }
+    .empty-msg { color: var(--muted); font-style: italic; font-size: 0.9rem; text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+
+  <div class="header-flex">
+    <div class="page-header">
+      <h1>📈 Student Report Card</h1>
+      <p>Analyze progress over time by tracking test scores across different subjects and topics.</p>
+    </div>
+    <a href="index.html" class="nav-btn">← Back to Library</a>
+  </div>
+
+  <div class="filters">
+    <div class="filter-group">
+      <label>Student Name</label>
+      <select id="filter-student"></select>
+    </div>
+    <div class="filter-group">
+      <label>Subject</label>
+      <select id="filter-subject"></select>
+    </div>
+    <div class="filter-group">
+      <label>Topic</label>
+      <select id="filter-topic"></select>
+    </div>
+  </div>
+
+  <div class="dashboard">
+    <div class="panel">
+      <h2>Progress Chart (%)</h2>
+      <div class="chart-container">
+        <canvas id="progressChart"></canvas>
+      </div>
+    </div>
+    
+    <div class="panel">
+      <h2>Recent Attempts</h2>
+      <div id="table-container"></div>
+    </div>
+  </div>
+
+  <script>
+    let chartInstance = null;
+
+    // Helper: get unique sorted values from an array of objects
+    function unique(arr, key) {
+      return [...new Set(arr.map(item => item[key]))].sort();
+    }
+
+    // Initialize Dropdowns
+    const studentSelect = document.getElementById('filter-student');
+    const subjectSelect = document.getElementById('filter-subject');
+    const topicSelect = document.getElementById('filter-topic');
+
+    function populateSelect(selectEl, values) {
+      selectEl.innerHTML = '<option value="All">All</option>' + values.map(v => `<option value="${v}">${v}</option>`).join('');
+    }
+
+    function initFilters() {
+      populateSelect(studentSelect, unique(SCORES, 'student'));
+      populateSelect(subjectSelect, unique(SCORES, 'subject'));
+      populateSelect(topicSelect, unique(SCORES, 'topic'));
+
+      // If there are students, default to the first one instead of "All" for a better chart view
+      const students = unique(SCORES, 'student');
+      if (students.length > 0) studentSelect.value = students[0];
+
+      [studentSelect, subjectSelect, topicSelect].forEach(el => {
+        el.addEventListener('change', renderDashboard);
+      });
+      
+      // Auto-update topics when subject changes
+      subjectSelect.addEventListener('change', () => {
+        const selectedSub = subjectSelect.value;
+        const validTopics = unique(SCORES.filter(s => selectedSub === "All" || s.subject === selectedSub), 'topic');
+        populateSelect(topicSelect, validTopics);
+        renderDashboard();
+      });
+    }
+
+    function getBadgeClass(percentage) {
+      if (percentage >= 80) return 'score-high';
+      if (percentage >= 50) return 'score-med';
+      return 'score-low';
+    }
+
+    function renderDashboard() {
+      const student = studentSelect.value;
+      const subject = subjectSelect.value;
+      const topic = topicSelect.value;
+
+      // Filter Data
+      const filtered = SCORES.filter(s => {
+        if (student !== "All" && s.student !== student) return false;
+        if (subject !== "All" && s.subject !== subject) return false;
+        if (topic !== "All" && s.topic !== topic) return false;
+        return true;
+      });
+
+      // Sort by Date (assuming "DD MMM YYYY")
+      filtered.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+      updateTable(filtered);
+      updateChart(filtered);
+    }
+
+    function updateTable(data) {
+      const container = document.getElementById('table-container');
+      if (data.length === 0) {
+        container.innerHTML = '<div class="empty-msg">No data available for the selected filters.</div>';
+        return;
+      }
+
+      // Show the last 10 attempts in reverse chronological order
+      const recent = [...data].reverse().slice(0, 10);
+
+      let html = `<table>
+        <tr>
+          <th>Date</th>
+          <th>Topic</th>
+          <th>Score</th>
+        </tr>`;
+      
+      recent.forEach(row => {
+        const perc = Math.round((row.score / row.total) * 100);
+        html += `<tr>
+          <td>${row.date}</td>
+          <td>${row.topic}</td>
+          <td><span class="score-badge ${getBadgeClass(perc)}">${row.score}/${row.total} (${perc}%)</span></td>
+        </tr>`;
+      });
+      html += `</table>`;
+      container.innerHTML = html;
+    }
+
+    function updateChart(data) {
+      const ctx = document.getElementById('progressChart').getContext('2d');
+      if (chartInstance) chartInstance.destroy();
+
+      if (data.length === 0) return;
+
+      const labels = data.map(d => d.date);
+      const percentages = data.map(d => (d.score / d.total) * 100);
+
+      chartInstance = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Score Percentage',
+            data: percentages,
+            borderColor: '#c9a84c',
+            backgroundColor: 'rgba(201, 168, 76, 0.2)',
+            borderWidth: 2,
+            pointBackgroundColor: '#fff',
+            pointBorderColor: '#c9a84c',
+            pointRadius: 4,
+            fill: true,
+            tension: 0.3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              grid: { color: 'rgba(255,255,255,0.05)' },
+              ticks: { color: '#8a8fa8' }
+            },
+            x: {
+              grid: { color: 'rgba(255,255,255,0.05)' },
+              ticks: { color: '#8a8fa8' }
+            }
+          }
+        }
+      });
+    }
+
+    // Bootstrap
+    initFilters();
+    renderDashboard();
+  </script>
+</body>
+</html>
