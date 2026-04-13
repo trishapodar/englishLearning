@@ -842,6 +842,17 @@
       });
     }
 
+    // ── Copy Link Utility ──────────────────────────────────────
+    function copyLink(relativeUrl, el) {
+      // Resolves to absolute URL based on the current page's domain/path
+      const absoluteUrl = new URL(relativeUrl, window.location.href).href;
+      navigator.clipboard.writeText(absoluteUrl).then(() => {
+        const originalText = el.innerHTML;
+        el.innerHTML = "Copied!";
+        setTimeout(() => el.innerHTML = originalText, 1500);
+      });
+    }
+
     // ── Render cards ──────────────────────────────────────────
     function render() {
       const q = state.search.toLowerCase();
@@ -883,7 +894,7 @@
         card.className = "card";
         card.innerHTML = `
       <div class="card-badges">
-        ${t.id ? `<span class="badge" style="background:var(--accent);color:#fff">#${t.id}</span>` : ""}
+        ${t.id ? `<span class="badge" onclick="copyLink('${t.url}', this)" title="Click to copy direct link" style="background:var(--accent);color:#fff;cursor:pointer">#${t.id} <span style="font-size:0.75rem;margin-left:2px">🔗</span></span>` : ""}
         <span class="badge ${badgeClass(t.subject)}">${t.subject}</span>
         <span class="badge badge-class">${t.class}</span>
         <span class="badge ${typeBadgeClass(t.type)}">${t.type}</span>
