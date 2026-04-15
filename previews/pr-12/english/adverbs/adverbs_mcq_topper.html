@@ -14,9 +14,875 @@
 
 <body>
 
-    <script type="application/json" id="qdata">[]</script>
+    <script type="application/json" id="qdata">
+        [
+  {
+    "id": 1,
+    "subtopic": "Adverb Typology: Integrated vs Non-Integrated",
+    "difficulty": "topper",
+    "stem": "Quirk et al. distinguish between INTEGRATED adverbials (adjuncts) and NON-INTEGRATED adverbials (disjuncts and conjuncts) using the mobility test, the denial test, and the scope test. Consider: 'Surprisingly, the bill passed unanimously.' Which set of diagnostics MOST conclusively demonstrates that 'surprisingly' is non-integrated?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It can appear at the front, middle, or end of the sentence without any change in meaning, demonstrating positional freedom.",
+        "explanation": "Positional freedom alone does not distinguish integrated from non-integrated adverbials. Manner and time adjuncts can also occupy front, mid, and end positions ('Quickly, she left' / 'She quickly left' / 'She left quickly'). Mobility is necessary but not sufficient as a distinguishing diagnostic for non-integration."
+      },
+      {
+        "label": "B",
+        "text": "It fails the denial test (cannot be targeted by 'not...but' denial), scopes over the entire proposition rather than the VP, and cannot be included in an it-cleft ('*It was surprisingly that the bill passed').",
+        "explanation": "These three diagnostics together constitute the most conclusive case for non-integration. Adjuncts CAN be denied ('She didn't leave quickly, but slowly'), have VP scope, and can appear in clefts ('It was quickly that she left'). Disjuncts fail all three tests: they resist VP-level denial, take propositional scope, and resist clefting. Convergent evidence from all three tests is the strongest diagnostic set. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "It ends in the -ly suffix, which is the morphological marker of all non-integrated adverbials.",
+        "explanation": "The -ly suffix is a morphological property, not a syntactic integration test. Many integrated manner adjuncts also end in -ly ('quickly', 'carefully', 'slowly'). Morphological form and syntactic integration status are independent dimensions -- conflating them is a basic categorical error."
+      },
+      {
+        "label": "D",
+        "text": "It is separated from the rest of the sentence by a comma, which is the defining punctuational criterion for non-integrated adverbials.",
+        "explanation": "Punctuation is a surface graphological feature, not a grammatical diagnostic. Some fronted adjuncts are also comma-separated ('Slowly, she turned around'). The comma reflects a prosodic boundary -- it is a symptom of non-integration, not its defining criterion. Grammatical analysis requires syntactic and semantic tests, not typographic conventions."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Three-diagnostic convergence test for non-integration: (1) DENIAL TEST -- adjuncts can be targeted by 'not...but' denial; disjuncts/conjuncts cannot; (2) SCOPE TEST -- adjuncts scope over VP; disjuncts scope over the entire proposition; (3) CLEFT TEST -- adjuncts can be clefted ('It was quickly that...'); disjuncts cannot. All three must align for conclusive evidence.",
+    "commonMistake": "Relying on a single diagnostic (especially morphological -ly or comma placement) to classify adverb integration status. Topper questions require convergent evidence from multiple syntactic and semantic tests, not surface heuristics."
+  },
+  {
+    "id": 2,
+    "subtopic": "Adverb Semantics: Scalarity and Implicature",
+    "difficulty": "topper",
+    "stem": "The sentence 'She sometimes makes mistakes' carries a Gricean scalar implicature beyond its literal truth conditions. Which analysis MOST precisely captures this implicature and its pragmatic mechanism?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The sentence implicates 'She always makes mistakes' because 'sometimes' is a weak scalar term that pragmatically strengthens to the strongest available claim.",
+        "explanation": "This inverts scalar reasoning. Gricean scalar implicature operates via the Maxim of Quantity: if the speaker could have used a stronger term and did not, the hearer infers the stronger term is not true. Using 'sometimes' (weak) implicates NOT 'always' (strong) -- the opposite of what this option claims."
+      },
+      {
+        "label": "B",
+        "text": "The sentence implicates that she does NOT always make mistakes, via Gricean scalar implicature triggered by using 'sometimes' -- the weakest member of the frequency scale <always, usually, often, sometimes, rarely, never>.",
+        "explanation": "On the Horn scale ordered by logical strength, using 'sometimes' when a stronger item ('always', 'often') would have been true and relevant implicates, by the Maxim of Quantity, that the stronger items are NOT true. Therefore 'She sometimes makes mistakes' implicates NOT always, NOT usually, NOT often. This is the most precise analysis and the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The sentence implicates she makes many mistakes because 'sometimes' is an emphatic frequency adverb that draws attention to the frequency of error.",
+        "explanation": "'Sometimes' is not emphatic -- it is a weak scalar adverb. Emphasis and scalar strength are distinct dimensions. The implicature mechanism is scalar implicature (Gricean), not emphasis. Claiming 'sometimes' signals high frequency reverses the scalar logic entirely."
+      },
+      {
+        "label": "D",
+        "text": "The sentence has no implicature beyond its literal truth conditions because frequency adverbs are purely descriptive and do not participate in scalar reasoning.",
+        "explanation": "This is demonstrably false. Frequency adverbs are paradigmatic members of Horn scales and have been extensively analysed as scalar terms generating pragmatic inferences beyond truth-conditional content in both neo-Gricean and Relevance-theoretic frameworks."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Horn Scales for frequency adverbs: <always, usually/generally, often/frequently, sometimes/occasionally, rarely/seldom, never>. Using a weaker member implicates the negation of all stronger members via the Maxim of Quantity. This is scalar implicature -- a pragmatic inference that is CANCELLABLE ('She sometimes makes mistakes -- in fact, she always does') but default in most contexts.",
+    "commonMistake": "Confusing semantic entailment with pragmatic implicature. 'Sometimes' does not ENTAIL 'not always' -- it IMPLICATES it. The distinction matters: implicatures are cancellable without contradiction; entailments are not."
+  },
+  {
+    "id": 3,
+    "subtopic": "Neg-Raising and Adverb Scope",
+    "difficulty": "topper",
+    "stem": "Analyse the sentence: 'I don't think she often visits her family.' A linguist claims the negation is logically interpreted not in the matrix clause but in the embedded clause -- a phenomenon called neg-raising. How does the adverb 'often' interact with this analysis?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Neg-raising is irrelevant to adverb analysis because adverbs operate at the word level and negation operates at the clause level -- the two systems are independent.",
+        "explanation": "This incorrectly partitions the analysis. Scope interactions between negation and quantificational adverbs like 'often' are precisely what make neg-raising relevant to adverb semantics. 'Often' is a frequency quantifier -- its scope relative to negation determines the sentence's truth conditions, and neg-raising affects exactly this scope relationship."
+      },
+      {
+        "label": "B",
+        "text": "The adverb 'often' is in the embedded clause and the negation, via neg-raising, is also interpreted in the embedded clause -- so the sentence means 'I think she doesn't often visit her family' rather than 'It is not the case that I think she often visits her family'.",
+        "explanation": "This is the most precise account. Neg-raising with verbs like 'think', 'believe', 'suppose' allows negation in the matrix clause to be pragmatically interpreted in the embedded clause. Combined with embedded 'often', the surface 'I don't think she often visits' is understood as 'I think she doesn't often visit' -- the negation has raised but is semantically construed with the embedded predicate and adverb. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The adverb 'often' takes wide scope over the entire sentence, making the matrix negation semantically vacuous and equivalent to 'She often doesn't visit her family'.",
+        "explanation": "'Often' is in a syntactically embedded position and does not take scope over the matrix negation. Scope is constrained by syntactic position and structural hierarchy -- lower constituents do not freely take scope over higher operators. The neg-raising analysis specifically addresses how the matrix negation interacts with embedded content."
+      },
+      {
+        "label": "D",
+        "text": "The sentence is structurally ambiguous between two adverb scope readings entirely unrelated to neg-raising, depending solely on whether 'often' modifies 'think' or 'visits'.",
+        "explanation": "The ambiguity is real, but characterising it as 'entirely unrelated to neg-raising' is incorrect. The neg-raising phenomenon is precisely the mechanism by which speakers routinely interpret matrix negation as embedded. The interaction between neg-raising and adverb scope is the crux of the analysis, not an irrelevant side issue."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Neg-raising verbs (think, believe, suppose, expect, want, seem) allow matrix negation to be semantically construed in the embedded clause. When a frequency adverb appears in the embedded clause, neg-raising yields: [I think [she NOT-often visits]] rather than [NOT [I think [she often visits]]]. The two truth conditions differ significantly.",
+    "commonMistake": "Treating matrix negation and embedded adverbs as operating in separate, non-interacting domains. Advanced semantic analysis requires tracking scope interactions across clause boundaries, particularly with neg-raising predicates."
+  },
+  {
+    "id": 4,
+    "subtopic": "Adverb Morphology: Conversion, Derivation and Zero Forms",
+    "difficulty": "topper",
+    "stem": "The word 'fast' functions as both adjective ('a fast car') and adverb ('she ran fast') without morphological change. Meanwhile, 'fastly' does not exist in standard English, yet 'quickly' (from 'quick') is standard. Which theoretical account MOST adequately explains this asymmetry?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The asymmetry is purely historical: 'fast' is an Old English word that retained dual-category status, while 'quick' is a later borrowing that required -ly marking. Etymology alone explains the difference.",
+        "explanation": "Historical explanation is relevant but insufficient as a complete account. It addresses the origin of the asymmetry but not the synchronic grammatical mechanism. A topper-level analysis requires explaining WHY 'fast' functions as a flat adverb while 'fastly' is blocked -- specifically the morphological principle at work."
+      },
+      {
+        "label": "B",
+        "text": "The asymmetry reflects zero-derivation (conversion) and the morphological principle of PRE-EMPTION (blocking): 'fast' undergoes zero-derivation to occupy the adverb slot, and once a zero-derived form exists, the productive -ly rule is blocked from applying to the same slot.",
+        "explanation": "This is the most theoretically complete account. Zero-derivation (conversion) creates flat adverbs. Once a zero-derived adverb form ('fast') occupies the adverb slot, the productive -ly derivation is pre-empted. 'Fastly' is ungrammatical not for phonological reasons but because the zero form pre-empts the -ly derivation -- a well-established morphological blocking principle also seen in irregular verb forms blocking regular ones. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The asymmetry reflects the phonological constraint that monosyllabic adjectives block the -ly suffix because -ly requires a polysyllabic base. 'Quick' has two syllables; 'fast' has one.",
+        "explanation": "This syllabic hypothesis is empirically false. Many monosyllabic adjectives take -ly: 'deeply' (deep), 'highly' (high), 'freely' (free), 'keenly' (keen), 'briefly' (brief). The phonological monosyllabic blocking claim does not hold in English."
+      },
+      {
+        "label": "D",
+        "text": "There is no theoretical asymmetry -- 'fastly' fell out of use through random drift and the rule governing 'fast' as an adverb is an idiomatic exception with no principled explanation.",
+        "explanation": "Appealing to random drift abandons theoretical explanation. The blocking/pre-emption principle is a well-established morphological regularity accounting for numerous cases ('stole' blocks *'stealed', 'singer' blocks *'singist'). Dismissing the pattern as random is empirically and theoretically inadequate."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "MORPHOLOGICAL BLOCKING (pre-emption): when a word already has a form for a given function, a competing derived form is blocked. Zero-derived adverbs (fast, hard, early, late, high) block their -ly counterparts. Crucially: when the -ly form acquires a DISTINCT meaning (hardly = scarcely, lately = recently, nearly = almost), blocking is bypassed because the two forms now occupy DIFFERENT semantic slots and are no longer competing.",
+    "commonMistake": "Either claiming 'fastly' is wrong without explaining why, or invoking phonology. The topper insight is morphological blocking/pre-emption. The corollary is crucial: when the -ly form acquires a new distinct meaning, blocking is bypassed -- the two forms serve different functions."
+  },
+  {
+    "id": 5,
+    "subtopic": "Adverb Semantics: Eventive vs Stative Predicates",
+    "difficulty": "topper",
+    "stem": "Compare: (i) 'She slowly opened the door' -- felicitous. (ii) 'She slowly knew the answer' -- anomalous. The adverb 'slowly' is identical in both, yet felicity differs. What is the MOST precise theoretical explanation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The anomaly in (ii) arises because 'slowly' is an animate-subject adverb and 'knew' is also used with an animate subject -- an incompatible combination.",
+        "explanation": "Subject animacy is identical in both sentences ('she' in both). Animacy cannot explain the contrast. The distinction must lie in the aspectual/Aktionsart properties of the verbs, not the animacy of the subject."
+      },
+      {
+        "label": "B",
+        "text": "The anomaly in (ii) arises because 'slowly' is a manner/process adverb requiring the modified predicate to describe a dynamic event with internal temporal stages, while 'knew' is a stative predicate with no internal temporal development -- it cannot be 'done slowly'.",
+        "explanation": "This is the correct theoretical explanation. Manner adverbs like 'slowly' require the verb to denote a DYNAMIC event -- one with internal phases across which speed/manner can vary. Stative predicates (know, believe, resemble, contain, own) denote non-dynamic, temporally homogeneous states with no internal stages. The adverb's semantic requirement clashes with the verb's Aktionsart. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The anomaly in (ii) is purely pragmatic -- it is odd because knowing things slowly is culturally unexpected but not grammatically impossible.",
+        "explanation": "This pragmatic explanation underestimates the structural nature of the constraint. The same anomaly persists cross-culturally: *'She slowly owned a house', *'She slowly resembled her mother' -- all anomalous regardless of cultural context. This points to a grammatical-semantic constraint, not a cultural expectation."
+      },
+      {
+        "label": "D",
+        "text": "The anomaly in (ii) arises because 'know' is an irregular verb and irregular verbs block adverb modification for phonological reasons.",
+        "explanation": "Verb irregularity (morphological paradigm) is entirely independent of Aktionsart (aspectual class). Many irregular verbs take manner adverbs freely: 'She slowly began', 'He carefully chose', 'They quickly knew what to do'. This answer has no basis in English grammar."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Vendler/Aktionsart constraint on manner adverbs: dynamic manner adverbs (slowly, quickly, carefully, vigorously) require a DYNAMIC predicate -- one belonging to the Aktionsart classes of ACTIVITIES (running slowly) or ACCOMPLISHMENTS (slowly opening the door). STATIVE predicates (know, believe, own, resemble, contain) lack internal temporal stages and are incompatible with dynamic manner adverbs. This is a lexical-semantic constraint, not a pragmatic one.",
+    "commonMistake": "Explaining adverb-verb incompatibility as pragmatic oddness rather than grammatical-semantic constraint. The Aktionsart/stative-dynamic distinction is a core component of lexical semantics tested at topper level."
+  },
+  {
+    "id": 6,
+    "subtopic": "The Syntax of Adverbs: Specifier, Adjunct or Head",
+    "difficulty": "topper",
+    "stem": "In Minimalist Programme syntax, degree adverbs like 'very' in 'very quickly' are sometimes analysed as HEADS of their own functional projection (DegP) rather than as adjuncts to the adverb phrase. What is the primary theoretical motivation for positing a DegP projection?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The DegP analysis is motivated by the phonological weight of 'very', which is too heavy to function as an adjunct in standard X-bar theory.",
+        "explanation": "Phonological weight is not a criterion for syntactic projection type in generative grammar. X-bar theory and Minimalism assign nodes based on syntactic and semantic properties, not phonological weight. This answer reflects a fundamental misunderstanding of syntactic theory."
+      },
+      {
+        "label": "B",
+        "text": "The DegP analysis is motivated by the fact that degree expressions introduce an independent grammatical feature (DEGREE), take obligatory complements (the gradable element they intensify), and show cross-linguistic parallels with other functional heads -- consistent with how Tense, Aspect, and Mood are treated.",
+        "explanation": "This correctly identifies the theoretical motivation. In Minimalism, functional projections are posited when an element introduces an independent grammatical feature, takes an obligatory complement, and shows cross-linguistic parallels. DEGREE as a grammatical feature heading its own projection (DegP) is consistent with TP, AspP, and MoodP as functional heads. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The DegP analysis is motivated by the need to distinguish adjuncts from complements -- since 'very' is obligatorily required by adjectives, it must be a complement in X-bar theory, and complements head their own projections.",
+        "explanation": "This conflates directionality. In X-bar theory, the HEAD selects its COMPLEMENT. If 'very' is the degree head, it selects the gradable adjective/adverb as its complement -- not the other way around. The claim that adjectives obligatorily require 'very' reverses the selection relationship."
+      },
+      {
+        "label": "D",
+        "text": "The DegP analysis is not theoretically motivated -- it is a notational convenience with no explanatory advantage over treating degree adverbs as simple left-branching adjuncts.",
+        "explanation": "Dismissing DegP as notational convenience ignores the substantial cross-linguistic, semantic, and formal motivations. DegP analysis accounts for comparative constructions ('more quickly than...'), degree morphology, scope interactions with negation, and the universality of the Degree feature in the grammar of gradation."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Functional projections in Minimalism are licensed by GRAMMATICAL FEATURES -- abstract elements like [TENSE], [ASPECT], [DEGREE] that require syntactic representation. DegP is posited because DEGREE is a grammatical feature encoding scalar/gradability information independent of lexical content. Degree heads take gradable predicates as complements and interact with comparative and superlative morphology in a principled way.",
+    "commonMistake": "Assuming 'very' is trivially an adjunct because it appears to 'attach to' the adverb. Minimalist syntax does not allow arbitrary adjunction -- every syntactic relationship must be motivated by features. The DegP analysis gives degree a principled syntactic status consistent with other functional projections."
+  },
+  {
+    "id": 7,
+    "subtopic": "Polysemy and Grammaticalisation of Adverbs",
+    "difficulty": "topper",
+    "stem": "The adverb 'just' displays at least four distinct senses: temporal ('She just arrived'), restrictive ('Just the director approved it'), minimising ('She just smiled -- nothing more'), and discourse marker ('Just tell me!'). Which theoretical framework BEST accounts for this polysemy and its developmental trajectory?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The polysemy is an accidental homonymy -- four unrelated words that have converged on the same phonological form through historical sound change.",
+        "explanation": "Claiming accidental homonymy for four semantically related senses is implausible. The senses of 'just' are clearly connected through notions of exactness, limitation, and immediacy. Homonymy is reserved for semantically unrelated items (bank-financial vs bank-riverbank). 'Just' shows semantic relatedness characteristic of polysemy, not homonymy."
+      },
+      {
+        "label": "B",
+        "text": "The polysemy reflects a GRAMMATICALISATION pathway: 'just' began as a lexical adjective meaning 'righteous/exact', grammaticalised into a temporal adverb, then into a scalar/restrictive focus particle, and then into a discourse particle -- a process of progressive semantic bleaching and pragmatic strengthening.",
+        "explanation": "This is the most theoretically comprehensive account. Grammaticalisation theory describes how lexical items undergo semantic bleaching (loss of specific content) and pragmatic strengthening (gain of discourse function) along the cline: CONTENT WORD > GRAMMATICAL WORD > CLITIC > AFFIX. 'Just' traces exactly this trajectory, retaining residual scalar/limitative semantics across its senses. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The polysemy is entirely synchronic -- 'just' has one underlying abstract meaning contextually specified in different ways, with no diachronic dimension.",
+        "explanation": "A fully monosemic synchronic account faces the challenge of identifying a single abstract meaning from which all four senses derive without semantic strain. While Relevance Theory attempts radical monosemy for some items, the temporal/restrictive/minimising/discourse marker senses of 'just' are sufficiently distinct that a grammaticalisation account with related but distinct polysemous senses better matches empirical data and cross-linguistic parallels."
+      },
+      {
+        "label": "D",
+        "text": "The polysemy reflects derivational morphology -- each sense corresponds to a separate morpheme 'just-1', 'just-2', 'just-3', 'just-4' with distinct derivational histories that happen to be phonologically identical.",
+        "explanation": "Positing four homophonous morphemes for what is clearly one historically derived word conflates morphological analysis with lexical semantics. Grammaticalisation theory tracks diachronic semantic change and is the appropriate framework. Multiple morpheme analysis simply redescribes the facts without explaining the developmental path or semantic relatedness."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Grammaticalisation cline for adverbs: LEXICAL ADJECTIVE > TEMPORAL ADVERB > SCALAR FOCUS PARTICLE > DISCOURSE MARKER. This involves: (a) semantic bleaching -- progressive loss of specific lexical content; (b) pragmatic strengthening -- gain of discourse and interactional functions; (c) decategorialisation -- loss of morphological flexibility. 'Just', 'even', 'only', 'well', 'right', 'pretty' all show degrees of grammaticalisation.",
+    "commonMistake": "Treating polysemous adverbs as collections of unrelated homonyms or assuming their multiple senses are fully contemporary phenomena without diachronic depth. Topper questions require integrating synchronic and diachronic perspectives."
+  },
+  {
+    "id": 8,
+    "subtopic": "Adverbs and Argument Structure Alternations",
+    "difficulty": "topper",
+    "stem": "In 'John hammered the metal flat' and 'She talked herself hoarse', the post-object elements 'flat' and 'hoarse' are traditionally analysed as resultative predicates. A competing analysis treats them as adverbs. Which set of diagnostics MOST conclusively resolves this classification dispute?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Their position after the object proves they are adverbs, because adverbs can appear in post-object position while adjectives cannot.",
+        "explanation": "Position alone is insufficient. Post-object position is occupied by both adverbs and predicative adjectives/resultatives. 'He painted the fence white' places 'white' (unambiguously an adjective) in post-object position. Positional argument cannot resolve the categorial question."
+      },
+      {
+        "label": "B",
+        "text": "The appropriate diagnostics are: degree adverb modification ('completely flat' targets the result state), result paraphrase ('hammer until it was flat'), and the subject-of-result test (the metal -- not John -- is flat). Together these confirm a secondary-predicate (adjectival) analysis, not an adverb analysis.",
+        "explanation": "These diagnostics converge on resultative predicates (adjectival secondary predicates), not adverbs. Resultatives: (1) accept degree adverbs targeting the result state ('completely flat'); (2) paraphrase as 'until it became [state]'; (3) predicate a property of the OBJECT (the metal is flat), not the subject. Manner adverbs do not share these properties. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "Since 'flat' and 'hoarse' can function as adjectives in other sentences ('a flat surface', 'a hoarse voice'), they must be adjectives in all syntactic positions.",
+        "explanation": "This assumes invariant category membership -- that a word is always the same category regardless of context. However, syntactic context and distributional tests determine the category of a token. 'Hard', 'fast', 'clean' are adjectives in some contexts and adverbs in others. The categorial question must be resolved by contextual diagnostics, not by appeal to other uses."
+      },
+      {
+        "label": "D",
+        "text": "The dispute is empirically unresolvable because resultative constructions are a hybrid category simultaneously adjectival and adverbial by definition.",
+        "explanation": "Declaring the question unresolvable is a theoretical retreat. Resultative predicates have been well-analysed within Construction Grammar (Goldberg), lexical semantic approaches (Levin and Rappaport Hovav), and Minimalist small clause analysis. The diagnostics in option B provide convergent evidence for a non-adverbial, secondary predicate analysis."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "Resultative constructions (hammer flat, paint clean, talk hoarse) contain SECONDARY PREDICATES, not adverbs. Diagnostics: (1) they accept degree adverb modification targeting a state ('completely flat'); (2) they paraphrase as 'until it became [state]'; (3) they have a SUBJECT-OF-RESULT distinct from the matrix subject (the metal is flat, not John). These tests distinguish resultatives from manner adverbs.",
+    "commonMistake": "Classifying all post-verbal, post-object elements as adverbs by default. Resultative predicates form a distinct construction type -- they are secondary predicates with their own result-state subjects, not mere adverbial modifiers of the matrix verb."
+  },
+  {
+    "id": 9,
+    "subtopic": "Adverb Scope and Quantifier Interaction",
+    "difficulty": "topper",
+    "stem": "Analyse the two interpretations of: 'Every student sometimes misses class.' Under one reading, 'sometimes' has narrow scope with respect to 'every'; under another, it has wide scope. What are the distinct truth conditions of each reading and which requires scope shifting?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Reading 1 (narrow scope of 'sometimes'): For every student x, there is some time t at which x misses class. Reading 2 (wide scope of 'sometimes'): There is some time t at which every student x misses class. The second reading requires scope shifting of the adverb above the universal quantifier.",
+        "explanation": "This correctly identifies both truth conditions and the scope-shifting requirement. Reading 2 means there is a COMMON time at which all students miss class simultaneously -- a much stronger, rarely intended claim. Surface syntax places 'every' above 'sometimes' in hierarchical structure, so wide scope of 'sometimes' requires covert movement (Quantifier Raising or scope reconstruction). This is the correct answer."
+      },
+      {
+        "label": "B",
+        "text": "Both readings have identical truth conditions because universal quantifiers always take scope over frequency adverbs by default and frequency adverbs cannot take wide scope over universals.",
+        "explanation": "This is empirically incorrect. The two readings have distinct truth conditions: each student individually has times of absence (narrow) versus a single shared time when all are absent (wide). These are logically independent claims. The claim that frequency adverbs cannot take wide scope over universals is also empirically contested."
+      },
+      {
+        "label": "C",
+        "text": "Reading 1 (wide scope of 'sometimes'): There is a time at which every student misses class. Reading 2 (narrow scope of 'sometimes'): Each student individually sometimes misses class. The first reading (wide scope) is the default surface reading because 'sometimes' precedes 'every' linearly.",
+        "explanation": "The scope labels are correctly described but the identification of surface default is reversed. Surface scope follows syntactic hierarchy, not linear order. 'Every student' occupies SpecTP (higher) while 'sometimes' is VP-internal (lower), making 'every' > 'sometimes' the surface scope default, not 'sometimes' > 'every'."
+      },
+      {
+        "label": "D",
+        "text": "The sentence has only one reading because frequency adverbs like 'sometimes' are scope-inert with respect to quantifiers -- they modify only the temporal dimension and do not interact with nominal quantifiers.",
+        "explanation": "Frequency adverbs are NOT scope-inert with respect to nominal quantifiers. The adverb-quantifier scope interaction in such sentences is a standard datum in formal semantics since Lewis (1975) and subsequent work on adverbs of quantification. Claiming scope inertness ignores the well-established literature."
+      }
+    ],
+    "correct": "A",
+    "topperRule": "Adverbs of quantification interact with nominal quantifiers to produce scope ambiguities. Surface scope (syntactic hierarchy) typically places the subject quantifier above the VP-internal adverb. Wide scope of the adverb is a marked reading achieved via covert scope shifting. The two readings have genuinely distinct truth conditions that can be made explicit through logical form representations.",
+    "commonMistake": "Treating frequency adverbs as purely temporal operators that do not interact with nominal quantifiers. At topper level, the interaction between adverbial quantification and nominal quantification -- including the formal representation of each reading's truth conditions -- is required knowledge."
+  },
+  {
+    "id": 10,
+    "subtopic": "Adverbs in Comparative Deletion and Ellipsis",
+    "difficulty": "topper",
+    "stem": "In 'She works more diligently than her colleague does', the comparative clause involves VP ELLIPSIS. In 'She works more diligently than her colleague', there is COMPARATIVE DELETION. What theoretical distinction between these two processes is MOST significant for adverb analysis?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Ellipsis and comparative deletion are the same process -- both involve omission of recoverable material and should be treated identically.",
+        "explanation": "This ignores the significant theoretical distinction. Ellipsis leaves a phonologically null but syntactically active VP that can be reconstructed; comparative deletion removes material without leaving a syntactically active remnant. They interact differently with binding, scope, and reconstruction -- treating them as identical obscures important grammatical differences."
+      },
+      {
+        "label": "B",
+        "text": "VP ellipsis preserves a syntactically represented but phonologically silent VP that licenses reconstruction and scope interpretations inside the elided clause, while comparative deletion removes the comparative element with no syntactic remnant -- with consequences for how the adverb's degree argument is interpreted across the two structures.",
+        "explanation": "This is the most theoretically precise account. VP ellipsis leaves a PF-deleted but LF-present VP -- the adverb inside it can participate in reconstruction and binding relations. Comparative deletion eliminates the compared element without a syntactic trace, requiring the degree of the adverb to be recovered differently through the comparative operator. This difference affects degree semantics computation. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The distinction is purely stylistic -- 'than her colleague does' is more formal and 'than her colleague' is more colloquial, but both mean exactly the same thing with identical syntactic derivations.",
+        "explanation": "The structures are not stylistic variants -- they involve distinct syntactic processes with different interactions with binding and scope. The surface similarity conceals structural differences apparent in binding contexts: 'She works harder than he expected she would' (ellipsis allows pronoun antecedent in elided clause) vs parallel deletion structures."
+      },
+      {
+        "label": "D",
+        "text": "The distinction is irrelevant for adverb analysis -- the adverb 'diligently' is in the matrix clause in both sentences and the comparative clause does not affect its syntactic or semantic status.",
+        "explanation": "The adverb 'diligently' contributes a DEGREE argument bound by the comparative operator. The comparative operator ranges over degrees of diligence. How that degree argument is reconstructed in the second clause -- via ellipsis or deletion -- directly affects the semantics of the degree comparison and the adverb's participation in it."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "VP ELLIPSIS: a phonologically silent but syntactically active VP exists in the comparative clause -- it participates in scope, binding, and reconstruction at LF. COMPARATIVE DELETION: the degree argument is removed, not silenced, and recovery depends on the comparative operator's degree abstraction. The difference matters for: (1) antecedent-binding in the elided clause, (2) scope of quantifiers inside the ellipsis site, (3) strict vs sloppy identity readings.",
+    "commonMistake": "Treating all truncated comparative clauses as stylistic variants with identical derivations. Topper questions require awareness that PF-deletion (ellipsis) and genuine deletion (comparative deletion) have different syntactic and semantic consequences."
+  },
+  {
+    "id": 11,
+    "subtopic": "Adverbs and Event Semantics (Davidsonian Analysis)",
+    "difficulty": "topper",
+    "stem": "In Davidson's (1967) event semantics, 'She signed the contract hurriedly in the office yesterday' is analysed as a conjunction of predicates over an EVENT variable rather than as a single multi-place predicate. What is the most significant theoretical advantage this analysis offers specifically for adverb semantics?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The event variable analysis allows adverbs to be treated as optional syntactic adjuncts with no semantic content -- they are decorative modifiers that do not contribute to truth conditions.",
+        "explanation": "This is the opposite of the Davidsonian insight. The whole point of event semantics is that adverbs DO contribute to truth conditions -- each adverb introduces a predicate on the event variable. Treating adverbs as semantically contentless contradicts the fundamental Davidsonian motivation for positing event variables."
+      },
+      {
+        "label": "B",
+        "text": "The event variable allows each adverb to function as an independent conjunct -- a separate predicate over the shared event variable -- which elegantly explains the INFERENTIAL INDEPENDENCE of adverbs (from 'she signed hurriedly in the office' we can infer 'she signed', 'she signed hurriedly', 'she did something in the office') without positing an infinite list of n-ary predicates.",
+        "explanation": "This correctly captures the primary advantage. In Davidson's analysis: SIGN(e) AND Agent(e, she) AND Theme(e, contract) AND Hurried(e) AND In(e, office) AND Time(e, yesterday). Each adverb adds a conjunct over the shared event variable e. Via existential closure, each conjunct is individually entailed, precisely matching the observed inference patterns. This replaces an infinite list of n-ary predicates. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "The event variable analysis allows adverbs to be assigned thematic roles (Agent, Patient, Goal) analogously to nominal arguments, giving adverbs the same structural status as noun phrases.",
+        "explanation": "This misapplies the Davidsonian framework. Thematic roles are assigned to PARTICIPANTS in events -- nominal arguments. Adverbs in the Davidsonian analysis introduce PREDICATES ON THE EVENT (Hurried(e), In(e, office)) -- one-place predicates restricting the event, not participants with thematic roles."
+      },
+      {
+        "label": "D",
+        "text": "The event variable analysis explains why adverbs can appear in any order -- since all adverbs are conjuncts over the same variable, conjunction is commutative and order is theoretically unrestricted.",
+        "explanation": "While conjunction commutativity does follow from the analysis, this is not the MOST significant advantage. The primary achievement -- explaining inferential independence without positing infinitely many predicate valences -- is a much more fundamental theoretical contribution. Ordering flexibility is a corollary, not the main insight."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "DAVIDSON'S EVENT ARGUMENT: verbs denote predicates of events (SIGN(e)). Each adverb adds an independent conjunct on the event variable: Hurried(e), In(e, office), Time(e, yesterday). Existential closure over e gives each conjunct as an independent entailment. This solves the LOGICAL FORM PROBLEM: without event variables, a sentence with n adverbs requires a different (n+2)-ary predicate for every combination -- an infinite proliferation. The event variable provides a uniform, elegant solution.",
+    "commonMistake": "Students who have not encountered formal event semantics treat adverbs as syntactic adjuncts with no formal semantic role. Topper questions require knowing WHY adverbs are analysed the way they are in formal semantics, not just labelling them in surface syntax."
+  },
+  {
+    "id": 12,
+    "subtopic": "Adverb Licensing in Negative Polarity Contexts",
+    "difficulty": "topper",
+    "stem": "The adverb 'ever' in 'She doesn't ever complain' is a NEGATIVE POLARITY ITEM (NPI). The adverb 'always' in 'She doesn't always complain' is NOT an NPI. What principle differentiates the NPI licensing of these two adverbs and what does this reveal about their scalar properties?",
+    "options": [
+      {
+        "label": "A",
+        "text": "'Ever' is an NPI because it ends in a vowel sound, which phonologically requires the support of a preceding negation. 'Always' ends in a consonant and therefore requires no such licensing.",
+        "explanation": "This phonological explanation has no basis in any linguistic theory. NPI licensing is a semantic phenomenon governed by entailment patterns (specifically downward entailment in the licensing environment), not the phonological form of the item."
+      },
+      {
+        "label": "B",
+        "text": "'Ever' is an NPI because it occupies the WEAK end of the frequency scale with existential/indefinite semantics requiring a DOWNWARD-ENTAILING environment for licensing. 'Always' is at the STRONG/universal end of the scale and does not require a downward-entailing context because its universal semantics is compatible with both positive and negative contexts.",
+        "explanation": "This is the correct theoretical explanation. NPIs like 'ever', 'any', 'yet', 'at all' have existential/indefinite semantics and are licensed only in downward-entailing (DE) environments -- contexts where entailment goes from sets to subsets. 'Always' has universal semantics -- at the strong end of the scale -- and is not existentially dependent on a DE context. 'Always' in negative sentences creates its own compositional reading ('not always' = 'sometimes not') without NPI licensing requirements. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "Both 'ever' and 'always' are NPIs, but 'always' is a STRONG NPI requiring a more intensely negative context than 'ever', which is a WEAK NPI licensed by ordinary negation.",
+        "explanation": "'Always' is not an NPI of any type. Strong NPIs (like 'in weeks', 'a damn thing', 'lift a finger') require non-veridical or anti-additive environments. 'Always' has no NPI status -- it appears freely in positive sentences ('She always arrives on time') without any licensing requirement from a negative or non-veridical context."
+      },
+      {
+        "label": "D",
+        "text": "Both 'ever' and 'always' are non-polarity items and neither requires special licensing -- the contrast between them in negative sentences is purely pragmatic.",
+        "explanation": "Dismissing NPI licensing as pragmatic preference ignores a large and well-established research tradition. The ungrammaticality of '*She ever complains' (positive context, no NPI licensor) vs 'She doesn't ever complain' (licensed by negation) is a grammatical fact. NPI licensing is a syntactic-semantic phenomenon with robust empirical tests."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "NPI licensing (Fauconnier-Ladusaw): an NPI is licensed in a DOWNWARD-ENTAILING (DE) environment -- one where entailment preserves from supersets to subsets. Negation is the prototypical DE operator. Existential/weak scalar items ('ever' = at any time, 'any', 'yet', 'at all') require DE environments. Universal/strong items ('always', 'every time') have universal semantics compatible with any entailment direction and require no DE licensing.",
+    "commonMistake": "Confusing the grammatical phenomenon of NPI licensing with pragmatic oddness. '*She ever complains' is grammatically ill-formed, not merely pragmatically odd. NPI licensing is a structural, semantic constraint with formal properties (downward entailment), not a stylistic preference."
+  },
+  {
+    "id": 13,
+    "subtopic": "Adverb Phrase Internal Syntax and the Specifier Hypothesis",
+    "difficulty": "topper",
+    "stem": "In the phrase 'far too quickly for safety', the structure can be analysed as [far [too quickly] [for safety]]. What does this structure reveal about the RECURSIVE potential of AdvP and the role of the degree specifier?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The structure reveals that adverb phrases cannot be recursive because each adverb can only be modified once -- 'far' modifies 'too' which modifies 'quickly', and a fourth level of modification would be ungrammatical.",
+        "explanation": "Adverb phrases are in principle recursive -- 'so very incredibly quickly', 'quite remarkably fast', 'rather surprisingly often' are grammatical multi-level degree modification stacks. Claiming a hard limit of one modification level is empirically false. The interest of the structure is precisely that it shows how each degree modifier builds a new AdvP layer."
+      },
+      {
+        "label": "B",
+        "text": "The structure demonstrates that degree adverbs (far, too, very, quite, rather) function as SPECIFIERS of AdvP or heads of DegP -- they scope over the entire AdvP below them, producing layered recursive embedding where each degree element's scope is determined by its structural height.",
+        "explanation": "This is the most precise syntactic analysis. In X-bar theory and Minimalism, degree adverbs are specifiers (or degree heads) of AdvP. 'Far' does not directly modify 'quickly' -- it modifies the degree adverb 'too' or the DegP [too quickly], scoping over the entire AdvP below it. This creates layered structure where each degree element scopes over the AdvP it heads, producing recursive embedding. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "'For safety' is a resultative predicate modifying 'quickly', and 'far too' is a collocational adverb that must always appear as a unit -- the internal structure of 'far too quickly for safety' is therefore flat (non-hierarchical).",
+        "explanation": "'For safety' is a purpose adverbial, not a resultative. More importantly, claiming a flat non-hierarchical structure for degree modification is inconsistent with X-bar theory and the demonstrated scope-taking behaviour of each degree element. 'Far' has scope over 'too quickly', which has scope over 'quickly' -- a hierarchy, not flatness."
+      },
+      {
+        "label": "D",
+        "text": "The structure is an idiomatic frozen construction -- 'far too quickly' is a fixed expression with no productive syntax, so no generalisable syntactic lesson can be drawn from it.",
+        "explanation": "The productivity of degree modification in AdvPs is well-established: 'rather too slowly', 'quite too carefully', 'somewhat too loudly'. These are not frozen idioms -- they are productive constructions generated by the general syntax of AdvP. Declaring any instance of degree stacking an idiom blocks the generalisation."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "AdvP internal structure with degree specifiers: [DegP far [DegP too [AdvP quickly]]]. Each degree adverb either heads its own DegP projection or occupies Spec,AdvP of the AdvP below it. The hierarchical embedding creates LEFT-BRANCHING recursive AdvP structure. This is why 'far too quickly' does not equal 'too far quickly' -- scope is determined by structural height, not linear order.",
+    "commonMistake": "Treating degree modification of adverbs as flat linear sequences. The hierarchical nature of degree stacking -- and its consequences for scope -- is a key topper-level insight into AdvP syntax."
+  },
+  {
+    "id": 14,
+    "subtopic": "Adverbs, Aktionsart and the Telic/Atelic Distinction",
+    "difficulty": "topper",
+    "stem": "The adverbial 'for an hour' distributes selectively over Aktionsart classes, while 'in an hour' distributes over a different set. Which statement MOST precisely captures the distributional constraint, including the COERCION phenomenon?",
+    "options": [
+      {
+        "label": "A",
+        "text": "'For an hour' combines with ATELIC predicates (activities and states); 'in an hour' combines with TELIC predicates (accomplishments and achievements). Forcing the wrong combination produces anomaly OR coerces an Aktionsart shift.",
+        "explanation": "This is the correct and most complete statement. 'For an hour' tests atelicity: 'She ran for an hour' (activity -- natural) vs 'She finished the report for an hour' (accomplishment -- anomalous). 'In an hour' tests telicity: 'She finished the report in an hour' (accomplishment -- natural) vs 'She ran in an hour' (activity -- forces a bounded/completive reading). This distributional asymmetry is a diagnostic tool for Aktionsart classification. This is the correct answer."
+      },
+      {
+        "label": "B",
+        "text": "'For an hour' and 'in an hour' are stylistic variants with identical Aktionsart implications -- the choice reflects only temporal specificity, not any aspectual distinction.",
+        "explanation": "This is empirically incorrect. The anomaly of 'She ran in an hour' (unmarked activity reading) vs 'She ran for an hour' demonstrates that the choice is grammatically constrained. Temporal specificity is common to both -- the relevant distinction is telic vs atelic predicate type."
+      },
+      {
+        "label": "C",
+        "text": "'For an hour' requires animate subjects while 'in an hour' permits both animate and inanimate subjects -- the constraint is on subject animacy, not predicate Aktionsart.",
+        "explanation": "Animacy is irrelevant. 'The river flowed for hours' (inanimate subject, atelic activity, 'for' natural). 'The report appeared in seconds' (inanimate subject, achievement, 'in' natural). The constraint aligns with the telic/atelic distinction of the PREDICATE, not the animacy of the subject."
+      },
+      {
+        "label": "D",
+        "text": "Both 'for an hour' and 'in an hour' combine freely with all Aktionsart classes -- apparent anomalies are pragmatic implausibilities, not grammatical constraints.",
+        "explanation": "This pragmatic account cannot explain the systematic class-by-class distribution. If both combined freely, 'She knew the answer for an hour' and 'She knew the answer in an hour' would be equally natural -- yet the former is the natural stative-atelic reading and the latter is strongly marked or anomalous. The constraint is grammatical-semantic, not pragmatic."
+      }
+    ],
+    "correct": "A",
+    "topperRule": "THE FOR/IN AKTIONSART TEST: 'for X time' (durative adverbial) tests ATELICITY -- natural with activities (run, swim) and states (know, believe). 'In X time' (frame adverbial) tests TELICITY -- natural with accomplishments (write a report) and achievements (reach the top). COERCION: forcing 'in X time' on an atelic predicate coerces a telic/bounded reading ('She ran in an hour' requires an implicit goal/bounded interpretation). Coercion changes the predicate's interpretation, not the adverb's meaning.",
+    "commonMistake": "Using temporal adverbial compatibility tests without knowing WHY they work. The theoretical grounding in the telic/atelic distinction -- a core property of verbal Aktionsart -- is required for topper-level answers. Also: the coercion phenomenon -- treating anomalous combinations as disproving the rule, rather than recognising Aktionsart shift."
+  },
+  {
+    "id": 15,
+    "subtopic": "Adverbs and Relevance Theory: Ad-hoc Concept Construction",
+    "difficulty": "topper",
+    "stem": "According to Relevance Theory (Sperber and Wilson), the encoded meaning of 'quickly' in 'She quickly finished the report' underdetermines the communicated content. What process accounts for the enrichment of 'quickly' to a contextually specific interpretation?",
+    "options": [
+      {
+        "label": "A",
+        "text": "The communicated content is fully determined by the lexical entry for 'quickly' -- a complete and precise specification in the mental lexicon that context merely selects from.",
+        "explanation": "This is the classical Truth-Conditional Semantic view that Relevance Theory challenges. Relevance Theory holds that lexical entries encode INCOMPLETE representations -- pointers (addresses) from which context-specific interpretations are pragmatically constructed. The lexical entry for 'quickly' does not specify what counts as quick for finishing a report vs running a race vs sending a text."
+      },
+      {
+        "label": "B",
+        "text": "Context triggers the construction of an AD HOC CONCEPT -- a temporary, occasion-specific interpretation of 'quickly' that is narrowed, broadened, or modulated relative to its encoded meaning to achieve optimal relevance. What counts as 'quickly' depends on cognitive environment, encyclopaedic knowledge, and the expected effort-effect ratio.",
+        "explanation": "This is the Relevance-Theoretic analysis. The encoded linguistic concept QUICKLY* is a schematic address from which the cognitive system constructs a richer ad hoc concept QUICKLY** -- context-specific, calibrated to the domain (report-finishing), and constrained by the Principle of Relevance (maximise contextual effects for minimum processing effort). This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "Grice's Maxim of Manner requires 'quickly' to be interpreted as literally as possible -- the hearer processes the encoded meaning without enrichment, and ambiguity is resolved by selecting the most salient world-state.",
+        "explanation": "Grice's Maxim of Manner governs utterance FORM (be brief, be orderly), not interpretation depth. It does not provide a mechanism for enriching underspecified lexical content. Relevance Theory's ad hoc concept construction goes beyond Grice's maxims in explaining the gap between encoded meaning and communicated content."
+      },
+      {
+        "label": "D",
+        "text": "The enrichment of 'quickly' is handled by a dedicated pragmatic module that applies only to adverbs, separate from the general inferential system -- adverbs require adverb-specific pragmatic processing.",
+        "explanation": "Relevance Theory explicitly rejects domain-specific interpretive modules for individual word classes. Pragmatic inference is CENTRAL and GENERAL -- the same Principle of Relevance applies to all linguistic communication. Postulating an adverb-specific module contradicts the architecture of Relevance Theory."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "RELEVANCE THEORY and adverb interpretation: lexical entries encode underdetermined concepts (QUICKLY*). Context-driven inference constructs ad hoc concepts (QUICKLY**) via three pragmatic processes: (1) NARROWING (restricting to a contextually relevant domain -- 'quickly' for surgery is more demanding than 'quickly' for texting), (2) BROADENING (extending loosely beyond the strictly encoded range), (3) MODULATION (adjusting the scale and standard to the context). Goal: optimal relevance -- maximum cognitive effects for minimum processing effort.",
+    "commonMistake": "Assuming adverbs have fully determinate meanings that context merely 'selects' rather than enriches. Topper questions require knowing that adverb semantics is underdetermined at the lexical level and that pragmatic inference (ad hoc concept construction) is necessary to arrive at the fully interpreted proposition."
+  },
+  {
+    "id": 16,
+    "subtopic": "Adverbs and the Left Periphery (Topic/Focus Projections)",
+    "difficulty": "topper",
+    "stem": "In Rizzi's (1997) cartography of the left periphery, sentence-initial adverbs like 'Suddenly, the lights went out' occupy positions in the CP domain associated with specific discourse features. Which analysis MOST accurately locates this adverb within the left periphery?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Sentence-initial adverbs occupy SpecTP (the specifier of Tense Phrase) -- the canonical subject position -- and temporarily displace the subject, which is recovered by pro-drop.",
+        "explanation": "SpecTP is the subject position in T-theory. Sentence-initial adverbs are not subjects and do not occupy SpecTP -- they are adjoined above TP or hosted in functional positions in the CP domain. There is no pro-drop of 'the lights' in 'Suddenly, the lights went out' -- the subject remains in its base TP position."
+      },
+      {
+        "label": "B",
+        "text": "In Rizzi's split-CP framework, frame-setting adverbs occupy Spec,ModP (Modifier Phrase in the left periphery) -- a functional projection between ForceP (clause type) and FinP (finiteness) dedicated to hosting adverbs that set the temporal/spatial/conditional frame for the proposition.",
+        "explanation": "This is the most accurate account. Rizzi's (1997) and subsequent cartographic work posit a layered CP left periphery: ForceP > TopP* > IntP > FocP > ModP* > FinP. Frame-setting adverbs occupy Spec,ModP positions in the pre-FinP zone. This gives them discourse-linking properties (they set a frame for the entire proposition) while remaining outside the core IP/TP domain. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "Sentence-initial adverbs always occupy SpecvP (the outer specifier of the little-v phase head) -- a position typically associated with the Agent/external argument, which adverbs can share due to their discourse prominence.",
+        "explanation": "SpecvP hosts external arguments (agents, causers) -- it is a theta-position within the vP phase, not a discourse-linked position in the CP domain. Adverbs do not receive theta-roles and cannot occupy theta-positions like SpecvP. This conflates argument structure positions with discourse-linking positions."
+      },
+      {
+        "label": "D",
+        "text": "Sentence-initial adverbs are always base-generated in VP-internal position and move to the left periphery via Adverb Movement targeting SpecCP -- the position normally reserved for wh-phrases.",
+        "explanation": "Many adverbs are base-generated in their surface position rather than moved. Furthermore, SpecCP in the classical analysis is the landing site for wh-phrases in questions. Claiming all sentence-initial adverbs occupy SpecCP conflates interrogative syntax with adverb placement. Rizzi's cartography provides distinct functional positions for different discourse-linked elements, precisely to avoid the SpecCP-as-dumping-ground analysis."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "RIZZI'S LEFT PERIPHERY CARTOGRAPHY: [ForceP [TopP [IntP [FocP [ModP [FinP [TP...]]]]]]. Frame-setting adverbs (sentential, spatio-temporal, conditional) occupy Spec,ModP in the pre-FinP zone of the CP domain. This accounts for: (1) their discourse-linking properties (frame-setting for the proposition); (2) their position above TP (they scope over tense); (3) their ordering relative to topics (TopP > ModP) and focus (FocP > ModP).",
+    "commonMistake": "Placing sentence-initial adverbs in SpecTP (subject position) or SpecCP (wh-phrase position) without knowing the fine-grained CP cartography. Topper-level syntax requires familiarity with Rizzi's split-CP and the distinct functional projections within the left periphery."
+  },
+  {
+    "id": 17,
+    "subtopic": "Adverbs and Mirativity",
+    "difficulty": "topper",
+    "stem": "Evidential adverbs like 'apparently', 'evidently', and 'reportedly' encode the speaker's EVIDENTIAL SOURCE. Some linguists claim they also encode MIRATIVITY -- marking information as unexpected. Consider: 'Apparently, the professor resigned.' Does this sentence encode mirativity as a separate semantic feature, or is surprise a pragmatic implicature?",
+    "options": [
+      {
+        "label": "A",
+        "text": "Mirativity is a separate semantic feature encoded by 'apparently', distinct from evidentiality -- the adverb obligatorily marks both the source of evidence and the speaker's surprise.",
+        "explanation": "Treating mirativity as OBLIGATORILY encoded by 'apparently' is too strong. 'Apparently she has a cold' does not necessarily convey surprise -- it conveys that the information comes from indirect evidence without necessarily marking it as unexpected. Surprise is a possible implicature but not an obligatory semantic component."
+      },
+      {
+        "label": "B",
+        "text": "Mirativity is not a separate semantic feature encoded in 'apparently' -- it encodes only the evidential source (hearsay/inference). The impression of surprise is a pragmatic implicature: reporting hearsay implies the content is noteworthy or non-obvious, which conversationally implicates unexpectedness.",
+        "explanation": "This is the most defensible theoretical position. Evidential adverbs encode the SOURCE of evidence (hearsay, inference, direct perception). The sense of surprise is a PRAGMATIC INFERENCE -- reporting indirect evidence is typically done when the content is newsworthy or non-obvious, creating the implicature of noteworthiness. Mirativity is not a separate semantic feature in the lexical entry; it emerges from pragmatic reasoning. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "Mirativity and evidentiality are entirely independent dimensions and 'apparently' encodes evidentiality while 'surprisingly' encodes mirativity -- there is no interaction between the two categories.",
+        "explanation": "This option correctly distinguishes the two adverbs but incorrectly claims there is NO interaction. In practice, evidential adverbs often co-occur with mirative contexts because indirect evidence typically pertains to content that is not directly known, which tends to coincide with unexpectedness. The theoretical question is whether mirativity is semantic or pragmatic in such adverbs."
+      },
+      {
+        "label": "D",
+        "text": "Evidential adverbs encode both evidentiality and mirativity as co-equal semantic components with equal truth-conditional weight -- removing either component changes the truth conditions.",
+        "explanation": "This overstates the truth-conditional status of mirativity. If mirativity were truth-conditionally encoded, 'Apparently the professor resigned' would be false if the resignation was expected -- which is counterintuitive. The sentence's truth conditions concern only the indirect-evidence relationship. Mirativity does not affect truth conditions in this way."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "EVIDENTIALITY vs MIRATIVITY: Evidential adverbs (apparently, evidently, reportedly, supposedly) encode the EPISTEMIC SOURCE: hearsay (apparently, reportedly), inference (evidently, clearly), or perception (obviously). MIRATIVITY (unexpected information marking) is a PRAGMATIC IMPLICATURE derived from the principle that speakers only report indirect evidence when the content is noteworthy. Surprise is an implicature, not a semantic entailment -- it is cancellable ('Apparently she is ill -- not surprisingly, given her lifestyle').",
+    "commonMistake": "Conflating evidentiality (semantic, truth-affecting) with mirativity (pragmatic, cancellable implicature). The distinction between semantic content and pragmatic inference is central to topper-level analysis of epistemic adverbs."
+  },
+  {
+    "id": 18,
+    "subtopic": "Adverb Ordering and the Cinque Hierarchy",
+    "difficulty": "topper",
+    "stem": "Cinque (1999) proposes a UNIVERSAL FUNCTIONAL HIERARCHY for adverbs, positing that the canonical cross-linguistic ordering of adverb classes is determined by the rigid ordering of their corresponding functional projections. Which sentence most clearly VIOLATES the Cinque hierarchy and what theoretical consequence follows?",
+    "options": [
+      {
+        "label": "A",
+        "text": "'She has probably already often carefully read such books' -- this ordering follows the hierarchy and is expected to be natural.",
+        "explanation": "This ordering follows Cinque's proposed hierarchy: epistemic (probably) > anterior (already) > habitual (often) > VP-internal manner (carefully). The sentence is semantically dense but its adverb order conforms to the universal hierarchy -- it is the expected canonical order, not a violation."
+      },
+      {
+        "label": "B",
+        "text": "'She has carefully often already probably read such books' -- this ordering reverses the Cinque hierarchy, and if the hierarchy is innate and universal, this reversal should be cross-linguistically dispreferred or require special discourse licensing.",
+        "explanation": "This is the correct violation. The Cinque hierarchy specifies: epistemic (probably) > anterior (already) > habitual (often) > VP-internal manner (carefully). Reversing to Carefully > Often > Already > Probably violates the hierarchy. If the hierarchy reflects universal I-language (an innate functional sequence), any reversal should require marked construal -- topic, focus, or special discourse effects -- or be cross-linguistically dispreferred. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "'She carefully read such books probably' -- placing an epistemic adverb at sentence end violates word order without violating the Cinque hierarchy because end-position adverbs are outside the hierarchical domain.",
+        "explanation": "Cinque's hierarchy concerns the RELATIVE ORDER of adverb classes when they co-occur -- it is about structural positions, not specifically front vs end placement. End-position epistemic adverbs are marked but do not constitute a hierarchy violation in the sense of reversing the relative order of two co-occurring adverb classes."
+      },
+      {
+        "label": "D",
+        "text": "No sentence can violate the Cinque hierarchy because the hierarchy is a post-hoc descriptive generalisation and does not constrain actual language use.",
+        "explanation": "This mischaracterises Cinque's theoretical claim. The hierarchy is offered as a reflection of the universal order of functional projections in I-language -- a constraint on Universal Grammar. As a UG constraint, it makes the strong empirical prediction that deviations are cross-linguistically marked. Treating it as merely post-hoc description abandons its theoretical content."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "CINQUE'S UNIVERSAL ADVERB HIERARCHY (abbreviated): Frankly > Fortunately > Allegedly > Probably > Wisely > Often > Already > No longer > Still > Always > Completely > Well > Fast/Carefully. This mirrors the hierarchy of functional projections from the left periphery to VP. Violations require discourse licensing (topicalisation, focus) or produce unnatural sentences cross-linguistically. The hierarchy is cross-linguistically consistent, providing evidence for the claim that adverb ordering reflects Universal Grammar.",
+    "commonMistake": "Treating adverb ordering as entirely free or as a mere stylistic phenomenon. The Cinque hierarchy shows that adverb class ordering is constrained by the universal sequence of functional projections -- a fact with deep implications for the architecture of Universal Grammar."
+  },
+  {
+    "id": 19,
+    "subtopic": "Adverbs and Quantificational Binding",
+    "difficulty": "topper",
+    "stem": "Consider: 'A student who studies hard always succeeds.' Under Lewis's (1975) adverb-of-quantification (AQ) analysis, 'always' unselectively binds the variable introduced by the indefinite 'a student'. What is the logical form of this sentence under the AQ analysis?",
+    "options": [
+      {
+        "label": "A",
+        "text": "ALWAYS[x: student(x) AND studies-hard(x)][succeeds(x)] -- 'always' functions as a universal quantifier binding the individual variable x, with the relative clause as the restrictor and 'succeeds' as the nuclear scope.",
+        "explanation": "This is precisely the AQ (adverb of quantification) analysis. 'Always' is a tripartite quantifier: RESTRICTOR = 'x is a student who studies hard'; NUCLEAR SCOPE = 'x succeeds'. 'Always' unselectively binds the free variable x introduced by 'a student'. This correctly captures the distributed individual-level reading and the formal mechanism. This is the correct answer."
+      },
+      {
+        "label": "B",
+        "text": "For all x [student(x) implies [studies-hard(x) implies succeeds(x)]] -- 'always' contributes nothing and the sentence is a universally quantified conditional analysable without special adverb semantics.",
+        "explanation": "This is the standard predicate logic rendering, but it does not capture Lewis's specific insight that the ADVERB is doing the quantificational work. Lewis's analysis gives the adverb formal semantic content -- not merely a redundant element parasitic on a pre-existing universal. The AQ analysis gives the adverb an active formal role."
+      },
+      {
+        "label": "C",
+        "text": "SOMETIMES[x: student(x)][studies-hard(x) AND succeeds(x)] -- 'always' is semantically equivalent to 'sometimes' in the tripartite structure because the restrictor includes the success condition.",
+        "explanation": "This misassigns the quantifier -- using 'sometimes' for a sentence with 'always' directly contradicts the data. The AQ analysis maintains the truth conditions of the surface adverb: ALWAYS yields universal quantification; SOMETIMES yields existential/particular quantification over cases. These have different truth conditions and are not interchangeable."
+      },
+      {
+        "label": "D",
+        "text": "'Always' is not a quantificational adverb but a simple temporal operator meaning 'at all times' -- its semantic contribution is purely temporal, not variable-binding.",
+        "explanation": "The purely temporal analysis cannot account for the binding relationship between 'always' and the indefinite 'a student'. If 'always' were purely temporal, the sentence would mean 'At all times, a student who studies hard succeeds' -- which does not correctly capture the distributive individual-level reading. Lewis's AQ analysis specifically addresses why adverbs must be variable-binding operators."
+      }
+    ],
+    "correct": "A",
+    "topperRule": "LEWIS'S ADVERBS OF QUANTIFICATION (AQ): Frequency adverbs (always, usually, often, sometimes, rarely, never) are UNSELECTIVE BINDERS -- they bind any free variable in their scope. Tripartite structure: [ADVERB [RESTRICTOR][NUCLEAR SCOPE]]. 'A student who studies hard always succeeds' = ALWAYS[x: student(x) AND studies-hard(x)][succeeds(x)]. This explains how indefinites ('a student', 'a linguist who travels') get universal or existential interpretation depending on which adverb binds them.",
+    "commonMistake": "Treating frequency adverbs as purely temporal operators and ignoring their role as unselective binders of individual and situation variables. At topper level, the Lewis AQ analysis -- and its formal tripartite structure -- is essential knowledge for semantics questions involving adverbs and indefinites."
+  },
+  {
+    "id": 20,
+    "subtopic": "Cross-Linguistic Adverb Typology and the Adjective-Adverb Distinction",
+    "difficulty": "topper",
+    "stem": "Many languages (Mandarin, Yoruba, and others) lack a morphological distinction between adjectives and adverbs -- a single uninflected form serves both attributive and adverbial functions. What theoretical implication does this cross-linguistic pattern have for the Universal Grammar status of the ADVERB as a word class?",
+    "options": [
+      {
+        "label": "A",
+        "text": "It implies that the adjective-adverb distinction is a Universal Grammar primitive -- found in all languages in some form, and apparent counter-examples represent analytical errors in the description of those languages.",
+        "explanation": "This is an empirically untenable strong universalist claim. Mandarin Chinese is extensively described, and it is well-established that many Mandarin adjectives/adverbs show no morphological distinction. Dismissing cross-linguistic counter-examples as 'analytical errors' is not scientifically admissible -- it insulates the hypothesis from falsification."
+      },
+      {
+        "label": "B",
+        "text": "It suggests that the adjective-adverb distinction may not be a primitive UG category but rather a language-specific morphological encoding of a deeper semantic/functional distinction (NOMINAL MODIFIER vs VERBAL/ADJECTIVAL MODIFIER) that can be realised by a single undifferentiated form cross-linguistically.",
+        "explanation": "This is the most theoretically sophisticated and empirically adequate position. The FUNCTIONAL DISTINCTION (nominal modification vs verbal/clausal modification) may be universal -- languages consistently distinguish which semantic role a modifier plays -- but the MORPHOLOGICAL ENCODING of this distinction as separate word classes (Adj vs Adv) is a language-particular realisation, not a UG primitive. This is the correct answer."
+      },
+      {
+        "label": "C",
+        "text": "It implies that the concept of word class (part of speech) is entirely language-specific and that no Universal Grammar exists -- because if one language lacks the Adj/Adv distinction, no grammatical category can be universal.",
+        "explanation": "This is an overreach -- drawing an overly broad conclusion from a single data point. The absence of a morphological Adj/Adv distinction does not entail the absence of all universal grammatical categories. It specifically suggests that THIS particular morphological distinction is not universal -- not that UG itself is empty."
+      },
+      {
+        "label": "D",
+        "text": "It has no theoretical implication for UG -- cross-linguistic variation in morphological categories is expected and irrelevant to the study of deep syntactic universals, which operate below the level of word class morphology.",
+        "explanation": "Dismissing the cross-linguistic data as irrelevant contradicts the comparative and typological enterprise. Cross-linguistic variation in category realisation directly bears on questions of UG: if a category is truly universal, its absence in some languages requires theoretical explanation. The interaction between morphological surface form and underlying syntactic/semantic categories is a core research question in UG-oriented linguistics."
+      }
+    ],
+    "correct": "B",
+    "topperRule": "CATEGORY UNIVERSALITY vs MORPHOLOGICAL ENCODING: Universal Grammar may make available functional distinctions (NOMINAL MODIFIER vs VERBAL/PREDICATE MODIFIER) without mandating a specific morphological encoding. English encodes the distinction morphologically (Adj vs Adv -ly). Mandarin does not. Both languages make the FUNCTIONAL distinction -- but only English grammaticalises it morphologically. The typological principle: FUNCTIONAL UNIVERSALS are not necessarily MORPHOLOGICAL UNIVERSALS.",
+    "commonMistake": "Equating the universality of a grammatical FUNCTION with the universality of its MORPHOLOGICAL EXPRESSION. The modifier function may be universal; the adjective-adverb morphological distinction is English-specific (or at least not universal). Topper questions require distinguishing these levels."
+  }
+]
+    </script>
 
-    <script type="application/json" id="rddata">{}</script>
+    <script type="application/json" id="rddata">
+        {
+  "Adverb Typology: Integrated vs Non-Integrated": {
+    "w": "8-10%",
+    "tips": [
+      "Master all three Quirk et al. diagnostics: (1) DENIAL TEST -- adjuncts can be denied with 'not...but'; disjuncts/conjuncts cannot; (2) SCOPE TEST -- adjuncts scope over VP; disjuncts scope over the whole proposition; (3) CLEFT TEST -- adjuncts can appear in 'It was [adv] that...' clefts; disjuncts cannot. All three must converge.",
+      "Apply all three diagnostics to each sentence adverb rather than relying on any single one -- only convergent evidence from multiple tests constitutes conclusive classification.",
+      "Distinguish the three disjunct sub-types: style (frankly, honestly), epistemic (probably, presumably, evidently), and evaluative (wisely, rightly, fortunately) -- each has different paraphrase tests."
+    ],
+    "traps": [
+      "Using the -ly suffix or comma placement as the sole criterion for non-integration -- many integrated adjuncts also end in -ly and appear comma-set at the front. Morphological and orthographic features are symptoms, not diagnostics.",
+      "Applying only one diagnostic and claiming conclusiveness -- topper questions specifically select adverbs where one test alone is ambiguous and only the full convergent set resolves the classification."
+    ]
+  },
+  "Adverb Semantics: Scalarity and Implicature": {
+    "w": "7-9%",
+    "tips": [
+      "Map the full Horn scale from strongest to weakest: always > usually/generally > often/frequently > sometimes/occasionally > rarely/seldom > never. Using any item implicates the negation of all stronger items.",
+      "Apply the cancellability test to distinguish implicature from entailment: 'She sometimes visits -- in fact, she always does' is not a contradiction (implicature cancelled), proving 'not always' is an implicature, not an entailment.",
+      "Know that scalar implicature is upper-bounding: using 'sometimes' signals the upper bound of the speaker's commitment, not a strengthening to the maximum."
+    ],
+    "traps": [
+      "Claiming 'She sometimes visits' ENTAILS 'She doesn't always visit' -- the 'not always' claim is a default implicature (cancellable without contradiction), not a semantic entailment (which cannot be cancelled).",
+      "Inverting the scale -- assuming that using a weak scalar item implicates the TRUTH of the stronger item. Scalar implicature is upper-bounding, not upward-strengthening."
+    ]
+  },
+  "Neg-Raising and Adverb Scope": {
+    "w": "6-8%",
+    "tips": [
+      "Memorise neg-raising predicates: think, believe, suppose, expect, want, seem, appear, be likely. Test: if 'I don't think P' is routinely understood as 'I think not-P', the predicate is a neg-raiser.",
+      "Compute both scope readings explicitly: (1) matrix-scope: 'It is not the case that I think she often visits'; (2) neg-raised: 'I think it is not the case that she often visits'. Neg-raising predicates strongly prefer the second reading.",
+      "Contrast neg-raising with non-neg-raising predicates (know, discover, realise, regret) -- 'I don't know she often visits' cannot mean 'I know she doesn't often visit'."
+    ],
+    "traps": [
+      "Treating the two scope readings as stylistic variants -- they have different truth conditions and one requires covert scope shifting.",
+      "Applying neg-raising to all predicates indiscriminately. Only specific predicates (the neg-raisers) allow matrix negation to shift into the embedded clause."
+    ]
+  },
+  "Adverb Morphology: Conversion, Derivation and Zero Forms": {
+    "w": "5-7%",
+    "tips": [
+      "Learn the morphological blocking principle: once a zero-derived form exists for a given adverb slot, the productive -ly derivation is pre-empted. This is why 'fastly' and 'hardly-as-manner' are blocked.",
+      "Identify the divergence condition: blocking is bypassed when the -ly form acquires a SEMANTICALLY DISTINCT meaning. Hard/hardly, late/lately, near/nearly, high/highly, deep/deeply -- each -ly form occupies a different semantic slot.",
+      "Distinguish zero-derivation (conversion -- same form, new category: fast adj > fast adv) from affixation (-ly derivation). Both compete for the same output slot, triggering blocking."
+    ],
+    "traps": [
+      "Explaining flat adverb restriction phonologically (monosyllabic = no -ly) -- empirically false. 'Deeply', 'highly', 'freely', 'keenly', 'briefly' are all monosyllabic-root adverbs that take -ly. The blocking explanation is morphological, not phonological.",
+      "Missing the crucial corollary: when the -ly form acquires a new meaning (hardly = scarcely), blocking is LIFTED because the two forms are no longer competing for the same semantic slot."
+    ]
+  },
+  "Adverb Semantics: Eventive vs Stative Predicates": {
+    "w": "7-9%",
+    "tips": [
+      "Memorise the four Vendlerian Aktionsart classes: STATES (know, believe, own -- no internal stages), ACTIVITIES (run, swim -- dynamic, no natural endpoint), ACCOMPLISHMENTS (build a house -- dynamic, with endpoint), ACHIEVEMENTS (notice, reach -- instantaneous).",
+      "Apply the compatibility matrix: dynamic manner adverbs (slowly, carefully) combine with activities and accomplishments (dynamic, internally staged). They are anomalous with states (no internal stages) and pure achievements (instantaneous).",
+      "Use the progressive test to identify Aktionsart: states resist progressive ('*She is knowing the answer'); activities take progressive naturally ('She is running')."
+    ],
+    "traps": [
+      "Explaining stative-dynamic incompatibility pragmatically rather than grammatically-semantically. The constraint holds across all cultural contexts and is predicted by the absence of internal stages in statives.",
+      "Misclassifying psychological predicates: 'She slowly came to believe it' is grammatical because 'come to believe' is an accomplishment (process of coming to a state). The verb PHRASE Aktionsart, not the matrix verb alone, determines compatibility."
+    ]
+  },
+  "The Syntax of Adverbs: Specifier, Adjunct or Head": {
+    "w": "5-7%",
+    "tips": [
+      "Know the criteria for positing a FUNCTIONAL PROJECTION in Minimalism: (1) an independent grammatical feature is encoded; (2) the element takes an obligatory complement; (3) cross-linguistic parallel structures exist; (4) principled interaction with other grammatical operations.",
+      "Apply the DegP analysis consistently: in 'very quickly', DegP = [Deg very [AdvP quickly]]. The degree head 'very' selects the gradable AdvP 'quickly' as its complement. This extends to comparative DegP: [Deg more [AdvP quickly]] [than...].",
+      "Distinguish adjunct vs specifier in AdvP: a degree adverb is a SPECIFIER (or head of DegP) because it is in a grammatically licensed position selected by the head; a manner adverb added to VP is an ADJUNCT (freely merged, not selected)."
+    ],
+    "traps": [
+      "Treating 'very' as a simple adjunct to AdvP without the DegP analysis -- missing the principled syntactic motivation for positing a separate functional projection for degree.",
+      "Confusing DegP (degree operators, gradable predicates) with QuantP (quantifier phrase) -- degree heads (very, more, most, too) build AdvP/AdjP; quantifiers (every, some, no) build DP/QP. Distinct projections, distinct motivations."
+    ]
+  },
+  "Polysemy and Grammaticalisation of Adverbs": {
+    "w": "6-8%",
+    "tips": [
+      "Learn the grammaticalisation cline: CONTENT WORD > GRAMMATICAL WORD > CLITIC > AFFIX. Adverbs typically fall in the GRAMMATICAL WORD zone -- they have lost full lexical content (semantic bleaching) but retain discourse functions (pragmatic strengthening).",
+      "Trace adverbs along the grammaticalisation cline using three criteria: (a) semantic bleaching (loss of original lexical meaning); (b) decategorialisation (loss of morphological flexibility); (c) pragmatic strengthening (gain of discourse functions).",
+      "Distinguish polysemy (multiple related senses of one form, connected by semantic development) from homonymy (unrelated meanings coinciding in form). For grammaticalised adverbs, the relatedness of senses is the signature of polysemy."
+    ],
+    "traps": [
+      "Treating grammaticalised adverbs as homonyms -- 'just' (temporal / restrictive / minimising / discourse) has four related senses on a developmental cline, not four unrelated homonyms.",
+      "Ignoring decategorialisation: a fully grammaticalised adverb loses inflectional possibilities. 'Well' as a discourse marker (*more-welly) shows maximum decategorialisation; 'well' as a manner adverb (better, best) retains comparison. This morphological change tracks the degree of grammaticalisation."
+    ]
+  },
+  "Adverbs and Argument Structure Alternations": {
+    "w": "5-7%",
+    "tips": [
+      "Apply the RESULT PARAPHRASE TEST: if the element can be paraphrased as 'until it became [state]' ('She hammered the metal flat' = 'She hammered the metal until it was flat'), it is a resultative secondary predicate, not an adverb.",
+      "Apply the SUBJECT-OF-RESULT TEST: in a resultative, the element predicates a property of the OBJECT (the metal is flat, not John is flat). This helps disambiguate in complex structures.",
+      "Use degree adverb modification as a test: 'She hammered the metal completely flat' -- 'completely' modifies the resultative state 'flat' as an adjectival degree modifier. True manner adverbs resist this state-degree modification."
+    ],
+    "traps": [
+      "Classifying all post-verbal, post-object elements as adverbs. Resultative predicates, depictive predicates ('She returned exhausted'), and small clause complements all appear in similar positions but have distinct syntactic analyses.",
+      "Confusing depictive secondary predicates ('She returned exhausted' -- simultaneous state) with resultative secondary predicates ('She ran herself exhausted' -- result of action). Both involve post-verbal adjective-like elements but have different structural and semantic relationships."
+    ]
+  },
+  "Adverb Scope and Quantifier Interaction": {
+    "w": "7-9%",
+    "tips": [
+      "Represent both scope readings using logical notation: EVERY(x)[P(x)] > SOMETIMES (surface scope) and SOMETIMES > EVERY(x)[P(x)] (inverse scope). Articulate the truth conditions of each reading explicitly.",
+      "Apply the scope hierarchy: syntactically higher constituents take scope over lower ones by default (surface scope). The subject quantifier (SpecTP) is higher than the VP-internal adverb -- 'every' > 'sometimes' is the default surface scope.",
+      "Know the covert movement mechanism (Quantifier Raising / scope reconstruction) that derives non-surface scope readings: inverse scope requires LF movement of the adverb above the quantifier or reconstruction of the quantifier into a lower position."
+    ],
+    "traps": [
+      "Treating frequency adverbs as scope-inert temporal operators -- this ignores Lewis's AQ analysis and the entire formal semantics literature on adverbs of quantification.",
+      "Confusing linear order with syntactic scope hierarchy -- the adverb that appears last is not necessarily the one with widest scope. Scope is determined by syntactic position in the hierarchical structure (c-command), not surface linear order."
+    ]
+  },
+  "Adverbs in Comparative Deletion and Ellipsis": {
+    "w": "5-7%",
+    "tips": [
+      "Distinguish three types of omission in comparative clauses: (1) ELLIPSIS (phonologically null but syntactically active VP); (2) COMPARATIVE DELETION (genuine removal of degree argument); (3) PRO-FORM substitution.",
+      "Apply the RECONSTRUCTION TEST: in ellipsis, the silent VP can be reconstructed and tested for binding and scope; in comparative deletion, reconstruction is unavailable. Sloppy identity readings in ellipsis confirm the syntactically active VP.",
+      "Trace how the degree argument of the comparative adverb is recovered in each structure -- via the silent VP in ellipsis, or via the comparative operator's degree abstraction in deletion."
+    ],
+    "traps": [
+      "Treating VP ellipsis and comparative deletion as stylistic variants with identical derivations and identical scope/binding behaviour -- they differ in whether a syntactically active silent VP is present.",
+      "Missing the strict vs sloppy identity distinction in ellipsis: 'She works harder than her colleague does' has a sloppy reading (colleague's own standard) -- a binding property of the elided VP unavailable in comparative deletion structures."
+    ]
+  },
+  "Adverbs and Event Semantics (Davidsonian Analysis)": {
+    "w": "7-9%",
+    "tips": [
+      "Write out Davidsonian logical forms explicitly: SIGN(e) AND Agent(e, she) AND Theme(e, contract) AND Hurried(e) AND In(e, office) AND Time(e, yesterday). Practise formalising several sentence types.",
+      "Derive entailments from the conjunctive structure: each conjunct is separately entailed by existential closure over e. This formally explains inferential independence.",
+      "Connect the Davidsonian analysis to the THEMATIC ROLES debate: neo-Davidsonian approaches (Parsons) take theta-roles as predicates over the event argument -- Agent(e, x), Theme(e, y) -- giving a fully conjunctive logical form for all elements."
+    ],
+    "traps": [
+      "Forgetting the primary theoretical motivation: without events, a sentence with n adverbs requires a different (n+2)-ary predicate for every combination -- producing an infinite lexicon. The event variable solves this by allowing each adverb to introduce an independent predicate.",
+      "Treating the Davidsonian event argument as equivalent to time reference -- events are abstract individuals with properties beyond temporal location. Confusing events with times misses the full power of the analysis."
+    ]
+  },
+  "Adverb Licensing in Negative Polarity Contexts": {
+    "w": "6-8%",
+    "tips": [
+      "Memorise the formal condition on NPI licensing: an NPI is licensed in a DOWNWARD-ENTAILING (DE) environment. Test: does the context license inference from supersets to subsets? In negation: 'didn't run fast' entails 'didn't run' -- yes, DE.",
+      "Know DE operators that license NPIs: negation, conditionals (antecedent), universals (restrictor), questions, superlatives, few, only. Apply the subset test to each.",
+      "Distinguish weak NPIs (ever, any, yet, at all -- licensed in any DE environment) from strong NPIs (in weeks, a damn thing, lift a finger -- licensed only in anti-additive or non-veridical environments)."
+    ],
+    "traps": [
+      "Classifying 'always' as an NPI because it appears in negative sentences -- 'She doesn't always arrive' is grammatical but 'always' is NOT an NPI. It is a universal quantifier compatible with negation ('not always' = 'sometimes not'). Its occurrence requires no special NPI licensing.",
+      "The scope trap: 'She doesn't ever complain' (ever in scope of negation = NPI licensed) vs '*Ever she doesn't complain' (ever outside scope = NPI unlicensed = ungrammatical). The structural scope of the DE operator determines licensing."
+    ]
+  },
+  "Adverb Phrase Internal Syntax and the Specifier Hypothesis": {
+    "w": "5-7%",
+    "tips": [
+      "Draw X-bar trees for AdvP with degree specifiers: [AdvP [Deg far] [DegP [Deg too] [AdvP quickly]]]. Practise three and four level degree embedding to internalise recursive structure.",
+      "Apply the SCOPE TEST to confirm hierarchical structure: in 'far too quickly', 'far' modifies the whole 'too quickly' complex (extent of the 'too-quick' degree). This is scope of 'far' over the entire DegP, not just over 'quickly'.",
+      "Distinguish the SPECIFIER position (structurally licensed by the head's feature requirements) from the ADJUNCT position (freely merged, not selected). Degree elements in AdvP/AdjP are specifiers/DegP heads, not free adjuncts."
+    ],
+    "traps": [
+      "Treating degree stacking as flat linear modification. The hierarchical embedding -- and its consequences for scope -- distinguishes syntactic analysis from naive linear description.",
+      "Confusing DegP specifier (specific to gradable predicates) with TopP/FocP specifiers in the left periphery. Distinct functional projections with distinct motivations and contents."
+    ]
+  },
+  "Adverbs, Aktionsart and the Telic/Atelic Distinction": {
+    "w": "7-9%",
+    "tips": [
+      "Memorise both adverbial tests: FOR X TIME tests atelicity (natural with activities and states); IN X TIME tests telicity (natural with accomplishments and achievements). Apply both to any predicate to determine its Aktionsart class.",
+      "Know the COERCION PHENOMENON: forcing 'in X time' on an atelic predicate coerces an Aktionsart shift. 'She ran in an hour' is grammatical but forces a telic bounded reading. Coercion changes the predicate's interpretation, not the adverb's meaning.",
+      "Connect the telic/atelic distinction to the HOMOGENEITY PROPERTY of atelic predicates: any subpart of 'running for an hour' is also running. This property underpins the for/in distributional asymmetry."
+    ],
+    "traps": [
+      "Treating anomalous for/in combinations as mere pragmatic oddness. 'She finished the report for an hour' is semantically anomalous (accomplishments are not homogeneous) -- a grammatical-semantic, not pragmatic, constraint.",
+      "The coercion trap: 'She ran in an hour' is grammatical, which students claim disproves the rule. It does not -- it exemplifies COERCION, where 'in X time' forces a telic reanalysis. Distinguishing anomaly from coerced compatibility is the topper-level insight."
+    ]
+  },
+  "Adverbs and Relevance Theory: Ad-hoc Concept Construction": {
+    "w": "5-7%",
+    "tips": [
+      "Know the three ad hoc concept construction processes: NARROWING (quickly for surgery is more demanding than quickly for texting), BROADENING (approximately-quick), MODULATION (adjusting scale and reference point to context).",
+      "Apply the effort-effect ratio: the interpretation chosen maximises cognitive effects for minimum processing effort. For adverbs, the contextually most accessible scale and standard of comparison is automatically activated.",
+      "Distinguish Gricean and Relevance-Theoretic accounts: Grice postulates maxims constraining utterance form; Sperber and Wilson posit a single Principle of Relevance driving pragmatic inference including concept enrichment."
+    ],
+    "traps": [
+      "Assuming adverb enrichment is 'just pragmatics' and irrelevant to grammar. Ad hoc concept construction operates at the level of the proposition's truth conditions and interfaces directly with semantic composition.",
+      "Confusing loosening (broadening -- approximation) with narrowing (applying a stricter domain-specific standard). The direction of modulation is context-driven and must be identified correctly."
+    ]
+  },
+  "Adverbs and the Left Periphery (Topic/Focus Projections)": {
+    "w": "6-8%",
+    "tips": [
+      "Memorise the Rizzian left periphery sequence: [ForceP [TopP* [IntP [FocP [ModP* [FinP [TP...]]]]]]. Frame-setting adverbs occupy Spec,ModP; topics occupy Spec,TopP; interrogative phrases occupy Spec,IntP; focus phrases occupy Spec,FocP.",
+      "Apply the ordering test: topics (TopP) occur ABOVE focus (FocP); frame-setting adverbs (ModP) occur BELOW FocP. This predicts that in any sentence with both a topic and a frame adverb, the topic will linearly precede the adverb.",
+      "Connect left periphery positions to DISCOURSE FUNCTION: TopP = discourse-linked topic (given information); FocP = new, contrastive information; ModP = spatio-temporal/conditional frame."
+    ],
+    "traps": [
+      "Placing all sentence-initial adverbs in SpecCP (the classical wh-movement landing site) without knowing the fine-grained left periphery. SpecCP in Rizzi's system is ForceP -- frame adverbs occupy lower ModP positions.",
+      "Ignoring the ModP vs FocP distinction: contrastive adverbs with nuclear stress occupy FocP; non-contrastive frame-setting adverbs occupy ModP. Same adverb class, different prosodic/information-structural context, different syntactic position."
+    ]
+  },
+  "Adverbs and Mirativity": {
+    "w": "5-6%",
+    "tips": [
+      "Apply the cancellability test to mirativity with evidential adverbs: 'Apparently she resigned -- not that it's surprising given her frustrations.' If cancellation is coherent, mirativity is pragmatic (implicature), not semantic (entailment).",
+      "Map the evidentiality space: reportative (apparently, reportedly -- hearsay), inferential (evidently, clearly -- inference from evidence), direct perception (obviously, plainly -- directly visible). Each subtype encodes a different EPISTEMIC SOURCE.",
+      "Distinguish mirative IMPLICATURE (evidential adverbs -- surprise derived from the relevance of reporting indirect evidence) from mirative ENCODING (some languages grammaticalise mirativity as a distinct mood category)."
+    ],
+    "traps": [
+      "Treating 'apparently' and 'surprisingly' as synonymous -- 'apparently' encodes evidential source (hearsay) and may implicate mirativity; 'surprisingly' is an evaluative disjunct that ENCODES surprise evaluation. Different categories, different semantic mechanisms.",
+      "Applying the cancellability test incorrectly: cancelling a SEMANTIC ENTAILMENT creates a contradiction; cancelling a CONVERSATIONAL IMPLICATURE is coherent (though perhaps odd). Confirming the difference is the correct test procedure."
+    ]
+  },
+  "Adverb Ordering and the Cinque Hierarchy": {
+    "w": "6-8%",
+    "tips": [
+      "Memorise the top layers: Frankly/Fortunately (MoodSpeech-act) > Allegedly (MoodEpistemic) > Probably (MoodEvidential) > Wisely (MoodEvaluative) > Necessarily (ModNecessity) > Always (AspHabitual) > Already (AspAnterior) > Completely (AspCompletive) > Well (VoiceP) > Fast/Carefully (lower AspP).",
+      "Use the hierarchy to predict which adverbs can co-occur: adverbs from adjacent layers can co-occur; adverbs from the same layer cannot (both 'probably' and 'allegedly' compete for the same functional slot).",
+      "Test the hierarchy against native-speaker judgments: the hierarchy predicts that canonical order is strongly preferred and deviations require discourse licensing (focus, contrast)."
+    ],
+    "traps": [
+      "Treating the Cinque hierarchy as descriptive only and failing to recognise its theoretical claim: if the hierarchy reflects the universal order of functional projections in I-language, it makes cross-linguistic predictions about adverb ordering that go beyond English.",
+      "Confusing the Cinque hierarchy (about relative ordering of DIFFERENT adverb classes) with the Royal Order (a practical end-position mnemonic for manner/place/time). Different theoretical claims, different empirical domains."
+    ]
+  },
+  "Adverbs and Quantificational Binding": {
+    "w": "7-9%",
+    "tips": [
+      "Write out the full tripartite structure: [AQ [RESTRICTOR][NUCLEAR SCOPE]]. For 'A linguist always travels', the restrictor is 'x is a linguist' and the nuclear scope is 'x travels'. Practise several sentence types.",
+      "Practice converting English sentences with indefinites and frequency adverbs into their AQ logical forms: the indefinite provides the free variable; the adverb provides the quantification; the restrictor clause provides the background condition.",
+      "Extend the AQ analysis to conditional structures: 'If a linguist travels, she always attends conferences' -- the if-clause is the restrictor, the main clause is the nuclear scope, and 'always' is the quantifier."
+    ],
+    "traps": [
+      "Treating the AQ analysis as relevant only to frequency adverbs. Tense operators, modal adverbs (necessarily, possibly), and conditional operators can all be analysed as unselective binders in the tripartite framework.",
+      "Confusing individual-level vs situation-level readings: 'always' can quantify over INDIVIDUALS or SITUATIONS/CASES. Context determines which variable is bound -- both are possible in the AQ framework."
+    ]
+  },
+  "Cross-Linguistic Adverb Typology and the Adjective-Adverb Distinction": {
+    "w": "5-7%",
+    "tips": [
+      "Know the typological distinction between MORPHOLOGICALLY DIFFERENTIATED systems (English -- separate Adj and Adv forms) and MORPHOLOGICALLY UNDIFFERENTIATED systems (Mandarin, Yoruba -- single form for both functions).",
+      "Apply the FORM vs FUNCTION distinction: the FUNCTION (nominal modifier vs predicate/verbal modifier) may be universal; the MORPHOLOGICAL FORM encoding it may be language-specific. Cross-linguistic variation in morphology does not entail cross-linguistic variation in function.",
+      "Connect the cross-linguistic data to UG debates: if the Adj/Adv distinction is not universal, it cannot be a UG primitive -- this supports a view where UG provides functional categories (MODIFIER, PREDICATE) but not specific morphological class distinctions."
+    ],
+    "traps": [
+      "Arguing that because Mandarin lacks the Adj/Adv morphological distinction, it makes no syntactic or semantic distinction between nominal and verbal modification. It does make the FUNCTIONAL distinction -- through word order and syntactic position -- but not through morphological class membership.",
+      "Over-generalising from Adj/Adv undifferentiation to claim all word class distinctions are absent. The absence of the Adj/Adv split does not entail the absence of Noun/Verb distinctions or all other categorial distinctions."
+    ]
+  }
+}
+    </script>
 
     <div id="score-bar">
         <div class="sb-inner">
