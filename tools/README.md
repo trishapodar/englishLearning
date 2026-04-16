@@ -1,8 +1,10 @@
-# generate_test.py — CBSE Weekly Test Generator
+# tools/ — CBSE Weekly Test Generator
 
-A command-line tool that generates a print-ready, DOCX-compatible CBSE  
-weekly test paper (with answer key and marking scheme) by calling the  
-Gemini API with a structured prompt.
+A two-step CLI pipeline that generates print-ready CBSE weekly test papers
+(with answer key and marking scheme) using a token-efficient JSON workflow.
+
+**Step 1 — `generate_test.py`**: Produces a prompt for the AI to generate a lightweight JSON file with only questions, marks, and rubrics.  
+**Step 2 — `build_test.py`**: Merges the AI-generated JSON into the master HTML template and saves the final test to the correct subject folder — at zero additional token cost.
 
 ---
 
@@ -26,84 +28,82 @@ GEMINI_API_KEY=your_key_here
 
 ---
 
-## Usage
+## Workflow
 
+### Step 1 — Generate the AI Prompt (dry-run)
 ```bash
-python3 generate_test.py \
+python3 tools/generate_test.py \
   --class   <class_number> \
   --subject <subject_name> \
-  --topics  <"Topic 1"> <"Topic 2"> [<"Topic 3">] \
+  --topics  <"Topic 1"> ["Topic 2"] \
   [--time   <minutes>]   \  # default: 90
-  [--marks  <total>]     \  # default: 40
-  [--output <directory>] \  # default: ./generated_tests/
-  [--model  <model_name>]   # default: gemini-2.0-flash
+  [--marks  <total>]        # default: 40
+  --dry-run
 ```
+
+Copy the printed prompt, send it to the AI (e.g. in this chat), and ask it to act on the prompt. The AI will return a raw JSON file — save it as `temp.json` in the project root.
+
+### Step 2 — Build the Final Test
+```bash
+python3 tools/build_test.py temp.json
+```
+
+This will:
+- Parse the JSON and inject all questions and the answer key into the master HTML template.
+- Auto-route the output to the correct subject folder (`math_tests/`, `science_tests/`, etc.).
+- Delete `temp.json` automatically after the HTML is generated.
 
 ---
 
 ## Examples
 
-### Class 9 Mathematics
+### Class 9 Mathematics (dry-run then build)
 ```bash
-python3 generate_test.py \
-  --class 9 \
-  --subject Mathematics \
-  --topics "Coordinate Geometry" "Congruent Triangles" \
-  --time 90 --marks 40 \
-  --output ../math_tests/
+# Step 1: generate the prompt
+python3 tools/generate_test.py --class 9 --subject Mathematics --topics "Coordinate Geometry" --time 90 --marks 40 --dry-run
+
+# Act on the prompt in the AI chat → save output as temp.json
+
+# Step 2: build the HTML
+python3 tools/build_test.py temp.json
+```
+
+### Class 4 Science
+```bash
+python3 tools/generate_test.py --class 4 --subject Science --topics "Plants" --marks 20 --dry-run
+# → get JSON from AI → save as temp.json
+python3 tools/build_test.py temp.json
 ```
 
 ### Class 10 Science (3 topics)
 ```bash
-python3 generate_test.py \
-  --class 10 \
-  --subject Science \
-  --topics "Light — Reflection" "Human Eye" "Glass Prism and Dispersion" \
-  --marks 30 \
-  --output ../science_tests/
-```
-
-### Class 9 English Grammar
-```bash
-python3 generate_test.py \
-  --class 9 \
-  --subject English \
-  --topics "Tenses" "Subject-Verb Agreement" \
-  --marks 40 \
-  --output ../english_tests/
-```
-
-### Preview prompt without calling the API (free, instant)
-```bash
-python3 generate_test.py \
-  --class 9 \
-  --subject Mathematics \
-  --topics "Polynomials" "Linear Equations" \
-  --dry-run
+python3 tools/generate_test.py --class 10 --subject Science --topics "Light — Reflection" "Human Eye" "Glass Prism and Dispersion" --marks 30 --dry-run
 ```
 
 ---
 
 ## Output
 
-The tool saves a timestamped HTML file:
-```
-../math_tests/class9_mathematics_coordinate_congruent_20260409_1945.html
-```
+`build_test.py` saves a timestamped HTML file automatically in the subject folder:
 
-Open in any browser to preview, or convert to DOCX:
+| Subject | Output Folder |
+|---|---|
+| Mathematics | `math_tests/` |
+| Science | `science_tests/` |
+| Any other | `<subject>_tests/` |
+
+Example filename: `science_tests/class4_science_plants_20260416.html`
+
+Open in any browser to preview, or convert to PDF:
 ```bash
-# Using pandoc
-pandoc output_file.html -o output_file.docx
-
-# Or: Browser → Print → Save as PDF
+# Browser → Print → Save as PDF
 ```
 
 ---
 
 ## Supported Total Marks
 
-The section distribution auto-adjusts for common mark targets:
+The section distribution in the prompt auto-adjusts for common mark targets:
 
 | `--marks` | Sec A (1m) | Sec B (2m) | Sec C (3m) | Sec D (5m) | Total Qs |
 |-----------|-----------|-----------|-----------|-----------|----------|
@@ -116,6 +116,8 @@ The section distribution auto-adjusts for common mark targets:
 ---
 
 ## Available Gemini Models
+
+When using `generate_test.py` with direct API mode (without `--dry-run`):
 
 | Model | Speed | Quality | Use for |
 |-------|-------|---------|---------|
@@ -130,10 +132,20 @@ Pass with `--model gemini-2.5-pro`.
 
 ```
 tools/
-├── generate_test.py    ← Main CLI script
-├── requirements.txt    ← Python dependencies
-├── .env                ← Your API key (gitignored)
-├── .env.example        ← Template to copy
-├── .gitignore          ← Keeps .env and outputs out of git
-└── README.md           ← This file
+├── generate_test.py          ← Step 1: Generates the structured AI prompt
+├── build_test.py             ← Step 2: Merges JSON into HTML template
+├── requirements.txt          ← Python dependencies
+├── .env                      ← Your API key (gitignored)
+├── .env.example              ← Template to copy
+├── .gitignore                ← Keeps .env out of git
+└── README.md                 ← This file
+
+tests/templates/
+└── weekly_test_template.html ← Master HTML/CSS template (single source of truth)
 ```
+
+---
+
+## How It Saves Tokens
+
+The old workflow asked the AI to generate a full HTML document (~400+ lines of CSS + HTML boilerplate on every single call). The new workflow asks the AI only for the raw data (questions, marks, rubrics) in a compact JSON format, which is then merged locally. This saves approximately **60–70% of completion tokens** per test generated.
