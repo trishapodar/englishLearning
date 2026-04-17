@@ -944,6 +944,12 @@
         return true;
       });
 
+      filtered.sort((a, b) => {
+        const timeA = a.date ? new Date(a.date).getTime() : 0;
+        const timeB = b.date ? new Date(b.date).getTime() : 0;
+        return timeB - timeA;
+      });
+
       document.getElementById("count-display").textContent = filtered.length;
 
       const grid = document.getElementById("card-grid");
