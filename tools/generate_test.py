@@ -53,11 +53,11 @@ def compute_distribution(total_marks: int) -> dict:
     Each value is a tuple (question_count, marks_per_question).
     """
     presets = {
-        20: {"A": (4, 1), "B": (2, 2), "C": (2, 3), "D": (1, 5)},
-        30: {"A": (4, 1), "B": (4, 2), "C": (4, 3), "D": (2, 4)},
+        20: {"A": (5, 1), "B": (2, 2), "C": (2, 3), "D": (1, 5)},
+        30: {"A": (6, 1), "B": (4, 2), "C": (2, 3), "D": (2, 5)},
         40: {"A": (4, 1), "B": (4, 2), "C": (6, 3), "D": (2, 5)},
-        50: {"A": (6, 1), "B": (6, 2), "C": (6, 3), "D": (2, 5)},
-        80: {"A": (20,1), "B": (6, 2), "C": (8, 3), "D": (3, 5)},
+        50: {"A": (10, 1), "B": (5, 2), "C": (5, 3), "D": (3, 5)},
+        80: {"A": (20, 1), "B": (5, 2), "C": (6, 3), "D": (4, 5), "E": (3, 4)},
     }
     if total_marks in presets:
         return presets[total_marks]
@@ -136,7 +136,8 @@ Additional rules:
 - No concept repeated across questions.
 - Source: strictly NCERT textbook + NCERT Exemplar for Class {CLASS}.
   Cite chapter/exercise in the marking scheme, not in question stems.
-- Difficulty: 40% Easy · 40% Moderate · 20% Challenging (HOTS).
+- Difficulty: 20% Easy · 60% Moderate · 20% Challenging (HOTS).
+- At least 40% of the questions must be Competency-Based Questions (CBQs) assessing application and analysis. 
 - Include at least 2 real-life / application questions; mark them ★.
 - Questions requiring a figure: append [Figure Required] after the stem.
 - No hints, notes, or sub-labels inside question stems.
