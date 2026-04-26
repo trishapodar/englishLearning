@@ -53,11 +53,11 @@ def compute_distribution(total_marks: int) -> dict:
     Each value is a tuple (question_count, marks_per_question).
     """
     presets = {
-        20: {"A": (4, 1), "B": (2, 2), "C": (2, 3), "D": (1, 5)},
-        30: {"A": (4, 1), "B": (4, 2), "C": (4, 3), "D": (2, 4)},
+        20: {"A": (5, 1), "B": (2, 2), "C": (2, 3), "D": (1, 5)},
+        30: {"A": (6, 1), "B": (4, 2), "C": (2, 3), "D": (2, 5)},
         40: {"A": (4, 1), "B": (4, 2), "C": (6, 3), "D": (2, 5)},
-        50: {"A": (6, 1), "B": (6, 2), "C": (6, 3), "D": (2, 5)},
-        80: {"A": (20,1), "B": (6, 2), "C": (8, 3), "D": (3, 5)},
+        50: {"A": (10, 1), "B": (5, 2), "C": (5, 3), "D": (3, 5)},
+        80: {"A": (20, 1), "B": (5, 2), "C": (6, 3), "D": (4, 5), "E": (3, 4)},
     }
     if total_marks in presets:
         return presets[total_marks]
@@ -136,135 +136,52 @@ Additional rules:
 - No concept repeated across questions.
 - Source: strictly NCERT textbook + NCERT Exemplar for Class {CLASS}.
   Cite chapter/exercise in the marking scheme, not in question stems.
-- Difficulty: 40% Easy · 40% Moderate · 20% Challenging (HOTS).
+- Difficulty: 20% Easy · 60% Moderate · 20% Challenging (HOTS).
+- At least 40% of the questions must be Competency-Based Questions (CBQs) assessing application and analysis. 
 - Include at least 2 real-life / application questions; mark them ★.
 - Questions requiring a figure: append [Figure Required] after the stem.
 - No hints, notes, or sub-labels inside question stems.
 
 ═══════════════════════════════════════
-HTML OUTPUT FORMAT (STRICT)
+JSON OUTPUT FORMAT (STRICT)
 ═══════════════════════════════════════
-Output ONLY a complete, self-contained HTML document.
-No markdown. No ```html fences. No commentary outside the HTML.
+Output ONLY a raw JSON object string. Fasten it tightly and do not use Markdown bounds like ```json.
+The JSON must strictly follow this structure:
 
-CSS RULES (inside <style> tag — use named CSS classes, NOT inline style="" on individual elements):
-  * {{ box-sizing:border-box; margin:0; padding:0; }}
-  body {{ font-family:"Times New Roman",Times,serif; font-size:12pt; color:#000; background:#fff;
-          max-width:21cm; margin:0 auto; padding:2cm 2.2cm; line-height:1.6; }}
-  h1 {{ font-size:15pt; text-align:center; }}
-  h2 {{ font-size:13pt; margin:20px 0 6px; }}
-  h3 {{ font-size:12pt; margin:14px 0 4px; }}
-  h4 {{ font-size:12pt; margin:12px 0 4px; }}
-  p  {{ margin:4px 0; }}
-  ol {{ margin-left:22px; }}
-  li {{ margin-bottom:10px; }}
-  table {{ border-collapse:collapse; width:100%; margin-top:10px; }}
-  th, td {{ border:1px solid #555; padding:5px 10px; text-align:left; }}
-  th {{ background:#e8e8e8; }}
-  .school-header {{ text-align:center; border-bottom:3px double #000; padding-bottom:10px; margin-bottom:10px; }}
-  .meta-table {{ width:100%; margin:10px 0 16px; font-size:11pt; border-collapse:collapse; }}
-  .meta-table td {{ border:none; padding:3px 6px; vertical-align:top; }}
-  .meta-right {{ text-align:right; }}
-  .instructions {{ border:1px solid #000; padding:8px 14px; margin-bottom:18px; font-size:11pt; }}
-  .instructions ol {{ margin-top:4px; }}
-  .instructions li {{ margin-bottom:2px; }}
-  .section-head {{ background:#000; color:#fff; padding:5px 10px; font-size:11.5pt; font-weight:bold; margin:20px 0 10px; }}
-  .section-sub {{ font-size:10pt; font-style:italic; margin-bottom:10px; color:#333; }}
-  .question {{ margin-bottom:14px; page-break-inside:avoid; }}
-  .q-row {{ display:flex; gap:8px; align-items:flex-start; }}
-  .q-num {{ font-weight:bold; min-width:32px; flex-shrink:0; }}
-  .q-body {{ flex:1; }}
-  .q-marks {{ font-weight:bold; white-space:nowrap; min-width:60px; text-align:right; flex-shrink:0; font-size:10.5pt; }}
-  .ans-space {{ border-bottom:1px dashed #aaa; margin-top:6px; }}
-  .ans-1 {{ height:1.5cm; }}
-  .ans-2 {{ height:3cm; }}
-  .ans-3 {{ height:5cm; }}
-  .ans-5 {{ height:9cm; }}
-  hr.thin {{ border:none; border-top:1px solid #ccc; margin:18px 0; }}
-  .answer-key {{ border-top:4px double #000; padding-top:18px; margin-top:30px; }}
-  .answer-key h2 {{ text-align:center; font-size:15pt; letter-spacing:1px; margin-bottom:4px; }}
-  .ak-subtitle {{ text-align:center; font-size:10pt; font-style:italic; color:#444; margin-bottom:16px; }}
-  .ak-section {{ margin-top:18px; }}
-  .ak-section h3 {{ font-size:12pt; border-bottom:1.5px solid #000; padding-bottom:3px; margin-bottom:10px; }}
-  .ak-q {{ margin-bottom:14px; padding-left:12px; border-left:3px solid #ccc; }}
-  .ak-q-head {{ font-weight:bold; margin-bottom:4px; }}
-  .rubric {{ margin-top:6px; font-size:10pt; background:#f5f5f5; border:1px solid #ddd; padding:5px 10px; }}
-  .rubric strong {{ display:block; margin-bottom:2px; }}
-  @media print {{ body {{ padding:1.2cm 1.5cm; }} }}
-
-Document structure — in this EXACT order:
-
-  1. <!DOCTYPE html><html lang="en"><head>
-       <meta charset="UTF-8">
-       <title>Class {CLASS} {SUBJECT} — Weekly Test</title>
-       <style> ... all CSS above ... </style>
-     </head><body>
-
-  2. Centered header block (class="school-header"):
-       <h1>WEEKLY TEST — {SUBJECT} (CLASS {CLASS})</h1>
-       <p><strong>Topics:</strong> {TOPICS_INLINE}</p>
-
-  3. Two-column meta table (class="meta-table"):
-     Left cell: School: _____ / Name: _____ / Roll No.: _____
-     Right cell (class="meta-right"): Class & Section: {CLASS} — ___ / Date: {DATE} / Time: {TIME} min | Max Marks: {MARKS}
-
-  4. Boxed instructions div (class="instructions"):
-     <strong>General Instructions:</strong>
-     Numbered <ol> with exactly 5 rules covering:
-       all compulsory, four sections A-D, neat diagrams, show all working, marks in brackets.
-
-  5. For each section A → D:
-     <div class="section-head">SECTION — [letter] &nbsp;| [Short Answer / Long Answer] | ([n] × [m] = [total] Marks)</div>
-     <p class="section-sub"><em>Questions n to m carry <strong>[marks] mark(s)</strong> each.</em></p>
-
-     Each question as:
-     <div class="question">
-       <div class="q-row">
-         <div class="q-num">Qn.</div>
-         <div class="q-body">
-           [Question stem text. Mark application questions with ★. Append [Figure Required] if needed.]
-           <div class="ans-space ans-[N]"></div>
-           <p style="text-align:right; font-size:10pt;">[N Mark(s)]</p>
-         </div>
-         <div class="q-marks">[N Marks]</div>
-       </div>
-     </div>
-     Separate consecutive questions with: <hr class="thin">
-     Use class ans-1 / ans-2 / ans-3 / ans-5 matching the mark value.
-
-  6. Marks summary footer after the last section:
-     <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
-       <strong>Section Summary:</strong>&nbsp;|&nbsp;
-       Section A: [n]×1 = <strong>X Marks</strong> &nbsp;|&nbsp; ... &nbsp;|&nbsp; <strong>Total: {MARKS} Marks</strong>
-     </div>
-
-  7. Answer Key block (class="answer-key"):
-     <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
-     <p class="ak-subtitle">Class {CLASS} {SUBJECT} — Weekly Test &nbsp;|&nbsp; CBSE Marking Scheme</p>
-     <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
-       <em>Award marks as indicated. For multi-step questions award marks stepwise for correct reasoning.</em>
-     </p>
-
-     For each section, a <div class="ak-section"> with:
-       <h3>SECTION [letter] — [marks] Mark(s) Each</h3>
-
-     For each question, a <div class="ak-q"> with:
-       <div class="ak-q-head">Q[n]. &nbsp; [brief answer label] &nbsp; [[marks] Mark(s)]</div>
-       <p>[Full correct answer.]</p>
-       [Step lines each as <p> starting with → ]
-       <div class="rubric">
-         <strong>Marking:</strong> ... detailed breakdown ...
-         <strong>Accept:</strong> ... alternate phrasings or methods ...
-         <strong>Common Error:</strong> ... what students typically get wrong ...
-       </div>
-       <p><em>Ref: NCERT Class {CLASS} {SUBJECT}, Ch. X, Ex. Y.Z</em></p>
-
-  8. Marks distribution table at the very end:
-     <table> with columns: Section | Questions | Marks/Q | Total Marks | Content Focus
-     Include a bold Total row.
+{{
+  "metadata": {{
+    "class": "{CLASS}",
+    "subject": "{SUBJECT}",
+    "topics_inline": "{TOPICS_INLINE}",
+    "date": "{DATE}",
+    "time": "{TIME}",
+    "marks": {MARKS}
+  }},
+  "sections": [
+    {{
+      "letter": "A",
+      "type": "Very Short Answer",
+      "marks_per_q": 1,
+      "questions": [
+        {{
+          "q_num": 1,
+          "stem": "Question text here. HTML math formulas like \\(\\frac{{a}}{{b}}\\) are allowed. Mark application questions with ★. Append [Figure Required] if needed.",
+          "marks": 1,
+          "ak_label": "brief answer label",
+          "ak_answer": "<p>[Full correct answer.]</p>\\n<p>→ [Step 1]</p>",
+          "ak_marking": "detailed breakdown",
+          "ak_accept": "alternate phrasings or methods",
+          "ak_common_error": "what students typically get wrong",
+          "ak_ref": "NCERT Class {CLASS} {SUBJECT}, Ch. X, Ex. Y.Z",
+          "content_focus": "Specific sub-topic tested"
+        }}
+      ]
+    }}
+  ]
+}}
 
 ═══════════════════════════════════════
-OUTPUT — BEGIN IMMEDIATELY WITH <!DOCTYPE html>
+OUTPUT — BEGIN IMMEDIATELY WITH {{
 ═══════════════════════════════════════
 """
 
