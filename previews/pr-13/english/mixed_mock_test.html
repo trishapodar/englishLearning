@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mixed Mock Test — English Grammar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../style/mcq_style.css">
+</head>
+
+<body>
+
+  <!-- Empty data islands for core compatibility -->
+  <script type="application/json" id="qdata">[]</script>
+  <script type="application/json" id="rddata">{}</script>
+
+  <div id="score-bar">
+    <div class="sb-inner">
+      <span class="sb-label">Mock Exam Score</span>
+      <div class="pill p-score">Score <span class="pn" id="lv-s">0.00</span></div>
+      <div class="pill p-ok">✓ <span class="pn" id="lv-ok">0</span></div>
+      <div class="pill p-bad">✗ <span class="pn" id="lv-bad">0</span></div>
+      <div class="pill p-skip">— <span class="pn" id="lv-sk">0</span></div>
+    </div>
+  </div>
+
+  <div id="app">
+    <div class="topic-select" style="
+  max-width:860px;
+  margin:40px auto;
+  background:#f7eed8;
+  border:1px solid #c8a050;
+  border-radius:8px;
+  box-shadow:0 8px 40px rgba(24,16,2,.3);
+  padding:24px;
+  font-family:'Source Serif 4', serif;
+">
+
+      <h3 style="
+    font-family:'Playfair Display', serif;
+    color:#180f02;
+    margin-bottom:16px;
+    font-size:1.3rem;
+  ">
+        Select Topics
+      </h3>
+
+      <div class="topic-list" style="
+    display:grid;
+    gap:10px;
+    margin-bottom:18px;
+  ">
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="noun" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Nouns</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="pronoun" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Pronouns</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="articles" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Articles</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="adjectives" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Adjectives</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="verbs" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Verbs</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="tenses" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Tenses</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="adverbs" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Adverbs</span>
+        </label>
+
+        <label style="display:block; cursor:pointer;">
+          <input type="checkbox" value="infinitives" style="display:none;">
+          <span style="
+        display:flex;
+        justify-content:center;
+        padding:12px;
+        background:#ede0be;
+        border:1.5px solid #e8d8a8;
+        border-radius:6px;
+        transition:all .2s;
+      ">Infinitives</span>
+        </label>
+
+      </div>
+
+      <button onclick="startSelectedMock()" id="start-btn" style="
+    padding:10px 28px;
+    border-radius:6px;
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    background:linear-gradient(135deg,#a87a0a,#8a6205);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    opacity:.6;
+  ">
+        Start Test
+      </button>
+
+    </div>
+
+    <script>
+      /* Selection styling + enable button */
+      document.querySelectorAll('.topic-select label').forEach(label => {
+        const input = label.querySelector('input');
+        const span = label.querySelector('span');
+
+        label.addEventListener('click', () => {
+          setTimeout(() => {
+            if (input.checked) {
+              span.style.background = '#ede0b8';
+              span.style.borderColor = '#a87a0a';
+              span.style.boxShadow = '0 0 0 2px rgba(168,122,10,.2)';
+            } else {
+              span.style.background = '#ede0be';
+              span.style.borderColor = '#e8d8a8';
+              span.style.boxShadow = 'none';
+            }
+
+            const anyChecked = document.querySelectorAll('.topic-select input:checked').length > 0;
+            const btn = document.getElementById('start-btn');
+            btn.style.opacity = anyChecked ? '1' : '.6';
+            btn.disabled = !anyChecked;
+
+          }, 0);
+        });
+      });
+    </script>
+    <div class="masthead">
+      <h1>Full Syllabus Mock Test</h1>
+      <div class="mast-sub">Randomized from all topics</div>
+      <div class="mast-meta">25 Random Questions · Mixed Difficulty · +1 / −0.25</div>
+    </div>
+
+    <div id="loading-status" style="text-align:center; padding: 40px; color: var(--gold);">Loading random questions from
+      database...</div>
+
+    <div class="dots-wrap" id="dots-wrap"></div>
+    <div id="quiz-wrap"></div>
+
+    <div class="finish-wrap" style="display:none;">
+      <button class="btn-finish" onclick="finishTest()">Finish Mock Exam</button>
+    </div>
+
+    <!-- Standard results div used by mcq_core.js -->
+    <div id="results">
+      <div class="res-card">
+        <div class="res-hdr">
+          <h2>Examination Complete</h2>
+          <div class="orn">✶ ✶ ✶</div>
+          <div class="grade" id="r-grade">—</div>
+          <div class="grade-lbl" id="r-lbl"></div>
+          <div class="stats">
+            <div class="stat s-score"> <span class="stat-n" id="r-sc">0</span> <span class="stat-l">Score</span></div>
+            <div class="stat s-correct"><span class="stat-n" id="r-ok">0</span> <span class="stat-l">Correct</span>
+            </div>
+            <div class="stat s-wrong"> <span class="stat-n" id="r-bad">0</span> <span class="stat-l">Wrong</span></div>
+            <div class="stat s-skip"> <span class="stat-n" id="r-skip">0</span><span class="stat-l">Skipped</span></div>
+          </div>
+        </div>
+        <div class="res-body">
+          <h3 class="sec-hdr">Subtopic Performance</h3>
+          <div class="st-bars" id="st-bars"></div>
+          <h3 class="sec-hdr">Personalised Study Roadmap</h3>
+          <div class="roadmap" id="roadmap"></div>
+          <div class="restart-wrap"><button class="btn-restart" onclick="location.reload()">Retake Examination</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TODO Think of moving this function to the mcq_core.js -->
+  <script>
+    window.initQuiz = function (questions, roadmap) {
+      QUESTIONS = questions || [];
+      RD = roadmap || {};
+
+      S = {
+        chosen: new Array(QUESTIONS.length).fill(null),
+        checked: new Array(QUESTIONS.length).fill(false),
+        skipped: new Array(QUESTIONS.length).fill(false),
+        score: 0, ok: 0, bad: 0, skip: 0
+      };
+
+      buildDots();
+      buildCards();
+      bar();
+    };
+  </script>
+
+  <script>
+    const TOPIC_FILES = {
+      noun: [
+        './noun/noun_mcq_foundational.html',
+        './noun/noun_mcq_advanced.html',
+        './noun/noun_mcq_topper.html'
+      ],
+      pronoun: [
+        './pronoun/pronoun_mcq_foundational.html',
+        './pronoun/pronoun_mcq_advanced.html',
+        './pronoun/pronoun_mcq_topper.html'
+      ],
+      adjectives: [
+        './adjectives/adjective_mcq_foundational.html',
+        './adjectives/adjective_mcq_advanced.html',
+        './adjectives/adjective_mcq_topper.html'
+      ],
+      articles: [
+        './articles/article_mcq_foundational.html',
+        './articles/article_mcq_advanced.html',
+        './articles/article_mcq_topper.html'
+
+      ],
+      verbs: [
+        './verbs/verb_mcq_foundational.html',
+        './verbs/verb_mcq_advanced.html',
+        './verbs/verb_mcq_topper.html'
+      ],
+      tenses: [
+        './tenses/tenses_mcq_foundational.html',
+        './tenses/tenses_mcq_advanced.html',
+        './tenses/tenses_mcq_topper.html'
+      ],
+      adverbs: [
+        './adverbs/adverbs_mcq_foundational.html',
+        './adverbs/adverbs_mcq_advanced.html',
+        './adverbs/adverbs_mcq_topper.html'
+      ],
+      infinitives: [
+        './infinitives/infinitive_mcq_foundational.html',
+        './infinitives/infinitive_mcq_advanced.html',
+        './infinitives/infinitive_mcq_topper.html'
+      ]
+    };
+  </script>
+
+  <script src="../js/mcq_core.js"></script>
+  <script>
+    function getSelectedTopics() {
+      return Array.from(document.querySelectorAll('.topic-list input:checked'))
+        .map(el => el.value);
+    }
+
+    async function startSelectedMock() {
+      const selectedTopics = getSelectedTopics();
+
+      if (selectedTopics.length === 0) {
+        alert("Please select at least one topic");
+        return;
+      }
+
+      const parser = new DOMParser();
+      let topicFileMap = {};
+      let roadmapPool = {};
+
+      // Create a mapping to remember which file belongs to which topic
+      let fileToTopicMap = {};
+
+      // Collect all files from selected topics
+      selectedTopics.forEach(t => {
+        topicFileMap[t] = {};
+        (TOPIC_FILES[t] || []).forEach(filePath => {
+          fileToTopicMap[filePath] = t;
+        });
+      });
+
+      const files = Object.keys(fileToTopicMap);
+
+      try {
+        for (const f of files) {
+          const res = await fetch(f);
+          const htmlText = await res.text();
+          const doc = parser.parseFromString(htmlText, 'text/html');
+
+          const qEl = doc.getElementById('qdata');
+          const rdEl = doc.getElementById('rddata');
+
+          if (qEl) {
+            const topic = fileToTopicMap[f];
+            topicFileMap[topic][f] = JSON.parse(qEl.textContent);
+          }
+          if (rdEl) {
+            Object.assign(roadmapPool, JSON.parse(rdEl.textContent));
+          }
+        }
+
+        // Use the two-tier balanced logic to get the final array
+        const finalQuestions = buildBalancedSet(topicFileMap, 25);
+
+        // --- NEW: Calculate counts per topic for the Masthead ---
+        const topicCounts = {};
+        selectedTopics.forEach(t => topicCounts[t] = 0);
+
+        // Identify where each question came from
+        finalQuestions.forEach(q => {
+          let found = false;
+          for (let topic in topicFileMap) {
+            for (let f in topicFileMap[topic]) {
+              if (topicFileMap[topic][f].includes(q)) {
+                topicCounts[topic]++;
+                found = true;
+                break;
+              }
+            }
+            if (found) break;
+          }
+        });
+
+        // Format the string: Noun(6), Pronoun(7)...
+        const countStrings = selectedTopics.map(t => {
+          const label = t.charAt(0).toUpperCase() + t.slice(1);
+          return `${label}(${topicCounts[t]})`;
+        });
+
+        const mastSub = document.querySelector('.mast-sub');
+        if (mastSub) {
+          mastSub.textContent = `Randomized from: ${countStrings.join(', ')}`;
+        }
+        // -------------------------------------------------------
+
+        // UI Updates
+        document.querySelector('.topic-select').style.display = 'none';
+        document.getElementById('loading-status').style.display = 'none';
+        document.querySelector('.finish-wrap').style.display = 'block';
+
+        window.__USE_EXTERNAL_DATA__ = true;
+        initQuiz(finalQuestions, roadmapPool);
+
+      } catch (err) {
+        console.error(err);
+        alert("Error loading questions");
+      }
+    }
+
+    function buildBalancedSet(topicFileMap, total = 25) {
+      const topics = Object.keys(topicFileMap);
+      const numTopics = topics.length;
+
+      if (numTopics === 0) return [];
+
+      const basePerTopic = Math.floor(total / numTopics);
+      let remainderTopic = total % numTopics;
+
+      let finalSelected = [];
+
+      topics.forEach((topic) => {
+        let countForThisTopic = basePerTopic + (remainderTopic > 0 ? 1 : 0);
+        if (remainderTopic > 0) remainderTopic--;
+
+        const filesMap = topicFileMap[topic];
+        const files = Object.keys(filesMap);
+        const numFiles = files.length;
+
+        if (numFiles === 0) return;
+
+        const basePerFile = Math.floor(countForThisTopic / numFiles);
+        let remainderFile = countForThisTopic % numFiles;
+
+        let topicSelected = [];
+
+        files.forEach((f) => {
+          let countForThisFile = basePerFile + (remainderFile > 0 ? 1 : 0);
+          if (remainderFile > 0) remainderFile--;
+
+          const arr = [...filesMap[f]].sort(() => 0.5 - Math.random());
+          const take = Math.min(countForThisFile, arr.length);
+          topicSelected = topicSelected.concat(arr.slice(0, take));
+        });
+
+        // Emergency Fallback for this topic
+        if (topicSelected.length < countForThisTopic) {
+          let pool = [];
+          files.forEach(f => {
+            const selectedIds = new Set(topicSelected.map(q => q.id || JSON.stringify(q)));
+            const extras = filesMap[f].filter(q => !selectedIds.has(q.id || JSON.stringify(q)));
+            pool = pool.concat(extras);
+          });
+
+          pool.sort(() => 0.5 - Math.random());
+          const gap = countForThisTopic - topicSelected.length;
+          topicSelected = topicSelected.concat(pool.slice(0, gap));
+        }
+
+        finalSelected = finalSelected.concat(topicSelected);
+      });
+
+      // Global Fallback
+      if (finalSelected.length < total) {
+        let globalPool = [];
+        topics.forEach(t => {
+          Object.values(topicFileMap[t]).forEach(arr => {
+            const selectedIds = new Set(finalSelected.map(q => q.id || JSON.stringify(q)));
+            const extras = arr.filter(q => !selectedIds.has(q.id || JSON.stringify(q)));
+            globalPool = globalPool.concat(extras);
+          });
+        });
+
+        globalPool.sort(() => 0.5 - Math.random());
+        const gap = total - finalSelected.length;
+        finalSelected = finalSelected.concat(globalPool.slice(0, gap));
+      }
+
+      return finalSelected.sort(() => 0.5 - Math.random());
+    }
+  </script>
+</body>
+
+</html>
