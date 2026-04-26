@@ -666,10 +666,10 @@
     }
 
     // ── Copy Link Utility ──────────────────────────────────────
-    function copyLink(relativeUrl, el) {
-      // Resolves to absolute URL based on the current page's domain/path
-      const absoluteUrl = new URL(relativeUrl, window.location.href).href;
-      navigator.clipboard.writeText(absoluteUrl).then(() => {
+    function copyLink(id, el) {
+      // Create a URL pointing to this dashboard with the '?id=' query parameter attached
+      const url = new URL(window.location.pathname + "?id=" + id, window.location.origin);
+      navigator.clipboard.writeText(url.href).then(() => {
         const originalText = el.innerHTML;
         el.innerHTML = "Copied!";
         setTimeout(() => el.innerHTML = originalText, 1500);
@@ -723,7 +723,7 @@
         card.className = "card";
         card.innerHTML = `
       <div class="card-badges">
-        ${t.id ? `<span class="badge" onclick="copyLink('${t.url}', this)" title="Click to copy direct link" style="background:var(--accent);color:#fff;cursor:pointer">#${t.id} <span style="font-size:0.75rem;margin-left:2px">🔗</span></span>` : ""}
+        ${t.id ? `<span class="badge" onclick="copyLink('${t.id}', this)" title="Click to copy direct link" style="background:var(--accent);color:#fff;cursor:pointer">#${t.id} <span style="font-size:0.75rem;margin-left:2px">🔗</span></span>` : ""}
         <span class="badge ${badgeClass(t.subject)}">${t.subject}</span>
         <span class="badge badge-class">${t.class}</span>
         <span class="badge ${typeBadgeClass(t.type)}">${t.type}</span>
@@ -739,6 +739,19 @@
     }
 
     // ── Init ──────────────────────────────────────────────────
+    
+    // Automatically route to test if ?id= parameter exists in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const targetId = urlParams.get("id");
+    if (targetId) {
+      const targetTest = TESTS.find(t => t.id === targetId);
+      if (targetTest) {
+        window.location.replace(targetTest.url);
+      } else {
+        alert("No test found with ID: " + targetId);
+      }
+    }
+
     buildChips("subject-chips", unique("subject"), "subject");
     buildChips("class-chips", unique("class"), "class");
     buildChips("type-chips", unique("type"), "type");
