@@ -24,19 +24,43 @@ def build_test(json_path):
     time_min = meta.get("time", 45)
     total_marks = meta.get("marks", 20)
 
-    # Determine directory
-    if subject.lower() == "mathematics":
-        out_dir = os.path.join(os.path.dirname(__file__), "..", "math_tests")
-    elif subject.lower() == "science":
-        out_dir = os.path.join(os.path.dirname(__file__), "..", "science_tests")
-    else:
-        out_dir = os.path.join(os.path.dirname(__file__), "..", f"{subject.lower()}_tests")
-    
+    # ── Derive a clean slug from any subject string ──────────────────────
+    # e.g. "Science - Biology" → "science", "Mathematics" → "mathematics"
+    subject_slug = subject.lower()
+    subject_slug = subject_slug.replace(" - ", "_").replace("-", "_").replace(" ", "_")
+    # Strip everything after the first underscore to get the base subject
+    base_subject = subject_slug.split("_")[0]   # "science", "mathematics", "english", …
+
+    # ── Map base subject to output directory ─────────────────────────────
+    DIR_MAP = {
+        "mathematics": "math_tests",
+        "math":        "math_tests",
+        "science":     "science_tests",
+        "english":     "english_tests",
+        "geography":   "geography_tests",
+        "history":     "history_tests",
+        "economics":   "economics_tests",
+        "civics":      "civics_tests",
+    }
+    out_folder = DIR_MAP.get(base_subject, f"{base_subject}_tests")
+    out_dir = os.path.join(os.path.dirname(__file__), "..", out_folder)
     os.makedirs(out_dir, exist_ok=True)
 
-    topics_slug = topics_inline.replace(" & ", "_").replace(" ", "_").replace(",", "").replace("-", "_").lower()
+    # ── Build a clean filename (no spaces, colons, or raw hyphens) ────────
+    def _slugify(text):
+        """Convert arbitrary text to a safe, lowercase filename slug."""
+        import re
+        text = text.lower()
+        text = text.replace(" & ", "_").replace(" - ", "_")
+        text = re.sub(r"[\s]+", "_", text)          # spaces → underscore
+        text = re.sub(r"[^a-z0-9_]", "", text)      # strip everything else
+        text = re.sub(r"_+", "_", text).strip("_")  # collapse duplicate underscores
+        return text
+
+    topics_slug = _slugify(topics_inline)
+    subject_file_slug = _slugify(subject)
     date_slug = datetime.now().strftime("%Y%m%d")
-    out_filename = f"class{class_num}_{subject.lower()}_{topics_slug}_{date_slug}.html"
+    out_filename = f"class{class_num}_{subject_file_slug}_{topics_slug}_{date_slug}.html"
     out_path = os.path.join(out_dir, out_filename)
 
     questions_html = ""
