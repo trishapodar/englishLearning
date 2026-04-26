@@ -26,7 +26,7 @@ def build_test(json_path):
 
     # ── Derive base_subject and sub_subject from any subject string ────────
     # e.g. "Science - Biology" → base="science", sub="biology"
-    # e.g. "Mathematics" → base="mathematics", sub=""
+    # e.g. "Maths" → base="maths", sub=""
     
     # Split by hyphen if present, clean up spaces
     subj_raw = subject.replace("—", "-").replace(" - ", "-")
@@ -36,8 +36,8 @@ def build_test(json_path):
     sub_subject = subj_parts[1].replace(" ", "_") if len(subj_parts) > 1 else ""
 
     # Normalise common aliases
-    if base_subject == "math": 
-        base_subject = "mathematics"
+    if base_subject in ["math", "mathematics"]: 
+        base_subject = "maths"
 
     # ── Build the nested output directory path ────────────────────────────
     # pattern: tests/class<num>/<base_subject>/<sub_subject>
