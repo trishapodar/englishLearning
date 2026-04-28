@@ -24,26 +24,30 @@ def build_test(json_path):
     time_min = meta.get("time", 45)
     total_marks = meta.get("marks", 20)
 
-    # ── Derive a clean slug from any subject string ──────────────────────
-    # e.g. "Science - Biology" → "science", "Mathematics" → "mathematics"
-    subject_slug = subject.lower()
-    subject_slug = subject_slug.replace(" - ", "_").replace("-", "_").replace(" ", "_")
-    # Strip everything after the first underscore to get the base subject
-    base_subject = subject_slug.split("_")[0]   # "science", "mathematics", "english", …
+    # ── Derive base_subject and sub_subject from any subject string ────────
+    # e.g. "Science - Biology" → base="science", sub="biology"
+    # e.g. "Maths" → base="maths", sub=""
+    
+    # Split by hyphen if present, clean up spaces
+    subj_raw = subject.replace("—", "-").replace(" - ", "-")
+    subj_parts = [p.strip().lower() for p in subj_raw.split("-") if p.strip()]
+    
+    base_subject = subj_parts[0].replace(" ", "_")
+    sub_subject = subj_parts[1].replace(" ", "_") if len(subj_parts) > 1 else ""
 
-    # ── Map base subject to output directory ─────────────────────────────
-    DIR_MAP = {
-        "mathematics": "math_tests",
-        "math":        "math_tests",
-        "science":     "science_tests",
-        "english":     "english_tests",
-        "geography":   "geography_tests",
-        "history":     "history_tests",
-        "economics":   "economics_tests",
-        "civics":      "civics_tests",
-    }
-    out_folder = DIR_MAP.get(base_subject, f"{base_subject}_tests")
-    out_dir = os.path.join(os.path.dirname(__file__), "..", out_folder)
+    # Normalise common aliases
+    if base_subject in ["math", "mathematics"]: 
+        base_subject = "maths"
+
+    # ── Build the nested output directory path ────────────────────────────
+    # pattern: tests/class<num>/<base_subject>/<sub_subject>
+    out_dir_parts = ["..", "tests", f"class{class_num}"]
+    if base_subject:
+        out_dir_parts.append(base_subject)
+    if sub_subject:
+        out_dir_parts.append(sub_subject)
+
+    out_dir = os.path.join(os.path.dirname(__file__), *out_dir_parts)
     os.makedirs(out_dir, exist_ok=True)
 
     # ── Build a clean filename (no spaces, colons, or raw hyphens) ────────
