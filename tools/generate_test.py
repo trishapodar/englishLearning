@@ -123,6 +123,41 @@ Total Marks   : {MARKS}
 Date          : {DATE}
 
 ═══════════════════════════════════════
+SYLLABUS & CURRICULUM CONTEXT (CRITICAL)
+═══════════════════════════════════════
+Academic Year : 2026–27
+Framework     : NCF-SE 2023 / NEP 2020
+
+MANDATORY CURRICULUM RULES:
+1. Follow ONLY the 2026-27 NCERT syllabus aligned with NCF-SE 2023 and NEP 2020.
+2. For Social Science: NCERT has replaced the four separate textbooks
+   (History, Geography, Civics, Economics) with a SINGLE integrated
+   textbook called "Gateway to Social Science". Use this name in ak_ref.
+3. For Science: Use the latest NCERT textbook name for Class {CLASS}.
+4. For Mathematics: Use the latest NCERT textbook name for Class {CLASS}.
+5. For English: Use the latest NCERT textbook name for Class {CLASS}.
+6. Several topics previously taught in higher classes (e.g., Plate
+   Tectonics, Geomorphology in Class 11) have been brought down to
+   Class 9 in the 2026-27 syllabus. Include them if relevant.
+7. The ak_ref field MUST reference the CURRENT 2026-27 textbook name
+   and chapter — never use deprecated textbook names.
+
+DEPRECATED TEXTBOOK NAMES — DO NOT USE:
+- "Contemporary India-I" or "Contemporary India-II" (old Geography)
+- "India and the Contemporary World" (old History)
+- "Democratic Politics" (old Political Science)
+- "Understanding Economic Development" (old Economics)
+- "Beehive" / "Moments" (verify if still current for English)
+
+COMPREHENSIVE COVERAGE RULE:
+When a topic/chapter name is given, you MUST cover ALL major subtopics
+within that chapter — not just one area. For example, if the topic is
+"Shaping of Earth" you must include questions on BOTH endogenic forces
+(earthquakes, volcanoes, plate tectonics) AND exogenic forces
+(weathering, erosion, agents of gradation, landforms, disasters).
+Avoid repeating the same concept across multiple questions.
+{SUBTOPICS_CONTEXT}
+═══════════════════════════════════════
 PAPER DESIGN — MANDATORY RULES
 ═══════════════════════════════════════
 Section distribution (FOLLOW EXACTLY):
@@ -134,10 +169,12 @@ Topic balance per section:
 Additional rules:
 - Every topic must appear in EVERY section (A, B, C, D).
 - No concept repeated across questions.
-- Source: strictly NCERT textbook + NCERT Exemplar for Class {CLASS}.
-  Cite chapter/exercise in the marking scheme, not in question stems.
+- Source: strictly the LATEST 2026-27 NCERT textbook + NCERT Exemplar
+  for Class {CLASS}. Cite chapter/exercise in the marking scheme,
+  not in question stems.
 - Difficulty: 20% Easy · 60% Moderate · 20% Challenging (HOTS).
-- At least 40% of the questions must be Competency-Based Questions (CBQs) assessing application and analysis. 
+- At least 40% of the questions must be Competency-Based Questions
+  (CBQs) assessing application and analysis.
 - Include at least 2 real-life / application questions; mark them ★.
 - Questions requiring a figure: append [Figure Required] after the stem.
 - No hints, notes, or sub-labels inside question stems.
@@ -172,7 +209,7 @@ The JSON must strictly follow this structure:
           "ak_marking": "detailed breakdown",
           "ak_accept": "alternate phrasings or methods",
           "ak_common_error": "what students typically get wrong",
-          "ak_ref": "NCERT Class {CLASS} {SUBJECT}, Ch. X, Ex. Y.Z",
+          "ak_ref": "NCERT Class {CLASS} [LATEST 2026-27 TEXTBOOK NAME], Ch. X",
           "content_focus": "Specific sub-topic tested"
         }}
       ]
@@ -190,22 +227,36 @@ OUTPUT — BEGIN IMMEDIATELY WITH {{
 # PROMPT BUILDER
 # ══════════════════════════════════════════════════════════════
 
+def build_subtopics_context(context_lines: list[str]) -> str:
+    """Format the optional --context subtopics into a prompt block."""
+    if not context_lines:
+        return ""
+    header = "\nSUBTOPIC GUIDANCE (provided by the user — follow closely):"
+    items  = "\n".join(f"  - {line}" for line in context_lines)
+    return f"{header}\n{items}\n"
+
+
 def build_prompt(args) -> str:
     topics_bulleted = "\n".join(f"- {t}" for t in args.topics)
     topics_inline   = ", ".join(args.topics)
     dist            = compute_distribution(args.marks)
     date_str        = datetime.now().strftime("%d %B %Y")
 
+    # Build optional subtopic context from --context flag
+    context_lines = getattr(args, 'context', None) or []
+    subtopics_ctx = build_subtopics_context(context_lines)
+
     return PROMPT_TEMPLATE.format(
-        CLASS          = args.class_num,
-        SUBJECT        = args.subject,
-        TOPICS         = topics_bulleted,
-        TOPICS_INLINE  = topics_inline,
-        TIME           = args.time,
-        MARKS          = args.marks,
-        DATE           = date_str,
-        DISTRIBUTION   = distribution_summary(dist),
-        TOPIC_BALANCE  = per_topic_constraint(dist, len(args.topics)),
+        CLASS              = args.class_num,
+        SUBJECT            = args.subject,
+        TOPICS             = topics_bulleted,
+        TOPICS_INLINE      = topics_inline,
+        TIME               = args.time,
+        MARKS              = args.marks,
+        DATE               = date_str,
+        DISTRIBUTION       = distribution_summary(dist),
+        TOPIC_BALANCE      = per_topic_constraint(dist, len(args.topics)),
+        SUBTOPICS_CONTEXT  = subtopics_ctx,
     )
 
 
@@ -347,6 +398,14 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--show-prompt", action="store_true",
         help="Print the prompt AND call the API (useful for debugging)",
+    )
+    parser.add_argument(
+        "--context", nargs="+", default=None, metavar="SUBTOPIC",
+        help=(
+            'Optional subtopic guidance for comprehensive chapter coverage. '
+            'Example: --context "Plate Tectonics" "Weathering" "River Landforms" "GLOF". '
+            'When provided, the LLM will ensure questions cover these specific areas.'
+        ),
     )
     return parser
 
