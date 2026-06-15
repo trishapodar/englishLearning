@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verbs in English Grammar — Complete Study Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+/* ═══════════════════════════════════════════════════
+   GRAMMAR STUDIO — EMBEDDED GUIDE STYLESHEET v1.0
+   ═══════════════════════════════════════════════════ */
+:root {
+  --bg:           #FAF8F4;
+  --surface:      #FFFFFF;
+  --topbar-bg:    #16162A;
+  --topbar-text:  #F0ECE4;
+  --accent:       #C8963E;
+  --accent-light: #F5E9D3;
+  --cobalt:       #2A52BE;
+  --cobalt-light: #E8EEFF;
+  --text-main:    #1C1C2E;
+  --text-sub:     #5A5A7A;
+  --text-muted:   #8888A8;
+  --border:       #E2DDD4;
+  --sidebar-w:    262px;
+  --topbar-h:     54px;
+  --def-bg:       #EEF4FF;
+  --def-border:   #7BA7E0;
+  --rule-bg:      #F0FAF0;
+  --rule-border:  #5CAD6A;
+  --warn-bg:      #FFF8EC;
+  --warn-border:  #E8A020;
+  --tip-bg:       #F0FAFA;
+  --tip-border:   #3AACAC;
+  --correct:      #2D8A4E;
+  --wrong:        #C0392B;
+  --code-bg:      #F2EFE8;
+  --radius:       8px;
+  --shadow:       0 2px 12px rgba(0,0,0,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--text-main);line-height:1.75}
+#topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--topbar-h);background:var(--topbar-bg);display:flex;align-items:center;gap:16px;padding:0 20px;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.tb-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--accent);white-space:nowrap;flex-shrink:0}
+.tb-sep{width:1px;height:24px;background:rgba(255,255,255,0.15);flex-shrink:0}
+.tb-title{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--topbar-text);opacity:0.75;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-right{flex-shrink:0}
+#menu-toggle{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:var(--topbar-text);font-size:0.8rem;padding:5px 12px;border-radius:4px;cursor:pointer;transition:background 0.2s}
+#menu-toggle:hover{background:rgba(255,255,255,0.2)}
+#progress-bar{position:fixed;top:var(--topbar-h);left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:199}
+#progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#E8C06A);transition:width 0.1s linear}
+#sidebar{position:fixed;top:var(--topbar-h);left:0;bottom:0;width:var(--sidebar-w);z-index:150;background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;padding:12px 0 40px;transform:translateX(-100%);transition:transform 0.25s cubic-bezier(0.4,0,0.2,1);box-shadow:4px 0 20px rgba(0,0,0,0.06)}
+#sidebar.open{transform:translateX(0)}
+.sid-head{font-family:'Playfair Display',serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);padding:8px 20px 12px;border-bottom:1px solid var(--border);margin-bottom:6px}
+.sid-item{display:flex;align-items:center;gap:10px;padding:8px 20px;cursor:pointer;font-size:0.82rem;color:var(--text-sub);text-decoration:none;transition:background 0.15s,color 0.15s;border-left:3px solid transparent}
+.sid-item:hover,.sid-item.active{background:var(--accent-light);color:var(--text-main);border-left-color:var(--accent)}
+.sid-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--code-bg);border-radius:50%;font-size:0.72rem;font-family:'Fira Code',monospace;color:var(--text-sub);flex-shrink:0;font-weight:500}
+.sid-item.active .sid-num{background:var(--accent);color:#fff}
+#main{margin-top:calc(var(--topbar-h) + 3px);min-height:calc(100vh - var(--topbar-h) - 3px)}
+.content-inner{max-width:800px;margin:0 auto;padding:0 28px 80px}
+.hero{padding:60px 0 50px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.hero-kicker{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);font-family:'Fira Code',monospace;margin-bottom:12px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;color:var(--text-main);margin-bottom:16px}
+.hero-sub{font-size:1.05rem;color:var(--text-sub);max-width:540px;line-height:1.65;margin-bottom:24px}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;font-family:'Fira Code',monospace;letter-spacing:0.04em}
+.chip-gold{background:var(--accent-light);color:#7A5A10;border:1px solid #D4A84B}
+.chip-cobalt{background:var(--cobalt-light);color:#1A3A8A;border:1px solid #6A8ADE}
+.topic-section{padding:52px 0 20px;border-bottom:1px solid var(--border);position:relative}
+.topic-section:last-child{border-bottom:none}
+.section-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:var(--border);line-height:1;margin-bottom:-10px;letter-spacing:-0.02em}
+.topic-section h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--text-main);margin-bottom:4px;line-height:1.25}
+.accent{color:var(--accent)}
+.section-subtitle{font-size:0.85rem;color:var(--text-muted);font-style:italic;margin-bottom:24px;padding-bottom:16px;border-bottom:1px dashed var(--border)}
+.sub-head{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--text-main);margin:28px 0 12px}
+.body-text{color:var(--text-sub);font-size:0.97rem;line-height:1.8;margin-bottom:14px}
+.card-bg{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow)}
+.def-box{border-left:4px solid var(--def-border);background:var(--def-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.95rem}
+.rule-box{border-left:4px solid var(--rule-border);background:var(--rule-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.warn-box{border-left:4px solid var(--warn-border);background:var(--warn-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.tip-box{border-left:4px solid var(--tip-border);background:var(--tip-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.rule-title,.warn-title,.tip-title{font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;letter-spacing:0.03em;margin-bottom:10px}
+.rule-title{color:#2A6A35}
+.warn-title{color:#8A5010}
+.tip-title{color:#1A7A7A}
+.rule-box ul,.warn-box ul,.tip-box ul,.def-box ul{margin:8px 0 0 16px;line-height:2}
+.rule-box p,.warn-box p,.tip-box p,.def-box p{margin-bottom:4px}
+.sentence-list{list-style:none;padding:0;margin:12px 0}
+.sentence-list li{padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:6px;font-size:0.93rem}
+.note{font-size:0.8rem;color:var(--text-muted);font-style:italic;margin-left:8px}
+.cmp-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:0.88rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.cmp-table th{background:var(--topbar-bg);color:var(--topbar-text);padding:10px 14px;text-align:left;font-family:'Fira Code',monospace;font-weight:500;font-size:0.8rem;letter-spacing:0.04em}
+.cmp-table td{padding:9px 14px;border-bottom:1px solid var(--border);background:var(--surface);vertical-align:top}
+.cmp-table tr:last-child td{border-bottom:none}
+.cmp-table tr:nth-child(even) td{background:#F7F4EE}
+.example-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:16px 0}
+.eg-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 12px;box-shadow:var(--shadow)}
+.eg-label{font-family:'Fira Code',monospace;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:8px}
+.eg-words{display:flex;flex-wrap:wrap;gap:5px}
+.eg-words span{background:var(--code-bg);padding:2px 8px;border-radius:4px;font-size:0.82rem;color:var(--text-main);font-family:'Source Serif 4',serif;font-style:italic}
+.tag-correct{color:var(--correct);font-weight:600}
+.tag-wrong{color:var(--wrong);font-weight:600}
+code{font-family:'Fira Code',monospace;font-size:0.85em;background:var(--code-bg);padding:1px 6px;border-radius:3px;color:var(--text-main)}
+code.tag-correct{background:#E8F8EE;color:var(--correct)}
+code.tag-wrong{background:#FEE8E8;color:var(--wrong)}
+.formula{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 0;font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--text-main)}
+.formula span{background:var(--accent-light);padding:4px 14px;border-radius:20px}
+.arr{background:none!important;padding:0!important;color:var(--accent);font-size:1.2rem}
+.ornament{text-align:center;color:var(--accent);font-size:1.1rem;padding:30px 0 10px;letter-spacing:0.2em}
+#btt{position:fixed;bottom:28px;right:24px;width:40px;height:40px;background:var(--topbar-bg);color:var(--accent);border:none;border-radius:50%;font-size:1.1rem;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;z-index:180}
+#btt.visible{opacity:1;pointer-events:auto}
+#btt:hover{transform:translateY(-2px)}
+@media(max-width:640px){
+  .content-inner{padding:0 16px 60px}
+  .hero{padding:36px 0 32px}
+  .cmp-table{font-size:0.8rem}
+  .cmp-table th,.cmp-table td{padding:7px 10px}
+  .section-num{font-size:3.5rem}
+}
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="tb-logo">Grammar Studio</div>
+  <div class="tb-sep"></div>
+  <div class="tb-title">Verbs in English Grammar &mdash; Complete Study Guide</div>
+  <div class="tb-right">
+    <button id="menu-toggle" onclick="toggleSidebar()">&#9776; Topics</button>
+  </div>
+</div>
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="sid-head">Topics &mdash; 18 Chapters</div>
+  <a class="sid-item active" onclick="goTo('s1')"><span class="sid-num">1</span>What Is a Verb?</a>
+  <a class="sid-item" onclick="goTo('s2')"><span class="sid-num">2</span>Types of Verbs</a>
+  <a class="sid-item" onclick="goTo('s3')"><span class="sid-num">3</span>Transitive &amp; Intransitive</a>
+  <a class="sid-item" onclick="goTo('s4')"><span class="sid-num">4</span>Auxiliary Verbs</a>
+  <a class="sid-item" onclick="goTo('s5')"><span class="sid-num">5</span>Five Principal Parts</a>
+  <a class="sid-item" onclick="goTo('s6')"><span class="sid-num">6</span>Overview of 12 Tenses</a>
+  <a class="sid-item" onclick="goTo('s7')"><span class="sid-num">7</span>Simple Tenses</a>
+  <a class="sid-item" onclick="goTo('s8')"><span class="sid-num">8</span>Perfect Tenses</a>
+  <a class="sid-item" onclick="goTo('s9')"><span class="sid-num">9</span>Continuous Tenses</a>
+  <a class="sid-item" onclick="goTo('s10')"><span class="sid-num">10</span>Perfect Continuous</a>
+  <a class="sid-item" onclick="goTo('s11')"><span class="sid-num">11</span>Subject-Verb Agreement</a>
+  <a class="sid-item" onclick="goTo('s12')"><span class="sid-num">12</span>Active &amp; Passive Voice</a>
+  <a class="sid-item" onclick="goTo('s13')"><span class="sid-num">13</span>Mood — Indicative &amp; Subjunctive</a>
+  <a class="sid-item" onclick="goTo('s14')"><span class="sid-num">14</span>Verbals — Infinitives &amp; Gerunds</a>
+  <a class="sid-item" onclick="goTo('s15')"><span class="sid-num">15</span>Irregular Verbs</a>
+  <a class="sid-item" onclick="goTo('s16')"><span class="sid-num">16</span>Causative Verbs</a>
+  <a class="sid-item" onclick="goTo('s17')"><span class="sid-num">17</span>Stative vs. Dynamic Verbs</a>
+  <a class="sid-item" onclick="goTo('s18')"><span class="sid-num">18</span>Common Errors &amp; Traps</a>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+<div class="content-inner">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-kicker">English Grammar &middot;</div>
+    <h1>Verbs<br>Grammar</h1>
+    <div class="hero-sub">A comprehensive guide to verbs in English&mdash;from the fundamental definition to advanced tense, mood, voice, and verbals. Master every pattern, avoid every trap, and write with precision.</div>
+    <div class="hero-chips">
+      <span class="chip chip-gold">18 Topics</span>
+      <span class="chip chip-cobalt">Foundation &rarr; Topper Level</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1 — WHAT IS A VERB?
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s1">
+    <div class="section-num">1</div>
+    <h2>What Is a <span class="accent">Verb</span>?</h2>
+    <div class="section-subtitle">The engine of every English sentence &mdash; expressing action, state, or occurrence</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>verb</strong> is a word or group of words that expresses an action, a state of being, or an occurrence. Grammatically, every finite clause must contain a verb; it is the only obligatory element of a predicate and is the syntactic head of the verb phrase (VP).</p>
+    </div>
+
+    <p class="body-text">Verbs are the engines of English sentences. Without a verb, a group of words may contain nouns, adjectives, and adverbs, yet it remains a fragment&mdash;not a clause. Every complete thought, from the simplest exclamation to the most complex subordinate clause, revolves around a verb.</p>
+
+    <p class="body-text">Linguists distinguish between a <strong>prescriptive</strong> view (the rules grammarians codify) and a <strong>descriptive</strong> view (how native speakers actually use verbs). At topper level, you must understand both: you apply the prescriptive standard in formal writing while recognising that colloquial usage may diverge.</p>
+
+    <h3 class="sub-head">Three Functions of Verbs</h3>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The Three Core Functions</div>
+      <ul>
+        <li><strong>Action (dynamic):</strong> The verb describes something a subject does &mdash; <em>&ldquo;She runs every morning.&rdquo;</em></li>
+        <li><strong>State (stative):</strong> The verb describes a condition or state &mdash; <em>&ldquo;He knows the answer.&rdquo;</em></li>
+        <li><strong>Occurrence:</strong> The verb describes an event that happens &mdash; <em>&ldquo;The accident occurred at dawn.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Quick Identification Test</h3>
+    <p class="body-text">The simplest test for a verb is the <strong>inflection test</strong>: can the word change form to show tense? <em>Walk &rarr; walked, walks, is walking.</em> If it inflects for tense, it is (or can be) a verb. A secondary test is the <strong>negation test</strong>: can <em>not</em> follow it directly? <em>&ldquo;She does not walk&rdquo;</em> confirms <em>walk</em> as a verb.</p>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Topper&rsquo;s Trick &mdash; The &ldquo;Yesterday&rdquo; Test</div>
+      <p>Insert <em>yesterday</em> before the predicate. If the verb changes form, it is a true (finite) verb.</p>
+      <ul>
+        <li><em>&ldquo;She <strong>runs</strong> every day.&rdquo;</em> &rarr; <em>&ldquo;Yesterday she <strong>ran</strong>.&rdquo;</em> &mdash; <span class="tag-correct">&#10003;</span> verb confirmed</li>
+        <li><em>&ldquo;Her <strong>running</strong> is beautiful.&rdquo;</em> &rarr; <em>&ldquo;Yesterday her <strong>running</strong> is beautiful.&rdquo;</em> &mdash; does not change &rarr; <em>running</em> here is a gerund (noun), not a finite verb.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 1 &mdash; Confusing Verbals with Verbs</div>
+      <p>Words derived from verbs&mdash;infinitives, gerunds, and participles&mdash;are called <strong>verbals</strong>. They look like verbs but function as nouns, adjectives, or adverbs. They are <em>not</em> finite verbs and cannot serve as the main predicate alone.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Running in the park good exercise.&rdquo;</em> <span class="note">No finite verb; <em>running</em> here is a gerund, not a predicate verb.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Running in the park is good exercise.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;The children <strong>played</strong> in the garden.&rdquo;</em> <span class="note">Action verb &mdash; past tense, finite</span></li>
+      <li><em>&ldquo;The soup <strong>smells</strong> delicious.&rdquo;</em> <span class="note">Linking verb &mdash; stative, present tense</span></li>
+      <li><em>&ldquo;An earthquake <strong>occurred</strong> last night.&rdquo;</em> <span class="note">Occurrence verb &mdash; intransitive, past tense</span></li>
+      <li><em>&ldquo;She <strong>has been waiting</strong> for an hour.&rdquo;</em> <span class="note">Verb phrase (auxiliary + present participle) &mdash; present perfect continuous</span></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2 — TYPES OF VERBS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s2">
+    <div class="section-num">2</div>
+    <h2>Types of <span class="accent">Verbs</span></h2>
+    <div class="section-subtitle">Action, linking, and auxiliary &mdash; three families with distinct grammatical behaviour</div>
+
+    <div class="def-box card-bg">
+      <p>English verbs fall into three broad classes based on their grammatical function: <strong>action verbs</strong> (also called lexical or main verbs), <strong>linking verbs</strong> (also called copulas), and <strong>auxiliary verbs</strong> (also called helping verbs). Every verb phrase must contain a main verb; auxiliaries and linking verbs modify or complete its meaning.</p>
+    </div>
+
+    <h3 class="sub-head">Action Verbs</h3>
+    <p class="body-text">An <strong>action verb</strong> describes something the subject physically or mentally does. Action verbs can be transitive (taking a direct object) or intransitive (not taking a direct object), a distinction explored in Chapter 3.</p>
+
+    <div class="example-grid">
+      <div class="eg-card">
+        <div class="eg-label">Physical</div>
+        <div class="eg-words"><span>run</span><span>jump</span><span>write</span><span>build</span><span>eat</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Mental</div>
+        <div class="eg-words"><span>think</span><span>believe</span><span>decide</span><span>consider</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Transfer</div>
+        <div class="eg-words"><span>give</span><span>send</span><span>offer</span><span>lend</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Occurrence</div>
+        <div class="eg-words"><span>happen</span><span>occur</span><span>arise</span><span>emerge</span></div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">Linking Verbs (Copulas)</h3>
+    <p class="body-text">A <strong>linking verb</strong> connects the subject to a <strong>subject complement</strong>&mdash;a predicate noun or predicate adjective that renames or describes the subject. The primary linking verb in English is <em>be</em> (is, am, are, was, were, being, been). Secondary linking verbs include verbs of sense (<em>seem, appear, feel, smell, taste, sound, look</em>) and verbs of becoming (<em>become, grow, turn, remain, stay, prove</em>).</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The Substitution Test for Linking Verbs</div>
+      <p>Replace the suspected linking verb with a form of <em>be</em>. If the sentence retains its meaning, the verb is a linking verb.</p>
+      <ul>
+        <li><em>&ldquo;The milk <strong>smells</strong> sour.&rdquo;</em> &rarr; <em>&ldquo;The milk <strong>is</strong> sour.&rdquo;</em> &mdash; <span class="tag-correct">&#10003;</span> linking verb</li>
+        <li><em>&ldquo;She <strong>smells</strong> the flowers.&rdquo;</em> &rarr; <em>&ldquo;She <strong>is</strong> the flowers.&rdquo;</em> &mdash; <span class="tag-wrong">&#10007;</span> nonsensical &rarr; action verb</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 2 &mdash; Adjective vs. Adverb after a Linking Verb</div>
+      <p>A linking verb must be followed by a <strong>predicate adjective</strong>, not an adverb, because the complement modifies the <em>subject</em>, not the verb.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The roses smell <strong>sweetly</strong>.&rdquo;</em> <span class="note"><em>Sweetly</em> is an adverb; it cannot be a subject complement. The subject does not perform an action sweetly.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The roses smell <strong>sweet</strong>.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He looks <strong>tiredly</strong>.&rdquo;</em> <span class="note">After a linking verb, the complement describes the subject; use the adjective <em>tired</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He looks <strong>tired</strong>.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Summary Comparison</h3>
+    <table class="cmp-table">
+      <tr><th>Type</th><th>Function</th><th>Complement / Object</th><th>Test</th></tr>
+      <tr>
+        <td><code>Action verb</code></td>
+        <td>Describes activity or occurrence</td>
+        <td>Direct object (transitive) or none (intransitive)</td>
+        <td>Can take <em>not</em> directly: <em>did not run</em></td>
+      </tr>
+      <tr>
+        <td><code>Linking verb</code></td>
+        <td>Connects subject to complement</td>
+        <td>Predicate noun or predicate adjective</td>
+        <td>Replaceable by <em>be</em> without nonsense</td>
+      </tr>
+      <tr>
+        <td><code>Auxiliary verb</code></td>
+        <td>Helps the main verb form tense, mood, voice</td>
+        <td>Main verb always present in phrase</td>
+        <td>Inverts in questions: <em>Has she left?</em></td>
+      </tr>
+    </table>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3 — TRANSITIVE & INTRANSITIVE
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s3">
+    <div class="section-num">3</div>
+    <h2>Transitive &amp; <span class="accent">Intransitive</span> Verbs</h2>
+    <div class="section-subtitle">Whether the verb&rsquo;s action passes to an object or stays with the subject</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>transitive verb</strong> (from Latin <em>transire</em>, to pass across) transfers its action to a direct object&mdash;a noun or noun phrase that receives the action. An <strong>intransitive verb</strong> does not transfer its action to an object; the predicate is complete without one. Many verbs can be used both ways depending on context.</p>
+    </div>
+
+    <p class="body-text">The distinction matters because only transitive verbs can form passive voice constructions. If a verb is intransitive, it has no object to promote to subject position in the passive, and so passive transformation is impossible.</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The &ldquo;What / Whom&rdquo; Test for Transitivity</div>
+      <p>After the verb, ask <em>&ldquo;What?&rdquo;</em> or <em>&ldquo;Whom?&rdquo;</em> If there is a sensible answer that is part of the sentence, the verb is transitive.</p>
+      <ul>
+        <li><em>&ldquo;She wrote <strong>a letter</strong>.&rdquo;</em> &rarr; Wrote what? A letter. &mdash; <span class="tag-correct">&#10003;</span> transitive</li>
+        <li><em>&ldquo;She wrote <strong>carefully</strong>.&rdquo;</em> &rarr; Wrote what? (No answer from the sentence.) &mdash; intransitive</li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Ditransitive Verbs</h3>
+    <p class="body-text">A special category of transitive verb is the <strong>ditransitive verb</strong>, which takes two objects: an <strong>indirect object</strong> (the recipient) and a <strong>direct object</strong> (the thing given). Common ditransitive verbs include <em>give, send, show, tell, teach, lend, offer, bring</em>.</p>
+
+    <div class="formula">
+      <span>Subject</span>
+      <span class="arr">&rarr;</span>
+      <span>Ditransitive Verb</span>
+      <span class="arr">&rarr;</span>
+      <span>Indirect Object</span>
+      <span class="arr">&rarr;</span>
+      <span>Direct Object</span>
+    </div>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;She <strong>gave</strong> [<u>him</u> &mdash; IO] [<u>the book</u> &mdash; DO].&rdquo;</em></li>
+      <li><em>&ldquo;They <strong>offered</strong> [<u>the refugees</u> &mdash; IO] [<u>shelter</u> &mdash; DO].&rdquo;</em></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 3 &mdash; Verbs That Change Meaning When Transitive vs. Intransitive</div>
+      <p>Several verbs have different meanings depending on whether they are used transitively or intransitively. Do not assume the same definition in both uses.</p>
+      <table class="cmp-table">
+        <tr><th>Verb</th><th>Transitive Use</th><th>Intransitive Use</th></tr>
+        <tr><td><code>run</code></td><td><em>&ldquo;She runs a company.&rdquo;</em> (manages)</td><td><em>&ldquo;She runs every day.&rdquo;</em> (exercises)</td></tr>
+        <tr><td><code>grow</code></td><td><em>&ldquo;He grows roses.&rdquo;</em> (cultivates)</td><td><em>&ldquo;The child grows fast.&rdquo;</em> (becomes bigger)</td></tr>
+        <tr><td><code>move</code></td><td><em>&ldquo;She moved the chair.&rdquo;</em> (displaced it)</td><td><em>&ldquo;She moved quickly.&rdquo;</em> (went)</td></tr>
+        <tr><td><code>smell</code></td><td><em>&ldquo;The dog smelled the bone.&rdquo;</em> (sniffed)</td><td><em>&ldquo;The bone smells.&rdquo;</em> (has a smell)</td></tr>
+      </table>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 4 &mdash; Passivising Intransitive Verbs</div>
+      <p>Since intransitive verbs have no object, they cannot be made passive. This is one of the most common examination errors.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The accident was occurred by careless driving.&rdquo;</em> <span class="note"><em>Occur</em> is intransitive; it has no object and cannot be passivised.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The accident occurred because of careless driving.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;A sneeze was happened suddenly.&rdquo;</em> <span class="note"><em>Happen</em> is intransitive; passive is impossible.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;A sneeze happened suddenly.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4 — AUXILIARY VERBS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s4">
+    <div class="section-num">4</div>
+    <h2>Auxiliary <span class="accent">Verbs</span></h2>
+    <div class="section-subtitle">Primary and modal helpers that build tense, aspect, voice, and mood</div>
+
+    <div class="def-box card-bg">
+      <p>An <strong>auxiliary verb</strong> (helping verb) precedes a main verb and helps express grammatical distinctions of <strong>tense</strong>, <strong>aspect</strong>, <strong>voice</strong>, <strong>mood</strong>, and <strong>modality</strong>. English has two sets: <strong>primary auxiliaries</strong> (<em>be, have, do</em>) and <strong>modal auxiliaries</strong> (<em>can, could, will, would, shall, should, may, might, must, ought to</em>).</p>
+    </div>
+
+    <h3 class="sub-head">Primary Auxiliaries: <em>Be, Have, Do</em></h3>
+
+    <table class="cmp-table">
+      <tr><th>Auxiliary</th><th>Main Use</th><th>Example</th></tr>
+      <tr><td><code>be</code></td><td>Continuous &amp; passive constructions</td><td><em>&ldquo;She <strong>is writing</strong> a report.&rdquo; / &ldquo;It <strong>was built</strong> in 1900.&rdquo;</em></td></tr>
+      <tr><td><code>have</code></td><td>Perfect aspect</td><td><em>&ldquo;They <strong>have arrived</strong>.&rdquo; / &ldquo;He <strong>had left</strong> before noon.&rdquo;</em></td></tr>
+      <tr><td><code>do</code></td><td>Questions, negation, emphasis</td><td><em>&ldquo;<strong>Do</strong> you agree?&rdquo; / &ldquo;I <strong>do</strong> understand.&rdquo;</em></td></tr>
+    </table>
+
+    <h3 class="sub-head">Modal Auxiliaries</h3>
+    <p class="body-text">Modal auxiliaries express the speaker&rsquo;s attitude toward an action&mdash;its possibility, necessity, permission, obligation, or ability. Crucially, <strong>modals do not inflect</strong>: they have no <em>-s</em> third-person singular form and no infinitive or participle form.</p>
+
+    <table class="cmp-table">
+      <tr><th>Modal</th><th>Core Meaning</th><th>Example</th></tr>
+      <tr><td><code>can / could</code></td><td>Ability; possibility</td><td><em>&ldquo;She <strong>can</strong> speak French.&rdquo; / &ldquo;It <strong>could</strong> rain.&rdquo;</em></td></tr>
+      <tr><td><code>will / would</code></td><td>Future; conditional</td><td><em>&ldquo;He <strong>will</strong> arrive soon.&rdquo; / &ldquo;I <strong>would</strong> help if I could.&rdquo;</em></td></tr>
+      <tr><td><code>shall / should</code></td><td>Future (formal); obligation</td><td><em>&ldquo;You <strong>shall</strong> not pass.&rdquo; / &ldquo;We <strong>should</strong> apologise.&rdquo;</em></td></tr>
+      <tr><td><code>may / might</code></td><td>Permission; weak possibility</td><td><em>&ldquo;You <strong>may</strong> leave.&rdquo; / &ldquo;It <strong>might</strong> be true.&rdquo;</em></td></tr>
+      <tr><td><code>must</code></td><td>Strong necessity; deduction</td><td><em>&ldquo;You <strong>must</strong> submit by Friday.&rdquo; / &ldquo;She <strong>must</strong> be tired.&rdquo;</em></td></tr>
+      <tr><td><code>ought to</code></td><td>Moral obligation (weaker than <em>must</em>)</td><td><em>&ldquo;You <strong>ought to</strong> apologise.&rdquo;</em></td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Four Key Properties of Modal Auxiliaries</div>
+      <ul>
+        <li><strong>No inflection:</strong> Never add <em>-s</em>, <em>-ing</em>, or <em>-ed</em>. There is no *<em>cans</em>, *<em>willing</em>, or *<em>musted</em>.</li>
+        <li><strong>Bare infinitive follows:</strong> After a modal, the main verb takes the base (bare infinitive) form. <em>&ldquo;She <strong>can go</strong>&rdquo;</em> &mdash; not *<em>&ldquo;can to go&rdquo;</em> or *<em>&ldquo;can goes&rdquo;.&rdquo;</em></li>
+        <li><strong>Inversion in questions:</strong> The modal moves before the subject: <em>&ldquo;<strong>Can</strong> she go?&rdquo;</em></li>
+        <li><strong>Negation with <em>not</em>:</strong> <em>&ldquo;She <strong>cannot</strong> (can&rsquo;t) go.&rdquo;</em> Note: <em>cannot</em> is one word.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 5 &mdash; Double Modals and Modal + To-Infinitive</div>
+      <p>In standard written English, two modal auxiliaries <strong>cannot</strong> be stacked, and most modals <strong>do not</strong> take <em>to</em> before the following verb.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She might could come.&rdquo;</em> <span class="note">Double modal &mdash; dialectal; not standard written English.</span></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He must to leave now.&rdquo;</em> <span class="note"><em>Must</em> takes bare infinitive: *must to leave is non-standard.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She might be able to come.&rdquo;</em> &mdash; use a periphrastic construction instead.</li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He must leave now.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; <em>Ought to</em> vs. <em>Should</em></div>
+      <p><em>Ought to</em> implies a moral duty or external expectation; <em>should</em> expresses the speaker&rsquo;s personal recommendation. In formal contexts they are nearly interchangeable, but <em>ought to</em> carries a slightly stronger sense of objective obligation.</p>
+      <ul>
+        <li><em>&ldquo;You <strong>ought to</strong> respect your elders.&rdquo;</em> (moral/social norm)</li>
+        <li><em>&ldquo;You <strong>should</strong> try the new restaurant.&rdquo;</em> (personal advice)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5 — FIVE PRINCIPAL PARTS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s5">
+    <div class="section-num">5</div>
+    <h2>The Five <span class="accent">Principal Parts</span></h2>
+    <div class="section-subtitle">Every English verb is built from five foundational forms</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>five principal parts</strong> of an English verb are the <strong>base form</strong>, the <strong>simple past</strong>, the <strong>past participle</strong>, the <strong>present participle</strong>, and the <strong>third-person singular present</strong>. All other verb forms are derived from these five. Mastering them is essential for correct tense formation.</p>
+    </div>
+
+    <div class="formula">
+      <span>Base</span>
+      <span class="arr">&rarr;</span>
+      <span>Simple Past</span>
+      <span class="arr">&rarr;</span>
+      <span>Past Participle</span>
+      <span class="arr">&rarr;</span>
+      <span>Pres. Participle</span>
+      <span class="arr">&rarr;</span>
+      <span>3rd Pers. Sg.</span>
+    </div>
+
+    <table class="cmp-table">
+      <tr><th>Base</th><th>Simple Past</th><th>Past Participle</th><th>Pres. Participle</th><th>3rd Sg. Pres.</th></tr>
+      <tr><td><code>walk</code></td><td><code>walked</code></td><td><code>walked</code></td><td><code>walking</code></td><td><code>walks</code></td></tr>
+      <tr><td><code>write</code></td><td><code>wrote</code></td><td><code>written</code></td><td><code>writing</code></td><td><code>writes</code></td></tr>
+      <tr><td><code>go</code></td><td><code>went</code></td><td><code>gone</code></td><td><code>going</code></td><td><code>goes</code></td></tr>
+      <tr><td><code>take</code></td><td><code>took</code></td><td><code>taken</code></td><td><code>taking</code></td><td><code>takes</code></td></tr>
+      <tr><td><code>be</code></td><td><code>was / were</code></td><td><code>been</code></td><td><code>being</code></td><td><code>is</code></td></tr>
+      <tr><td><code>have</code></td><td><code>had</code></td><td><code>had</code></td><td><code>having</code></td><td><code>has</code></td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Regular vs. Irregular Verbs</div>
+      <ul>
+        <li><strong>Regular verbs</strong> form their simple past and past participle by adding <em>-ed</em> (or just <em>-d</em> if the base ends in <em>-e</em>): <em>walk &rarr; walked; love &rarr; loved</em>.</li>
+        <li><strong>Irregular verbs</strong> change their vowel, their ending, or both in unpredictable ways: <em>sing &rarr; sang &rarr; sung</em>. These must be memorised.</li>
+        <li><strong>Flat verbs</strong> are a subset of irregulars whose three forms are identical: <em>cut &rarr; cut &rarr; cut; hit &rarr; hit &rarr; hit</em>.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 6 &mdash; Confusing Simple Past with Past Participle</div>
+      <p>The simple past is used alone (no auxiliary); the past participle requires an auxiliary. Mixing the two is a serious grammatical error.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She has <strong>went</strong> to the market.&rdquo;</em> <span class="note"><em>Went</em> is simple past; perfect needs past participle <em>gone</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She has <strong>gone</strong> to the market.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He <strong>done</strong> his homework.&rdquo;</em> <span class="note"><em>Done</em> is past participle; without auxiliary, use simple past <em>did</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He <strong>did</strong> his homework.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Spelling Rules for <em>-ed</em> and <em>-ing</em></h3>
+    <table class="cmp-table">
+      <tr><th>Rule</th><th>Condition</th><th>Example</th></tr>
+      <tr><td>Double the consonant</td><td>Base ends in: consonant-vowel-consonant (CVC) AND is stressed on last syllable</td><td><em>stop &rarr; stopped / stopping; begin &rarr; beginning</em></td></tr>
+      <tr><td>Drop the silent <em>-e</em></td><td>Base ends in silent <em>-e</em></td><td><em>love &rarr; loved / loving; hope &rarr; hoped / hoping</em></td></tr>
+      <tr><td>Change <em>-ie</em> to <em>-y</em></td><td>Base ends in <em>-ie</em> (for <em>-ing</em> only)</td><td><em>lie &rarr; lying; die &rarr; dying</em></td></tr>
+      <tr><td>Add <em>-d</em> only</td><td>Base ends in <em>-e</em></td><td><em>bake &rarr; baked; race &rarr; raced</em></td></tr>
+    </table>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6 — OVERVIEW OF 12 TENSES
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s6">
+    <div class="section-num">6</div>
+    <h2>Overview of the <span class="accent">12 Tenses</span></h2>
+    <div class="section-subtitle">Tense, time, and aspect &mdash; understanding the full system before diving into each family</div>
+
+    <div class="def-box card-bg">
+      <p>English uses a system of <strong>12 tenses</strong> built from the intersection of three <strong>times</strong> (past, present, future) and four <strong>aspects</strong> (simple, perfect, continuous, perfect continuous). <strong>Tense</strong> is a grammatical category that locates an event in time. <strong>Aspect</strong> describes whether the event is ongoing, completed, or ongoing-and-completed relative to a reference point.</p>
+    </div>
+
+    <p class="body-text">A key distinction at topper level is between <strong>tense</strong> and <strong>time</strong>. Tense is a grammatical form; time is a semantic concept. The present tense does not always refer to present time (e.g., &ldquo;He <em>leaves</em> tomorrow&rdquo; uses present tense to express future time), and the past tense can express hypothetical situations in conditionals (e.g., &ldquo;If I <em>had</em> a million dollars&rdquo;).</p>
+
+    <table class="cmp-table">
+      <tr><th>Aspect</th><th>Past</th><th>Present</th><th>Future</th></tr>
+      <tr>
+        <td><code>Simple</code></td>
+        <td><em>She walked</em></td>
+        <td><em>She walks</em></td>
+        <td><em>She will walk</em></td>
+      </tr>
+      <tr>
+        <td><code>Perfect</code></td>
+        <td><em>She had walked</em></td>
+        <td><em>She has walked</em></td>
+        <td><em>She will have walked</em></td>
+      </tr>
+      <tr>
+        <td><code>Continuous</code></td>
+        <td><em>She was walking</em></td>
+        <td><em>She is walking</em></td>
+        <td><em>She will be walking</em></td>
+      </tr>
+      <tr>
+        <td><code>Perfect Continuous</code></td>
+        <td><em>She had been walking</em></td>
+        <td><em>She has been walking</em></td>
+        <td><em>She will have been walking</em></td>
+      </tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; What Each Aspect Signals</div>
+      <ul>
+        <li><strong>Simple:</strong> States a fact, habit, or completed event without emphasising duration or completion relative to another event.</li>
+        <li><strong>Perfect:</strong> Connects a past event to a reference point (usually the present or another past event); emphasises completion or relevance.</li>
+        <li><strong>Continuous:</strong> Emphasises the ongoing, in-progress nature of an action at a specific time.</li>
+        <li><strong>Perfect Continuous:</strong> Combines both&mdash;an action that was ongoing up to and possibly including a reference point, emphasising both duration and connection to that point.</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; The Auxiliary Stack</div>
+      <p>Every tense beyond the simple present and simple past is built by layering auxiliaries before the main verb in a predictable order: <em>modal &rarr; have &rarr; be &rarr; main verb</em>. Only the first element in the stack inflects.</p>
+      <div class="formula">
+        <span>(Modal)</span>
+        <span class="arr">&rarr;</span>
+        <span>(have)</span>
+        <span class="arr">&rarr;</span>
+        <span>(be)</span>
+        <span class="arr">&rarr;</span>
+        <span>Main Verb</span>
+      </div>
+      <ul>
+        <li><em>&ldquo;She <strong>will have been writing</strong>&rdquo;</em> = modal (<em>will</em>) + perfect (<em>have</em>) + continuous (<em>be</em>) + main (<em>write</em>)</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 7 &mdash; Tense is Not the Same as Time</div>
+      <p>Do not assume the grammatical tense of a verb always matches the real-world time of the event. Several common constructions break the tense=time rule.</p>
+      <ul>
+        <li><em>&ldquo;The train <strong>leaves</strong> at 9 a.m. tomorrow.&rdquo;</em> <span class="note">Present tense &mdash; future time (scheduled event)</span></li>
+        <li><em>&ldquo;If I <strong>were</strong> you, I would apologise.&rdquo;</em> <span class="note">Past tense (<em>were</em>) &mdash; hypothetical present meaning</span></li>
+        <li><em>&ldquo;Napoleon <strong>marches</strong> on Moscow.&rdquo;</em> <span class="note">Present tense &mdash; past time (historical present for dramatic effect)</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7 — SIMPLE TENSES
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s7">
+    <div class="section-num">7</div>
+    <h2><span class="accent">Simple</span> Tenses</h2>
+    <div class="section-subtitle">Present, past, and future simple &mdash; facts, habits, completed events, and scheduled actions</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>simple tenses</strong> present actions or states as whole, undivided events&mdash;without implying any specific duration or connection to another time. They are the most frequently used tenses in English and form the foundation for all other aspects.</p>
+    </div>
+
+    <h3 class="sub-head">Simple Present</h3>
+    <p class="body-text">The <strong>simple present</strong> is formed with the base form of the verb (adding <em>-s</em> or <em>-es</em> for third-person singular). It expresses: habitual actions, general truths, states, scheduled future events, and narration in the &ldquo;historic present.&rdquo;</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Uses of the Simple Present</div>
+      <ul>
+        <li><strong>Habits/routines:</strong> <em>&ldquo;She <strong>drinks</strong> coffee every morning.&rdquo;</em></li>
+        <li><strong>General/scientific truths:</strong> <em>&ldquo;Water <strong>boils</strong> at 100 &deg;C.&rdquo;</em></li>
+        <li><strong>Stative conditions:</strong> <em>&ldquo;He <strong>knows</strong> the answer.&rdquo;</em></li>
+        <li><strong>Scheduled future:</strong> <em>&ldquo;The match <strong>starts</strong> at 7 p.m.&rdquo;</em></li>
+        <li><strong>Instructions/directions:</strong> <em>&ldquo;You <strong>take</strong> the second left, then <strong>turn</strong> right.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 8 &mdash; Omitting the <em>-s</em> in Third Person Singular</div>
+      <p>In formal writing, the third-person singular present always requires <em>-s</em> (or <em>-es</em>). Dropping it is a fundamental error.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He <strong>write</strong> very clearly.&rdquo;</em> <span class="note">Third-person singular requires the inflection <em>-s</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He <strong>writes</strong> very clearly.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Simple Past</h3>
+    <p class="body-text">The <strong>simple past</strong> locates a completed action at a definite point in the past. It is formed with the second principal part (e.g., <em>walked, wrote, went</em>). Key signals include time expressions such as <em>yesterday, last year, in 2005, ago, when</em>.</p>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 9 &mdash; Using Present Perfect When Simple Past Is Required</div>
+      <p>If a specific past time is mentioned, use the <strong>simple past</strong>, not the present perfect. The present perfect is incompatible with definite past-time adverbials.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I <strong>have met</strong> her <strong>yesterday</strong>.&rdquo;</em> <span class="note"><em>Yesterday</em> is a specific past time; present perfect requires no specific time reference.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I <strong>met</strong> her yesterday.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Simple Future</h3>
+    <p class="body-text">The <strong>simple future</strong> is most commonly formed with <em>will + base form</em>. It expresses: predictions, spontaneous decisions, promises, and offers. For planned or arranged future events, English prefers <em>be going to</em> or the present continuous.</p>
+
+    <table class="cmp-table">
+      <tr><th>Form</th><th>Best Used For</th><th>Example</th></tr>
+      <tr><td><code>will + base</code></td><td>Predictions, promises, spontaneous decisions, offers</td><td><em>&ldquo;I <strong>will call</strong> you tonight.&rdquo;</em></td></tr>
+      <tr><td><code>be going to + base</code></td><td>Intentions already decided; evidence-based predictions</td><td><em>&ldquo;Look at those clouds &mdash; it <strong>is going to</strong> rain.&rdquo;</em></td></tr>
+      <tr><td><code>Pres. continuous</code></td><td>Fixed arrangements (diary future)</td><td><em>&ldquo;We <strong>are meeting</strong> the director tomorrow.&rdquo;</em></td></tr>
+      <tr><td><code>Pres. simple</code></td><td>Timetabled / scheduled events</td><td><em>&ldquo;The flight <strong>departs</strong> at 6 a.m.&rdquo;</em></td></tr>
+    </table>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 8 — PERFECT TENSES
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s8">
+    <div class="section-num">8</div>
+    <h2><span class="accent">Perfect</span> Tenses</h2>
+    <div class="section-subtitle">Connecting past events to a reference point — present perfect, past perfect, and future perfect</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>perfect aspect</strong> is formed with <code>have / had / will have</code> + <strong>past participle</strong>. It signals that an event is relevant to, completed before, or connected to a specific reference point in time. The three perfect tenses are present perfect, past perfect (pluperfect), and future perfect.</p>
+    </div>
+
+    <h3 class="sub-head">Present Perfect</h3>
+    <p class="body-text">The <strong>present perfect</strong> (<em>have/has + past participle</em>) links a past event to the present. It is used when the past action has <em>current relevance</em>, when the exact time is unknown or unimportant, or to describe experience up to now.</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Four Core Uses of the Present Perfect</div>
+      <ul>
+        <li><strong>Experience (ever/never):</strong> <em>&ldquo;Have you <strong>ever visited</strong> Japan?&rdquo;</em></li>
+        <li><strong>Unfinished past (for/since):</strong> <em>&ldquo;She <strong>has lived</strong> here for ten years / since 2014.&rdquo;</em></li>
+        <li><strong>Recent past with <em>just</em>:</strong> <em>&ldquo;He <strong>has just left</strong>.&rdquo;</em></li>
+        <li><strong>Result in the present (already/yet):</strong> <em>&ldquo;The bus <strong>has already gone</strong>.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 10 &mdash; <em>Since</em> vs. <em>For</em> with Perfect Tenses</div>
+      <p><em>Since</em> introduces a <strong>point in time</strong> (a specific moment); <em>for</em> introduces a <strong>duration</strong> (a period of time). Confusing them is a very common error.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I have known her <strong>since</strong> three years.&rdquo;</em> <span class="note">Three years is a duration, not a point in time.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I have known her <strong>for</strong> three years.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She has been here <strong>for</strong> Monday.&rdquo;</em> <span class="note">Monday is a point in time, not a duration.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She has been here <strong>since</strong> Monday.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Past Perfect (Pluperfect)</h3>
+    <p class="body-text">The <strong>past perfect</strong> (<em>had + past participle</em>) is used when two past events are narrated and you need to show that one occurred <em>before</em> the other. The earlier event takes the past perfect; the later event takes the simple past.</p>
+
+    <div class="formula">
+      <span>Earlier event</span>
+      <span class="arr">&rarr;</span>
+      <span>had + past participle</span>
+      <span class="arr">&rarr;</span>
+      <span>Later event</span>
+      <span class="arr">&rarr;</span>
+      <span>simple past</span>
+    </div>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;When she <strong>arrived</strong>, the meeting <strong>had already started</strong>.&rdquo;</em> <span class="note">Meeting started first (past perfect); then she arrived (simple past)</span></li>
+      <li><em>&ldquo;He <strong>had never seen</strong> snow before he <strong>moved</strong> to Norway.&rdquo;</em></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 11 &mdash; Overusing Past Perfect</div>
+      <p>The past perfect is only necessary when there is a risk of ambiguity about which past event came first. When <em>before</em> or <em>after</em> makes the sequence clear, the simple past is acceptable for both events.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She <strong>finished</strong> her work before she <strong>left</strong>.&rdquo;</em> <span class="note"><em>Before</em> signals the order clearly; past perfect not obligatory here.</span></li>
+        <li><span class="tag-correct">&#10003;</span> (Also acceptable) <em>&ldquo;She <strong>had finished</strong> her work before she <strong>left</strong>.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Future Perfect</h3>
+    <p class="body-text">The <strong>future perfect</strong> (<em>will have + past participle</em>) expresses an action that will be completed before a specified future time.</p>
+    <ul class="sentence-list">
+      <li><em>&ldquo;By the time you arrive, I <strong>will have finished</strong> cooking.&rdquo;</em> <span class="note">Completion (finish) is projected before the future moment (your arrival).</span></li>
+      <li><em>&ldquo;By 2030, scientists <strong>will have discovered</strong> new treatments.&rdquo;</em></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 9 — CONTINUOUS TENSES
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s9">
+    <div class="section-num">9</div>
+    <h2><span class="accent">Continuous</span> (Progressive) Tenses</h2>
+    <div class="section-subtitle">Emphasising ongoing action at a specific moment in past, present, or future</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>continuous (progressive) aspect</strong> is formed with the appropriate form of <code>be</code> + the <strong>present participle</strong> (<em>-ing</em> form). It signals that an action is in progress at a specific moment, is temporary, or contrasts with habitual/permanent states. Continuous tenses cannot be used with <strong>stative verbs</strong> in most contexts (see Chapter 17).</p>
+    </div>
+
+    <h3 class="sub-head">Present Continuous</h3>
+    <p class="body-text">The <strong>present continuous</strong> (<em>am/is/are + -ing</em>) expresses actions happening now, temporary situations, changing situations, and arranged future events.</p>
+
+    <table class="cmp-table">
+      <tr><th>Use</th><th>Signal Words</th><th>Example</th></tr>
+      <tr><td>Action at this moment</td><td>now, at the moment, currently</td><td><em>&ldquo;She <strong>is writing</strong> an email right now.&rdquo;</em></td></tr>
+      <tr><td>Temporary situation</td><td>this week/month, for the time being</td><td><em>&ldquo;He <strong>is staying</strong> with his aunt this month.&rdquo;</em></td></tr>
+      <tr><td>Changing/developing situation</td><td>gradually, increasingly</td><td><em>&ldquo;Temperatures <strong>are rising</strong> globally.&rdquo;</em></td></tr>
+      <tr><td>Future arrangement</td><td>tomorrow, next week, on Monday</td><td><em>&ldquo;We <strong>are flying</strong> to Rome next Friday.&rdquo;</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 12 &mdash; Continuous with Stative Verbs</div>
+      <p>Stative verbs describe states, not actions, and are generally incompatible with the continuous aspect. This is one of the most tested traps in grammar examinations.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I am knowing the answer.&rdquo;</em> <span class="note"><em>Know</em> is stative; it describes a state, not an ongoing action.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I know the answer.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is owning a house.&rdquo;</em> <span class="note"><em>Own</em> is stative (possession); use simple present.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She owns a house.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Past Continuous</h3>
+    <p class="body-text">The <strong>past continuous</strong> (<em>was/were + -ing</em>) expresses an action that was in progress at a specific moment in the past or that was interrupted by another past event (expressed in the simple past).</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The Classic Interrupted-Action Pattern</div>
+      <ul>
+        <li><strong>Longer background action:</strong> past continuous &mdash; <em>&ldquo;She <strong>was reading</strong> a book&hellip;&rdquo;</em></li>
+        <li><strong>Shorter interrupting action:</strong> simple past &mdash; <em>&ldquo;&hellip;when the phone <strong>rang</strong>.&rdquo;</em></li>
+        <li><strong>Two parallel ongoing actions:</strong> <em>&ldquo;While he <strong>was cooking</strong>, she <strong>was setting</strong> the table.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Future Continuous</h3>
+    <p class="body-text">The <strong>future continuous</strong> (<em>will be + -ing</em>) indicates an action that will be in progress at a specific future moment, or a politely enquiring use that avoids imposing.</p>
+    <ul class="sentence-list">
+      <li><em>&ldquo;At this time tomorrow, I <strong>will be sitting</strong> on the beach.&rdquo;</em> <span class="note">In progress at a future moment</span></li>
+      <li><em>&ldquo;Will you <strong>be using</strong> the car tonight?&rdquo;</em> <span class="note">Polite enquiry (not demanding an explanation)</span></li>
+    </ul>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 10 — PERFECT CONTINUOUS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s10">
+    <div class="section-num">10</div>
+    <h2><span class="accent">Perfect Continuous</span> Tenses</h2>
+    <div class="section-subtitle">Duration, ongoing activity, and connection to a reference point &mdash; the most nuanced aspect</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>perfect continuous aspect</strong> combines perfect (<em>have/had/will have</em>) with continuous (<em>be + -ing</em>) to form <code>have/had/will have + been + -ing</code>. It emphasises both the <strong>duration</strong> of an activity and its <strong>connection</strong> to a reference point. It often implies that the activity has just stopped or is still ongoing, and explains a present or past result.</p>
+    </div>
+
+    <h3 class="sub-head">Present Perfect Continuous</h3>
+    <p class="body-text">The <strong>present perfect continuous</strong> (<em>have/has been + -ing</em>) stresses duration of an activity up to and including now, often explaining a visible present result.</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Present Perfect vs. Present Perfect Continuous</div>
+      <ul>
+        <li><strong>How many / how much?</strong> &rarr; Use <strong>present perfect</strong> (result, quantity): <em>&ldquo;She <strong>has written</strong> three chapters.&rdquo;</em></li>
+        <li><strong>How long?</strong> &rarr; Use <strong>present perfect continuous</strong> (duration): <em>&ldquo;She <strong>has been writing</strong> for three hours.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;Your eyes are red. Have you <strong>been crying</strong>?&rdquo;</em> <span class="note">Activity explains a visible present result; duration implied</span></li>
+      <li><em>&ldquo;I <strong>have been waiting</strong> for you for forty minutes!&rdquo;</em> <span class="note">Emphasis on duration from past to now, implying frustration</span></li>
+    </ul>
+
+    <h3 class="sub-head">Past Perfect Continuous</h3>
+    <p class="body-text">The <strong>past perfect continuous</strong> (<em>had been + -ing</em>) describes an action that was in progress for a period before a past reference point. It is the past-time equivalent of the present perfect continuous.</p>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;She was exhausted because she <strong>had been running</strong> for two hours.&rdquo;</em> <span class="note">Running was ongoing before the past state of exhaustion</span></li>
+      <li><em>&ldquo;He <strong>had been working</strong> at the firm for a decade before he retired.&rdquo;</em></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 13 &mdash; Perfect Continuous with Stative Verbs</div>
+      <p>Just as the simple continuous is incompatible with stative verbs, so is the perfect continuous. Even topper students make this error with &ldquo;know,&rdquo; &ldquo;believe,&rdquo; &ldquo;want,&rdquo; and similar verbs.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I <strong>have been knowing</strong> her for years.&rdquo;</em> <span class="note"><em>Know</em> is stative; use present perfect simple.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I <strong>have known</strong> her for years.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She <strong>has been believing</strong> in ghosts since childhood.&rdquo;</em> <span class="note"><em>Believe</em> is stative; use present perfect simple.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She <strong>has believed</strong> in ghosts since childhood.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Future Perfect Continuous</h3>
+    <p class="body-text">The <strong>future perfect continuous</strong> (<em>will have been + -ing</em>) describes an action that will have been in progress for a specified duration by a future point in time.</p>
+    <ul class="sentence-list">
+      <li><em>&ldquo;By December, they <strong>will have been building</strong> the bridge for three years.&rdquo;</em></li>
+      <li><em>&ldquo;When she graduates, she <strong>will have been studying</strong> medicine for six years.&rdquo;</em></li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Topper&rsquo;s Tip &mdash; The Diagnostic Question</div>
+      <p>To choose between perfect simple and perfect continuous, ask two diagnostic questions:</p>
+      <ul>
+        <li><em>Is the verb stative?</em> &rarr; If yes, use perfect simple only.</li>
+        <li><em>Is emphasis on duration or a visible result of ongoing activity?</em> &rarr; If yes and verb is dynamic, prefer perfect continuous.</li>
+        <li><em>Is emphasis on completion or a quantity?</em> &rarr; If yes, use perfect simple.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 11 — SUBJECT-VERB AGREEMENT
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s11">
+    <div class="section-num">11</div>
+    <h2>Subject-Verb <span class="accent">Agreement</span></h2>
+    <div class="section-subtitle">The grammatical rule that the verb must match its subject in number and person</div>
+
+    <div class="def-box card-bg">
+      <p><strong>Subject-verb agreement</strong> (concord) is the grammatical principle that a finite verb must agree with its subject in <strong>number</strong> (singular or plural) and <strong>person</strong> (first, second, or third). In practice, this usually means adding or dropping <em>-s</em>/<em>-es</em> in the present tense for third-person singular subjects.</p>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Core Agreement Rules</div>
+      <ul>
+        <li><strong>Singular subject &rarr; singular verb:</strong> <em>&ldquo;The dog <strong>barks</strong>.&rdquo;</em></li>
+        <li><strong>Plural subject &rarr; plural verb:</strong> <em>&ldquo;The dogs <strong>bark</strong>.&rdquo;</em></li>
+        <li><strong>Compound subject with <em>and</em> &rarr; plural verb:</strong> <em>&ldquo;Tom and Jerry <strong>are</strong> here.&rdquo;</em></li>
+        <li><strong>Compound subject with <em>or/nor</em> &rarr; agree with nearest subject:</strong> <em>&ldquo;Neither the teacher nor the students <strong>were</strong> late.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Tricky Subjects</h3>
+
+    <table class="cmp-table">
+      <tr><th>Subject Type</th><th>Agreement</th><th>Example</th></tr>
+      <tr><td>Collective noun (as a unit)</td><td>Singular</td><td><em>&ldquo;The committee <strong>has</strong> decided.&rdquo;</em></td></tr>
+      <tr><td>Collective noun (as individuals)</td><td>Plural (BrE)</td><td><em>&ldquo;The team <strong>are</strong> arguing among themselves.&rdquo;</em></td></tr>
+      <tr><td>Indefinite pronouns (<em>everyone, nobody, each</em>)</td><td>Singular</td><td><em>&ldquo;Everyone <strong>has</strong> a role to play.&rdquo;</em></td></tr>
+      <tr><td><em>None</em> (formal)</td><td>Singular</td><td><em>&ldquo;None of the evidence <strong>was</strong> conclusive.&rdquo;</em></td></tr>
+      <tr><td>Title/amount as a unit</td><td>Singular</td><td><em>&ldquo;Ten kilometres <strong>is</strong> a long walk.&rdquo;</em></td></tr>
+      <tr><td><em>The number of</em></td><td>Singular</td><td><em>&ldquo;The number of students <strong>is</strong> rising.&rdquo;</em></td></tr>
+      <tr><td><em>A number of</em></td><td>Plural</td><td><em>&ldquo;A number of students <strong>were</strong> absent.&rdquo;</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 14 &mdash; Intervening Phrase Confusion</div>
+      <p>A prepositional or relative clause between the subject and verb does not change the agreement. Always identify the <em>true</em> grammatical subject.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The quality of the reports <strong>are</strong> poor.&rdquo;</em> <span class="note">Subject is <em>quality</em> (singular), not <em>reports</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The quality of the reports <strong>is</strong> poor.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;One of the boys <strong>were</strong> missing.&rdquo;</em> <span class="note">Subject is <em>one</em> (singular), not <em>boys</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;One of the boys <strong>was</strong> missing.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 15 &mdash; Inverted Sentences</div>
+      <p>When the sentence is inverted (verb before subject) &mdash; as in questions or sentences beginning with <em>There is/are</em> &mdash; the verb must still agree with its grammatical subject, which follows it.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;There <strong>is</strong> three apples on the table.&rdquo;</em> <span class="note">Subject is <em>apples</em> (plural).</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;There <strong>are</strong> three apples on the table.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;<strong>Has</strong> the children arrived?&rdquo;</em> <span class="note">Subject is <em>children</em> (plural).</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;<strong>Have</strong> the children arrived?&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 12 — ACTIVE & PASSIVE VOICE
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s12">
+    <div class="section-num">12</div>
+    <h2>Active &amp; <span class="accent">Passive</span> Voice</h2>
+    <div class="section-subtitle">Who does the action, and who receives it &mdash; syntactic transformation and stylistic choice</div>
+
+    <div class="def-box card-bg">
+      <p>In the <strong>active voice</strong>, the grammatical subject is the agent (the doer of the action). In the <strong>passive voice</strong>, the grammatical subject is the patient (the receiver of the action), and the agent is either expressed in a <em>by</em>-phrase or omitted. The passive is formed with <code>be (in appropriate tense)</code> + <strong>past participle</strong> of a transitive verb.</p>
+    </div>
+
+    <div class="formula">
+      <span>Active: Subject (Agent)</span>
+      <span class="arr">&rarr;</span>
+      <span>Verb</span>
+      <span class="arr">&rarr;</span>
+      <span>Object (Patient)</span>
+    </div>
+    <div class="formula">
+      <span>Passive: Subject (Patient)</span>
+      <span class="arr">&rarr;</span>
+      <span>be + Past Participle</span>
+      <span class="arr">&rarr;</span>
+      <span>(by + Agent)</span>
+    </div>
+
+    <h3 class="sub-head">Passive in All Tenses</h3>
+
+    <table class="cmp-table">
+      <tr><th>Tense</th><th>Active</th><th>Passive</th></tr>
+      <tr><td>Simple Present</td><td><em>She writes the report.</em></td><td><em>The report <strong>is written</strong> (by her).</em></td></tr>
+      <tr><td>Simple Past</td><td><em>She wrote the report.</em></td><td><em>The report <strong>was written</strong>.</em></td></tr>
+      <tr><td>Simple Future</td><td><em>She will write the report.</em></td><td><em>The report <strong>will be written</strong>.</em></td></tr>
+      <tr><td>Present Perfect</td><td><em>She has written the report.</em></td><td><em>The report <strong>has been written</strong>.</em></td></tr>
+      <tr><td>Past Perfect</td><td><em>She had written the report.</em></td><td><em>The report <strong>had been written</strong>.</em></td></tr>
+      <tr><td>Present Continuous</td><td><em>She is writing the report.</em></td><td><em>The report <strong>is being written</strong>.</em></td></tr>
+      <tr><td>Past Continuous</td><td><em>She was writing the report.</em></td><td><em>The report <strong>was being written</strong>.</em></td></tr>
+      <tr><td>Modal</td><td><em>She must write the report.</em></td><td><em>The report <strong>must be written</strong>.</em></td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; When to Use Passive Voice</div>
+      <ul>
+        <li><strong>Agent unknown or unimportant:</strong> <em>&ldquo;The window <strong>was broken</strong>.&rdquo;</em> (We do not know or care who broke it.)</li>
+        <li><strong>Agent obvious from context:</strong> <em>&ldquo;The accused <strong>was sentenced</strong> to five years.&rdquo;</em> (Clearly by the court.)</li>
+        <li><strong>Scientific / formal writing:</strong> To foreground the process rather than the researcher: <em>&ldquo;The samples <strong>were analysed</strong>.&rdquo;</em></li>
+        <li><strong>Diplomatic vagueness:</strong> <em>&ldquo;Mistakes <strong>were made</strong>.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 16 &mdash; Passive with Intransitive Verbs</div>
+      <p>Only transitive verbs can form passive constructions. Applying passive to an intransitive verb is a fundamental error.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The accident was happened.&rdquo;</em> <span class="note"><em>Happen</em> is intransitive; passive transformation is impossible.</span></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The sun was risen.&rdquo;</em> <span class="note"><em>Rise</em> is intransitive; do not confuse with transitive <em>raise</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The flag was <strong>raised</strong>.&rdquo;</em> (<em>Raise</em> is transitive.)</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; The <em>Get</em>-Passive</div>
+      <p>In informal English, <em>get</em> can replace <em>be</em> in the passive, often with a nuance of misfortune or unexpectedness:</p>
+      <ul>
+        <li><em>&ldquo;He <strong>got sacked</strong> last week.&rdquo;</em> (informal passive = <em>&ldquo;He was dismissed.&rdquo;</em>)</li>
+        <li><em>&ldquo;The car <strong>got stolen</strong>.&rdquo;</em></li>
+      </ul>
+      <p>Avoid <em>get</em>-passives in formal or academic writing; use <em>be</em>-passives instead.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 13 — MOOD
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s13">
+    <div class="section-num">13</div>
+    <h2>Mood &mdash; Indicative, Imperative &amp; <span class="accent">Subjunctive</span></h2>
+    <div class="section-subtitle">Grammatical mood signals the speaker&rsquo;s relationship to the reality of the proposition</div>
+
+    <div class="def-box card-bg">
+      <p><strong>Mood</strong> is a grammatical category that expresses the speaker&rsquo;s attitude toward the factuality, possibility, desirability, or contingency of what is expressed. English has three moods: <strong>indicative</strong> (stating facts), <strong>imperative</strong> (giving commands), and <strong>subjunctive</strong> (expressing hypotheticals, wishes, suggestions, and demands).</p>
+    </div>
+
+    <h3 class="sub-head">Indicative Mood</h3>
+    <p class="body-text">The <strong>indicative mood</strong> is the default mood of English. It is used for statements, questions, and exclamations about real or assumed real situations. All the tenses studied so far (chapters 7&ndash;10) operate in the indicative mood.</p>
+
+    <h3 class="sub-head">Imperative Mood</h3>
+    <p class="body-text">The <strong>imperative mood</strong> is used to give commands, instructions, invitations, or warnings. It uses the <strong>base form</strong> of the verb without a stated subject (the understood subject is <em>you</em>).</p>
+    <ul class="sentence-list">
+      <li><em>&ldquo;<strong>Close</strong> the door, please.&rdquo;</em></li>
+      <li><em>&ldquo;<strong>Do not</strong> enter without permission.&rdquo;</em></li>
+      <li><em>&ldquo;<strong>Let</strong> us begin.&rdquo;</em> <span class="note">First-person inclusive imperative using <em>let</em></span></li>
+    </ul>
+
+    <h3 class="sub-head">Subjunctive Mood</h3>
+    <p class="body-text">The <strong>subjunctive mood</strong> is used to express wishes, hypothetical conditions, demands, suggestions, and requirements. It is more prominent in formal and written English than in casual speech. There are two forms: the <strong>present subjunctive</strong> (base form) and the <strong>past subjunctive</strong> (<em>were</em> for all persons).</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; When to Use the Subjunctive</div>
+      <ul>
+        <li><strong>After verbs of demand/suggestion/recommendation:</strong> <em>insist, demand, suggest, recommend, require, propose, urge, ask</em> + <strong>that</strong> + subject + <strong>base form</strong> (not <em>-s</em> form).</li>
+        <li><strong>After certain adjectives:</strong> <em>essential, important, necessary, vital, imperative</em> + <strong>that</strong> + subject + <strong>base form</strong>.</li>
+        <li><strong>In hypothetical/counterfactual conditionals:</strong> <em>if + were</em> (for all persons).</li>
+        <li><strong>Set expressions:</strong> <em>be that as it may; far be it from me; God save the Queen; come what may.</em></li>
+      </ul>
+    </div>
+
+    <table class="cmp-table">
+      <tr><th>Context</th><th>Indicative (Incorrect Here)</th><th>Subjunctive (Correct)</th></tr>
+      <tr><td>Demand verb + that-clause</td><td><code class="tag-wrong">The judge insisted that she <strong>pays</strong>. &#10007;</code></td><td><code class="tag-correct">The judge insisted that she <strong>pay</strong>. &#10003;</code></td></tr>
+      <tr><td>Necessity adjective</td><td><code class="tag-wrong">It is essential that he <strong>is</strong> present. &#10007;</code></td><td><code class="tag-correct">It is essential that he <strong>be</strong> present. &#10003;</code></td></tr>
+      <tr><td>Hypothetical <em>if</em></td><td><code class="tag-wrong">If I <strong>was</strong> you, I would leave. &#10007;</code></td><td><code class="tag-correct">If I <strong>were</strong> you, I would leave. &#10003;</code></td></tr>
+      <tr><td>Wish (present/future)</td><td><code class="tag-wrong">I wish I <strong>am</strong> taller. &#10007;</code></td><td><code class="tag-correct">I wish I <strong>were</strong> taller. &#10003;</code></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 17 &mdash; <em>Was</em> vs. <em>Were</em> in Hypotheticals</div>
+      <p>In formal prescriptive English, the past subjunctive <em>were</em> is used for <em>all</em> persons in counterfactual conditions and wishes, including first and third person singular. Using <em>was</em> here is colloquial and non-standard in formal writing.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;If he <strong>was</strong> here, he would help.&rdquo;</em> <span class="note">Hypothetical; formal prescriptive standard requires <em>were</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;If he <strong>were</strong> here, he would help.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 14 — VERBALS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s14">
+    <div class="section-num">14</div>
+    <h2>Verbals &mdash; Infinitives, Gerunds <span class="accent">&amp; Participles</span></h2>
+    <div class="section-subtitle">Verb forms that function as nouns, adjectives, and adverbs &mdash; not as finite verbs</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>verbal</strong> is a verb form that does not function as the main predicate of a clause. The three verbals are the <strong>infinitive</strong> (<em>to + base</em> or bare base), the <strong>gerund</strong> (<em>-ing</em> form used as a noun), and the <strong>participle</strong> (present <em>-ing</em> or past <em>-ed/-en</em> form used as an adjective or in an absolute phrase). Verbals are non-finite&mdash;they do not inflect for person, number, or tense on their own.</p>
+    </div>
+
+    <h3 class="sub-head">Infinitives</h3>
+    <p class="body-text">The <strong>infinitive</strong> appears either as the <strong>to-infinitive</strong> (<em>to run, to know</em>) or the <strong>bare infinitive</strong> (<em>run, know</em>). It can function as a noun (subject or object), an adjective, or an adverb (showing purpose).</p>
+
+    <table class="cmp-table">
+      <tr><th>Function</th><th>Example</th><th>Notes</th></tr>
+      <tr><td>Subject</td><td><em>&ldquo;<strong>To err</strong> is human.&rdquo;</em></td><td>Formal; gerund more common in speech</td></tr>
+      <tr><td>Object</td><td><em>&ldquo;She wants <strong>to leave</strong>.&rdquo;</em></td><td>After <em>want, hope, plan, decide</em></td></tr>
+      <tr><td>Adjective</td><td><em>&ldquo;She needs something <strong>to read</strong>.&rdquo;</em></td><td>Modifies indefinite pronoun</td></tr>
+      <tr><td>Adverb (purpose)</td><td><em>&ldquo;He ran <strong>to catch</strong> the bus.&rdquo;</em></td><td>Can be replaced by <em>in order to</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 18 &mdash; The Split Infinitive Controversy</div>
+      <p>A <strong>split infinitive</strong> places an adverb between <em>to</em> and the verb (<em>&ldquo;to boldly go&rdquo;</em>). Prescriptively, many style guides advise against it; descriptively, it is standard in most contexts. In examination writing, avoid splitting infinitives unless not splitting would create ambiguity or awkwardness.</p>
+      <ul>
+        <li><em>&ldquo;She needs <strong>to carefully review</strong> the document.&rdquo;</em> <span class="note">Split infinitive &mdash; avoid in formal/exam writing.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She needs <strong>to review</strong> the document <strong>carefully</strong>.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Gerunds</h3>
+    <p class="body-text">A <strong>gerund</strong> is the <em>-ing</em> form of a verb functioning as a noun. It can serve as a subject, object, or object of a preposition. The grammatical test: if the <em>-ing</em> word can be replaced by <em>it</em> or a noun phrase without loss of meaning, it is a gerund.</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Gerund vs. Infinitive after Verbs</div>
+      <ul>
+        <li><strong>Gerund only after:</strong> <em>enjoy, avoid, admit, deny, finish, consider, mind, suggest, postpone, practise</em> &mdash; <em>&ldquo;She enjoys <strong>swimming</strong>.&rdquo;</em></li>
+        <li><strong>Infinitive only after:</strong> <em>want, hope, decide, refuse, manage, offer, plan, expect, agree</em> &mdash; <em>&ldquo;She decided <strong>to leave</strong>.&rdquo;</em></li>
+        <li><strong>Both (same meaning):</strong> <em>begin, start, continue, like, love, hate, prefer</em></li>
+        <li><strong>Both (different meaning):</strong> <em>remember, forget, stop, regret, try, mean</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 19 &mdash; <em>Remember/Forget + Gerund</em> vs. <em>+ Infinitive</em></div>
+      <p>This is one of the most tested distinctions in grammar examinations. The meaning changes completely depending on whether a gerund or infinitive follows.</p>
+      <ul>
+        <li><em>&ldquo;I <strong>remember locking</strong> the door.&rdquo;</em> <span class="note">Gerund &rarr; memory of a past action already done</span></li>
+        <li><em>&ldquo;Remember <strong>to lock</strong> the door.&rdquo;</em> <span class="note">Infinitive &rarr; reminder to perform a future action</span></li>
+        <li><em>&ldquo;She <strong>forgot posting</strong> the letter.&rdquo;</em> <span class="note">Gerund &rarr; she posted it but then forgot she had done so</span></li>
+        <li><em>&ldquo;She <strong>forgot to post</strong> the letter.&rdquo;</em> <span class="note">Infinitive &rarr; she did not post it because she forgot</span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Participles</h3>
+    <p class="body-text">A <strong>participle</strong> is a verb form used as an adjective or in an absolute phrase. The <strong>present participle</strong> (<em>-ing</em>) suggests ongoing or active quality; the <strong>past participle</strong> (<em>-ed/-en</em>) suggests completed or passive quality.</p>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 20 &mdash; Dangling Participles</div>
+      <p>A <strong>dangling participle</strong> occurs when the participial phrase&rsquo;s implied subject does not match the subject of the main clause. This creates an absurd or unintended meaning and is a classic high-mark examination trap.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;<strong>Walking</strong> down the street, the trees looked beautiful.&rdquo;</em> <span class="note">The participle <em>walking</em> implies someone walks; logically the trees are doing the walking.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;<strong>Walking</strong> down the street, <strong>she</strong> found the trees beautiful.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;<strong>Having finished</strong> the exam, the room fell silent.&rdquo;</em> <span class="note">The room did not finish the exam; the students did.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;<strong>Having finished</strong> the exam, <strong>the students</strong> fell silent.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 15 — IRREGULAR VERBS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s15">
+    <div class="section-num">15</div>
+    <h2><span class="accent">Irregular</span> Verbs</h2>
+    <div class="section-subtitle">Patterns, groupings, and the most commonly confused principal parts</div>
+
+    <div class="def-box card-bg">
+      <p>An <strong>irregular verb</strong> does not form its simple past and past participle by adding <em>-ed</em> to the base form. Instead, it changes its vowel (<strong>ablaut</strong>), changes its ending, or remains unchanged. There are approximately 200 irregular verbs in common use; recognising their patterns reduces the burden of memorisation.</p>
+    </div>
+
+    <h3 class="sub-head">Patterns Among Irregular Verbs</h3>
+
+    <div class="example-grid">
+      <div class="eg-card">
+        <div class="eg-label">A &rarr; A &rarr; A (flat)</div>
+        <div class="eg-words"><span>cut&ndash;cut&ndash;cut</span><span>hit&ndash;hit&ndash;hit</span><span>put&ndash;put&ndash;put</span><span>let&ndash;let&ndash;let</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">A &rarr; B &rarr; A</div>
+        <div class="eg-words"><span>come&ndash;came&ndash;come</span><span>run&ndash;ran&ndash;run</span><span>become&ndash;became&ndash;become</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">A &rarr; B &rarr; B</div>
+        <div class="eg-words"><span>buy&ndash;bought&ndash;bought</span><span>teach&ndash;taught&ndash;taught</span><span>bring&ndash;brought&ndash;brought</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">A &rarr; B &rarr; C</div>
+        <div class="eg-words"><span>sing&ndash;sang&ndash;sung</span><span>drink&ndash;drank&ndash;drunk</span><span>write&ndash;wrote&ndash;written</span></div>
+      </div>
+    </div>
+
+    <h3 class="sub-head">High-Frequency Irregular Verbs (A&ndash;Z)</h3>
+
+    <table class="cmp-table">
+      <tr><th>Base Form</th><th>Simple Past</th><th>Past Participle</th></tr>
+      <tr><td><code>arise</code></td><td><code>arose</code></td><td><code>arisen</code></td></tr>
+      <tr><td><code>bear</code></td><td><code>bore</code></td><td><code>borne / born</code></td></tr>
+      <tr><td><code>beat</code></td><td><code>beat</code></td><td><code>beaten</code></td></tr>
+      <tr><td><code>bite</code></td><td><code>bit</code></td><td><code>bitten</code></td></tr>
+      <tr><td><code>blow</code></td><td><code>blew</code></td><td><code>blown</code></td></tr>
+      <tr><td><code>break</code></td><td><code>broke</code></td><td><code>broken</code></td></tr>
+      <tr><td><code>choose</code></td><td><code>chose</code></td><td><code>chosen</code></td></tr>
+      <tr><td><code>draw</code></td><td><code>drew</code></td><td><code>drawn</code></td></tr>
+      <tr><td><code>fall</code></td><td><code>fell</code></td><td><code>fallen</code></td></tr>
+      <tr><td><code>fly</code></td><td><code>flew</code></td><td><code>flown</code></td></tr>
+      <tr><td><code>forget</code></td><td><code>forgot</code></td><td><code>forgotten</code></td></tr>
+      <tr><td><code>freeze</code></td><td><code>froze</code></td><td><code>frozen</code></td></tr>
+      <tr><td><code>grow</code></td><td><code>grew</code></td><td><code>grown</code></td></tr>
+      <tr><td><code>hang</code></td><td><code>hung / hanged</code></td><td><code>hung / hanged</code></td></tr>
+      <tr><td><code>hide</code></td><td><code>hid</code></td><td><code>hidden</code></td></tr>
+      <tr><td><code>know</code></td><td><code>knew</code></td><td><code>known</code></td></tr>
+      <tr><td><code>lie (recline)</code></td><td><code>lay</code></td><td><code>lain</code></td></tr>
+      <tr><td><code>lay (place)</code></td><td><code>laid</code></td><td><code>laid</code></td></tr>
+      <tr><td><code>rise</code></td><td><code>rose</code></td><td><code>risen</code></td></tr>
+      <tr><td><code>raise</code></td><td><code>raised</code></td><td><code>raised</code></td></tr>
+      <tr><td><code>shake</code></td><td><code>shook</code></td><td><code>shaken</code></td></tr>
+      <tr><td><code>speak</code></td><td><code>spoke</code></td><td><code>spoken</code></td></tr>
+      <tr><td><code>steal</code></td><td><code>stole</code></td><td><code>stolen</code></td></tr>
+      <tr><td><code>swear</code></td><td><code>swore</code></td><td><code>sworn</code></td></tr>
+      <tr><td><code>tear</code></td><td><code>tore</code></td><td><code>torn</code></td></tr>
+      <tr><td><code>throw</code></td><td><code>threw</code></td><td><code>thrown</code></td></tr>
+      <tr><td><code>wear</code></td><td><code>wore</code></td><td><code>worn</code></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 21 &mdash; <em>Lie</em> vs. <em>Lay</em> — The Most Confusing Pair</div>
+      <p><em>Lie</em> (to recline) is intransitive; <em>lay</em> (to place) is transitive. Their past forms overlap, causing widespread confusion even among native speakers.</p>
+      <table class="cmp-table">
+        <tr><th>Verb</th><th>Base</th><th>Simple Past</th><th>Past Participle</th></tr>
+        <tr><td>Recline (intrans.)</td><td><code>lie</code></td><td><code>lay</code></td><td><code>lain</code></td></tr>
+        <tr><td>Place (transitive)</td><td><code>lay</code></td><td><code>laid</code></td><td><code>laid</code></td></tr>
+      </table>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She <strong>laid</strong> down on the sofa.&rdquo;</em> <span class="note"><em>Lie</em> (recline, intrans.) &rarr; simple past is <em>lay</em>, not <em>laid</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She <strong>lay</strong> down on the sofa.&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She <strong>laid</strong> the book on the table.&rdquo;</em> (transitive <em>lay</em>)</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 22 &mdash; <em>Hanged</em> vs. <em>Hung</em></div>
+      <p><em>Hanged</em> is used specifically for execution by hanging (a legal or historical context); <em>hung</em> is used for all other meanings.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The criminal was <strong>hanged</strong> at dawn.&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She <strong>hung</strong> the painting on the wall.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The painting was <strong>hanged</strong> on the wall.&rdquo;</em> <span class="note">Use <em>hung</em> for objects.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 16 — CAUSATIVE VERBS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s16">
+    <div class="section-num">16</div>
+    <h2><span class="accent">Causative</span> Verbs</h2>
+    <div class="section-subtitle">Make, have, let, get &mdash; verbs that express causing someone else to do something</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>causative verb</strong> expresses that the subject causes or enables another person (or thing) to perform an action. The four primary causative verbs in English are <em>make</em>, <em>have</em>, <em>let</em>, and <em>get</em>. Each has a distinctive grammatical pattern governing whether the following verb takes a bare infinitive, a to-infinitive, or a past participle.</p>
+    </div>
+
+    <table class="cmp-table">
+      <tr><th>Causative</th><th>Pattern</th><th>Meaning</th><th>Example</th></tr>
+      <tr><td><code>make</code></td><td>make + object + <strong>bare infinitive</strong></td><td>Force; compel (often against will)</td><td><em>&ldquo;The teacher <strong>made</strong> them <strong>rewrite</strong> the essay.&rdquo;</em></td></tr>
+      <tr><td><code>have</code></td><td>have + object + <strong>bare infinitive</strong> (active) OR <strong>past participle</strong> (passive)</td><td>Arrange; delegate; experience</td><td><em>&ldquo;She <strong>had</strong> the mechanic <strong>fix</strong> her car.&rdquo; / &ldquo;She <strong>had</strong> her car <strong>fixed</strong>.&rdquo;</em></td></tr>
+      <tr><td><code>let</code></td><td>let + object + <strong>bare infinitive</strong></td><td>Allow; permit</td><td><em>&ldquo;He <strong>let</strong> the children <strong>stay</strong> up late.&rdquo;</em></td></tr>
+      <tr><td><code>get</code></td><td>get + object + <strong>to-infinitive</strong> (active) OR <strong>past participle</strong> (passive)</td><td>Persuade; manage to arrange</td><td><em>&ldquo;She <strong>got</strong> him <strong>to apologise</strong>.&rdquo; / &ldquo;She <strong>got</strong> her car <strong>serviced</strong>.&rdquo;</em></td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Active vs. Passive Causative</div>
+      <ul>
+        <li><strong>Active causative</strong> (a person performs the action): <em>have/get + person + bare/to-infinitive</em> &mdash; <em>&ldquo;I had <strong>the plumber fix</strong> the leak.&rdquo;</em></li>
+        <li><strong>Passive causative</strong> (a thing receives the action): <em>have/get + thing + past participle</em> &mdash; <em>&ldquo;I had <strong>the leak fixed</strong>.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 23 &mdash; <em>Make</em> in Passive Takes <em>To</em>-Infinitive</div>
+      <p>In the <strong>active</strong> voice, <em>make</em> takes a bare infinitive. But in the <strong>passive</strong> voice, <em>make</em> must be followed by a <strong>to-infinitive</strong>. This switch catches even advanced learners.</p>
+      <ul>
+        <li>Active: <em>&ldquo;They made her <strong>sign</strong> the contract.&rdquo;</em> (bare infinitive)</li>
+        <li><span class="tag-wrong">&#10007;</span> Passive: <em>&ldquo;She was made <strong>sign</strong> the contract.&rdquo;</em> <span class="note">Bare infinitive cannot follow passive <em>make</em>.</span></li>
+        <li><span class="tag-correct">&#10003;</span> Passive: <em>&ldquo;She was made <strong>to sign</strong> the contract.&rdquo;</em> (to-infinitive)</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Nuance: <em>Make</em> vs. <em>Let</em> vs. <em>Get</em></div>
+      <p>These three causatives carry distinct nuances of coercion, permission, and persuasion:</p>
+      <ul>
+        <li><em><strong>Make</strong></em>: compulsion &mdash; the subject forces the object; the object may be unwilling.</li>
+        <li><em><strong>Let</strong></em>: permission &mdash; the subject allows; there is no compulsion.</li>
+        <li><em><strong>Get</strong></em>: persuasion &mdash; the subject convinces or manoeuvres the object through effort or negotiation.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 17 — STATIVE VS. DYNAMIC VERBS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s17">
+    <div class="section-num">17</div>
+    <h2>Stative vs. <span class="accent">Dynamic</span> Verbs</h2>
+    <div class="section-subtitle">Understanding which verbs resist the continuous aspect — and when even stative verbs can go continuous</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>stative verb</strong> (also called a state verb) describes a condition, mental state, perception, or relationship that is relatively permanent and does not involve deliberate, observable activity. A <strong>dynamic verb</strong> (action verb) describes an event, process, or activity that is bounded in time and can be observed. This distinction governs whether a verb can appear in the continuous aspect.</p>
+    </div>
+
+    <div class="example-grid">
+      <div class="eg-card">
+        <div class="eg-label">Mental States</div>
+        <div class="eg-words"><span>know</span><span>believe</span><span>think*</span><span>understand</span><span>realise</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Emotions</div>
+        <div class="eg-words"><span>love</span><span>hate</span><span>like</span><span>prefer</span><span>fear</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Perception</div>
+        <div class="eg-words"><span>see*</span><span>hear*</span><span>smell*</span><span>taste*</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Possession</div>
+        <div class="eg-words"><span>have*</span><span>own</span><span>possess</span><span>belong</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Being / Appearance</div>
+        <div class="eg-words"><span>be*</span><span>seem</span><span>appear*</span><span>look*</span></div>
+      </div>
+    </div>
+
+    <p class="body-text"><span class="note">* These verbs can sometimes be used dynamically, changing their meaning.</span></p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The Dynamic Use of Stative Verbs</div>
+      <p>Several stative verbs can shift to dynamic use, acquiring a different, more deliberate meaning. This is a topper-level distinction.</p>
+      <ul>
+        <li><strong>Think (stative = hold an opinion):</strong> <em>&ldquo;I <strong>think</strong> you are right.&rdquo;</em></li>
+        <li><strong>Think (dynamic = actively considering):</strong> <em>&ldquo;I <strong>am thinking</strong> about your proposal.&rdquo;</em></li>
+        <li><strong>Have (stative = possession):</strong> <em>&ldquo;She <strong>has</strong> a car.&rdquo;</em></li>
+        <li><strong>Have (dynamic = experience/enjoy):</strong> <em>&ldquo;She <strong>is having</strong> a great time.&rdquo;</em></li>
+        <li><strong>See (stative = perceive):</strong> <em>&ldquo;I <strong>see</strong> the point.&rdquo;</em></li>
+        <li><strong>See (dynamic = meet/visit):</strong> <em>&ldquo;I <strong>am seeing</strong> the doctor tomorrow.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <table class="cmp-table">
+      <tr><th>Verb</th><th>Stative Use (Simple)</th><th>Dynamic Use (Continuous)</th></tr>
+      <tr><td><code>appear</code></td><td><em>&ldquo;She <strong>appears</strong> confident.&rdquo;</em> (seems)</td><td><em>&ldquo;She <strong>is appearing</strong> in a new film.&rdquo;</em> (performing)</td></tr>
+      <tr><td><code>taste</code></td><td><em>&ldquo;The soup <strong>tastes</strong> salty.&rdquo;</em> (has a flavour)</td><td><em>&ldquo;The chef <strong>is tasting</strong> the soup.&rdquo;</em> (sampling)</td></tr>
+      <tr><td><code>smell</code></td><td><em>&ldquo;The flower <strong>smells</strong> sweet.&rdquo;</em> (has a scent)</td><td><em>&ldquo;The dog <strong>is smelling</strong> the ground.&rdquo;</em> (sniffing)</td></tr>
+      <tr><td><code>weigh</code></td><td><em>&ldquo;The parcel <strong>weighs</strong> 2 kg.&rdquo;</em> (has a mass)</td><td><em>&ldquo;She <strong>is weighing</strong> the parcel.&rdquo;</em> (measuring)</td></tr>
+      <tr><td><code>be</code></td><td><em>&ldquo;He <strong>is</strong> kind.&rdquo;</em> (character)</td><td><em>&ldquo;He <strong>is being</strong> kind today.&rdquo;</em> (deliberate behaviour)</td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Trap 24 &mdash; Overextending the Stative Rule</div>
+      <p>Some students, having learned that stative verbs avoid the continuous, overcorrect and use simple forms for verbs that <em>are</em> legitimately dynamic in context. Always ask: is the verb expressing a genuine ongoing <em>activity</em> (dynamic) or a <em>state</em>?</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She <strong>eats</strong> her lunch right now.&rdquo;</em> <span class="note"><em>Eat</em> is dynamic; at this precise moment, continuous is correct.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She <strong>is eating</strong> her lunch right now.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 18 — COMMON ERRORS & TRAPS
+       ═══════════════════════════════════════════ -->
+  <section class="topic-section" id="s18">
+    <div class="section-num">18</div>
+    <h2>Common Errors &amp; <span class="accent">Traps</span></h2>
+    <div class="section-subtitle">The definitive checklist of verb errors — from foundation mistakes to topper-level pitfalls</div>
+
+    <div class="def-box card-bg">
+      <p>This chapter consolidates the most frequently examined verb errors in English grammar. Each error is categorised by difficulty level. Eliminating these errors systematically is the single most effective way to raise marks in grammar sections of competitive examinations.</p>
+    </div>
+
+    <h3 class="sub-head">Foundation Level: The Most Common Errors</h3>
+
+    <table class="cmp-table">
+      <tr><th>Error Type</th><th>Wrong &#10007;</th><th>Correct &#10003;</th><th>Principle</th></tr>
+      <tr>
+        <td>Missing <em>-s</em> (3rd sg.)</td>
+        <td><code class="tag-wrong">He go to school.</code></td>
+        <td><code class="tag-correct">He goes to school.</code></td>
+        <td>3rd person singular present requires <em>-s/-es</em></td>
+      </tr>
+      <tr>
+        <td>Wrong tense with <em>yesterday</em></td>
+        <td><code class="tag-wrong">I have seen him yesterday.</code></td>
+        <td><code class="tag-correct">I saw him yesterday.</code></td>
+        <td>Definite past time &rarr; simple past, not present perfect</td>
+      </tr>
+      <tr>
+        <td>Simple past used for past participle</td>
+        <td><code class="tag-wrong">She has went home.</code></td>
+        <td><code class="tag-correct">She has gone home.</code></td>
+        <td>Present perfect = <em>have/has + past participle</em></td>
+      </tr>
+      <tr>
+        <td>Passive of intransitive verb</td>
+        <td><code class="tag-wrong">The event was occurred.</code></td>
+        <td><code class="tag-correct">The event occurred.</code></td>
+        <td>Intransitive verbs cannot be passivised</td>
+      </tr>
+      <tr>
+        <td>Stative verb in continuous</td>
+        <td><code class="tag-wrong">I am knowing the answer.</code></td>
+        <td><code class="tag-correct">I know the answer.</code></td>
+        <td>Stative verbs take simple tense, not continuous</td>
+      </tr>
+    </table>
+
+    <h3 class="sub-head">Intermediate Level: Subtler Mistakes</h3>
+
+    <table class="cmp-table">
+      <tr><th>Error Type</th><th>Wrong &#10007;</th><th>Correct &#10003;</th><th>Principle</th></tr>
+      <tr>
+        <td><em>Since</em> / <em>for</em> confusion</td>
+        <td><code class="tag-wrong">I have lived here since five years.</code></td>
+        <td><code class="tag-correct">I have lived here for five years.</code></td>
+        <td><em>Since</em> = point in time; <em>for</em> = duration</td>
+      </tr>
+      <tr>
+        <td>Modal + to-infinitive</td>
+        <td><code class="tag-wrong">She must to attend.</code></td>
+        <td><code class="tag-correct">She must attend.</code></td>
+        <td>Modals take bare infinitive</td>
+      </tr>
+      <tr>
+        <td>Double modal</td>
+        <td><code class="tag-wrong">He might could help.</code></td>
+        <td><code class="tag-correct">He might be able to help.</code></td>
+        <td>No double modals in standard English</td>
+      </tr>
+      <tr>
+        <td>Subject-verb agreement with collective noun</td>
+        <td><code class="tag-wrong">The committee are decided.</code></td>
+        <td><code class="tag-correct">The committee has decided.</code></td>
+        <td>Collective noun acting as unit = singular verb</td>
+      </tr>
+      <tr>
+        <td>Intervening phrase confusion</td>
+        <td><code class="tag-wrong">The box of chocolates are on the table.</code></td>
+        <td><code class="tag-correct">The box of chocolates is on the table.</code></td>
+        <td>Subject is <em>box</em> (singular), not <em>chocolates</em></td>
+      </tr>
+      <tr>
+        <td><em>Remember</em> + wrong form</td>
+        <td><code class="tag-wrong">Remember to lock the door = remembered locking</code></td>
+        <td><code class="tag-correct">Remember to lock (future duty) / remember locking (past action)</code></td>
+        <td>Gerund = past; infinitive = future obligation</td>
+      </tr>
+    </table>
+
+    <h3 class="sub-head">Topper Level: Advanced Traps</h3>
+
+    <table class="cmp-table">
+      <tr><th>Error Type</th><th>Wrong &#10007;</th><th>Correct &#10003;</th><th>Principle</th></tr>
+      <tr>
+        <td>Subjunctive omitted in demand clause</td>
+        <td><code class="tag-wrong">She insisted that he was present.</code></td>
+        <td><code class="tag-correct">She insisted that he be present.</code></td>
+        <td>Demand verbs + that-clause require present subjunctive (base form)</td>
+      </tr>
+      <tr>
+        <td>Dangling participle</td>
+        <td><code class="tag-wrong">Walking home, the rain started.</code></td>
+        <td><code class="tag-correct">Walking home, she was caught in the rain.</code></td>
+        <td>Participial phrase subject must match main clause subject</td>
+      </tr>
+      <tr>
+        <td>Causative make (passive)</td>
+        <td><code class="tag-wrong">She was made sign the form.</code></td>
+        <td><code class="tag-correct">She was made to sign the form.</code></td>
+        <td>Passive <em>make</em> requires to-infinitive</td>
+      </tr>
+      <tr>
+        <td><em>Lie</em> vs. <em>lay</em></td>
+        <td><code class="tag-wrong">She laid down to rest.</code></td>
+        <td><code class="tag-correct">She lay down to rest.</code></td>
+        <td><em>Lie</em> (recline) past = <em>lay</em>; <em>lay</em> (place) past = <em>laid</em></td>
+      </tr>
+      <tr>
+        <td>Perfect continuous + stative</td>
+        <td><code class="tag-wrong">I have been knowing her for years.</code></td>
+        <td><code class="tag-correct">I have known her for years.</code></td>
+        <td>Stative verbs cannot take perfect continuous aspect</td>
+      </tr>
+      <tr>
+        <td>Tense ≠ time confusion</td>
+        <td><code class="tag-wrong">Using simple past for hypothetical: &ldquo;If I was you.&rdquo;</code></td>
+        <td><code class="tag-correct">If I were you&hellip; (past subjunctive, all persons)</code></td>
+        <td>Hypothetical conditionals use past subjunctive <em>were</em></td>
+      </tr>
+    </table>
+
+    <h3 class="sub-head">The Ultimate Verb Self-Check List</h3>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Before You Submit — Run This Checklist</div>
+      <ul>
+        <li>&#10003; Does every clause have a <strong>finite verb</strong> (not just a verbal)?</li>
+        <li>&#10003; Does the <strong>third-person singular present</strong> have <em>-s</em>?</li>
+        <li>&#10003; Have you used <strong>simple past</strong> (not present perfect) with definite past-time adverbials?</li>
+        <li>&#10003; In perfect constructions, is the <strong>past participle</strong> (not simple past) used?</li>
+        <li>&#10003; Are all <strong>stative verbs</strong> in the simple form (not continuous)?</li>
+        <li>&#10003; Do <strong>modals</strong> take bare infinitives (no <em>to</em>, no <em>-s</em>)?</li>
+        <li>&#10003; Does the verb agree with its <strong>true grammatical subject</strong> (not a nearby noun)?</li>
+        <li>&#10003; Are <strong>demand / suggestion verbs</strong> followed by the subjunctive base form in <em>that</em>-clauses?</li>
+        <li>&#10003; Is the <strong>passive</strong> only applied to transitive verbs?</li>
+        <li>&#10003; Are <strong>participial phrases</strong> correctly anchored to the main clause subject (no dangling participles)?</li>
+        <li>&#10003; Have you distinguished <strong>lie/lay</strong>, <strong>rise/raise</strong>, and <strong>hung/hanged</strong>?</li>
+        <li>&#10003; In causative <em>make</em> (passive), is the <strong>to-infinitive</strong> used?</li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Prescriptive vs. Descriptive — A Topper&rsquo;s Perspective</div>
+      <p>Many &ldquo;errors&rdquo; in this guide are errors only by <strong>prescriptive</strong> standards&mdash;the rules that educated formal writing follows. <strong>Descriptively</strong>, native speakers routinely say <em>&ldquo;If I was you&rdquo;</em> and use the progressive with stative verbs for stylistic effect (<em>&ldquo;I&rsquo;m loving it&rdquo;</em>). In examinations and formal essays, apply prescriptive rules rigorously. In creative writing and speech, descriptive use is acceptable. Know which standard the context demands.</p>
+    </div>
+
+    <div class="ornament">&#10022; &nbsp;&nbsp; End of Study Guide &nbsp;&nbsp; &#10022;</div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; You Are Ready to Attempt the MCQ Tests</div>
+      <p>You have completed all 18 chapters of the Verbs in English Grammar study guide&mdash;from the definition of a verb through types, principal parts, all 12 tenses, subject-verb agreement, passive voice, mood, verbals, irregular verbs, causatives, stative verbs, and the full catalogue of common errors. Proceed to the <strong>MCQ Engine</strong> to test your mastery. Begin with Foundation-level questions and work up to Topper-level challenge sets. Good luck!</p>
+    </div>
+
+  </section>
+
+</div><!-- content-inner -->
+</div><!-- main -->
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open')}
+function goTo(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const h=document.getElementById('topbar').offsetHeight+6;
+  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-h,behavior:'smooth'});
+  document.getElementById('sidebar').classList.remove('open');
+}
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progress-fill').style.width=(d>0?(window.scrollY/d)*100:0)+'%';
+  const b=document.getElementById('btt');
+  window.scrollY>300?b.classList.add('visible'):b.classList.remove('visible');
+});
+const secs=Array.from(document.querySelectorAll('.topic-section'));
+const items=Array.from(document.querySelectorAll('.sid-item'));
+secs.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      items.forEach(i=>i.classList.remove('active'));
+      const a=items.find(i=>(i.getAttribute('onclick')||'').includes(e.target.id));
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px',threshold:0}).observe(s));
+</script>
+</body>
+</html>

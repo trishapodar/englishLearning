@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adjectives in English Grammar — Complete Study Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+/* ═══════════════════════════════════════════════════
+   GRAMMAR STUDIO — EMBEDDED GUIDE STYLESHEET v1.0
+   ═══════════════════════════════════════════════════ */
+:root {
+  --bg:           #FAF8F4;
+  --surface:      #FFFFFF;
+  --topbar-bg:    #16162A;
+  --topbar-text:  #F0ECE4;
+  --accent:       #C8963E;
+  --accent-light: #F5E9D3;
+  --cobalt:       #2A52BE;
+  --cobalt-light: #E8EEFF;
+  --text-main:    #1C1C2E;
+  --text-sub:     #5A5A7A;
+  --text-muted:   #8888A8;
+  --border:       #E2DDD4;
+  --sidebar-w:    262px;
+  --topbar-h:     54px;
+  --def-bg:       #EEF4FF;
+  --def-border:   #7BA7E0;
+  --rule-bg:      #F0FAF0;
+  --rule-border:  #5CAD6A;
+  --warn-bg:      #FFF8EC;
+  --warn-border:  #E8A020;
+  --tip-bg:       #F0FAFA;
+  --tip-border:   #3AACAC;
+  --correct:      #2D8A4E;
+  --wrong:        #C0392B;
+  --code-bg:      #F2EFE8;
+  --radius:       8px;
+  --shadow:       0 2px 12px rgba(0,0,0,0.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--bg);color:var(--text-main);line-height:1.75}
+#topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:var(--topbar-h);background:var(--topbar-bg);display:flex;align-items:center;gap:16px;padding:0 20px;box-shadow:0 2px 8px rgba(0,0,0,0.3)}
+.tb-logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.05rem;color:var(--accent);white-space:nowrap;flex-shrink:0}
+.tb-sep{width:1px;height:24px;background:rgba(255,255,255,0.15);flex-shrink:0}
+.tb-title{font-family:'Source Serif 4',serif;font-size:0.85rem;color:var(--topbar-text);opacity:0.75;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-right{flex-shrink:0}
+#menu-toggle{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);color:var(--topbar-text);font-size:0.8rem;padding:5px 12px;border-radius:4px;cursor:pointer;transition:background 0.2s}
+#menu-toggle:hover{background:rgba(255,255,255,0.2)}
+#progress-bar{position:fixed;top:var(--topbar-h);left:0;right:0;height:3px;background:rgba(255,255,255,0.08);z-index:199}
+#progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#E8C06A);transition:width 0.1s linear}
+#sidebar{position:fixed;top:var(--topbar-h);left:0;bottom:0;width:var(--sidebar-w);z-index:150;background:var(--surface);border-right:1px solid var(--border);overflow-y:auto;padding:12px 0 40px;transform:translateX(-100%);transition:transform 0.25s cubic-bezier(0.4,0,0.2,1);box-shadow:4px 0 20px rgba(0,0,0,0.06)}
+#sidebar.open{transform:translateX(0)}
+.sid-head{font-family:'Playfair Display',serif;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);padding:8px 20px 12px;border-bottom:1px solid var(--border);margin-bottom:6px}
+.sid-item{display:flex;align-items:center;gap:10px;padding:8px 20px;cursor:pointer;font-size:0.82rem;color:var(--text-sub);text-decoration:none;transition:background 0.15s,color 0.15s;border-left:3px solid transparent}
+.sid-item:hover,.sid-item.active{background:var(--accent-light);color:var(--text-main);border-left-color:var(--accent)}
+.sid-num{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;background:var(--code-bg);border-radius:50%;font-size:0.72rem;font-family:'Fira Code',monospace;color:var(--text-sub);flex-shrink:0;font-weight:500}
+.sid-item.active .sid-num{background:var(--accent);color:#fff}
+#main{margin-top:calc(var(--topbar-h) + 3px);min-height:calc(100vh - var(--topbar-h) - 3px)}
+.content-inner{max-width:800px;margin:0 auto;padding:0 28px 80px}
+.hero{padding:60px 0 50px;border-bottom:1px solid var(--border);margin-bottom:10px}
+.hero-kicker{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent);font-family:'Fira Code',monospace;margin-bottom:12px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.15;color:var(--text-main);margin-bottom:16px}
+.hero-sub{font-size:1.05rem;color:var(--text-sub);max-width:540px;line-height:1.65;margin-bottom:24px}
+.hero-chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-block;padding:4px 14px;border-radius:20px;font-size:0.75rem;font-weight:600;font-family:'Fira Code',monospace;letter-spacing:0.04em}
+.chip-gold{background:var(--accent-light);color:#7A5A10;border:1px solid #D4A84B}
+.chip-cobalt{background:var(--cobalt-light);color:#1A3A8A;border:1px solid #6A8ADE}
+.topic-section{padding:52px 0 20px;border-bottom:1px solid var(--border);position:relative}
+.topic-section:last-child{border-bottom:none}
+.section-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:900;color:var(--border);line-height:1;margin-bottom:-10px;letter-spacing:-0.02em}
+.topic-section h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:700;color:var(--text-main);margin-bottom:4px;line-height:1.25}
+.accent{color:var(--accent)}
+.section-subtitle{font-size:0.85rem;color:var(--text-muted);font-style:italic;margin-bottom:24px;padding-bottom:16px;border-bottom:1px dashed var(--border)}
+.sub-head{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:600;color:var(--text-main);margin:28px 0 12px}
+.body-text{color:var(--text-sub);font-size:0.97rem;line-height:1.8;margin-bottom:14px}
+.card-bg{background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow)}
+.def-box{border-left:4px solid var(--def-border);background:var(--def-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.95rem}
+.rule-box{border-left:4px solid var(--rule-border);background:var(--rule-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.warn-box{border-left:4px solid var(--warn-border);background:var(--warn-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.tip-box{border-left:4px solid var(--tip-border);background:var(--tip-bg)!important;padding:18px 20px;margin:16px 0;border-radius:0 var(--radius) var(--radius) 0;font-size:0.93rem}
+.rule-title,.warn-title,.tip-title{font-family:'Playfair Display',serif;font-weight:700;font-size:0.88rem;letter-spacing:0.03em;margin-bottom:10px}
+.rule-title{color:#2A6A35}
+.warn-title{color:#8A5010}
+.tip-title{color:#1A7A7A}
+.rule-box ul,.warn-box ul,.tip-box ul,.def-box ul{margin:8px 0 0 16px;line-height:2}
+.rule-box p,.warn-box p,.tip-box p,.def-box p{margin-bottom:4px}
+.sentence-list{list-style:none;padding:0;margin:12px 0}
+.sentence-list li{padding:8px 12px;background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:6px;font-size:0.93rem}
+.note{font-size:0.8rem;color:var(--text-muted);font-style:italic;margin-left:8px}
+.cmp-table{width:100%;border-collapse:collapse;margin:16px 0;font-size:0.88rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.cmp-table th{background:var(--topbar-bg);color:var(--topbar-text);padding:10px 14px;text-align:left;font-family:'Fira Code',monospace;font-weight:500;font-size:0.8rem;letter-spacing:0.04em}
+.cmp-table td{padding:9px 14px;border-bottom:1px solid var(--border);background:var(--surface);vertical-align:top}
+.cmp-table tr:last-child td{border-bottom:none}
+.cmp-table tr:nth-child(even) td{background:#F7F4EE}
+.example-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin:16px 0}
+.eg-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 12px;box-shadow:var(--shadow)}
+.eg-label{font-family:'Fira Code',monospace;font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:8px}
+.eg-words{display:flex;flex-wrap:wrap;gap:5px}
+.eg-words span{background:var(--code-bg);padding:2px 8px;border-radius:4px;font-size:0.82rem;color:var(--text-main);font-family:'Source Serif 4',serif;font-style:italic}
+.tag-correct{color:var(--correct);font-weight:600}
+.tag-wrong{color:var(--wrong);font-weight:600}
+code{font-family:'Fira Code',monospace;font-size:0.85em;background:var(--code-bg);padding:1px 6px;border-radius:3px;color:var(--text-main)}
+code.tag-correct{background:#E8F8EE;color:var(--correct)}
+code.tag-wrong{background:#FEE8E8;color:var(--wrong)}
+.formula{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:14px 0;font-family:'Playfair Display',serif;font-size:1rem;font-weight:600;color:var(--text-main)}
+.formula span{background:var(--accent-light);padding:4px 14px;border-radius:20px}
+.arr{background:none!important;padding:0!important;color:var(--accent);font-size:1.2rem}
+.ornament{text-align:center;color:var(--accent);font-size:1.1rem;padding:30px 0 10px;letter-spacing:0.2em}
+#btt{position:fixed;bottom:28px;right:24px;width:40px;height:40px;background:var(--topbar-bg);color:var(--accent);border:none;border-radius:50%;font-size:1.1rem;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,0.2);opacity:0;pointer-events:none;transition:opacity 0.2s,transform 0.2s;z-index:180}
+#btt.visible{opacity:1;pointer-events:auto}
+#btt:hover{transform:translateY(-2px)}
+@media(max-width:640px){
+  .content-inner{padding:0 16px 60px}
+  .hero{padding:36px 0 32px}
+  .cmp-table{font-size:0.8rem}
+  .cmp-table th,.cmp-table td{padding:7px 10px}
+  .section-num{font-size:3.5rem}
+}
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="tb-logo">Grammar Studio</div>
+  <div class="tb-sep"></div>
+  <div class="tb-title">Adjectives in English Grammar &mdash; Complete Study Guide</div>
+  <div class="tb-right">
+    <button id="menu-toggle" onclick="toggleSidebar()">&#9776; Topics</button>
+  </div>
+</div>
+<div id="progress-bar"><div id="progress-fill"></div></div>
+
+<!-- SIDEBAR -->
+<div id="sidebar">
+  <div class="sid-head">Topics &mdash; 17 Chapters</div>
+  <a class="sid-item active" onclick="goTo('s1')"><span class="sid-num">1</span>What Is an Adjective?</a>
+  <a class="sid-item" onclick="goTo('s2')"><span class="sid-num">2</span>Types of Adjectives</a>
+  <a class="sid-item" onclick="goTo('s3')"><span class="sid-num">3</span>Descriptive Adjectives</a>
+  <a class="sid-item" onclick="goTo('s4')"><span class="sid-num">4</span>Quantitative Adjectives</a>
+  <a class="sid-item" onclick="goTo('s5')"><span class="sid-num">5</span>Demonstrative Adjectives</a>
+  <a class="sid-item" onclick="goTo('s6')"><span class="sid-num">6</span>Possessive Adjectives</a>
+  <a class="sid-item" onclick="goTo('s7')"><span class="sid-num">7</span>Interrogative Adjectives</a>
+  <a class="sid-item" onclick="goTo('s8')"><span class="sid-num">8</span>Distributive Adjectives</a>
+  <a class="sid-item" onclick="goTo('s9')"><span class="sid-num">9</span>Articles as Adjectives</a>
+  <a class="sid-item" onclick="goTo('s10')"><span class="sid-num">10</span>Attributive vs. Predicative</a>
+  <a class="sid-item" onclick="goTo('s11')"><span class="sid-num">11</span>Order of Adjectives</a>
+  <a class="sid-item" onclick="goTo('s12')"><span class="sid-num">12</span>Degrees of Comparison</a>
+  <a class="sid-item" onclick="goTo('s13')"><span class="sid-num">13</span>The Superlative Degree</a>
+  <a class="sid-item" onclick="goTo('s14')"><span class="sid-num">14</span>Irregular Comparisons</a>
+  <a class="sid-item" onclick="goTo('s15')"><span class="sid-num">15</span>Adjectives vs. Adverbs</a>
+  <a class="sid-item" onclick="goTo('s16')"><span class="sid-num">16</span>Participial Adjectives</a>
+  <a class="sid-item" onclick="goTo('s17')"><span class="sid-num">17</span>Common Errors &amp; Traps</a>
+</div>
+
+<!-- MAIN -->
+<div id="main">
+<div class="content-inner">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-kicker">English Grammar &middot; Parts of Speech</div>
+    <h1>Adjectives in English<br>Grammar</h1>
+    <div class="hero-sub">A complete, examiner-standard guide covering every class, rule, and subtlety of English adjectives &mdash; from foundational definitions to topper-level prescriptive distinctions, common traps, and the Royal Order of Adjectives.</div>
+    <div class="hero-chips">
+      <span class="chip chip-gold">17 Topics</span>
+      <span class="chip chip-cobalt">Foundation &rarr; Topper Level</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ SECTION 1 ═══════════════════════════ -->
+  <section class="topic-section" id="s1">
+    <div class="section-num">1</div>
+    <h2>What Is an <span class="accent">Adjective?</span></h2>
+    <div class="section-subtitle">The foundational definition &mdash; function, form, and grammatical role</div>
+
+    <div class="def-box card-bg">
+      <p>An <strong>adjective</strong> is a word that <strong>modifies or describes a noun or pronoun</strong>, providing additional information about its quality, quantity, size, colour, origin, or identity. Grammatically, adjectives belong to an open lexical class and function as <em>noun phrase modifiers</em> or <em>subject/object complements</em> within the predicate.</p>
+    </div>
+
+    <p class="body-text">Adjectives answer one of three key questions about a noun: <strong>What kind?</strong> (descriptive), <strong>How many / How much?</strong> (quantitative), or <strong>Which one?</strong> (determinative). Every adjective in English can be tested against at least one of these questions.</p>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The Three Diagnostic Questions for Adjectives</div>
+      <ul>
+        <li><strong>What kind?</strong> &rarr; <em>&ldquo;a <strong>red</strong> apple&rdquo;</em> &mdash; describes a quality of the noun.</li>
+        <li><strong>How many / how much?</strong> &rarr; <em>&ldquo;<strong>three</strong> apples,&rdquo; &ldquo;<strong>some</strong> water&rdquo;</em> &mdash; quantifies the noun.</li>
+        <li><strong>Which one?</strong> &rarr; <em>&ldquo;<strong>this</strong> apple,&rdquo; &ldquo;<strong>my</strong> apple&rdquo;</em> &mdash; identifies or points to the noun.</li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Prescriptive vs. Descriptive Perspective</h3>
+    <p class="body-text">In the <strong>prescriptive tradition</strong> (the grammar of formal examinations and standard writing), adjectives are strictly classified as modifiers of nouns and pronouns. The <strong>descriptive tradition</strong> (contemporary linguistics) further recognises that many words can function as adjectives without belonging to the adjective word-class &mdash; for example, nouns functioning as noun-phrase modifiers (<em>&ldquo;a <strong>stone</strong> wall&rdquo;</em>). For examination purposes, the prescriptive view is the standard.</p>
+
+    <div class="example-grid">
+      <div class="eg-card">
+        <div class="eg-label">Quality</div>
+        <div class="eg-words"><span>brave</span><span>kind</span><span>cold</span><span>tall</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Quantity</div>
+        <div class="eg-words"><span>three</span><span>some</span><span>few</span><span>all</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Colour</div>
+        <div class="eg-words"><span>blue</span><span>scarlet</span><span>golden</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Origin</div>
+        <div class="eg-words"><span>Indian</span><span>French</span><span>Nordic</span></div>
+      </div>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Adjective or Noun? The &ldquo;Stone Wall&rdquo; Trap</div>
+      <p>When a noun modifies another noun (e.g., <em>&ldquo;stone wall,&rdquo; &ldquo;school bus&rdquo;</em>), the modifying noun is called a <strong>noun adjunct</strong> or <strong>attributive noun</strong> &mdash; it is <em>not</em> classified as an adjective in prescriptive grammar. Do not call <em>stone</em> an adjective in <em>&ldquo;a stone wall.&rdquo;</em></p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Stone is an adjective in &lsquo;a stone wall.&rsquo;&rdquo;</em> <span class="note">Stone remains a noun functioning as a modifier; it fails the gradability test (you cannot say *a very stone wall).</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Stone is a noun adjunct in &lsquo;a stone wall.&rsquo;&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Topper&rsquo;s Gradability Test</div>
+      <p>A reliable way to confirm a true adjective is the <strong>gradability test</strong>: if the word accepts degree modifiers such as <em>very, extremely, rather</em>, it is almost certainly an adjective.</p>
+      <ul>
+        <li><em>&ldquo;very <strong>cold</strong>&rdquo;</em> &rarr; <span class="tag-correct">&#10003;</span> cold is an adjective.</li>
+        <li><em>&ldquo;very <strong>stone</strong>&rdquo;</em> &rarr; <span class="tag-wrong">&#10007;</span> stone is not an adjective.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 2 ═══════════════════════════ -->
+  <section class="topic-section" id="s2">
+    <div class="section-num">2</div>
+    <h2>Types of <span class="accent">Adjectives</span> &mdash; An Overview</h2>
+    <div class="section-subtitle">A taxonomic map of all adjective classes in English</div>
+
+    <p class="body-text">English adjectives are classified into several major types based on the <strong>kind of information</strong> they convey about a noun. Memorising this taxonomy is essential for examinations that test identification, labelling, and usage.</p>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Type</th>
+        <th>Function</th>
+        <th>Examples</th>
+      </tr>
+      <tr>
+        <td><code>Descriptive</code></td>
+        <td>Describes a quality or characteristic</td>
+        <td><em>tall, beautiful, honest, cold</em></td>
+      </tr>
+      <tr>
+        <td><code>Quantitative</code></td>
+        <td>Indicates amount or quantity</td>
+        <td><em>some, much, little, enough</em></td>
+      </tr>
+      <tr>
+        <td><code>Numeral</code></td>
+        <td>Indicates number (cardinal or ordinal)</td>
+        <td><em>three, first, second, dozen</em></td>
+      </tr>
+      <tr>
+        <td><code>Demonstrative</code></td>
+        <td>Points to a specific noun</td>
+        <td><em>this, that, these, those</em></td>
+      </tr>
+      <tr>
+        <td><code>Possessive</code></td>
+        <td>Shows ownership or relationship</td>
+        <td><em>my, your, his, her, our, their</em></td>
+      </tr>
+      <tr>
+        <td><code>Interrogative</code></td>
+        <td>Introduces questions about a noun</td>
+        <td><em>which, what, whose</em></td>
+      </tr>
+      <tr>
+        <td><code>Distributive</code></td>
+        <td>Refers to members of a group individually</td>
+        <td><em>each, every, either, neither</em></td>
+      </tr>
+      <tr>
+        <td><code>Emphasising</code></td>
+        <td>Adds force or emphasis</td>
+        <td><em>very (own), sheer, utter, complete</em></td>
+      </tr>
+      <tr>
+        <td><code>Exclamatory</code></td>
+        <td>Expresses strong feeling</td>
+        <td><em>what (a wonderful day!)</em></td>
+      </tr>
+    </table>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; The Determiner Umbrella</div>
+      <p>Modern linguistics groups demonstrative, possessive, interrogative, and distributive adjectives under the single category of <strong>determiners</strong> &mdash; words that &ldquo;determine&rdquo; or delimit the reference of a noun phrase. In traditional grammar (and most Indian curriculum examinations), however, each is still treated as a separate type of adjective. Know both frameworks.</p>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Numeral vs. Quantitative Confusion</div>
+      <p>Students frequently confuse <strong>numeral adjectives</strong> (which denote a precise number: <em>two, ten, first</em>) with <strong>quantitative adjectives</strong> (which denote an indefinite amount: <em>much, some, little</em>). The key difference is <strong>precision vs. vagueness</strong>.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;&lsquo;Some&rsquo; is a numeral adjective.&rdquo;</em> <span class="note">Some does not denote a specific, countable number; it is quantitative.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;&lsquo;Three&rsquo; is a cardinal numeral adjective; &lsquo;some&rsquo; is a quantitative adjective.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 3 ═══════════════════════════ -->
+  <section class="topic-section" id="s3">
+    <div class="section-num">3</div>
+    <h2>Descriptive <span class="accent">(Qualitative)</span> Adjectives</h2>
+    <div class="section-subtitle">The largest class &mdash; qualities, states, and characteristics of nouns</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>descriptive adjective</strong> (also called a <strong>qualitative adjective</strong>) is one that describes a quality, property, or state of a noun or pronoun. This is the largest open class of adjectives in English, encompassing physical properties, emotional states, colours, sizes, shapes, and textures.</p>
+    </div>
+
+    <p class="body-text">Descriptive adjectives are <strong>gradable</strong> &mdash; they can occur in comparative and superlative forms, and they freely accept degree adverbs such as <em>very, quite, rather, extremely, somewhat</em>. This gradability is the hallmark that distinguishes them from determiners.</p>
+
+    <h3 class="sub-head">Sub-classes of Descriptive Adjectives</h3>
+
+    <div class="example-grid">
+      <div class="eg-card">
+        <div class="eg-label">Physical Size</div>
+        <div class="eg-words"><span>huge</span><span>tiny</span><span>vast</span><span>compact</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Colour</div>
+        <div class="eg-words"><span>crimson</span><span>azure</span><span>ivory</span><span>jade</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Shape</div>
+        <div class="eg-words"><span>oval</span><span>jagged</span><span>curved</span><span>flat</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Personality</div>
+        <div class="eg-words"><span>brave</span><span>cunning</span><span>gentle</span><span>vain</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Condition</div>
+        <div class="eg-words"><span>broken</span><span>wet</span><span>dusty</span><span>fresh</span></div>
+      </div>
+      <div class="eg-card">
+        <div class="eg-label">Origin / Material</div>
+        <div class="eg-words"><span>wooden</span><span>silken</span><span>woollen</span><span>golden</span></div>
+      </div>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Identifying Descriptive Adjectives &mdash; Four Formal Tests</div>
+      <ul>
+        <li><strong>Gradability:</strong> Can you say <em>very [word]</em>? &rarr; <em>very tall</em> <span class="tag-correct">&#10003;</span></li>
+        <li><strong>Comparison:</strong> Does it form comparatives? &rarr; <em>taller, more beautiful</em> <span class="tag-correct">&#10003;</span></li>
+        <li><strong>Attributive use:</strong> Does it precede a noun? &rarr; <em>&ldquo;a tall man&rdquo;</em> <span class="tag-correct">&#10003;</span></li>
+        <li><strong>Predicative use:</strong> Can it follow a linking verb? &rarr; <em>&ldquo;The man is tall.&rdquo;</em> <span class="tag-correct">&#10003;</span></li>
+      </ul>
+    </div>
+
+    <h3 class="sub-head">Proper Adjectives</h3>
+    <p class="body-text">A sub-type of descriptive adjective worth noting at the topper level is the <strong>proper adjective</strong> &mdash; an adjective derived from a proper noun. These are always capitalised. Examples: <em>Indian cuisine, Shakespearean drama, Victorian architecture, Buddhist philosophy</em>. They describe origin, style, or association with a proper name.</p>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;She wore a <strong>silken</strong> scarf.&rdquo;</em> <span class="note">silken = descriptive adjective, material; modifies scarf (noun).</span></li>
+      <li><em>&ldquo;The child was <strong>extremely curious</strong>.&rdquo;</em> <span class="note">curious = descriptive adjective in predicative position; extremely is a degree adverb.</span></li>
+      <li><em>&ldquo;They served <strong>Italian</strong> coffee.&rdquo;</em> <span class="note">Italian = proper adjective derived from the proper noun Italy; capitalised.</span></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Non-Gradable Adjectives Are Still Descriptive</div>
+      <p>Some descriptive adjectives are <strong>absolute</strong> or <strong>non-gradable</strong> by meaning &mdash; you cannot be &ldquo;very dead,&rdquo; &ldquo;somewhat unique,&rdquo; or &ldquo;quite perfect.&rdquo; These adjectives describe all-or-nothing states. Using degree adverbs with them is a formal error.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Her essay was very unique.&rdquo;</em> <span class="note">Unique means &lsquo;one of a kind&rsquo; &mdash; an absolute concept; degree modification is illogical.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Her essay was truly unique.&rdquo;</em> <span class="note">Truly here functions as an affirmer, not a degree modifier.</span></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He is more dead than alive.&rdquo;</em> <span class="note">Acceptable only as a fixed informal expression; formally, dead is absolute.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 4 ═══════════════════════════ -->
+  <section class="topic-section" id="s4">
+    <div class="section-num">4</div>
+    <h2>Quantitative <span class="accent">Adjectives</span></h2>
+    <div class="section-subtitle">Expressing amount, degree, and indefinite quantity</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>quantitative adjective</strong> indicates the <strong>quantity or amount</strong> of the noun it modifies, but does so <em>without specifying an exact number</em>. It answers the question <em>&ldquo;How much?&rdquo;</em> for uncountable nouns and <em>&ldquo;How many?&rdquo;</em> for countable nouns in a non-specific way. The grammatical principle at work is the <strong>count/non-count noun distinction</strong>.</p>
+    </div>
+
+    <h3 class="sub-head">Countable vs. Uncountable: The Core Rule</h3>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Adjective</th>
+        <th>With Countable Nouns</th>
+        <th>With Uncountable Nouns</th>
+        <th>With Both</th>
+      </tr>
+      <tr>
+        <td><code>few / a few</code></td>
+        <td><code class="tag-correct">a few books &#10003;</code></td>
+        <td><code class="tag-wrong">a few water &#10007;</code></td>
+        <td>&mdash;</td>
+      </tr>
+      <tr>
+        <td><code>little / a little</code></td>
+        <td><code class="tag-wrong">a little books &#10007;</code></td>
+        <td><code class="tag-correct">a little water &#10003;</code></td>
+        <td>&mdash;</td>
+      </tr>
+      <tr>
+        <td><code>much</code></td>
+        <td><code class="tag-wrong">much books &#10007;</code></td>
+        <td><code class="tag-correct">much water &#10003;</code></td>
+        <td>&mdash;</td>
+      </tr>
+      <tr>
+        <td><code>many</code></td>
+        <td><code class="tag-correct">many books &#10003;</code></td>
+        <td><code class="tag-wrong">many water &#10007;</code></td>
+        <td>&mdash;</td>
+      </tr>
+      <tr>
+        <td><code>some / any</code></td>
+        <td><code class="tag-correct">some books &#10003;</code></td>
+        <td><code class="tag-correct">some water &#10003;</code></td>
+        <td><span class="tag-correct">&#10003;</span> Both</td>
+      </tr>
+      <tr>
+        <td><code>enough / all</code></td>
+        <td><code class="tag-correct">enough books &#10003;</code></td>
+        <td><code class="tag-correct">enough water &#10003;</code></td>
+        <td><span class="tag-correct">&#10003;</span> Both</td>
+      </tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Few vs. A Few &mdash; A Crucial Semantic Distinction</div>
+      <ul>
+        <li><strong>Few</strong> (without article): implies a <em>disappointingly small number</em> &mdash; a negative connotation. <em>&ldquo;Few students passed.&rdquo;</em> (most did not)</li>
+        <li><strong>A few</strong> (with article): implies <em>some, though not many</em> &mdash; a positive or neutral connotation. <em>&ldquo;A few students passed.&rdquo;</em> (at least some did)</li>
+        <li><strong>Little</strong> (without article): a <em>disappointingly small amount</em>. <em>&ldquo;There is little hope.&rdquo;</em></li>
+        <li><strong>A little</strong> (with article): <em>some, at least</em>. <em>&ldquo;There is a little hope.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; &ldquo;Less&rdquo; vs. &ldquo;Fewer&rdquo; &mdash; One of the Most Tested Traps</div>
+      <p>Use <strong>fewer</strong> with countable nouns and <strong>less</strong> with uncountable nouns. This is one of the most commonly tested distinctions in formal grammar examinations.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;There are less people here today.&rdquo;</em> <span class="note">People is countable; fewer is required.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;There are fewer people here today.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She drinks fewer water.&rdquo;</em> <span class="note">Water is uncountable; less is required.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She drinks less water.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 5 ═══════════════════════════ -->
+  <section class="topic-section" id="s5">
+    <div class="section-num">5</div>
+    <h2>Demonstrative <span class="accent">Adjectives</span></h2>
+    <div class="section-subtitle">Pointing and identifying &mdash; proximity, number, and the determiner function</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>demonstrative adjective</strong> is one of the four words &mdash; <strong>this, that, these, those</strong> &mdash; that <em>points to</em> a specific noun or pronoun, indicating its proximity to the speaker in space or time. The grammatical principle is <strong>deixis</strong> (Greek: &ldquo;pointing&rdquo;), which encodes both <em>distance</em> (near vs. far) and <em>number</em> (singular vs. plural).</p>
+    </div>
+
+    <div class="formula">
+      <span>Near + Singular</span>
+      <span class="arr">&rarr;</span>
+      <span>this</span>
+      <span class="arr">&nbsp;&nbsp;</span>
+      <span>Near + Plural</span>
+      <span class="arr">&rarr;</span>
+      <span>these</span>
+      <span class="arr">&nbsp;&nbsp;</span>
+      <span>Far + Singular</span>
+      <span class="arr">&rarr;</span>
+      <span>that</span>
+      <span class="arr">&nbsp;&nbsp;</span>
+      <span>Far + Plural</span>
+      <span class="arr">&rarr;</span>
+      <span>those</span>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Demonstrative Adjective vs. Demonstrative Pronoun</div>
+      <ul>
+        <li>When <em>this / that / these / those</em> <strong>precede a noun</strong>, they are adjectives: <em>&ldquo;<strong>This</strong> book is mine.&rdquo;</em></li>
+        <li>When they <strong>stand alone</strong> (replacing a noun), they are pronouns: <em>&ldquo;<strong>This</strong> is mine.&rdquo;</em></li>
+        <li>The test: if you can add a noun after the word without changing the sentence&rsquo;s meaning significantly, it is functioning as an adjective.</li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;<strong>This</strong> mango is ripe.&rdquo;</em> <span class="note">this = demonstrative adjective; near + singular; modifies mango.</span></li>
+      <li><em>&ldquo;<strong>Those</strong> children are playing.&rdquo;</em> <span class="note">those = demonstrative adjective; far + plural; modifies children.</span></li>
+      <li><em>&ldquo;<strong>That</strong> was a mistake.&rdquo;</em> <span class="note">that = demonstrative pronoun here; it stands alone without a following noun.</span></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Agreement Error &mdash; This/That with Plural Nouns</div>
+      <p>Demonstrative adjectives must agree in number with the noun they modify. <em>This</em> and <em>that</em> can only modify singular nouns; <em>these</em> and <em>those</em> must be used with plural nouns.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;These <strong>kind</strong> of errors are common.&rdquo;</em> <span class="note">Kind is singular; this kind is the correct form.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;This kind of error is common.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;That books are interesting.&rdquo;</em> <span class="note">Books is plural; those is required.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Those books are interesting.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 6 ═══════════════════════════ -->
+  <section class="topic-section" id="s6">
+    <div class="section-num">6</div>
+    <h2>Possessive <span class="accent">Adjectives</span></h2>
+    <div class="section-subtitle">Ownership, relationship, and the pronoun&ndash;adjective boundary</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>possessive adjective</strong> is a word that modifies a noun by indicating <strong>ownership, association, or relationship</strong>. In English, the possessive adjectives are: <strong>my, your, his, her, its, our, their, whose</strong>. They are grammatically derived from personal pronouns and always precede a noun (or a noun phrase).</p>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Person</th>
+        <th>Possessive Adjective</th>
+        <th>Possessive Pronoun (for contrast)</th>
+      </tr>
+      <tr><td>1st Singular</td><td><code>my</code></td><td><code>mine</code></td></tr>
+      <tr><td>2nd Singular/Plural</td><td><code>your</code></td><td><code>yours</code></td></tr>
+      <tr><td>3rd Singular (M)</td><td><code>his</code></td><td><code>his</code></td></tr>
+      <tr><td>3rd Singular (F)</td><td><code>her</code></td><td><code>hers</code></td></tr>
+      <tr><td>3rd Singular (N)</td><td><code>its</code></td><td><code>its</code></td></tr>
+      <tr><td>1st Plural</td><td><code>our</code></td><td><code>ours</code></td></tr>
+      <tr><td>3rd Plural</td><td><code>their</code></td><td><code>theirs</code></td></tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Possessive Adjective vs. Possessive Pronoun Test</div>
+      <ul>
+        <li><strong>Possessive adjective</strong>: always followed by a noun &mdash; <em>&ldquo;<strong>my</strong> book,&rdquo; &ldquo;<strong>her</strong> idea.&rdquo;</em></li>
+        <li><strong>Possessive pronoun</strong>: stands alone, replacing a noun &mdash; <em>&ldquo;The book is <strong>mine</strong>.&rdquo;</em></li>
+        <li>Note: <em>his</em> and <em>its</em> have identical forms for both functions &mdash; only context distinguishes them.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Its vs. It&rsquo;s &mdash; The Apostrophe Catastrophe</div>
+      <p><em>Its</em> (no apostrophe) is a <strong>possessive adjective</strong>. <em>It&rsquo;s</em> (with apostrophe) is a <strong>contraction</strong> of <em>it is</em> or <em>it has</em>. These are never interchangeable.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The dog wagged it&rsquo;s tail.&rdquo;</em> <span class="note">It&rsquo;s here would mean &lsquo;it is tail&rsquo; &mdash; grammatically absurd.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The dog wagged its tail.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Its raining outside.&rdquo;</em> <span class="note">The possessive adjective its cannot stand alone without a noun; it&rsquo;s (it is) is needed.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;It&rsquo;s raining outside.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Their / There / They&rsquo;re &mdash; A Classic Homophones Trap</div>
+      <p>These three homophones are among the most common spelling errors at every level:</p>
+      <ul>
+        <li><strong>Their</strong> = possessive adjective: <em>&ldquo;It is <strong>their</strong> responsibility.&rdquo;</em></li>
+        <li><strong>There</strong> = adverb of place or existential subject: <em>&ldquo;<strong>There</strong> is a problem.&rdquo;</em></li>
+        <li><strong>They&rsquo;re</strong> = contraction of <em>they are</em>: <em>&ldquo;<strong>They&rsquo;re</strong> coming soon.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 7 ═══════════════════════════ -->
+  <section class="topic-section" id="s7">
+    <div class="section-num">7</div>
+    <h2>Interrogative <span class="accent">Adjectives</span></h2>
+    <div class="section-subtitle">Asking questions through noun modification</div>
+
+    <div class="def-box card-bg">
+      <p>An <strong>interrogative adjective</strong> is one of the words <strong>which, what,</strong> or <strong>whose</strong> when used before a noun to introduce a direct or indirect question. The grammatical function is to <em>modify a noun within an interrogative clause</em> rather than to stand alone as a pronoun.</p>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Which vs. What &mdash; Choice vs. Open Question</div>
+      <ul>
+        <li><strong>Which</strong> implies a <em>limited, defined set</em> of choices: <em>&ldquo;<strong>Which</strong> book do you prefer?&rdquo;</em> (among specified books)</li>
+        <li><strong>What</strong> implies an <em>open, undefined range</em>: <em>&ldquo;<strong>What</strong> book are you reading?&rdquo;</em> (any book at all)</li>
+        <li><strong>Whose</strong> asks about <em>possession or authorship</em>: <em>&ldquo;<strong>Whose</strong> pen is this?&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;<strong>Which</strong> route should we take?&rdquo;</em> <span class="note">which = interrogative adjective; modifies route; implies routes are already defined.</span></li>
+      <li><em>&ldquo;<strong>What</strong> time does the train leave?&rdquo;</em> <span class="note">what = interrogative adjective; modifies time; open question.</span></li>
+      <li><em>&ldquo;<strong>Whose</strong> coat is hanging here?&rdquo;</em> <span class="note">whose = interrogative adjective; modifies coat; asks about possession.</span></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Interrogative Adjective vs. Interrogative Pronoun</div>
+      <p>The words <em>which, what,</em> and <em>whose</em> are <strong>adjectives</strong> when they are immediately followed by a noun, and <strong>pronouns</strong> when they stand alone.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;<strong>Which</strong> pen do you want?&rdquo;</em> <span class="note">which + noun (pen) = interrogative adjective.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;<strong>Which</strong> do you want?&rdquo;</em> <span class="note">which stands alone = interrogative pronoun.</span></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Interrogative Adjectives in Indirect Questions</div>
+      <p>Interrogative adjectives also appear in <strong>indirect (embedded) questions</strong>, where the word order does not invert. This is a topper-level usage detail.</p>
+      <ul>
+        <li><em>&ldquo;I don&rsquo;t know <strong>which</strong> train he took.&rdquo;</em> <span class="note">Indirect question; which modifies train; normal subject-verb order is maintained.</span></li>
+        <li><em>&ldquo;She asked <strong>whose</strong> car was parked outside.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 8 ═══════════════════════════ -->
+  <section class="topic-section" id="s8">
+    <div class="section-num">8</div>
+    <h2>Distributive <span class="accent">Adjectives</span></h2>
+    <div class="section-subtitle">Referring to members of a group one by one</div>
+
+    <div class="def-box card-bg">
+      <p>A <strong>distributive adjective</strong> is one of the words <strong>each, every, either, neither</strong> (and sometimes <em>both</em>) when used before a noun to refer to the members of a group <em>individually or separately</em>, rather than collectively. The grammatical principle is <strong>individuation</strong>: each member is considered one at a time.</p>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Subject&ndash;Verb Agreement: Distributive Adjectives Require Singular Verbs</div>
+      <ul>
+        <li><em>Each, every, either, neither</em> + noun always take a <strong>singular verb</strong>, because each member is treated individually.</li>
+        <li><em>&ldquo;<strong>Every</strong> student <strong>is</strong> responsible.&rdquo;</em></li>
+        <li><em>&ldquo;<strong>Each</strong> of the answers <strong>was</strong> correct.&rdquo;</em></li>
+        <li><em>&ldquo;<strong>Neither</strong> option <strong>is</strong> satisfactory.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Adjective</th>
+        <th>Usage</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td><code>each</code></td>
+        <td>Two or more, individually</td>
+        <td><em>&ldquo;Each child received a gift.&rdquo;</em></td>
+      </tr>
+      <tr>
+        <td><code>every</code></td>
+        <td>Three or more, collectively as individuals</td>
+        <td><em>&ldquo;Every student must submit the form.&rdquo;</em></td>
+      </tr>
+      <tr>
+        <td><code>either</code></td>
+        <td>One of two (affirmative)</td>
+        <td><em>&ldquo;Either road leads to the city.&rdquo;</em></td>
+      </tr>
+      <tr>
+        <td><code>neither</code></td>
+        <td>Not one of two (negative)</td>
+        <td><em>&ldquo;Neither answer is correct.&rdquo;</em></td>
+      </tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Each vs. Every &mdash; Not Always Interchangeable</div>
+      <p><em>Each</em> can be used for <strong>two or more</strong> individuals and emphasises individuality. <em>Every</em> is only used for <strong>three or more</strong> and emphasises totality. Additionally, <em>every</em> cannot be used in certain positions where <em>each</em> can.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Each of the two teams played well.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Every of the two teams played well.&rdquo;</em> <span class="note">Every cannot precede &lsquo;of&rsquo; directly and is not used for groups of exactly two.</span></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The players each received medals.&rdquo;</em> &mdash; Wait: this is actually correct! Each can float as a <strong>floating quantifier</strong> in postverbal position, but <em>every</em> cannot: <span class="tag-wrong">&#10007;</span> <em>&ldquo;The players every received medals.&rdquo;</em> is wrong.</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Either / Neither with More Than Two Options</div>
+      <p>Formally, <em>either</em> and <em>neither</em> should only be used when referring to <strong>exactly two</strong> options. For three or more, use <em>any</em> and <em>none</em> respectively.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Neither of the three candidates is qualified.&rdquo;</em> <span class="note">Formal grammar requires &lsquo;none&rsquo; when three or more are involved.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;None of the three candidates is qualified.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 9 ═══════════════════════════ -->
+  <section class="topic-section" id="s9">
+    <div class="section-num">9</div>
+    <h2>Articles as <span class="accent">Adjectives</span></h2>
+    <div class="section-subtitle">A, An, The &mdash; definiteness, phonological choice, and topper-level nuances</div>
+
+    <div class="def-box card-bg">
+      <p>The articles <strong>a, an</strong> (indefinite) and <strong>the</strong> (definite) are traditionally classified as a sub-type of adjective in prescriptive grammar because they <em>modify nouns</em> by specifying their definiteness. Linguistically, they belong to the class of <strong>determiners</strong>. The choice of article encodes whether a noun refers to a <em>specific, known entity</em> (<em>the</em>) or an <em>unspecified member</em> of a class (<em>a / an</em>).</p>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; A vs. An &mdash; The Sound Rule (Not the Spelling Rule)</div>
+      <ul>
+        <li>Use <strong>a</strong> before a word beginning with a <em>consonant sound</em>.</li>
+        <li>Use <strong>an</strong> before a word beginning with a <em>vowel sound</em>.</li>
+        <li>The decision depends on <strong>pronunciation</strong>, not spelling &mdash; this is the most-tested principle of article usage.</li>
+      </ul>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Word</th>
+        <th>Initial Sound</th>
+        <th>Correct Article</th>
+        <th>Wrong Version</th>
+      </tr>
+      <tr>
+        <td><em>honest</em></td>
+        <td>Vowel sound /ɒ/ (silent h)</td>
+        <td><code class="tag-correct">an honest man &#10003;</code></td>
+        <td><code class="tag-wrong">a honest man &#10007;</code></td>
+      </tr>
+      <tr>
+        <td><em>university</em></td>
+        <td>Consonant sound /juː/ (yoo)</td>
+        <td><code class="tag-correct">a university &#10003;</code></td>
+        <td><code class="tag-wrong">an university &#10007;</code></td>
+      </tr>
+      <tr>
+        <td><em>hour</em></td>
+        <td>Vowel sound /aʊ/ (silent h)</td>
+        <td><code class="tag-correct">an hour &#10003;</code></td>
+        <td><code class="tag-wrong">a hour &#10007;</code></td>
+      </tr>
+      <tr>
+        <td><em>European</em></td>
+        <td>Consonant sound /juː/ (yoo)</td>
+        <td><code class="tag-correct">a European &#10003;</code></td>
+        <td><code class="tag-wrong">an European &#10007;</code></td>
+      </tr>
+      <tr>
+        <td><em>MBA</em></td>
+        <td>Vowel sound /ɛm/ (em)</td>
+        <td><code class="tag-correct">an MBA &#10003;</code></td>
+        <td><code class="tag-wrong">a MBA &#10007;</code></td>
+      </tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Omission of &ldquo;The&rdquo; &mdash; Generic vs. Specific Nouns</div>
+      <p>The definite article <em>the</em> is omitted before <strong>generic, uncountable, and abstract nouns</strong> used in their general sense. Inserting <em>the</em> changes the meaning from general to specific.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The honesty is the best policy.&rdquo;</em> <span class="note">Honesty here is abstract and generic; no article is needed.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Honesty is the best policy.&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The honesty she displayed was remarkable.&rdquo;</em> <span class="note">Here, a specific instance of honesty is referred to; the is correct.</span></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Topper Note &mdash; &ldquo;The&rdquo; with Superlatives and Unique Entities</div>
+      <p>The definite article <em>the</em> is <strong>obligatory</strong> before superlative adjectives and before nouns that are one-of-a-kind entities (celestial bodies, geographic features when unique).</p>
+      <ul>
+        <li><em>&ldquo;She is <strong>the</strong> tallest student in the class.&rdquo;</em></li>
+        <li><em>&ldquo;<strong>The</strong> sun rises in the east.&rdquo;</em></li>
+        <li><em>&ldquo;He is <strong>the</strong> Prime Minister.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 10 ═══════════════════════════ -->
+  <section class="topic-section" id="s10">
+    <div class="section-num">10</div>
+    <h2>Attributive vs. <span class="accent">Predicative</span> Position</h2>
+    <div class="section-subtitle">Where an adjective sits in a sentence &mdash; and why it matters</div>
+
+    <div class="def-box card-bg">
+      <p>Every adjective in a sentence occupies one of two <strong>syntactic positions</strong>: <strong>attributive</strong> (directly before the noun it modifies, within the noun phrase) or <strong>predicative</strong> (after a linking verb such as <em>be, seem, appear, become, feel, look, smell, taste</em>). Some adjectives are restricted to one position only.</p>
+    </div>
+
+    <div class="formula">
+      <span>Attributive:</span>
+      <span class="arr">&rarr;</span>
+      <span>[Article] + Adjective + Noun</span>
+      <span class="arr">&nbsp;&nbsp;</span>
+      <span>Predicative:</span>
+      <span class="arr">&rarr;</span>
+      <span>Subject + Linking Verb + Adjective</span>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Position</th>
+        <th>Example</th>
+        <th>Structure</th>
+      </tr>
+      <tr>
+        <td>Attributive</td>
+        <td><em>&ldquo;a <strong>sleepy</strong> child&rdquo;</em></td>
+        <td>Adjective directly before noun</td>
+      </tr>
+      <tr>
+        <td>Predicative</td>
+        <td><em>&ldquo;The child is <strong>sleepy</strong>.&rdquo;</em></td>
+        <td>Adjective after linking verb</td>
+      </tr>
+      <tr>
+        <td>Postpositive</td>
+        <td><em>&ldquo;something <strong>unusual</strong>&rdquo;</em></td>
+        <td>Adjective after indefinite pronoun</td>
+      </tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Adjectives Restricted to Attributive Position Only</div>
+      <ul>
+        <li><strong>Utter, sheer, mere, chief, main, principal, sole, only:</strong> These intensifiers and emphasising adjectives can <em>only</em> appear before a noun.</li>
+        <li><em>&ldquo;an <strong>utter</strong> fool&rdquo;</em> <span class="tag-correct">&#10003;</span> &nbsp; &mdash; &nbsp; <em>&ldquo;The fool is <strong>utter</strong>.&rdquo;</em> <span class="tag-wrong">&#10007;</span></li>
+        <li><em>&ldquo;a <strong>mere</strong> child&rdquo;</em> <span class="tag-correct">&#10003;</span> &nbsp; &mdash; &nbsp; <em>&ldquo;The child is <strong>mere</strong>.&rdquo;</em> <span class="tag-wrong">&#10007;</span></li>
+      </ul>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Adjectives Restricted to Predicative Position Only</div>
+      <ul>
+        <li><strong>Afraid, asleep, awake, alive, aware, ashamed, alike, aghast, afoot, ajar:</strong> The &ldquo;a-prefix&rdquo; adjectives almost exclusively appear after linking verbs.</li>
+        <li><em>&ldquo;The child is <strong>asleep</strong>.&rdquo;</em> <span class="tag-correct">&#10003;</span> &nbsp; &mdash; &nbsp; <em>&ldquo;an <strong>asleep</strong> child&rdquo;</em> <span class="tag-wrong">&#10007;</span></li>
+        <li><em>&ldquo;She felt <strong>afraid</strong>.&rdquo;</em> <span class="tag-correct">&#10003;</span> &nbsp; &mdash; &nbsp; <em>&ldquo;the <strong>afraid</strong> woman&rdquo;</em> <span class="tag-wrong">&#10007;</span></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Postpositive Adjectives &mdash; After Indefinite Pronouns</div>
+      <p>When an adjective modifies an <strong>indefinite pronoun</strong> (<em>something, anything, nothing, someone, anyone, nowhere, everywhere</em>), the adjective must come <em>after</em> the pronoun, not before. This is the <strong>postpositive</strong> position.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Is there <strong>new</strong> anything to discuss?&rdquo;</em> <span class="note">Adjectives cannot precede indefinite pronouns.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Is there anything <strong>new</strong> to discuss?&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I need something <strong>cold</strong> to drink.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 11 ═══════════════════════════ -->
+  <section class="topic-section" id="s11">
+    <div class="section-num">11</div>
+    <h2>The Royal Order of <span class="accent">Adjectives</span></h2>
+    <div class="section-subtitle">Why &ldquo;a lovely little old rectangular green French silver whittling knife&rdquo; sounds right</div>
+
+    <div class="def-box card-bg">
+      <p>When multiple adjectives modify a single noun, English speakers follow a largely <strong>instinctive but rule-governed sequence</strong> known as the <strong>Royal Order of Adjectives</strong>. Violations of this order produce sequences that are grammatically permissible but deeply unnatural &mdash; a key topper-level distinction. The principle underlying the order is that adjectives closest in meaning to the noun are placed nearest to it.</p>
+    </div>
+
+    <div class="formula">
+      <span>Opinion</span>
+      <span class="arr">&rarr;</span>
+      <span>Size</span>
+      <span class="arr">&rarr;</span>
+      <span>Age</span>
+      <span class="arr">&rarr;</span>
+      <span>Shape</span>
+      <span class="arr">&rarr;</span>
+      <span>Colour</span>
+      <span class="arr">&rarr;</span>
+      <span>Origin</span>
+      <span class="arr">&rarr;</span>
+      <span>Material</span>
+      <span class="arr">&rarr;</span>
+      <span>Purpose</span>
+      <span class="arr">&rarr;</span>
+      <span>NOUN</span>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Category</th>
+        <th>Position</th>
+        <th>Examples</th>
+      </tr>
+      <tr><td>Opinion / General</td><td>1st</td><td><em>lovely, horrible, beautiful, strange</em></td></tr>
+      <tr><td>Size</td><td>2nd</td><td><em>big, small, tall, tiny, enormous</em></td></tr>
+      <tr><td>Age</td><td>3rd</td><td><em>young, old, ancient, medieval, new</em></td></tr>
+      <tr><td>Shape</td><td>4th</td><td><em>round, square, oval, flat, jagged</em></td></tr>
+      <tr><td>Colour</td><td>5th</td><td><em>red, blue, golden, dark, pale</em></td></tr>
+      <tr><td>Origin / Nationality</td><td>6th</td><td><em>French, Italian, Indian, Nordic</em></td></tr>
+      <tr><td>Material</td><td>7th</td><td><em>wooden, silk, glass, plastic, stone</em></td></tr>
+      <tr><td>Purpose / Qualifier</td><td>8th</td><td><em>cooking, sleeping, racing, writing</em></td></tr>
+    </table>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;She bought a <strong>lovely small antique oval black French silver writing</strong> desk.&rdquo;</em> <span class="note">Opinion &rarr; Size &rarr; Age &rarr; Shape &rarr; Colour &rarr; Origin &rarr; Material &rarr; Purpose: all categories in canonical order.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;a French lovely black small desk&rdquo;</em> <span class="note">Origin before Opinion and Colour before Size violates the Royal Order; deeply unnatural in English.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;a lovely big old brown wooden wardrobe&rdquo;</em> <span class="note">Opinion &rarr; Size &rarr; Age &rarr; Colour &rarr; Material: correct sequence.</span></li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Mnemonic: OSASCOMP</div>
+      <p>Remember the Royal Order with the acronym <strong>OSASCOMP</strong>: <strong>O</strong>pinion &mdash; <strong>S</strong>ize &mdash; <strong>A</strong>ge &mdash; <strong>S</strong>hape &mdash; <strong>C</strong>olour &mdash; <strong>O</strong>rigin &mdash; <strong>M</strong>aterial &mdash; <strong>P</strong>urpose.</p>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Comma Rules with Multiple Adjectives</div>
+      <p>When adjectives of the <strong>same category</strong> (co-ordinate adjectives) are used together, separate them with commas or &ldquo;and.&rdquo; When adjectives are from <strong>different categories</strong> (cumulative adjectives following the Royal Order), no comma is used.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;a kind, patient teacher&rdquo;</em> <span class="note">Two opinion adjectives (co-ordinate) &rarr; comma used.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;a tall old Indian man&rdquo;</em> <span class="note">Different categories (size, age, origin) &rarr; no comma.</span></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;a tall, old, Indian man&rdquo;</em> <span class="note">Commas between cumulative adjectives of different categories are incorrect in formal usage.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 12 ═══════════════════════════ -->
+  <section class="topic-section" id="s12">
+    <div class="section-num">12</div>
+    <h2>Degrees of Comparison &mdash; <span class="accent">Positive &amp; Comparative</span></h2>
+    <div class="section-subtitle">How adjectives scale quality &mdash; formation, rules, and exceptions</div>
+
+    <div class="def-box card-bg">
+      <p>Gradable adjectives in English exist in three <strong>degrees of comparison</strong>: the <strong>positive</strong> (base form, no comparison), the <strong>comparative</strong> (comparing two entities), and the <strong>superlative</strong> (comparing three or more, identifying the extreme). The grammatical principle is <strong>scalar modification</strong> &mdash; placing a quality on a scale relative to other referents.</p>
+    </div>
+
+    <h3 class="sub-head">Formation of the Comparative Degree</h3>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Adjective Type</th>
+        <th>Rule</th>
+        <th>Positive &rarr; Comparative</th>
+      </tr>
+      <tr>
+        <td>One syllable</td>
+        <td>Add <code>-er</code></td>
+        <td><em>tall &rarr; taller, fast &rarr; faster</em></td>
+      </tr>
+      <tr>
+        <td>One syllable ending in <em>-e</em></td>
+        <td>Add <code>-r</code> only</td>
+        <td><em>fine &rarr; finer, wise &rarr; wiser</em></td>
+      </tr>
+      <tr>
+        <td>One syllable CVC (consonant-vowel-consonant)</td>
+        <td>Double final consonant + <code>-er</code></td>
+        <td><em>hot &rarr; hotter, big &rarr; bigger, sad &rarr; sadder</em></td>
+      </tr>
+      <tr>
+        <td>Two syllables ending in <em>-y</em></td>
+        <td>Change <em>y</em> to <em>i</em> + <code>-er</code></td>
+        <td><em>happy &rarr; happier, lazy &rarr; lazier</em></td>
+      </tr>
+      <tr>
+        <td>Two+ syllables (most)</td>
+        <td>Add <code>more</code> before</td>
+        <td><em>careful &rarr; more careful, modern &rarr; more modern</em></td>
+      </tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Using the Comparative Degree Correctly</div>
+      <ul>
+        <li>The comparative must be followed by <strong>than</strong> when the second term of comparison is expressed: <em>&ldquo;She is taller <strong>than</strong> her brother.&rdquo;</em></li>
+        <li>The second term must be <strong>grammatically parallel</strong> to the first: compare like with like.</li>
+        <li>Never use <em>more</em> with a form already ending in <em>-er</em> (the double comparative trap).</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; The Double Comparative &mdash; A Classic Examination Trap</div>
+      <p>Using both <em>more</em> and the <em>-er</em> suffix simultaneously is a <strong>double comparative</strong> and is always incorrect in formal English.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is more taller than him.&rdquo;</em> <span class="note">More and -er cannot both mark the comparative degree on the same adjective.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She is taller than him.&rdquo;</em></li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;This is more easier than I expected.&rdquo;</em> <span class="note">Same error: more + -er = double comparative.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;This is easier than I expected.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Illogical Comparison &mdash; Comparing Incomparable Things</div>
+      <p>One of the most subtle traps: when comparing a noun to a group that includes itself, use <em>any other</em> (not <em>any</em>) to exclude the subject from the group.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Mumbai is larger than any city in India.&rdquo;</em> <span class="note">Mumbai is itself a city in India; this illogically implies Mumbai is larger than itself.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Mumbai is larger than any <strong>other</strong> city in India.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 13 ═══════════════════════════ -->
+  <section class="topic-section" id="s13">
+    <div class="section-num">13</div>
+    <h2>The <span class="accent">Superlative</span> Degree</h2>
+    <div class="section-subtitle">The highest point on the scale &mdash; formation, the definite article rule, and traps</div>
+
+    <div class="def-box card-bg">
+      <p>The <strong>superlative degree</strong> of an adjective is used when comparing <strong>three or more</strong> entities, singling out the one that possesses a quality to the <em>greatest or least extent</em>. Structurally, the superlative is formed either by adding the suffix <strong>-est</strong> or by using <strong>most / least</strong> before the adjective. The definite article <strong>the</strong> almost always precedes the superlative.</p>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Adjective Type</th>
+        <th>Superlative Rule</th>
+        <th>Example</th>
+      </tr>
+      <tr>
+        <td>One syllable</td>
+        <td>Add <code>-est</code></td>
+        <td><em>tall &rarr; tallest, fast &rarr; fastest</em></td>
+      </tr>
+      <tr>
+        <td>One syllable CVC</td>
+        <td>Double consonant + <code>-est</code></td>
+        <td><em>hot &rarr; hottest, big &rarr; biggest</em></td>
+      </tr>
+      <tr>
+        <td>Two syllables ending in <em>-y</em></td>
+        <td>Change <em>y</em> to <em>i</em> + <code>-est</code></td>
+        <td><em>happy &rarr; happiest, easy &rarr; easiest</em></td>
+      </tr>
+      <tr>
+        <td>Two+ syllables (most)</td>
+        <td>Add <code>most</code> before</td>
+        <td><em>careful &rarr; most careful</em></td>
+      </tr>
+    </table>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; Superlative Usage Rules</div>
+      <ul>
+        <li>Always use <strong>the</strong> before a superlative adjective in attributive or predicative position: <em>&ldquo;She is <strong>the</strong> most talented student.&rdquo;</em></li>
+        <li>Superlatives imply membership of a group: use <em>in</em> for places and organisations (<em>&ldquo;the best student in the class&rdquo;</em>) and <em>of</em> for time periods and sets (<em>&ldquo;the best day of the year&rdquo;</em>).</li>
+        <li>Never follow a superlative with <em>any other</em>: use <em>any</em> or <em>all other.</em></li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><em>&ldquo;He is <strong>the most diligent</strong> student in the school.&rdquo;</em> <span class="note">Superlative; three or more compared; in + place/group.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Sachin is greater than any other cricketer who has ever played.&rdquo;</em> <span class="note">If superlative meaning is intended (&lsquo;the greatest&rsquo;), use the superlative form directly.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Sachin is <strong>the greatest</strong> cricketer who has ever played.&rdquo;</em></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Double Superlative &mdash; Most + -est</div>
+      <p>Like the double comparative, using both <em>most</em> and the <em>-est</em> suffix is a formal error.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is the most kindest person I know.&rdquo;</em> <span class="note">Most and -est cannot both mark superlative on the same adjective.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She is the kindest person I know.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Superlative with Only Two Items</div>
+      <p>When only <strong>two</strong> entities are being compared, the <strong>comparative</strong> degree must be used, not the superlative. Using the superlative with two items is a classic grammar error.</p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Of the two sisters, Priya is the most intelligent.&rdquo;</em> <span class="note">Only two people; superlative is incorrect.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;Of the two sisters, Priya is the more intelligent.&rdquo;</em></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 14 ═══════════════════════════ -->
+  <section class="topic-section" id="s14">
+    <div class="section-num">14</div>
+    <h2>Irregular <span class="accent">Comparisons</span></h2>
+    <div class="section-subtitle">Adjectives that defy the standard formation rules</div>
+
+    <div class="def-box card-bg">
+      <p>A small but frequently tested group of adjectives form their comparative and superlative degrees through <strong>suppletion</strong> &mdash; the use of entirely different word roots rather than suffixes or <em>more / most</em>. These forms must be memorised as they cannot be predicted by any rule.</p>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>Positive</th>
+        <th>Comparative</th>
+        <th>Superlative</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td><code>good</code></td>
+        <td><code>better</code></td>
+        <td><code>best</code></td>
+        <td>quality</td>
+      </tr>
+      <tr>
+        <td><code>bad</code></td>
+        <td><code>worse</code></td>
+        <td><code>worst</code></td>
+        <td>quality (negative)</td>
+      </tr>
+      <tr>
+        <td><code>little</code></td>
+        <td><code>less</code></td>
+        <td><code>least</code></td>
+        <td>amount (uncountable)</td>
+      </tr>
+      <tr>
+        <td><code>much / many</code></td>
+        <td><code>more</code></td>
+        <td><code>most</code></td>
+        <td>amount / number</td>
+      </tr>
+      <tr>
+        <td><code>far</code></td>
+        <td><code>farther / further</code></td>
+        <td><code>farthest / furthest</code></td>
+        <td>distance / degree</td>
+      </tr>
+      <tr>
+        <td><code>old</code></td>
+        <td><code>older / elder</code></td>
+        <td><code>oldest / eldest</code></td>
+        <td>age</td>
+      </tr>
+      <tr>
+        <td><code>late</code></td>
+        <td><code>later / latter</code></td>
+        <td><code>latest / last</code></td>
+        <td>time / sequence</td>
+      </tr>
+      <tr>
+        <td><code>near</code></td>
+        <td><code>nearer</code></td>
+        <td><code>nearest / next</code></td>
+        <td>proximity</td>
+      </tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Further vs. Farther &mdash; A Topper-Level Distinction</div>
+      <p><strong>Farther / farthest</strong> refer strictly to physical, measurable distance. <strong>Further / furthest</strong> refer to figurative, metaphorical, or additional degree &mdash; and also to physical distance in British English.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;The station is <strong>farther</strong> than I thought.&rdquo;</em> (physical distance)</li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;We need <strong>further</strong> discussion on this matter.&rdquo;</em> (additional / metaphorical)</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;We need <strong>farther</strong> discussion.&rdquo;</em> <span class="note">Discussion is not a physical distance; further is required.</span></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Elder vs. Older &mdash; Another Key Distinction</div>
+      <p><strong>Elder / eldest</strong> are used only for members of the <em>same family</em> and cannot be followed by <em>than</em>. <strong>Older / oldest</strong> are used for any comparison and can take <em>than</em>.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He is my <strong>elder</strong> brother.&rdquo;</em> (family member; attributive)</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He is elder than me.&rdquo;</em> <span class="note">Elder cannot be followed by than; older than is required.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He is older than me.&rdquo;</em></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She is the eldest daughter in the family.&rdquo;</em></li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Later vs. Latter &mdash; Time vs. Sequence</div>
+      <p><strong>Later</strong> refers to time (after a point in time). <strong>Latter</strong> refers to the second of two previously mentioned items, and it does not function as a straightforward comparative.</p>
+      <ul>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;We will discuss this at a <strong>later</strong> date.&rdquo;</em> (time)</li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He studied science and history; the <strong>latter</strong> was his favourite.&rdquo;</em> (second of two)</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The <strong>latter</strong> I called him, the better he felt.&rdquo;</em> <span class="note">Latter cannot be used to indicate time; later is required.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 15 ═══════════════════════════ -->
+  <section class="topic-section" id="s15">
+    <div class="section-num">15</div>
+    <h2>Adjectives vs. <span class="accent">Adverbs</span></h2>
+    <div class="section-subtitle">The most commonly confused distinction in English usage</div>
+
+    <div class="def-box card-bg">
+      <p>Adjectives modify <strong>nouns and pronouns</strong>. Adverbs modify <strong>verbs, adjectives, other adverbs, or whole clauses</strong>. The grammatical confusion arises because many adverbs are formed from adjectives by adding <em>-ly</em> &mdash; but some adjectives themselves end in <em>-ly</em> (<em>friendly, lovely, lonely</em>), and some adverbs have the same form as the corresponding adjective (<em>fast, hard, late, early</em>).</p>
+    </div>
+
+    <div class="rule-box card-bg">
+      <div class="rule-title">&#10003; The Linking Verb Test</div>
+      <ul>
+        <li>After a <strong>linking verb</strong> (be, seem, appear, feel, look, smell, taste, sound, become, grow, remain), use an <strong>adjective</strong> (it describes the subject).</li>
+        <li>After an <strong>action verb</strong>, use an <strong>adverb</strong> (it describes the action).</li>
+        <li>Test: Can you replace the verb with <em>is / are / was</em>? &rarr; If yes, use adjective; if not, use adverb.</li>
+      </ul>
+    </div>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She looks beautifully.&rdquo;</em> <span class="note">Looks here is a linking verb; beautifully (adverb) is incorrect &mdash; the word should describe the subject, not the verb.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;She looks <strong>beautiful</strong>.&rdquo;</em> <span class="note">Beautiful (adjective) correctly describes the subject She via the linking verb looks.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He ran quick.&rdquo;</em> <span class="note">Ran is an action verb; an adverb (quickly) is required to modify it.</span></li>
+      <li><span class="tag-correct">&#10003;</span> <em>&ldquo;He ran <strong>quickly</strong>.&rdquo;</em></li>
+    </ul>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Flat Adverbs &mdash; Words That Are Both Adjective and Adverb</div>
+      <p>Certain words function as both adjective and adverb with <em>no change in form</em>. These are called <strong>flat adverbs</strong>. Mistakenly adding <em>-ly</em> to them creates an error.</p>
+      <ul>
+        <li><em>fast</em>: <em>&ldquo;a fast car&rdquo;</em> (adjective) / <em>&ldquo;She ran fast&rdquo;</em> (adverb &mdash; not *fastly)</li>
+        <li><em>hard</em>: <em>&ldquo;a hard exam&rdquo;</em> (adjective) / <em>&ldquo;He worked hard&rdquo;</em> (adverb &mdash; not *hardly, which means &lsquo;scarcely&rsquo;)</li>
+        <li><em>late</em>: <em>&ldquo;a late train&rdquo;</em> (adjective) / <em>&ldquo;She arrived late&rdquo;</em> (adverb &mdash; not *lately, which means &lsquo;recently&rsquo;)</li>
+      </ul>
+    </div>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; Hardly / Lately / Highly &mdash; Not the Adverbs of Hard / Late / High</div>
+      <p>The adverbs formed by adding <em>-ly</em> to certain adjectives carry <strong>completely different meanings</strong> from the flat adverb forms:</p>
+      <ul>
+        <li><strong>hard</strong> (adverb: with effort) &ne; <strong>hardly</strong> (scarcely, barely)</li>
+        <li><strong>late</strong> (adverb: not on time) &ne; <strong>lately</strong> (recently)</li>
+        <li><strong>high</strong> (adverb: at a great height) &ne; <strong>highly</strong> (to a great degree; figuratively)</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He hardly works.&rdquo;</em> (means he barely works) vs. <em>&ldquo;He works hard.&rdquo;</em> (with effort)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 16 ═══════════════════════════ -->
+  <section class="topic-section" id="s16">
+    <div class="section-num">16</div>
+    <h2>Participial <span class="accent">Adjectives</span> &mdash; -ed &amp; -ing Forms</h2>
+    <div class="section-subtitle">Verbs that become adjectives &mdash; and the logic behind choosing the right form</div>
+
+    <div class="def-box card-bg">
+      <p><strong>Participial adjectives</strong> are adjective forms derived from verbs &mdash; either the <strong>present participle</strong> (<em>-ing</em>) or the <strong>past participle</strong> (<em>-ed / irregular</em>). The key grammatical principle is the <strong>direction of feeling</strong>: the <em>-ing</em> form describes what causes a feeling or state; the <em>-ed</em> form describes who or what experiences it.</p>
+    </div>
+
+    <div class="formula">
+      <span>-ing form</span>
+      <span class="arr">&rarr;</span>
+      <span>causes the feeling</span>
+      <span class="arr">&rarr;</span>
+      <span>&ldquo;a boring lecture&rdquo;</span>
+      <span class="arr">&rarr;</span>
+      <span>the lecture causes boredom</span>
+    </div>
+    <div class="formula">
+      <span>-ed form</span>
+      <span class="arr">&rarr;</span>
+      <span>experiences the feeling</span>
+      <span class="arr">&rarr;</span>
+      <span>&ldquo;a bored student&rdquo;</span>
+      <span class="arr">&rarr;</span>
+      <span>the student feels boredom</span>
+    </div>
+
+    <table class="cmp-table">
+      <tr>
+        <th>-ing (Cause)</th>
+        <th>-ed (Experiencer)</th>
+        <th>Example sentences</th>
+      </tr>
+      <tr><td><em>boring</em></td><td><em>bored</em></td><td><em>&ldquo;a boring speech / a bored audience&rdquo;</em></td></tr>
+      <tr><td><em>interesting</em></td><td><em>interested</em></td><td><em>&ldquo;an interesting topic / an interested student&rdquo;</em></td></tr>
+      <tr><td><em>confusing</em></td><td><em>confused</em></td><td><em>&ldquo;a confusing question / a confused candidate&rdquo;</em></td></tr>
+      <tr><td><em>exciting</em></td><td><em>excited</em></td><td><em>&ldquo;an exciting match / an excited crowd&rdquo;</em></td></tr>
+      <tr><td><em>exhausting</em></td><td><em>exhausted</em></td><td><em>&ldquo;an exhausting journey / an exhausted traveller&rdquo;</em></td></tr>
+      <tr><td><em>terrifying</em></td><td><em>terrified</em></td><td><em>&ldquo;a terrifying nightmare / a terrified child&rdquo;</em></td></tr>
+      <tr><td><em>disappointing</em></td><td><em>disappointed</em></td><td><em>&ldquo;a disappointing result / a disappointed player&rdquo;</em></td></tr>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">&#9888; The Most Tested Participial Adjective Error</div>
+      <p>Using the <em>-ing</em> form when the <em>-ed</em> form is required &mdash; or vice versa &mdash; is one of the most common errors in competitive examinations. Always ask: <em>Is the noun the cause or the experiencer?</em></p>
+      <ul>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I was very boring at the party.&rdquo;</em> <span class="note">This says you caused others to feel bored, not that you felt bored yourself.</span></li>
+        <li><span class="tag-correct">&#10003;</span> <em>&ldquo;I was very <strong>bored</strong> at the party.&rdquo;</em> (you experienced boredom)</li>
+        <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The teacher found the students very interested.&rdquo;</em> <span class="note">If the students caused disinterest in the teacher, interesting is needed; if the students felt interest, interested is correct. Context determines the choice.</span></li>
+      </ul>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Compound Adjectives Using Participles</div>
+      <p>Participial adjectives frequently appear in <strong>compound adjectives</strong> (hyphenated before nouns): <em>well-known, thought-provoking, hard-working, good-looking, long-lasting, heart-breaking</em>. Note: the hyphen is used in the <em>attributive</em> position only.</p>
+      <ul>
+        <li><em>&ldquo;a <strong>well-known</strong> scientist&rdquo;</em> (attributive &rarr; hyphen) <span class="tag-correct">&#10003;</span></li>
+        <li><em>&ldquo;The scientist is <strong>well known</strong>.&rdquo;</em> (predicative &rarr; no hyphen) <span class="tag-correct">&#10003;</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SECTION 17 ═══════════════════════════ -->
+  <section class="topic-section" id="s17">
+    <div class="section-num">17</div>
+    <h2>Common Errors <span class="accent">&amp; Traps</span> &mdash; A Comprehensive Summary</h2>
+    <div class="section-subtitle">Every major pitfall in one chapter &mdash; for revision and examination preparation</div>
+
+    <p class="body-text">This final chapter consolidates the most frequently tested traps across all areas of adjective usage. Mastering these errors is the difference between a good score and a topper-level performance.</p>
+
+    <h3 class="sub-head">Category 1 &mdash; Degree and Comparison Errors</h3>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is more prettier than her sister.&rdquo;</em> <span class="note">Double comparative: more + -er simultaneously. Use prettier alone.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Of the two options, A is the best.&rdquo;</em> <span class="note">Superlative used for only two items; the better is required.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is the most unique candidate.&rdquo;</em> <span class="note">Unique is an absolute adjective; it cannot be graded. Write simply: she is a unique candidate.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Delhi is bigger than any city in India.&rdquo;</em> <span class="note">Illogical comparison: Delhi is in India. Use any other city in India.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He is elder than his colleague.&rdquo;</em> <span class="note">Elder cannot be followed by than; use older than.</span></li>
+    </ul>
+
+    <h3 class="sub-head">Category 2 &mdash; Count / Non-Count Errors</h3>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;There are less students today.&rdquo;</em> <span class="note">Students is countable; fewer is required.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;We don&rsquo;t have many time.&rdquo;</em> <span class="note">Time (in this sense) is uncountable; much is required.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She has a little books in her bag.&rdquo;</em> <span class="note">Books is countable; a few is required.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He has few patience.&rdquo;</em> <span class="note">Patience is uncountable; little patience is required.</span></li>
+    </ul>
+
+    <h3 class="sub-head">Category 3 &mdash; Agreement and Number Errors</h3>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;These kind of mistakes are avoidable.&rdquo;</em> <span class="note">Kind is singular; this kind of mistake is are avoidable is the correct form.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Every students must attend.&rdquo;</em> <span class="note">Every is a distributive adjective; it takes a singular noun: every student.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Neither of the three roads are safe.&rdquo;</em> <span class="note">Three options require none, not neither; also, neither takes a singular verb.</span></li>
+    </ul>
+
+    <h3 class="sub-head">Category 4 &mdash; Participial Adjective Errors</h3>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The movie was very bored.&rdquo;</em> <span class="note">A movie cannot experience boredom; it causes it. The movie was boring.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;I am very interesting in history.&rdquo;</em> <span class="note">The subject (I) experiences the interest; I am very interested in history.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The situation is very worrying for those who are worrying.&rdquo;</em> <span class="note">First worrying (cause) is correct; second should be worried (experiencer).</span></li>
+    </ul>
+
+    <h3 class="sub-head">Category 5 &mdash; Article Errors</h3>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is a honest person.&rdquo;</em> <span class="note">Honest begins with a vowel sound /ɒ/ (silent h); an honest is required.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He is an university student.&rdquo;</em> <span class="note">University begins with consonant sound /juː/; a university is required.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The gold is valuable.&rdquo;</em> <span class="note">Gold used generically as an uncountable noun does not take the; drop the article.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She is best student in the class.&rdquo;</em> <span class="note">Superlative adjectives require the: she is the best student.</span></li>
+    </ul>
+
+    <h3 class="sub-head">Category 6 &mdash; Position and Order Errors</h3>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;Is there new anything on the agenda?&rdquo;</em> <span class="note">Adjectives must follow indefinite pronouns: anything new.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She feels afraid of the dark.&rdquo;</em> &mdash; <span class="note">This is actually correct; afraid is a predicative-only adjective and correctly follows the linking verb feels.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;an afraid child&rdquo;</em> <span class="note">Afraid cannot be used in attributive position; a frightened child is correct.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;a French lovely old table&rdquo;</em> <span class="note">Royal Order violated; the correct order is: a lovely old French table (opinion &rarr; age &rarr; origin).</span></li>
+    </ul>
+
+    <h3 class="sub-head">Category 7 &mdash; Adjective vs. Adverb Confusion</h3>
+
+    <ul class="sentence-list">
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;The soup smells wonderfully.&rdquo;</em> <span class="note">Smells is a linking verb; an adjective (wonderful) is required to describe the subject.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;She works hardly.&rdquo;</em> <span class="note">Hardly means scarcely; to express great effort, use the flat adverb hard: she works hard.</span></li>
+      <li><span class="tag-wrong">&#10007;</span> <em>&ldquo;He came lately.&rdquo;</em> <span class="note">Lately means recently; to express not on time, use the flat adverb late: he came late.</span></li>
+    </ul>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; Master Quick-Reference: The 10 Golden Rules of Adjectives</div>
+      <ul>
+        <li>1. Use <strong>fewer</strong> with countable nouns; <strong>less</strong> with uncountable nouns.</li>
+        <li>2. Never use both <em>more / most</em> AND an <em>-er / -est</em> suffix together (double comparison).</li>
+        <li>3. Use the <strong>comparative</strong> (not superlative) when comparing exactly two entities.</li>
+        <li>4. <em>Unique, perfect, dead, eternal, infinite</em> are <strong>absolute adjectives</strong> &mdash; do not grade them.</li>
+        <li>5. Use <strong>an</strong> before a vowel <em>sound</em>; <strong>a</strong> before a consonant <em>sound</em> (sound, not spelling).</li>
+        <li>6. The <strong>-ed</strong> participial form describes the experiencer; the <strong>-ing</strong> form describes the cause.</li>
+        <li>7. Adjectives must come <strong>after</strong> indefinite pronouns (anything new, nothing wrong).</li>
+        <li>8. Follow the <strong>Royal Order</strong> (OSASCOMP) when stacking multiple adjectives.</li>
+        <li>9. <em>Elder / eldest</em> are used only within <strong>families</strong> and cannot take <em>than</em>.</li>
+        <li>10. <em>Each, every, either, neither</em> + noun always demand a <strong>singular verb</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="ornament">&#10022; &nbsp;&nbsp; End of Study Guide &nbsp;&nbsp; &#10022;</div>
+
+    <div class="tip-box">
+      <div class="tip-title">&#10003; You Are Ready to Attempt the MCQ Tests</div>
+      <p>You have now completed the full Grammar Studio study guide for <strong>Adjectives in English Grammar</strong> &mdash; covering all types, degrees, positional rules, the Royal Order, common traps, and topper-level distinctions. You are equipped to tackle multiple-choice questions, error-spotting tasks, and sentence-correction exercises at any examination level. Proceed to the <strong>MCQ Engine</strong> to test your mastery chapter by chapter.</p>
+    </div>
+
+  </section>
+
+</div><!-- content-inner -->
+</div><!-- main -->
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+
+<script>
+function toggleSidebar(){document.getElementById('sidebar').classList.toggle('open')}
+function goTo(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  const h=document.getElementById('topbar').offsetHeight+6;
+  window.scrollTo({top:el.getBoundingClientRect().top+window.scrollY-h,behavior:'smooth'});
+  document.getElementById('sidebar').classList.remove('open');
+}
+window.addEventListener('scroll',()=>{
+  const d=document.documentElement.scrollHeight-window.innerHeight;
+  document.getElementById('progress-fill').style.width=(d>0?(window.scrollY/d)*100:0)+'%';
+  const b=document.getElementById('btt');
+  window.scrollY>300?b.classList.add('visible'):b.classList.remove('visible');
+});
+const secs=Array.from(document.querySelectorAll('.topic-section'));
+const items=Array.from(document.querySelectorAll('.sid-item'));
+secs.forEach(s=>new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      items.forEach(i=>i.classList.remove('active'));
+      const a=items.find(i=>(i.getAttribute('onclick')||'').includes(e.target.id));
+      if(a)a.classList.add('active');
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px',threshold:0}).observe(s));
+</script>
+</body>
+</html>
