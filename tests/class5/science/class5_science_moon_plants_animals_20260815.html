@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 5 Science — Periodic Assessment Test</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 5 SCIENCE</h1>
+        <p><strong>Topic:</strong> Periodic Assessment Test (The Moon, Growing Plants, The World of Animals)</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 5 — ___<br>Date: 15 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>The question paper contains 4 Sections: A, B, C, and D.</li>
+            <li>Section A comprises 4 objective questions of 1 mark each.</li>
+            <li>Section B comprises 3 very short answer questions of 2 marks each.</li>
+            <li>Section C comprises 2 short answer/application questions of 3 marks each.</li>
+            <li>Section D comprises 1 case-based analytical question of 4 marks.</li>
+            <li>All questions are compulsory.</li>
+            <li>Write clear, legible answers with proper scientific terms and examples.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A: Objective & One-Word Answer</div>
+    <p class="section-sub">Each question carries 1 mark. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>The gravity on the Moon is about:</p>
+                <ol type="a">
+                    <li>Equal to Earth's gravity</li>
+                    <li>1/2 of Earth's gravity</li>
+                    <li>1/6 of Earth's gravity</li>
+                    <li>Twice of Earth's gravity</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>Which of the following seeds has stiff hooks or spines that attach to animal fur for dispersal?</p>
+                <ol type="a">
+                    <li>Dandelion</li>
+                    <li>Coconut</li>
+                    <li>Xanthium (Tiger nail)</li>
+                    <li>Pea pod</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>Insects like cockroaches and grasshoppers breathe through tiny air holes located along the sides of their body called:</p>
+                <ol type="a">
+                    <li>Gills</li>
+                    <li>Lungs</li>
+                    <li>Spiracles</li>
+                    <li>Moist skin</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>Which of the following is a Rabi crop (grown in winter)?</p>
+                <ol type="a">
+                    <li>Rice</li>
+                    <li>Maize</li>
+                    <li>Cotton</li>
+                    <li>Wheat</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section B: Very Short Answer Questions</div>
+    <p class="section-sub">Each question carries 2 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>Why can two astronauts standing on the surface of the Moon not hear each other directly without using radio equipment?</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>(a) Define Vegetative Propagation. (1 Mark)<br>
+                (b) Name one plant that reproduces through its leaves and one plant that reproduces through its underground stem. (1 Mark)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>(a) What is Migration in animals? (1 Mark)<br>
+                (b) Name any two migratory animals or birds. (1 Mark)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section C: Short Answer & Scientific Application</div>
+    <p class="section-sub">Each question carries 3 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>(a) An astronaut with their space suit weighs 66 kg on Earth. What will be their weight on the surface of the Moon? Show the calculation. (1.5 Marks)<br>
+                (b) Draw or write the correct linear alignment of the Sun, Moon, and Earth during a Solar Eclipse. On which moon phase does a solar eclipse occur? (1.5 Marks)</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>(a) State the three essential environmental conditions required for a healthy seed to germinate into a seedling. (1.5 Marks)<br>
+                (b) Describe how the seeds of Dandelion (dispersed by wind) and Coconut (dispersed by water) are specially adapted for seed dispersal. (1.5 Marks)</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D: Case-Based / Comprehensive Question</div>
+    <p class="section-sub">Total Marks: 4</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">10.</div>
+            <div class="q-body">
+                <p>Read the passage and answer the questions that follow:<br><br>
+                Animals inhabit diverse ecosystems ranging from freezing oceans to lush forests. To survive in their respective habitats, they develop specialized organs for breathing and unique body coverings. While a freshwater carp fish absorbs oxygen dissolved in water, a dolphin swimming in the same water body must periodically rise to the surface to inhale air. Meanwhile, an earthworm living underground absorbs atmospheric oxygen through its outer body surface.<br><br>
+                (a) Identify the primary breathing organ for each of the following animals:<br>
+                (i) Fish<br>
+                (ii) Dolphin<br>
+                (iii) Earthworm<br>
+                (1.5 Marks)<br><br>
+                (b) Why does a dolphin or whale need to come to the water surface to breathe, unlike a fish? (1.5 Marks)<br><br>
+                (c) What is the protective function of the hard shell found on animals like tortoises and snails? (1 Mark)</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 4 Objective (4M) | Section B: 3 Very Short Answer (6M) | Section C: 2 Short Answer (6M) | Section D: 1 Case-Based (4M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 5 Science — Periodic Assessment Test &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. For multi-step questions award marks stepwise for correct reasoning.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. (c) 1/6 of Earth's gravity</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (c).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. (c) Xanthium (Tiger nail)</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (c).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. (c) Spiracles</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (c).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. (d) Wheat</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (d).
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Sound on the Moon</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong>
+                    Reason: Sound waves require a material medium (like air/gas) to travel. Since the Moon has no atmosphere (vacuum), sound cannot travel through space, making direct speech impossible without radio communication.<br>
+                    Marking: [1 Mark] for mentioning "no atmosphere/vacuum", [1 Mark] for stating "sound requires a medium to travel".
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. Vegetative Propagation</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong>
+                    (a) Definition: Vegetative propagation is a form of plant reproduction in which a new plant grows from a vegetative part of the parent plant such as roots, stems, or leaves (without seeds). [1 Mark]<br>
+                    (b) Examples:<br>
+                    From Leaves: Bryophyllum / Begonia. [0.5 Mark]<br>
+                    From Underground Stem: Potato (eyes/buds) / Ginger / Onion. [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Migration</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong>
+                    (a) Definition of Migration: Migration is the seasonal mass movement of animals from one region to another in search of food, warmer weather, or suitable breeding grounds. [1 Mark]<br>
+                    (b) Examples (Any two): Arctic Tern, Siberian Crane, Monarch Butterfly, Salmon fish. [1 Mark] (0.5 Mark for each valid example).
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Weight on Moon & Solar Eclipse</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong>
+                    (a) Weight Calculation on Moon:<br>
+                    Weight on Moon = Weight on Earth × (1/6) [0.5 Mark]<br>
+                    Weight on Moon = 66 kg ÷ 6 = 11 kg [1 Mark]<br>
+                    Answer: 11 kg<br>
+                    (b) Solar Eclipse Alignment & Moon Phase:<br>
+                    Alignment: Sun  →  Moon  →  Earth (The Moon comes directly between the Sun and Earth). [1 Mark]<br>
+                    Moon Phase: It occurs on a New Moon day (Amavasya). [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Seed Germination and Dispersal</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong>
+                    (a) Three Conditions for Germination:<br>
+                    Air (Oxygen): For respiration and energy release. [0.5 Mark]<br>
+                    Water (Moisture): To soften the seed coat and activate enzymes. [0.5 Mark]<br>
+                    Warmth (Sunlight/Proper Temperature): For cell division and growth. [0.5 Mark]<br>
+                    (b) Adaptations for Dispersal:<br>
+                    Dandelion (Wind): Seeds are very light and have tufts of fine, silky hair (parachutes) that enable them to float long distances in the air. [0.75 Mark]<br>
+                    Coconut (Water): Has a thick fibrous, spongy outer husk that traps air and allows the fruit to float on water across rivers and oceans. [0.75 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q10. Case-Based Model Answers</div>
+                <div class="rubric"><strong>Case-Based Model Answers:</strong>
+                    Part (a) Breathing Organs [1.5 Marks]:<br>
+                    (i) Fish: Gills [0.5 Mark]<br>
+                    (ii) Dolphin: Lungs (via blowhole on top of the head) [0.5 Mark]<br>
+                    (iii) Earthworm: Moist skin [0.5 Mark]<br><br>
+                    Part (b) Dolphin Breathing Mechanism [1.5 Marks]:<br>
+                    Dolphins are mammals and have lungs, not gills. [0.5 Mark]<br>
+                    They cannot absorb dissolved oxygen directly from water. They must rise to the surface to breathe atmospheric oxygen through their blowhole. [1 Mark]<br><br>
+                    Part (c) Protective Function of Shells [1 Mark]:<br>
+                    The hard shell serves as an outer shield (exoskeleton) that protects the animal's soft internal organs from physical injury and shields them from predators when threatened. [1 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

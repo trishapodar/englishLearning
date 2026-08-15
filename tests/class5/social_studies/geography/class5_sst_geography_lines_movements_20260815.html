@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 5 Social Studies — Imaginary Lines & Movements of the Earth</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+        
+        .diagram-box {
+            font-family: monospace;
+            white-space: pre;
+            background: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+            font-size: 11pt;
+            overflow-x: auto;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 5 SOCIAL STUDIES (GEOGRAPHY)</h1>
+        <p><strong>Topic:</strong> Imaginary Lines on Earth (Map Reading) & Movements of the Earth</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 5 — ___<br>Date: 15 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper is divided into 4 Sections: A, B, C, and D.</li>
+            <li>Section A comprises 5 objective questions of 1 mark each.</li>
+            <li>Section B comprises 1 diagram identification/labeling question of 4 marks.</li>
+            <li>Section C comprises 3 short answer/map-reading questions of 2 marks each.</li>
+            <li>Section D comprises 1 long answer/analytical question of 5 marks.</li>
+            <li>All questions are compulsory.</li>
+            <li>Write clear, legible answers with correct geographical terms and units.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A: Objective & Fill in the Blanks</div>
+    <p class="section-sub">Each question carries 1 mark. (Total Marks: 5)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>The 0° Meridian that passes through the Royal Observatory at Greenwich near London is officially known as the:</p>
+                <ol type="a">
+                    <li>Equator</li>
+                    <li>Tropic of Cancer</li>
+                    <li>Prime Meridian</li>
+                    <li>International Date Line</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>Which movement of the Earth is directly responsible for causing Day and Night?</p>
+                <ol type="a">
+                    <li>Revolution along its elliptical orbit</li>
+                    <li>Rotation on its tilted axis</li>
+                    <li>Gravitational pull of the Moon</li>
+                    <li>Shifting of magnetic poles</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>Fill in the blank:<br>The imaginary circle that separates the lighted daylight half of the Earth from the dark nighttime half is called the __________.</p>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>On a physical map, deep water bodies like oceans and seas are conventionally represented by which color?</p>
+                <ol type="a">
+                    <li>Dark Green</li>
+                    <li>Deep Blue</li>
+                    <li>Bright Yellow</li>
+                    <li>Dark Brown</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>On March 21 and September 23, all places on Earth experience equal lengths of day and night (12 hours each). This event is known as:</p>
+                <ol type="a">
+                    <li>Summer Solstice</li>
+                    <li>Winter Solstice</li>
+                    <li>Equinox</li>
+                    <li>Leap Day</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section B: Diagram Identification & Labeling</div>
+    <p class="section-sub">Total Marks: 4</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>Look at the diagram below representing the Globe and the important Parallels of Latitude. Identify and write the names of the lines marked as (A), (B), (C), and (D):</p>
+                <div class="diagram-box">                  [ North Pole (90° N) ]
+  -------------------------------------------------- &lt;--- Line (A) (66.5° N)
+  
+  -------------------------------------------------- &lt;--- Line (B) (23.5° N)
+  
+  ================================================== &lt;--- Line (C) (0°)
+  
+  -------------------------------------------------- &lt;--- Line (D) (23.5° S)
+  
+                  [ South Pole (90° S) ]</div>
+                <p>Line (A): ____________________<br>Line (B): ____________________<br>Line (C): ____________________<br>Line (D): ____________________</p>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section C: Short Answer & Map Reading Questions</div>
+    <p class="section-sub">Each question carries 2 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>A tourist map has a graphic scale where 1 cm on the map = 50 km on the actual ground.<br>
+                (i) Why is a scale necessary on a map? (1 Mark)<br>
+                (ii) If the distance between City A and City B measured on this map is 6 cm, calculate the actual distance between the two cities on the ground. (1 Mark)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>Differentiate between Rotation and Revolution of the Earth by completing the table below:</p>
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Rotation</th>
+                        <th>Revolution</th>
+                    </tr>
+                    <tr>
+                        <td>(i) Time Taken</td>
+                        <td>____________________</td>
+                        <td>____________________</td>
+                    </tr>
+                    <tr>
+                        <td>(ii) Main Effect</td>
+                        <td>____________________</td>
+                        <td>____________________</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>(a) What is the Geographic Grid? (1 Mark)<br>
+                (b) How does the grid help navigators, pilots, and modern GPS systems in daily life? (1 Mark)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D: Long Answer / Analytical Question</div>
+    <p class="section-sub">Total Marks: 5</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">10.</div>
+            <div class="q-body">
+                <p>Read the following prompts and answer the questions in detail:<br><br>
+                (a) Explain why a Leap Year has 366 days and why it occurs once every four years. (2 Marks)<br>
+                (b) What is the Summer Solstice? Mention the date on which it occurs and describe what happens in the Northern Hemisphere on that day. (2 Marks)<br>
+                (c) When people in India (Northern Hemisphere) are celebrating Christmas in winter, which season are people in Australia (Southern Hemisphere) experiencing? Why? (1 Mark)</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[5]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 5 Objective (5M) | Section B: 1 Diagram (4M) | Section C: 3 Short Answer (6M) | Section D: 1 Long Answer (5M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 5 Social Studies — Imaginary Lines & Movements of the Earth &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. For multi-step questions award marks stepwise for correct reasoning.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. (c) Prime Meridian</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (c).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. (b) Rotation on its tilted axis</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (b).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. Circle of Illumination</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for the exact term.
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. (b) Deep Blue</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (b).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. (c) Equinox</div>
+                <div class="rubric"><strong>Marking Scheme:</strong>
+                    [1 Mark] for option (c).
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. Diagram Identification</div>
+                <div class="rubric"><strong>Model Answers:</strong>
+                    Line (A) (66.5° N): Arctic Circle [1 Mark]<br>
+                    Line (B) (23.5° N): Tropic of Cancer [1 Mark]<br>
+                    Line (C) (0°): Equator [1 Mark]<br>
+                    Line (D) (23.5° S): Tropic of Capricorn [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Map Reading and Scale</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    (i) Purpose of Map Scale: The Earth is too large to draw at its actual size on paper. A map scale reduces large real-world distances proportionately so that accurate ground distances can be measured easily. [1 Mark]<br>
+                    (ii) Distance Calculation: Given scale: 1 cm = 50 km. Distance on map = 6 cm. Actual distance = 6 × 50 km = 300 km. Answer: 300 km [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Rotation vs Revolution</div>
+                <div class="rubric"><strong>Model Answer & Differentiation:</strong>
+                    (i) Time Taken: Rotation - 24 hours (1 Day) [0.5 Mark] | Revolution - 365 days and 6 hours (1 Year) [0.5 Mark]<br>
+                    (ii) Main Effect: Rotation - Causes Day and Night [0.5 Mark] | Revolution - Causes Change of Seasons [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Geographic Grid</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    (a) Definition: The network formed by the criss-crossing of horizontal lines of latitude and vertical lines of longitude on a globe or map is called the Geographic Grid. [1 Mark]<br>
+                    (b) Practical Application: The point where a line of latitude intersects a line of longitude gives the exact coordinates (address) of any location on Earth, enabling pilots, ships, and GPS applications to pinpoint exact locations. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q10. Long Answer Question</div>
+                <div class="rubric"><strong>Model Answers & Rubric:</strong>
+                    Part (a) Leap Year Calculation [2 Marks]:<br>
+                    - The Earth takes 365 days and 6 hours (1/4th of a day) to complete one full revolution around the Sun. [0.5 Mark]<br>
+                    - For convenience, a normal calendar year is counted as 365 days, and the remaining 6 hours are saved each year. [0.5 Mark]<br>
+                    - In four years, these extra hours add up: 6 hours × 4 = 24 hours = 1 full day. [0.5 Mark]<br>
+                    - This extra day is added to February every 4th year (making February 29 days long and the year 366 days). [0.5 Mark]<br><br>
+                    
+                    Part (b) Summer Solstice [2 Marks]:<br>
+                    - Date: It occurs on June 21. [0.5 Mark]<br>
+                    - Phenomenon: The Northern Hemisphere is tilted towards the Sun, and direct sun rays fall on the Tropic of Cancer (23.5° N). [0.5 Mark]<br>
+                    - Effect in Northern Hemisphere: It brings summer, and this day has the longest day and the shortest night of the year. [1 Mark]<br><br>
+                    
+                    Part (c) Opposite Seasons in Australia [1 Mark]:<br>
+                    - Australia is in the Southern Hemisphere. When the Northern Hemisphere is tilted away from the Sun (experiencing winter in December), the Southern Hemisphere is tilted towards the Sun, receiving direct sunlight and experiencing Summer. [1 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
