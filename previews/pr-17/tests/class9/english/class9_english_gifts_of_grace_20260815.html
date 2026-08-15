@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 English — Unit Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 9 ENGLISH (LANGUAGE & LITERATURE)</h1>
+        <p><strong>Topic:</strong> Unit Assessment: "Gifts of Grace: Honouring Our Vocations" (Kaveri)</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 15 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper is divided into 4 Sections: A, B, C, and D.</li>
+            <li>Section A: Reference to Context / Extract-Based Questions (5 Marks).</li>
+            <li>Section B: Vocational Vocabulary & Language in Context (3 Marks).</li>
+            <li>Section C: Short Answer Questions (6 Marks).</li>
+            <li>Section D: Long Answer / Value-Based Analytical Question (6 Marks).</li>
+            <li>All questions are compulsory.</li>
+            <li>Maintain neat handwriting and adhere to the prescribed word limits.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A: Reference to Context (Extract-Based)</div>
+    <p class="section-sub">Total Marks: 5</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>Read the following extract and answer the questions that follow:<br><br>
+                <em>"The shoemakers affirming the quality of their work, for<br>
+                the feet that walk, dance, run, jump, return home.<br>
+                The delicious singing of the cook, or the rhythm of<br>
+                designer, mason, each celebrating what belongs to them<br>
+                and to none else,<br>
+                The voice of their vocation is the voice of their identity.<br>
+                I hear Bharat celebrating, the varied voices I hear!"</em></p>
+                <br>
+                <p>(i) The word "affirming" in the extract most nearly means:</p>
+                <ol type="a">
+                    <li>Making minor alterations</li>
+                    <li>Declaring with confidence and pride</li>
+                    <li>Putting price labels on finished goods</li>
+                    <li>Seeking validation from buyers</li>
+                </ol>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num"></div>
+            <div class="q-body">
+                <p>(ii) What do the varied actions (walk, dance, run, jump) signify regarding the importance of a shoemaker's craft?</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num"></div>
+            <div class="q-body">
+                <p>(iii) Which literary/sensory device is predominantly used in "the delicious singing of the cook" and "the rhythm of designer, mason"?</p>
+                <ol type="a">
+                    <li>Sensory and auditory imagery</li>
+                    <li>Personification of inanimate tools</li>
+                    <li>Irony and sarcasm</li>
+                    <li>Understatement</li>
+                </ol>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num"></div>
+            <div class="q-body">
+                <p>(iv) Complete the sentence with a suitable word or phrase:<br>
+                The phrase "each celebrating what belongs to them and to none else" emphasizes that each worker's contribution is __________.</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num"></div>
+            <div class="q-body">
+                <p>(v) In the context of the poem, what deeper meaning does the phrase "return home" carry beyond the physical act of walking back?</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section B: Vocational Vocabulary in Context</div>
+    <p class="section-sub">Total Marks: 3</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>Match the vocations in Column A with their accurate vocational descriptions in Column B:</p>
+                <table>
+                    <tr>
+                        <th>Column A (Vocation)</th>
+                        <th>Column B (Description)</th>
+                    </tr>
+                    <tr>
+                        <td>(i) Sericulturist</td>
+                        <td>(A) A trained female community health activist under the National Rural Health Mission.</td>
+                    </tr>
+                    <tr>
+                        <td>(ii) Horticulturist</td>
+                        <td>(B) A specialist who cultivates, grows, and studies garden plants and fruits.</td>
+                    </tr>
+                    <tr>
+                        <td>(iii) ASHA Worker</td>
+                        <td>(C) A skilled rearer of silkworms for producing raw silk.</td>
+                    </tr>
+                </table>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section C: Short Answer Questions</div>
+    <p class="section-sub">Answer in 30–40 words each. Each question carries 3 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>"The voice of their vocation is the voice of their identity."<br>
+                Explain the philosophical significance of this line with reference to the message of the poem.</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>How does the poet employ visual and auditory imagery to celebrate everyday workers such as the electrician, the carpenter, and the boatmen? Illustrate with examples from the poem.</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D: Long Answer / Value-Based Question</div>
+    <p class="section-sub">Answer in 100–120 words. Total Marks: 6</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>"No work is menial if performed with sincerity, skill, and dedication."<br>
+                In contemporary society, manual crafts and essential trades are often undervalued compared to white-collar jobs. Drawing inspiration from the poem <em>Gifts of Grace: Honouring Our Vocations</em>, write a short analytical article on "The Dignity of Labour and Nation-Building."<br><br>
+                Your response should address:<br>
+                • The contribution of diverse workers to the economic and cultural fabric of the nation.<br>
+                • Why cultivating mutual respect for all skill-based vocations is essential for social equality.<br>
+                • How the spirit of "I hear Bharat celebrating" inspires youth to take pride in their work.</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[6]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 1 Extract-Based (5M) | Section B: Vocational Vocabulary (3M) | Section C: 2 Short Answer (6M) | Section D: 1 Long Answer (6M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 English (Language & Literature) — Gifts of Grace &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. Accept well-reasoned alternative expressions.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. Model Answers:</div>
+                <div class="rubric"><strong>(i)</strong> Correct Option: (b) Answer: Declaring with confidence and pride. [1 Mark]<br>
+                <strong>(ii)</strong> Significance of the actions: It signifies that the shoemaker's craft supports every human endeavor—work, joy, sports, and comfort—enabling people to move through life safely and actively. [1 Mark for identifying versatility, life journey, or physical support.]<br>
+                <strong>(iii)</strong> Correct Option: (a) Answer: Sensory and auditory imagery (combines sound and taste/rhythm). [1 Mark]<br>
+                <strong>(iv)</strong> Sentence Completion: Answer: Unique / distinct / irreplaceable / uniquely specialized. [1 Mark for any appropriate synonym denoting individuality or uniqueness.]<br>
+                <strong>(v)</strong> Deeper meaning of "return home": It symbolises safety, emotional fulfillment, peace, and the satisfying conclusion of a hard day's honest work. [1 Mark for mentioning safety, emotional rest, or fulfillment.]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. Model Match:</div>
+                <div class="rubric">
+                    (i) Sericulturist → (C) A skilled rearer of silkworms for producing raw silk. [1 Mark]<br>
+                    (ii) Horticulturist → (B) A specialist who cultivates, grows, and studies garden plants and fruits. [1 Mark]<br>
+                    (iii) ASHA Worker → (A) A trained female community health activist under the National Rural Health Mission. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. Significance of Vocation and Identity</div>
+                <div class="rubric"><strong>Model Answer & Marking Scheme:</strong> Work is not merely a source of livelihood; it is a creative medium through which an individual expresses their unique talents, pride, and self-worth. [1 Mark]. When workers master their craft—whether weaving, carpentry, or masonry—their work becomes their authentic signature and defines their dignity in society. [1 Mark]. It asserts that every trade gives a distinct voice to the collective harmony of the nation. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. Visual and Auditory Imagery</div>
+                <div class="rubric"><strong>Model Answer & Marking Scheme:</strong> Imagery & Examples:<br>
+                    Electricians (Auditory & Visual): Depicted as "humming" joyfully while preparing for work and working with wires and cables to "brighten our lives." [1 Mark]<br>
+                    Carpenters (Precision & Visual): Described as creating wooden objects with "mathematical precision." [1 Mark]<br>
+                    Boatmen (Auditory & Kinetic): Portrayed as singing while sailing and gathering nets, returning to share captivating tales of life at sea. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Long Answer / Value-Based Question</div>
+                <div class="rubric"><strong>Breakdown of Marks (Total = 6 Marks):</strong> Content & Thematic Relevance: 3 Marks. Organization & Coherence: 1.5 Marks. Language, Vocabulary & Grammar: 1.5 Marks.<br><br>
+                <strong>Model Answer:</strong><br>
+                The Dignity of Labour and Nation-Building<br>
+                The poem "Gifts of Grace: Honouring Our Vocations" presents a vibrant portrait of a thriving nation powered by the dedicated labour of its artisans, technicians, and manual workers. A progressive society does not depend solely on white-collar professions; it stands firmly on the foundation laid by carpenters, masons, electricians, farmers, and health workers.<br><br>
+                True dignity of labour lies in recognizing that every vocation requires distinct skill, creativity, and perseverance. When a shoemaker crafts durable footwear or an electrician wires a home safely, they contribute directly to societal well-being. Looking down upon manual trades creates artificial social divides.<br><br>
+                By celebrating the phrase "I hear Bharat celebrating," the poem urges us to shed vocational prejudices. Instilling respect for all trades fosters social harmony and inspires the next generation to pursue vocational skills with pride and excellence.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
