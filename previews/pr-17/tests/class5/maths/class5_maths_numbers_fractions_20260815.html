@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 5 Mathematics — Periodic Assessment Test</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 5 MATHEMATICS</h1>
+        <p><strong>Topic:</strong> Periodic Assessment Test (Numbers, Operations, Factors & Multiples, Fractions)</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 5 — ___<br>Date: 15 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>The question paper contains 4 Sections: A, B, C, and D.</li>
+            <li>Section A comprises 4 Multiple Choice Questions of 1 mark each.</li>
+            <li>Section B comprises 3 Short Answer Questions of 2 marks each.</li>
+            <li>Section C comprises 2 Multi-Step Problem Solving Questions of 3 marks each.</li>
+            <li>Section D comprises 1 Case-Based Real-Life Question of 4 marks.</li>
+            <li>All questions are compulsory.</li>
+            <li>Show all necessary rough work, calculation steps, and units clearly.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A: Objective & Mental Math</div>
+    <p class="section-sub">Each question carries 1 mark. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>How many Lakhs are equal to 1 Million in the International Place Value System?</p>
+                <ol type="a">
+                    <li>1 Lakh</li>
+                    <li>10 Lakhs</li>
+                    <li>100 Lakhs</li>
+                    <li>1000 Lakhs</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>When a number is divided by 15, the quotient is 24 and the remainder is 7. What is the dividend?</p>
+                <ol type="a">
+                    <li>360</li>
+                    <li>367</li>
+                    <li>353</li>
+                    <li>375</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>Which of the following numbers is divisible by both 3 and 5?</p>
+                <ol type="a">
+                    <li>234</li>
+                    <li>515</li>
+                    <li>435</li>
+                    <li>620</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>Which of the following fractions is equivalent to 3/5?</p>
+                <ol type="a">
+                    <li>6/15</li>
+                    <li>9/20</li>
+                    <li>12/20</li>
+                    <li>15/30</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section B: Short Answer Questions</div>
+    <p class="section-sub">Each question carries 2 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>In the number 8,74,520:<br>
+                (i) Write the place value of the digit 7.<br>
+                (ii) Write the face value of the digit 7.<br>
+                (iii) Find the difference between its place value and face value.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>Find the Highest Common Factor (HCF) and Lowest Common Multiple (LCM) of 18 and 24 using the prime factorization method.</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>Solve and express your final answer as a mixed fraction in its simplest form:<br>
+                2 1/4 + 1 2/3</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section C: Multi-Step Word Problems</div>
+    <p class="section-sub">Each question carries 3 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>A dairy processing unit packs 375 liters of milk into bottles every day.<br>
+                (a) How many liters of milk will the dairy pack in the month of March (31 days)? (1.5 Marks)<br>
+                (b) If milk is transported in large cans that hold 25 liters each, how many full cans are required to transport 1,875 liters of milk? (1.5 Marks)</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>Ananya bought a ribbon of length 5 meters for a craft project. She used 1 1/2 meters for decorating a greeting card and 2 1/4 meters for wrapping a gift box.<br>
+                (a) Find the total length of ribbon used by Ananya. (1.5 Marks)<br>
+                (b) Find the length of ribbon remaining with her. (1.5 Marks)</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D: Real-Life Application / Case-Based</div>
+    <p class="section-sub">Total Marks: 4</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">10.</div>
+            <div class="q-body">
+                <p>Read the scenario and answer the questions:<br><br>
+                For the Class 5 Annual Sports Picnic, 120 boys and 84 girls enrolled for team activities.<br><br>
+                (a) The sports coach wants to divide the boys and girls into separate activity groups such that each group has the exact same number of students and no student is left out. What is the maximum number of students that can be placed in each group? (Find the HCF of 120 and 84) (1.5 Marks)<br><br>
+                (b) Two electronic event timers at the sports ground beep at intervals of 15 minutes and 20 minutes respectively. If both timers beep together at 9:00 a.m., at what time will they next beep together? (Find the LCM of 15 and 20) (1.5 Marks)<br><br>
+                (c) During the picnic lunch, a large pizza was sliced into 8 equal pieces. Aman ate 3 pieces and Priya ate 2 pieces. What fraction of the pizza was left uneaten? (1 Mark)</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 4 Objective (4M) | Section B: 3 Short Answer (6M) | Section C: 2 Word Problems (6M) | Section D: 1 Case-Based (4M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 5 Mathematics — Periodic Assessment Test &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. For multi-step questions award marks stepwise for correct reasoning.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. (b) 10 Lakhs</div>
+                <div class="rubric"><strong>Explanation:</strong>
+                    1 Million = 1,000,000. In the Indian system, 1,000,000 is written as 10,00,000 (10 Lakhs).<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (b).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. (b) 367</div>
+                <div class="rubric"><strong>Explanation:</strong>
+                    Dividend = (Divisor × Quotient) + Remainder = (15 × 24) + 7 = 360 + 7 = 367.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (b).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. (c) 435</div>
+                <div class="rubric"><strong>Explanation:</strong>
+                    A number divisible by 5 must end in 0 or 5. A number divisible by 3 must have the sum of its digits divisible by 3. For 435: ends in 5, and 4 + 3 + 5 = 12 (divisible by 3).<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (c).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. (c) 12/20</div>
+                <div class="rubric"><strong>Explanation:</strong>
+                    Multiplying both numerator and denominator by 4: (3 × 4) / (5 × 4) = 12/20.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (c).
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Place Value and Face Value</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    (i) Place Value of 7: Digit 7 is in the Ten-Thousands place = 70,000 [0.5 Mark]<br>
+                    (ii) Face Value of 7: 7 [0.5 Mark]<br>
+                    (iii) Difference: 70,000 - 7 = 69,993 [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. HCF and LCM of 18 and 24</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    Prime Factorization: 18 = 2 × 3 × 3 [0.5 Mark] | 24 = 2 × 2 × 2 × 3 [0.5 Mark]<br>
+                    HCF Calculation: Common prime factors = 2 × 3 = 6 [0.5 Mark]<br>
+                    LCM Calculation: Highest powers = 2 × 2 × 2 × 3 × 3 = 8 × 9 = 72 [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Fraction Addition</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    Step 1: Convert to improper fractions: 2 1/4 = (2 × 4 + 1) / 4 = 9/4 [0.5 Mark] | 1 2/3 = (1 × 3 + 2) / 3 = 5/3<br>
+                    Step 2: Find LCM of denominators (4 and 3): LCM = 12. 9/4 = (9 × 3) / (4 × 3) = 27/12. 5/3 = (5 × 4) / (3 × 4) = 20/12 [0.5 Mark]<br>
+                    Step 3: Add like fractions: 27/12 + 20/12 = 47/12 [0.5 Mark]<br>
+                    Step 4: Convert to mixed fraction: 47 ÷ 12 = 3 with remainder 11 → 3 11/12 [0.5 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Multiplication and Division Word Problem</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    (a) Milk packed in March (31 days):<br>
+                    Daily production = 375 liters. Total milk = 375 × 31. 375 × 1 = 375, 375 × 30 = 11,250. 11,250 + 375 = 11,625 liters. Answer: 11,625 liters [1.5 Marks]<br>
+                    (b) Number of cans required:<br>
+                    Total milk = 1,875 liters. Capacity per can = 25 liters. Number of cans = 1,875 ÷ 25 = 75. Answer: 75 cans [1.5 Marks]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Fraction Word Problem</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    (a) Total ribbon used:<br>
+                    Used for card = 1 1/2 = 3/2 meters. Used for gift = 2 1/4 = 9/4 meters.<br>
+                    Total used = 3/2 + 9/4. Convert to like denominator: (3 × 2) / (2 × 2) = 6/4. 6/4 + 9/4 = 15/4 meters = 3 3/4 meters.<br>
+                    Answer: 15/4 meters (or 3 3/4 meters) [1.5 Marks]<br>
+                    (b) Ribbon remaining:<br>
+                    Total ribbon = 5 meters = 20/4 meters.<br>
+                    Remaining ribbon = 5 - 15/4 = 20/4 - 15/4 = 5/4 meters.<br>
+                    Convert to mixed fraction: 5/4 = 1 1/4 meters.<br>
+                    Answer: 1 1/4 meters (or 1.25 meters) [1.5 Marks]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q10. Case-Based Model Answers</div>
+                <div class="rubric"><strong>Case-Based Model Answers:</strong>
+                    Part (a) Maximum Students Per Group (HCF) [1.5 Marks]:<br>
+                    Prime factors of 120: 2 × 2 × 2 × 3 × 5. Prime factors of 84: 2 × 2 × 3 × 7 [0.5 Mark]. Common factors: 2 × 2 × 3 = 12. Answer: The maximum number of students in each group is 12 students. [1 Mark]<br><br>
+                    Part (b) Next Simultaneous Beep Time (LCM) [1.5 Marks]:<br>
+                    Prime factors of 15: 3 × 5. Prime factors of 20: 2 × 2 × 5 [0.5 Mark]. LCM = 2 × 2 × 3 × 5 = 60 minutes = 1 hour [0.5 Mark]. Next beep time = 9:00 a.m. + 1 hour = 10:00 a.m. Answer: 10:00 a.m. [0.5 Mark]<br><br>
+                    Part (c) Fraction of Pizza Left [1 Mark]:<br>
+                    Fraction eaten by Aman = 3/8. Fraction eaten by Priya = 2/8. Total fraction eaten = 3/8 + 2/8 = 5/8 [0.5 Mark]. Fraction left = 1 - 5/8 = 8/8 - 5/8 = 3/8. Answer: 3/8 of the pizza [0.5 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
