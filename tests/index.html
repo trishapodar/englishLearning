@@ -339,6 +339,15 @@
     <input type="text" id="search-input" placeholder="Search by topic, class, or test name…">
   </div>
 
+  <!-- Date Filter -->
+  <div class="filter-section">
+    <div class="filter-label">Created After</div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+        <input type="date" id="date-after-input" style="padding: 8px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); font-family: inherit; font-size: .9rem; outline: none; transition: border-color .2s; cursor: pointer;">
+        <button id="clear-date-btn" class="nav-btn" style="padding: 6px 12px; display: none;">Clear</button>
+    </div>
+  </div>
+
   <!-- Subject Filter -->
   <div class="filter-section">
     <div class="filter-label">Subject</div>
@@ -1068,13 +1077,25 @@
         date: "15 Aug 2026",
         model: "NCERT MCP",
         url: "./class9/english/class9_english_gifts_of_grace_20260815.html"
+      },
+      {
+        id: "SST-007",
+        title: "Social Science (History) — Early Humans and Beginning of Civilisation",
+        subject: "Social Science",
+        class: "Class 9",
+        type: "Chapter Assessment",
+        topics: ["Early Humans", "Neolithic Revolution", "Civilisation"],
+        marks: 20,
+        date: "20 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/social_science/class9_social_science_history_early_humans_20260820.html"
       }
     ];
 
     // ══════════════════════════════════════════════════════════════
     // FILTER STATE
     // ══════════════════════════════════════════════════════════════
-    const state = { subject: "All", class: "All", type: "All", search: "" };
+    const state = { subject: "All", class: "All", type: "All", search: "", dateAfter: null };
 
     function unique(key) {
       return ["All", ...new Set(TESTS.map(t => t[key]).sort())];
@@ -1134,6 +1155,12 @@
         if (state.subject !== "All" && t.subject !== state.subject) return false;
         if (state.class !== "All" && t.class !== state.class) return false;
         if (state.type !== "All" && t.type !== state.type) return false;
+        if (state.dateAfter) {
+          if (!t.date) return false;
+          const tDate = new Date(t.date).getTime();
+          const filterDate = new Date(state.dateAfter).getTime();
+          if (tDate <= filterDate) return false;
+        }
         if (q && !t.title.toLowerCase().includes(q) &&
           !(t.id && t.id.toLowerCase().includes(q)) &&
           !t.topics.join(" ").toLowerCase().includes(q) &&
@@ -1209,6 +1236,22 @@
 
     document.getElementById("search-input").addEventListener("input", e => {
       state.search = e.target.value;
+      render();
+    });
+
+    const dateInput = document.getElementById("date-after-input");
+    const clearDateBtn = document.getElementById("clear-date-btn");
+
+    dateInput.addEventListener("change", e => {
+      state.dateAfter = e.target.value || null;
+      clearDateBtn.style.display = state.dateAfter ? "block" : "none";
+      render();
+    });
+
+    clearDateBtn.addEventListener("click", () => {
+      dateInput.value = "";
+      state.dateAfter = null;
+      clearDateBtn.style.display = "none";
       render();
     });
 
