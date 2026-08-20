@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Social Science (History) — Chapter Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 9 SOCIAL SCIENCE (HISTORY)</h1>
+        <p><strong>Topic:</strong> Chapter Assessment: "Early Humans and Beginning of Civilisation"</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 20 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper is divided into 4 Sections: A, B, C, and D.</li>
+            <li>Section A comprises 4 objective questions of 1 mark each.</li>
+            <li>Section B comprises 2 very short answer questions of 2 marks each.</li>
+            <li>Section C comprises 2 short answer questions of 3 marks each.</li>
+            <li>Section D comprises 1 case-based analytical question of 6 marks.</li>
+            <li>All questions are compulsory.</li>
+            <li>Support your answers with relevant historical facts, archaeological sites, and clear reasoning.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A: Objective & Assertion-Reason</div>
+    <p class="section-sub">Each question carries 1 mark. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>Which archaeological site in the Indian subcontinent provides the earliest evidence of settled agriculture, wheat/barley cultivation, and animal domestication dating back to circa 7000 BCE?</p>
+                <ol type="a">
+                    <li>Bhimbetka (Madhya Pradesh)</li>
+                    <li>Mehrgarh (Balochistan)</li>
+                    <li>Burzahom (Kashmir)</li>
+                    <li>Hunasagi (Karnataka)</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>The rock shelters of Bhimbetka are world-famous primarily for:</p>
+                <ol type="a">
+                    <li>Megalithic burial urns and iron implements</li>
+                    <li>Palaeolithic and Mesolithic cave paintings depicting hunting and community rituals</li>
+                    <li>Cuneiform clay tablets and seal inscriptions</li>
+                    <li>Canals and dockyard structures for marine trade</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>Early urban civilisations transitioned from the Stone Age to the Bronze Age. Bronze is an alloy produced by combining:</p>
+                <ol type="a">
+                    <li>Iron and Carbon</li>
+                    <li>Copper and Tin</li>
+                    <li>Gold and Silver</li>
+                    <li>Lead and Zinc</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p><strong>Directions for Q4: Select the correct option:</strong><br>
+                (a) Both Assertion (A) and Reason (R) are true, and R is the correct explanation of A.<br>
+                (b) Both Assertion (A) and Reason (R) are true, but R is NOT the correct explanation of A.<br>
+                (c) Assertion (A) is true, but Reason (R) is false.<br>
+                (d) Assertion (A) is false, but Reason (R) is true.<br><br>
+                <strong>Assertion (A):</strong> The invention of the potter's wheel during the Neolithic Age was a critical technological breakthrough for early human societies.<br>
+                <strong>Reason (R):</strong> Settled farming generated agricultural surpluses that required sturdy, heat-resistant vessels for long-term grain storage and cooking.</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section B: Very Short Answer Questions</div>
+    <p class="section-sub">Each question carries 2 marks. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>(a) What were microliths? (1 Mark)<br>
+                (b) How did the climatic warming during the Mesolithic period (Middle Stone Age) impact early human subsistence patterns? (1 Mark)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>State any two architectural or lifestyle features of the Neolithic settlement discovered at Burzahom (Kashmir).</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section C: Short Answer Questions</div>
+    <p class="section-sub">Each question carries 3 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>The controlled use of fire is considered one of the greatest milestones in human prehistory. Describe three distinct ways in which the discovery of fire transformed the daily life and survival of Palaeolithic hunter-gatherers.</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>Why did all major early human civilisations (such as the Harappan, Mesopotamian, and Egyptian civilisations) emerge along river valleys? Explain three geographic and economic reasons.</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D: Case-Based / Source-Based Question</div>
+    <p class="section-sub">Total Marks: 6</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>Read the source text below and answer the questions that follow:<br><br>
+                For over two million years, early humans lived as nomadic hunter-gatherers, continuously following animal herds and seasonal wild plants. Around 10,000 to 12,000 years ago, a profound transformation known as the Neolithic Revolution occurred. Humans learned to sow seeds, cultivate crops such as barley, wheat, and rice, and domesticate herd animals like sheep, goats, and cattle.<br><br>
+                Farming anchored communities to one place, leading to permanent mud-brick villages, specialized tool-making, weaving, and ceramic pottery. As agricultural efficiency increased, farms yielded surplus food beyond immediate subsistence needs. This surplus freed a portion of the population from direct food production, fostering the rise of artisans, traders, administrators, and religious specialists, ultimately paving the way for the world's earliest cities.<br><br>
+                (a) How did the lifestyle of humans in the Neolithic period differ fundamentally from that of the Palaeolithic period regarding food procurement? (1.5 Marks)<br><br>
+                (b) Why did the emergence of agriculture make settled village life and the invention of pottery indispensable? (2 Marks)<br><br>
+                (c) Explain the chain of development through which an agricultural surplus led to the emergence of specialized professions and early urban civilisations. (2.5 Marks)</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[6]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 4 Objective (4M) | Section B: 2 Very Short Answer (4M) | Section C: 2 Short Answer (6M) | Section D: 1 Case-Based (6M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 Social Science (History) — Early Humans &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. Accept well-reasoned alternative expressions.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. (b) Mehrgarh (Balochistan)</div>
+                <div class="rubric"><strong>Marking Scheme:</strong> [1 Mark] for option (b).</div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. (b) Palaeolithic and Mesolithic cave paintings depicting hunting and community rituals</div>
+                <div class="rubric"><strong>Marking Scheme:</strong> [1 Mark] for option (b).</div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. (b) Copper and Tin</div>
+                <div class="rubric"><strong>Marking Scheme:</strong> [1 Mark] for option (b).</div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. (a) Both Assertion (A) and Reason (R) are true, and R is the correct explanation of A.</div>
+                <div class="rubric"><strong>Marking Scheme:</strong> [1 Mark] for option (a).</div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Microliths and Climatic Warming</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong>
+                    (a) Definition of Microliths: Microliths were tiny, sharp, symmetrical stone tools (usually 1 to 5 cm long) crafted during the Mesolithic period, frequently mounted on wooden or bone handles to make composite tools like spears, arrows, and sickles. [1 Mark]<br>
+                    (b) Impact of Climatic Warming: Warmer climates after the Ice Age led to the expansion of grasslands and flora, increasing the population of herbivores (deer, sheep, cattle) and enabling humans to shift from heavy big-game hunting to fishing, small-game hunting, and the initial taming/herding of animals. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. Burzahom Settlement</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong> Features of Burzahom (Any two):<br>
+                    Pit-Houses: People dug circular and oval pit-dwellings into the ground with steps leading down, providing insulation against severe cold. [1 Mark]<br>
+                    Specialized Tools: Polished stone axes and a rich variety of bone tools (needles, harpoons, points) were discovered. [1 Mark]<br>
+                    Burial Customs: Evidence of unique burials, including humans buried alongside their domesticated animals (like dogs). (Alternative accepted).
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Role of Fire</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong> Three Transformative Roles of Fire:<br>
+                    Protection & Warmth: Fire provided essential warmth during cold nights/ice ages and kept wild predators away from cave entrances. [1 Mark]<br>
+                    Cooking & Nutrition: Cooking softened tough raw meat and roots, making food easier to digest, safer from pathogens, and improving overall health. [1 Mark]<br>
+                    Light & Extended Activity: Provided illumination inside dark caves, extending productive hours for tool-making and social interaction. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Early Civilisations in River Valleys</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong> Three Reasons for Emergence in River Valleys:<br>
+                    Fertile Alluvial Soil: Annual river floods deposited rich silt on the floodplains, ensuring high crop yields without exhaustive soil management. [1 Mark]<br>
+                    Perennial Water Supply: Rivers provided an abundant, reliable supply of water for human and animal consumption as well as irrigation for agricultural fields. [1 Mark]<br>
+                    Trade and Transportation: Waterways served as the earliest and most cost-effective transportation highways for trading heavy goods, metals, and connecting distant settlements. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Case-Based Model Answers</div>
+                <div class="rubric"><strong>Case-Based Model Answers & Marking:</strong><br>
+                    Part (a) Shift in Food Procurement [1.5 Marks]: Palaeolithic Era: Humans were nomadic food gatherers and hunters, relying entirely on wild nature and moving constantly in search of animal herds and wild plants. [0.75 Mark]. Neolithic Era: Humans became settled food producers (farmers and herders), systematically cultivating crops (wheat, barley, rice) and domesticating cattle, sheep, and goats. [0.75 Mark]<br><br>
+                    Part (b) Need for Settled Life and Pottery [2 Marks]: Permanent Settlements: Crops required continuous care over several months—sowing, watering, weeding, and protecting plants until harvest—forcing humans to build permanent dwellings near their farmlands. [1 Mark]. Invention of Pottery: Surplus grain, seeds for the next sowing cycle, and milk/cooked liquids required durable, pest-proof, and fire-resistant storage containers, leading to the invention of earthenware and the potter's wheel. [1 Mark]<br><br>
+                    Part (c) Agricultural Surplus to Urban Civilisation [2.5 Marks]: Food Security & Population Growth: Efficient farming produced more food than farming families consumed, supporting larger and denser populations. [0.5 Mark]. Division of Labour & Craft Specialisation: Because not everyone needed to farm, individuals could specialize in full-time non-farming professions (e.g., metalworkers, potters, masons, weavers, toolmakers). [1 Mark]. Trade, Governance, and Urban Growth: Specialised craft production required raw materials (copper, tin, timber) from distant regions, driving long-distance trade, the invention of scripts/weights for record-keeping, centralized administrative systems, and the growth of trading hubs into the world's first cities. [1 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
