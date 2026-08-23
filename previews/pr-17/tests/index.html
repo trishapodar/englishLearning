@@ -341,7 +341,7 @@
 
   <!-- Date Filter -->
   <div class="filter-section">
-    <div class="filter-label">Created After</div>
+    <div class="filter-label">Created On or After</div>
     <div style="display: flex; gap: 10px; align-items: center;">
         <input type="date" id="date-after-input" style="padding: 8px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); font-family: inherit; font-size: .9rem; outline: none; transition: border-color .2s; cursor: pointer;">
         <button id="clear-date-btn" class="nav-btn" style="padding: 6px 12px; display: none;">Clear</button>
@@ -1089,6 +1089,18 @@
         date: "20 Aug 2026",
         model: "NCERT MCP",
         url: "./class9/social_science/class9_social_science_history_early_humans_20260820.html"
+      },
+      {
+        id: "SST-008",
+        title: "Social Science (History) — State and Society up to 1000 CE",
+        subject: "Social Science",
+        class: "Class 9",
+        type: "Chapter Assessment",
+        topics: ["Political Developments", "State Formation", "Ideals of Kingship", "Administrative Systems"],
+        marks: 20,
+        date: "23 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/social_science/class9_social_science_history_state_society_20260823.html"
       }
     ];
 
@@ -1157,9 +1169,9 @@
         if (state.type !== "All" && t.type !== state.type) return false;
         if (state.dateAfter) {
           if (!t.date) return false;
-          const tDate = new Date(t.date).getTime();
-          const filterDate = new Date(state.dateAfter).getTime();
-          if (tDate <= filterDate) return false;
+          const tDate = new Date(t.date).setHours(0, 0, 0, 0);
+          const filterDate = new Date(state.dateAfter.replace(/-/g, '/')).setHours(0, 0, 0, 0);
+          if (tDate < filterDate) return false;
         }
         if (q && !t.title.toLowerCase().includes(q) &&
           !(t.id && t.id.toLowerCase().includes(q)) &&
