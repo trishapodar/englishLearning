@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Mathematics — Multichapter Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CLASS IX MATHEMATICS</h1>
+        <p><strong>Topic:</strong> Multichapter Assessment</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 25 Aug 2026<br>Time: 60 Minutes (1 Hour) | Max Marks: 30</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper contains 14 questions divided into Four Sections.</li>
+            <li>Section A: Questions 1 to 6 are Multiple Choice Questions (MCQs) carrying 1 mark each.</li>
+            <li>Section B: Questions 7 to 9 are Very Short Answer (VSA) type questions carrying 2 marks each.</li>
+            <li>Section C: Questions 10 to 12 are Short Answer (SA) type questions carrying 3 marks each.</li>
+            <li>Section D: Question 13 is a Long Answer (LA) question carrying 5 marks (with internal choice), and Question 14 is a Case Study-based question carrying 4 marks.</li>
+            <li>All questions are compulsory.</li>
+            <li>Use of calculators is strictly prohibited.</li>
+            <li>Take π = 22/7 wherever required unless stated otherwise.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">SECTION A: MULTIPLE CHOICE QUESTIONS</div>
+    <p class="section-sub">Questions 1 to 6 carry 1 mark each. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>The points P(-3, 5) and Q(-3, -7) lie on the Cartesian plane. The line segment PQ is:</p>
+                <ol type="a">
+                    <li>Parallel to the x-axis</li>
+                    <li>Parallel to the y-axis</li>
+                    <li>Passing through the origin (0, 0)</li>
+                    <li>Perpendicular to the y-axis</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>The decimal expansion of the number 0.4777... (with 7 repeating indefinitely) expressed in the rational form p/q (where p, q are integers and q ≠ 0) is:</p>
+                <ol type="a">
+                    <li>47/99</li>
+                    <li>43/90</li>
+                    <li>47/90</li>
+                    <li>43/99</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>The zero of the linear polynomial p(x) = 3x - 5 is:</p>
+                <ol type="a">
+                    <li>-5/3</li>
+                    <li>5/3</li>
+                    <li>-3/5</li>
+                    <li>3/5</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>If x + 1/x = 4, then the numerical value of x² + 1/x² is:</p>
+                <ol type="a">
+                    <li>16</li>
+                    <li>14</li>
+                    <li>18</li>
+                    <li>12</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>A standard fair six-sided die is rolled once. The probability of obtaining a prime number is:</p>
+                <ol type="a">
+                    <li>1/3</li>
+                    <li>1/2</li>
+                    <li>2/3</li>
+                    <li>1/6</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>The 15th term of the arithmetic sequence 7, 11, 15, 19, ... is:</p>
+                <ol type="a">
+                    <li>59</li>
+                    <li>63</li>
+                    <li>67</li>
+                    <li>71</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION B: VERY SHORT ANSWER QUESTIONS</div>
+    <p class="section-sub">Questions 7 to 9 carry 2 marks each. Answer concisely in 2 to 3 steps. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>Simplify the following numerical expression by rationalising the denominator:<br>
+                5 / (√3 + √2)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>If x = 3 is a zero of the linear polynomial p(x) = 2x + 3k - 15, find the value of the constant k.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>A bag contains 5 red balls, 8 white balls, and 7 green balls. One ball is drawn at random from the bag. Find the probability that the ball drawn is:<br>
+                (i) A white ball<br>
+                (ii) Not a red ball</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION C: SHORT ANSWER QUESTIONS</div>
+    <p class="section-sub">Questions 10 to 12 carry 3 marks each. Show all necessary working steps. (Total Marks: 9)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">10.</div>
+            <div class="q-body">
+                <p>Evaluate each of the following using suitable algebraic identities without direct multiplication:<br>
+                (i) 103 × 107<br>
+                (ii) (99)³</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">11.</div>
+            <div class="q-body">
+                <p>A triangular park ABC has side lengths 120 m, 80 m, and 50 m.<br>
+                (i) Using Heron’s formula, calculate the exact area of the park where grass is to be planted.<br>
+                (ii) A barbed wire fence is to be put all around the park, leaving a gap of 3 m wide for a gate on one side. Find the total length of the wire required.</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">12.</div>
+            <div class="q-body">
+                <p>In an arithmetic progression (AP), the 4th term is 18 and the 10th term is 42.<br>
+                (i) Find the first term (a) and the common difference (d).<br>
+                (ii) Calculate the sum of the first 20 terms (S20).</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION D: LONG ANSWER & CASE STUDY QUESTIONS</div>
+    <p class="section-sub">Total Marks: 9</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">13.</div>
+            <div class="q-body">
+                <p><strong>Long Answer Type Question (5 Marks)</strong><br>
+                Answer EITHER (A) OR (B):<br><br>
+                <strong>(A)</strong> If a + b + c = 9 and ab + bc + ca = 26, determine the values of:<br>
+                (i) a² + b² + c² [2 Marks]<br>
+                (ii) a³ + b³ + c³ - 3abc [3 Marks]<br><br>
+                <strong>OR</strong><br><br>
+                <strong>(B)</strong><br>
+                (i) Factorise completely using an identity: 8x³ + 27y³ + 36x²y + 54xy² [2.5 Marks]<br>
+                (ii) Factorise: 27x³ + y³ + z³ - 9xyz [2.5 Marks]</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[5]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">14.</div>
+            <div class="q-body">
+                <p><strong>Competency / Case Study-Based Question (4 Marks)</strong><br><br>
+                Context: A town planner is designing a community recreation park on a coordinate grid map where each grid unit represents 10 metres. The four corner points of the children's sports arena ABCD are plotted on the grid as: A(2, 2), B(8, 2), C(8, 7), and D(2, 7).<br><br>
+                Based on this information, answer the following questions:<br><br>
+                (i) Name the specific geometric shape formed by joining vertices A, B, C, and D in order, giving a brief mathematical reason. [1 Mark]<br>
+                (ii) Find the length of sides AB and BC in grid units and their corresponding actual lengths in metres. [1 Mark]<br>
+                (iii) Calculate: The total actual perimeter of the sports arena ABCD in metres. [1 Mark]<br>
+                (iv) Calculate: The total actual area of the sports arena ABCD in square metres (m²). [1 Mark]</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 6 MCQs (6M) | Section B: 3 Very Short Answer (6M) | Section C: 3 Short Answer (9M) | Section D: 1 Long Answer (5M) & 1 Case Study (4M)
+        &nbsp;|&nbsp; <strong>Total: 30 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 Mathematics — Multichapter Assessment &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. Accept well-reasoned alternative expressions.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>SECTION A: MCQs (6 MARKS)</h3>
+            <table style="font-size: 10pt; margin-top: 10px;">
+                <tr>
+                    <th>Q#</th>
+                    <th>Correct Option</th>
+                    <th>Working / Justification</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>(b) Parallel to the y-axis</td>
+                    <td>Both points P(-3, 5) and Q(-3, -7) share the same x-coordinate (x = -3). The line x = -3 is a vertical line parallel to the y-axis.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>(b) 43/90</td>
+                    <td>Let x = 0.4777... 10x = 4.777... and 100x = 47.777... 100x - 10x = 47.777... - 4.777... 90x = 43 => x = 43/90</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>(b) 5/3</td>
+                    <td>Set p(x) = 0: 3x - 5 = 0 => 3x = 5 => x = 5/3</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>(b) 14</td>
+                    <td>(x + 1/x)² = x² + 2(x)(1/x) + 1/x² = 16 => x² + 1/x² + 2 = 16 => x² + 1/x² = 14</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>(b) 1/2</td>
+                    <td>Sample space S = {1, 2, 3, 4, 5, 6} (Total = 6). Prime numbers = {2, 3, 5} (Favourable = 3). P(Prime) = 3/6 = 1/2</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>(b) 63</td>
+                    <td>First term a = 7, common difference d = 11 - 7 = 4. a15 = a + (15 - 1)d = 7 + 14(4) = 7 + 56 = 63</td>
+                    <td>[1 Mark]</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION B: VERY SHORT ANSWER QUESTIONS (6 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Rationalisation</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong><br>
+                    Step 1: Multiply numerator and denominator by the conjugate (√3 - √2): [5 / (√3 + √2)] × [(√3 - √2) / (√3 - √2)] [0.5 Mark]<br>
+                    Step 2: Apply identity (a + b)(a - b) = a² - b² in denominator: = [5(√3 - √2)] / [(√3)² - (√2)²] [0.5 Mark]<br>
+                    = [5(√3 - √2)] / (3 - 2) [0.5 Mark]<br>
+                    Step 3: Final answer: = 5(√3 - √2) OR 5√3 - 5√2 [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Zero of Linear Polynomial</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong><br>
+                    Step 1: Since x = 3 is a zero, p(3) = 0: 2(3) + 3k - 15 = 0 [0.5 Mark]<br>
+                    Step 2: Simplify equation: 6 + 3k - 15 = 0 => 3k - 9 = 0 [0.5 Mark]<br>
+                    Step 3: Solve for k: 3k = 9 => k = 9/3 = 3 [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Probability of Drawing Balls</div>
+                <div class="rubric"><strong>Model Answer & Marking:</strong><br>
+                    Total number of possible outcomes = 5 + 8 + 7 = 20 [0.5 Mark]<br>
+                    (i) Probability of White ball: Number of white balls = 8. P(White) = 8/20 = 2/5 (or 0.4) [0.5 Mark + 0.25 Mark for simplification]<br>
+                    (ii) Probability of Not a red ball: Number of non-red balls = 8 + 7 = 15. P(Not Red) = 15/20 = 3/4 (or 0.75) [0.75 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION C: SHORT ANSWER QUESTIONS (9 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q10. Algebraic Identities Evaluation</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong><br>
+                    (i) 103 × 107 [1.5 Marks]: Write as: (100 + 3)(100 + 7) [0.5 Mark]. Apply identity: (x + a)(x + b) = x² + (a + b)x + ab = (100)² + (3 + 7)(100) + (3 × 7) [0.5 Mark]. = 10000 + (10 × 100) + 21 = 11,021 [0.5 Mark]<br>
+                    (ii) (99)³ [1.5 Marks]: Write as: (100 - 1)³ [0.5 Mark]. Apply identity: (a - b)³ = a³ - 3a²b + 3ab² - b³ = (100)³ - 3(100)²(1) + 3(100)(1)² - (1)³ [0.5 Mark]. = 1,000,000 - 30,000 + 300 - 1 = 970,299 [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q11. Heron’s Formula & Perimeter</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong><br>
+                    (i) Area of Triangular Park [2 Marks]: Sides: a = 120 m, b = 80 m, c = 50 m. Semi-perimeter s = (a + b + c)/2 = 250/2 = 125 m [0.5 Mark]. s - a = 5 m, s - b = 45 m, s - c = 75 m [0.5 Mark]. Area = √[s(s - a)(s - b)(s - c)] = √[125 × 5 × 45 × 75] = 375√15 m² [1 Mark]<br>
+                    (ii) Wire required for fencing [1 Mark]: Perimeter of park = 250 m. Length of wire = Perimeter - Gate space = 250 - 3 = 247 m [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q12. Arithmetic Progression</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong><br>
+                    (i) Finding a and d [1.5 Marks]: a4 = a + 3d = 18 (1) [0.5 Mark], a10 = a + 9d = 42 (2) [0.5 Mark]. Subtracting (1) from (2): 6d = 24 => d = 4 [0.25 Mark]. Substitute d = 4 in (1): a + 12 = 18 => a = 6 [0.25 Mark]<br>
+                    (ii) Sum of first 20 terms [1.5 Marks]: Sn = (n/2)[2a + (n - 1)d]. S20 = (20/2)[2(6) + (20 - 1)(4)] [0.5 Mark]. = 10[12 + 76] [0.5 Mark]. = 10 × 88 = 880 [0.5 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION D: LONG ANSWER & CASE STUDY QUESTIONS (9 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q13. Option (A)</div>
+                <div class="rubric"><strong>Model Answer & Marking (5 Marks):</strong><br>
+                    (i) Value of a² + b² + c² [2 Marks]: Identity: (a + b + c)² = a² + b² + c² + 2(ab + bc + ca) [0.5 Mark]. Substitute values: (9)² = a² + b² + c² + 2(26) [0.5 Mark]. 81 = a² + b² + c² + 52 [0.5 Mark]. a² + b² + c² = 29 [0.5 Mark]<br>
+                    (ii) Value of a³ + b³ + c³ - 3abc [3 Marks]: Identity: a³ + b³ + c³ - 3abc = (a + b + c)[a² + b² + c² - (ab + bc + ca)] [1 Mark]. Substitute values: = 9 × [29 - 26] [1 Mark]. = 9 × 3 = 27 [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q13. Option (B)</div>
+                <div class="rubric"><strong>Model Answer & Marking (5 Marks):</strong><br>
+                    (i) Factorise 8x³ + 27y³ + 36x²y + 54xy² [2.5 Marks]: Rewrite terms: (2x)³ + (3y)³ + 3(2x)²(3y) + 3(2x)(3y)² [1 Mark]. Notice form: a³ + b³ + 3a²b + 3ab² = (a + b)³ [0.5 Mark]. = (2x + 3y)³ = (2x + 3y)(2x + 3y)(2x + 3y) [1 Mark]<br>
+                    (ii) Factorise 27x³ + y³ + z³ - 9xyz [2.5 Marks]: Rewrite terms: (3x)³ + (y)³ + (z)³ - 3(3x)(y)(z) [1 Mark]. Apply identity: a³ + b³ + c³ - 3abc = (a + b + c)(a² + b² + c² - ab - bc - ca) [0.5 Mark]. = (3x + y + z)(9x² + y² + z² - 3xy - yz - 3zx) [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q14. Case Study Question</div>
+                <div class="rubric"><strong>Model Answer & Marking (4 Marks):</strong><br>
+                    (i) Geometric Shape [1 Mark]: Adjacent side AB is along horizontal line y = 2, and side AD is along vertical line x = 2 (perpendicular at 90°). Opposite sides are equal (6 and 5). Therefore, ABCD is a Rectangle. [1 Mark] (0.5 for name + 0.5 for reason)<br>
+                    (ii) Dimensions [1 Mark]: Length AB = 8 - 2 = 6 grid units = 60 m [0.5 Mark]. Width BC = 7 - 2 = 5 grid units = 50 m [0.5 Mark]<br>
+                    (iii) Perimeter [1 Mark]: 2 × (Length + Width) = 2 × (60 m + 50 m) = 220 m [1 Mark]<br>
+                    (iv) Area [1 Mark]: Length × Width = 60 m × 50 m = 3,000 m² [1 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
