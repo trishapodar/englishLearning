@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Science (Physics, Chemistry, Biology) — Multichapter Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CLASS IX SCIENCE (PHYSICS, CHEMISTRY, BIOLOGY)</h1>
+        <p><strong>Topic:</strong> Multichapter Assessment</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 25 Aug 2026<br>Time: 60 Minutes (1 Hour) | Max Marks: 30</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper consists of 15 questions in Four Sections: A, B, C, and D.</li>
+            <li>Section A: Questions 1 to 7 are Objective / MCQs / Assertion-Reason carrying 1 mark each.</li>
+            <li>Section B: Questions 8 to 10 are Very Short Answer (VSA) type carrying 2 marks each.</li>
+            <li>Section C: Questions 11 to 13 are Short Answer (SA) type carrying 3 marks each.</li>
+            <li>Section D: Question 14 is a Case Study-based question carrying 4 marks, and Question 15 is a Long Answer (LA) question carrying 4 marks (with internal choice).</li>
+            <li>All questions are compulsory.</li>
+            <li>Write clear, step-by-step explanations and units with all numerical answers.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">SECTION A: OBJECTIVE / MCQs</div>
+    <p class="section-sub">Questions 1 to 7 carry 1 mark each. (Total Marks: 7)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>The slope of a velocity-time (v-t) graph of a moving body represents its:</p>
+                <ol type="a">
+                    <li>Total distance travelled</li>
+                    <li>Displacement</li>
+                    <li>Acceleration</li>
+                    <li>Speed</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>An object of mass 2 kg is moving with a constant velocity of 4 m/s on a frictionless horizontal table. The net external force required to keep the object moving with the same velocity is:</p>
+                <ol type="a">
+                    <li>8 N</li>
+                    <li>2 N</li>
+                    <li>0 N</li>
+                    <li>0.5 N</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>In Rutherford’s alpha-particle scattering experiment, which crucial observation directly proved that almost all the mass and positive charge of an atom is concentrated in a remarkably small volume at the centre?</p>
+                <ol type="a">
+                    <li>Most of the alpha-particles passed straight through the gold foil without any deflection.</li>
+                    <li>A small fraction of alpha-particles were deflected by small angles.</li>
+                    <li>Approximately 1 in every 12,000 alpha-particles rebounded backwards along its path (180° deflection).</li>
+                    <li>Alpha-particles have a mass of 4 u and carry two units of positive charge.</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>In a pure sample of water (H2O), the ratio of the mass of hydrogen to the mass of oxygen is always fixed at 1:8. If 9 g of water is completely decomposed, the mass of oxygen gas obtained will be:</p>
+                <ol type="a">
+                    <li>1 g</li>
+                    <li>8 g</li>
+                    <li>16 g</li>
+                    <li>18 g</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>An animal cell placed in a concentrated salt solution (hypertonic medium) will:</p>
+                <ol type="a">
+                    <li>Swell and burst due to endosmosis</li>
+                    <li>Shrink in size due to exosmosis</li>
+                    <li>Undergo plasmolysis with cell wall detachment</li>
+                    <li>Remain completely unchanged in size</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>The girth (diameter/thickness) of the stem and root in a plant increases due to the continuous division of:</p>
+                <ol type="a">
+                    <li>Apical meristem</li>
+                    <li>Intercalary meristem</li>
+                    <li>Lateral meristem (Cambium)</li>
+                    <li>Parenchyma tissue</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p><strong>Directions for Q7: Select the correct option:</strong><br>
+                (a) Both (A) and (R) are true, and (R) is the correct explanation of (A).<br>
+                (b) Both (A) and (R) are true, but (R) is not the correct explanation of (A).<br>
+                (c) (A) is true, but (R) is false.<br>
+                (d) (A) is false, but (R) is true.<br><br>
+                <strong>Assertion (A):</strong> Meristematic cells possess dense cytoplasm, thin cellulose walls, prominent nuclei, and lack vacuoles.<br>
+                <strong>Reason (R):</strong> Meristematic cells undergo active, continuous cell division and do not perform storage functions.</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION B: VERY SHORT ANSWER QUESTIONS</div>
+    <p class="section-sub">Questions 8 to 10 carry 2 marks each. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>A racing car starts from rest and accelerates uniformly at 4 m/s² along a straight track for 10 seconds.<br>
+                (i) Calculate the final velocity acquired by the car.<br>
+                (ii) Calculate the total distance covered by the car in this 10-second interval.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>(i) State the Law of Conservation of Mass.<br>
+                (ii) When 5.3 g of sodium carbonate reacts completely with 6.0 g of ethanoic acid, the products formed are 2.2 g of carbon dioxide, 0.9 g of water, and 8.2 g of sodium ethanoate. Show that these experimental observations agree with the Law of Conservation of Mass.</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">10.</div>
+            <div class="q-body">
+                <p>(i) Where is the Apical Meristem located in plants, and what is its primary function?<br>
+                (ii) State the biological process by which meristematic cells take up a permanent shape, size, and function to become permanent tissue.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION C: SHORT ANSWER QUESTIONS</div>
+    <p class="section-sub">Questions 11 to 13 carry 3 marks each. (Total Marks: 9)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">11.</div>
+            <div class="q-body">
+                <p>A bullet of mass 20 g (0.02 kg) is horizontally fired with a velocity of 150 m/s from a pistol of mass 2 kg.<br>
+                (i) State the Law of Conservation of Linear Momentum. [1 Mark]<br>
+                (ii) Calculate the recoil velocity of the pistol. [2 Marks]</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">12.</div>
+            <div class="q-body">
+                <p>(i) State any two main postulates of Bohr’s Model of the Atom that explained why electrons do not radiate energy and collapse into the nucleus. [2 Marks]<br>
+                (ii) An atom of an element X has atomic number Z = 13 and mass number A = 27. Write its electronic configuration and find its valency. [1 Mark]</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">13.</div>
+            <div class="q-body">
+                <p>(i) Why are lysosomes called the "suicide bags" of a cell? [1 Mark]<br>
+                (ii) Why are mitochondria referred to as the "powerhouses" of the cell? Name the chemical energy currency generated by them. [1 Mark]<br>
+                (iii) What is plasmolysis? In what type of solution does it occur in plant cells? [1 Mark]</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION D: CASE STUDY & LONG ANSWER QUESTIONS</div>
+    <p class="section-sub">Total Marks: 8</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">14.</div>
+            <div class="q-body">
+                <p><strong>Competency / Case Study-Based Question (4 Marks)</strong><br><br>
+                Context: A car driver starts from rest at point O on a straight test track. The car accelerates uniformly, reaching a velocity of 20 m/s in 10 seconds. It then maintains this constant velocity of 20 m/s for the next 20 seconds (from t = 10 s to t = 30 s). Finally, the driver applies brakes, bringing the car uniformly to rest in the next 10 seconds (from t = 30 s to t = 40 s).</p>
+<pre>
+Velocity (m/s)
+  20 |           B-------------------C
+     |          /                     \
+     |         /                       \
+     |        /                         \
+   0 +-------A---------------------------D---- Time (s)
+     0      10                           40
+</pre>
+                <p>Based on this motion profile, answer the following:<br><br>
+                (i) Calculate the acceleration of the car during the first 10 seconds (phase AB). [1 Mark]<br>
+                (ii) Calculate the magnitude of deceleration/retardation during the braking phase (phase CD, from t = 30 s to 40 s). [1 Mark]<br>
+                (iii) Calculate the total distance covered by the car during the entire 40-second journey using the area under the velocity-time graph. [2 Marks]</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">15.</div>
+            <div class="q-body">
+                <p><strong>Long Answer Type Question (4 Marks)</strong><br>
+                Answer EITHER (A) OR (B):<br><br>
+                <strong>(A)</strong><br>
+                (i) State any four key postulates of Dalton’s Atomic Theory. [2 Marks]<br>
+                (ii) Which postulate of Dalton’s atomic theory explains the Law of Definite Proportions? [1 Mark]<br>
+                (iii) Differentiate between Apical Meristem and Lateral Meristem based on their location and role in plant growth. [1 Mark]<br><br>
+                <strong>OR</strong><br><br>
+                <strong>(B)</strong><br>
+                (i) State Newton’s Second Law of Motion and deduce the mathematical formula F = ma from it. [2.5 Marks]<br>
+                (ii) A constant force acts on an object of mass 5 kg for a duration of 2 seconds, increasing its velocity from 3 m/s to 7 m/s. Find the magnitude of the applied force. [1.5 Marks]</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 7 Objective (7M) | Section B: 3 Very Short Answer (6M) | Section C: 3 Short Answer (9M) | Section D: 1 Case-Based (4M) & 1 Long Answer (4M)
+        &nbsp;|&nbsp; <strong>Total: 30 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 Science — Multichapter Assessment &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. Accept well-reasoned alternative expressions.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>SECTION A: MCQs (7 MARKS)</h3>
+            <table style="font-size: 10pt; margin-top: 10px;">
+                <tr>
+                    <th>Q#</th>
+                    <th>Correct Option</th>
+                    <th>Scientific Explanation</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>(c) Acceleration</td>
+                    <td>Slope of v-t graph = (Change in velocity) / (Time taken) = a.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>(c) 0 N</td>
+                    <td>According to Newton's First Law, an object in uniform motion continues with constant velocity unless acted upon by an unbalanced force. On a frictionless table, net force required is zero.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>(c) Approximately 1 in every 12,000 alpha-particles rebounded backwards (180° deflection)</td>
+                    <td>A direct 180° rebound of high-energy positively charged alpha-particles indicated that the entire positive charge and mass is concentrated in a very small, dense central core (nucleus).</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>(b) 8 g</td>
+                    <td>Water decomposes in fixed ratio H:O = 1:8 by mass. Total parts = 1 + 8 = 9 parts. In 9 g of water, mass of oxygen = (8/9) × 9 g = 8 g.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>(b) Shrink in size due to exosmosis</td>
+                    <td>In a hypertonic medium, water moves out of the animal cell from higher to lower water concentration, causing cell shrinkage.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>(c) Lateral meristem (Cambium)</td>
+                    <td>Lateral meristem (vascular cambium and cork cambium) causes secondary growth, increasing girth/thickness of stems and roots.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>(a) Both (A) and (R) are true, and (R) is the correct explanation of (A)</td>
+                    <td>Meristematic cells are actively dividing and do not store nutrients or sap, hence they have dense cytoplasm, prominent nuclei, and lack vacuoles.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION B: VERY SHORT ANSWER QUESTIONS (6 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Motion Numericals</div>
+                <div class="rubric"><strong>Model Answer & Marking (2 Marks):</strong><br>
+                    Given: Initial velocity u = 0, acceleration a = 4 m/s², time t = 10 s<br>
+                    (i) Final Velocity [1 Mark]: Formula: v = u + at [0.5 Mark]. v = 0 + (4 × 10) = 40 m/s [0.5 Mark]<br>
+                    (ii) Total Distance Covered [1 Mark]: Formula: s = ut + (1/2)at² [0.5 Mark]. s = (0 × 10) + (1/2) × 4 × (10)² = 2 × 100 = 200 m [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Law of Conservation of Mass</div>
+                <div class="rubric"><strong>Model Answer & Marking (2 Marks):</strong><br>
+                    (i) Statement [1 Mark]: "Mass can neither be created nor destroyed in a chemical reaction." (Total mass of reactants = Total mass of products). [1 Mark]<br>
+                    (ii) Verification [1 Mark]: Mass of Reactants = Mass of sodium carbonate + Mass of ethanoic acid = 5.3 g + 6.0 g = 11.3 g [0.5 Mark]. Mass of Products = Mass of CO2 + Mass of water + Mass of sodium ethanoate = 2.2 g + 0.9 g + 8.2 g = 11.3 g [0.5 Mark]. Since Total Mass of Reactants (11.3 g) = Total Mass of Products (11.3 g), the law is verified.
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q10. Plant Meristematic Tissues</div>
+                <div class="rubric"><strong>Model Answer & Marking (2 Marks):</strong><br>
+                    (i) Apical Meristem Location & Function [1 Mark]: Location: Present at the growing tips of stems (shoots) and roots. [0.5 Mark]. Function: Increases the vertical length/height of the plant (primary growth). [0.5 Mark]<br>
+                    (ii) Differentiation [1 Mark]: The process is called Differentiation (where meristematic cells lose their capacity to divide and take up permanent structure and function). [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION C: SHORT ANSWER QUESTIONS (9 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q11. Conservation of Momentum</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong><br>
+                    (i) Statement [1 Mark]: "In an isolated system (where no external unbalanced force acts), the total momentum of colliding or interacting bodies remains constant/conserved." [1 Mark]<br>
+                    (ii) Recoil Velocity Calculation [2 Marks]: Mass of bullet m1 = 20 g = 0.02 kg, Initial velocity u1 = 0, Final velocity v1 = 150 m/s. Mass of pistol m2 = 2 kg, Initial velocity u2 = 0, Recoil velocity = v2. Initial momentum = m1u1 + m2u2 = 0 [0.5 Mark]. Final momentum = m1v1 + m2v2 = (0.02 × 150) + (2 × v2) = 3 + 2v2 [0.5 Mark]. By conservation of momentum: Total Initial Momentum = Total Final Momentum. 0 = 3 + 2v2 => 2v2 = -3 => v2 = -1.5 m/s [0.5 Mark]. Conclusion: Recoil velocity is 1.5 m/s in the backward direction (negative sign indicates opposite direction). [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q12. Bohr’s Model & Atomic Structure</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong><br>
+                    (i) Postulates of Bohr’s Model [2 Marks]: Only certain special orbits known as discrete orbits of electrons are allowed inside the atom. [1 Mark]. While revolving in discrete orbits, the electrons do not radiate energy. (Energy levels are designated as K, L, M, N... or n = 1, 2, 3, 4...). [1 Mark]<br>
+                    (ii) Configuration & Valency for Element X (Z = 13, A = 27) [1 Mark]: Electronic Configuration: K = 2, L = 8, M = 3 (Distribution: 2, 8, 3) [0.5 Mark]. Valency: Since it has 3 valence electrons in the outermost shell, it loses 3 electrons to attain a stable octet; therefore, Valency = 3. [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q13. Cell Organelles & Osmosis</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong><br>
+                    (i) Suicide Bags [1 Mark]: Lysosomes contain powerful digestive enzymes. When cell metabolism is disturbed or the cell gets damaged, lysosomes may burst and their enzymes digest their own cell. [1 Mark]<br>
+                    (ii) Powerhouses & ATP [1 Mark]: Mitochondria release energy required for various chemical activities through cellular respiration in the form of ATP (Adenosine Triphosphate). [1 Mark]<br>
+                    (iii) Plasmolysis [1 Mark]: When a living plant cell loses water through exosmosis in a hypertonic solution, there is shrinkage or contraction of the cell contents away from the cell wall. This is called Plasmolysis. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION D: CASE STUDY & LONG ANSWER (8 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q14. Motion Case Study</div>
+                <div class="rubric"><strong>Model Answer & Marking (4 Marks):</strong><br>
+                    (i) Acceleration in Phase AB (0 to 10 s) [1 Mark]: u = 0, v = 20 m/s, t = 10 s. a = (v - u) / t = (20 - 0) / 10 = 2 m/s² [1 Mark]<br>
+                    (ii) Retardation in Phase CD (30 s to 40 s) [1 Mark]: u = 20 m/s, v = 0, t = 40 - 30 = 10 s. a = (0 - 20) / 10 = -2 m/s². Magnitude of Retardation (Deceleration) = 2 m/s² [1 Mark]<br>
+                    (iii) Total Distance from Area under Graph [2 Marks]: Total Distance s = Area of Trapezium OABCD [0.5 Mark]. Area = (1/2) × (Sum of parallel sides) × (Perpendicular height). Parallel sides: Base (t = 0 to 40 s) = 40 s; Top (t = 10 to 30 s) = 20 s. Height = 20 m/s [0.5 Mark]. s = (1/2) × (40 + 20) × 20. s = (1/2) × 60 × 20 = 600 metres [1 Mark]. (Alternative method by dividing into 2 triangles + 1 rectangle: 100 m + 400 m + 100 m = 600 m gets full 2 marks).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q15. Long Answer</div>
+                <div class="rubric"><strong>Option (A) [4 Marks]:</strong><br>
+                    (i) Four Postulates of Dalton’s Atomic Theory [2 Marks] (0.5 Mark per valid postulate): All matter is made of very tiny particles called atoms. Atoms are indivisible particles, which cannot be created or destroyed in a chemical reaction. Atoms of a given element are identical in mass and chemical properties. Atoms of different elements have different masses and chemical properties. Atoms combine in the ratio of small whole numbers to form compounds. The relative number and kinds of atoms are constant in a given compound.<br>
+                    (ii) Postulate explaining Law of Definite Proportions [1 Mark]: "The relative number and kinds of atoms are constant in a given compound" (or "Atoms combine in the ratio of small whole numbers to form compounds"). [1 Mark]<br>
+                    (iii) Apical vs. Lateral Meristem [1 Mark]: Apical Meristem: Located at shoot/root tips; responsible for growth in length (primary vertical growth). [0.5 Mark]. Lateral Meristem: Located along the lateral sides/cambium; responsible for growth in girth/diameter (secondary lateral growth). [0.5 Mark]<br><br>
+                    <strong>Option (B) [4 Marks]:</strong><br>
+                    (i) Newton’s Second Law & Derivation [2.5 Marks]: Statement: "The rate of change of momentum of an object is directly proportional to the applied unbalanced force and takes place in the direction in which the force acts." [1 Mark]. Mathematical Derivation: Initial momentum p1 = mu, Final momentum p2 = mv. Change in momentum = p2 - p1 = m(v - u) [0.5 Mark]. Rate of change of momentum = [m(v - u)] / t = ma (since a = (v - u)/t) [0.5 Mark]. By 2nd Law: Force F ∝ ma => F = k·ma (in SI units, k = 1) => F = ma [0.5 Mark]<br>
+                    (ii) Numerical Calculation [1.5 Marks]: Mass m = 5 kg, t = 2 s, u = 3 m/s, v = 7 m/s. Acceleration a = (v - u) / t = (7 - 3) / 2 = 4 / 2 = 2 m/s² [0.5 Mark]. Applied Force F = m × a = 5 kg × 2 m/s² = 10 N [1 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
