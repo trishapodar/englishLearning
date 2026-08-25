@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Social Science — Multichapter Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CLASS IX SOCIAL SCIENCE (HISTORY, GEOGRAPHY, POLITICAL SCIENCE, ECONOMICS)</h1>
+        <p><strong>Topic:</strong> Multichapter Assessment</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 25 Aug 2026<br>Time: 60 Minutes (1 Hour) | Max Marks: 30</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>The question paper comprises Four Sections: A, B, C, and D.</li>
+            <li>Section A: Questions 1 to 6 are Objective Type / MCQs carrying 1 mark each.</li>
+            <li>Section B: Questions 7 to 9 are Very Short Answer (VSA) type questions carrying 2 marks each.</li>
+            <li>Section C: Questions 10 to 12 are Short Answer (SA) type questions carrying 3 marks each.</li>
+            <li>Section D: Question 13 is a Case Study / Source-Based question carrying 4 marks, and Question 14 is a Long Answer (LA) question carrying 5 marks (with internal choice).</li>
+            <li>All questions are compulsory. Internal choice is provided in Question 14.</li>
+            <li>Marks are indicated against each question.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">SECTION A: OBJECTIVE / MCQs</div>
+    <p class="section-sub">Questions 1 to 6 carry 1 mark each. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>Landforms such as folded mountain ranges and deep oceanic trenches are primarily formed by:</p>
+                <ol type="a">
+                    <li>Exogenic forces through weathering and deposition</li>
+                    <li>Endogenic forces generated from the interior of the Earth</li>
+                    <li>Atmospheric weathering caused by wind abrasion</li>
+                    <li>Ocean currents flowing along coastal margins</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>Which layer of the atmosphere contains the ozone layer that protects living organisms on Earth from harmful ultraviolet (UV) radiation?</p>
+                <ol type="a">
+                    <li>Troposphere</li>
+                    <li>Stratosphere</li>
+                    <li>Mesosphere</li>
+                    <li>Thermosphere</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>The distinctive grid-pattern street layout, covered drains with inspection holes, and standardised baked bricks are landmark features of which ancient civilization?</p>
+                <ol type="a">
+                    <li>Mesopotamian Civilisation</li>
+                    <li>Egyptian Nile Valley Civilisation</li>
+                    <li>Sindhu-Sarasvati (Harappan) Civilisation</li>
+                    <li>Ancient Roman Civilisation</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>In early Vedic society (up to 1000 BCE), which political bodies served as popular representative assemblies to advise the king (Rajan) and deliberate on tribal matters?</p>
+                <ol type="a">
+                    <li>Sabha and Samiti</li>
+                    <li>Senani and Purohita</li>
+                    <li>Gramani and Kulapa</li>
+                    <li>Janapada and Rashtra</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>In India, which autonomous constitutional authority is vested with the power to announce election schedules, enforce the Model Code of Conduct, and supervise polling?</p>
+                <ol type="a">
+                    <li>Supreme Court of India</li>
+                    <li>Parliament of India</li>
+                    <li>Election Commission of India (ECI)</li>
+                    <li>Ministry of Law and Justice</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>Tools, machines, generators, and factory buildings that can be used repeatedly in production over many years are classified as:</p>
+                <ol type="a">
+                    <li>Working Capital</li>
+                    <li>Human Capital</li>
+                    <li>Fixed Capital</li>
+                    <li>Natural Capital</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION B: VERY SHORT ANSWER QUESTIONS</div>
+    <p class="section-sub">Questions 7 to 9 carry 2 marks each. Answer in 30–40 words. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>State any two fundamental differences between Weather and Climate.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>Why are Reserved Constituencies created for Scheduled Castes (SCs) and Scheduled Tribes (STs) in the Indian electoral system?</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>Differentiate between Fixed Capital and Working Capital with one suitable example for each.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION C: SHORT ANSWER QUESTIONS</div>
+    <p class="section-sub">Questions 10 to 12 carry 3 marks each. Answer in 60–80 words. (Total Marks: 9)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">10.</div>
+            <div class="q-body">
+                <p>Explain three salient features of the urban planning and sophisticated drainage system of the Sindhu-Sarasvati (Harappan) cities.</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">11.</div>
+            <div class="q-body">
+                <p>What makes elections in India genuinely democratic? Describe three key powers exercised by the Election Commission of India (ECI) to ensure free and fair elections.</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">12.</div>
+            <div class="q-body">
+                <p>Explain how the market price of a commodity is determined through the interaction of Demand and Supply. What happens to the price if there is an excess supply (surplus) in the market?</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION D: CASE STUDY & LONG ANSWER QUESTIONS</div>
+    <p class="section-sub">Total Marks: 9</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">13.</div>
+            <div class="q-body">
+                <p><strong>Source-Based / Competency Question (4 Marks)</strong><br><br>
+                Read the source given below and answer the questions that follow:<br><br>
+                "Every society faces the fundamental economic problem of scarcity. Human wants for food, healthcare, modern transport, and education are virtually limitless, while the natural and physical resources required to produce them are finite. Because resources are limited, choices must be made regarding what goods to produce, how to produce them, and for whom to produce. Every production process requires a combination of land, human labour, physical tools, and entrepreneurial organisation. When resources are allocated to produce one commodity, the opportunity to produce another alternative good is foregone. This foregone next-best alternative is termed opportunity cost."<br><br>
+                (i) What is the fundamental root cause of all economic problems described in the passage? [1 Mark]<br>
+                (ii) Name any two essential Factors of Production mentioned in the source. [1 Mark]<br>
+                (iii) Explain the concept of Opportunity Cost with a practical everyday example. [2 Marks]</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">14.</div>
+            <div class="q-body">
+                <p><strong>Long Answer Type Question (5 Marks)</strong><br>
+                (Answer in 100–120 words. Answer EITHER (A) OR (B):)<br><br>
+                <strong>(A)</strong><br>
+                (i) Describe the sequential landforms created by the action of a river as it flows from its source in the mountains to its mouth in the sea (include V-shaped valleys, meanders, oxbow lakes, and deltas). [3 Marks]<br>
+                (ii) Differentiate between Endogenic and Exogenic geomorphic processes shaping the Earth's crust. [2 Marks]<br><br>
+                <strong>OR</strong><br><br>
+                <strong>(B)</strong><br>
+                "Democracy is considered the most superior form of government, yet it is not a magical solution to all societal problems."<br>
+                (i) State three major arguments in favour of democracy (strengths). [3 Marks]<br>
+                (ii) State two major arguments against democracy (limitations/criticisms). [2 Marks]</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[5]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 6 Objective (6M) | Section B: 3 Very Short Answer (6M) | Section C: 3 Short Answer (9M) | Section D: 1 Case-Based (4M) & 1 Long Answer (5M)
+        &nbsp;|&nbsp; <strong>Total: 30 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 Social Science — Multichapter Assessment &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. Accept well-reasoned alternative expressions.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>SECTION A: MCQs (6 MARKS)</h3>
+            <table style="font-size: 10pt; margin-top: 10px;">
+                <tr>
+                    <th>Q#</th>
+                    <th>Correct Option</th>
+                    <th>Historical / Conceptual Rationale</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>(b) Endogenic forces generated from the interior of the Earth</td>
+                    <td>Plate tectonics, folding, faulting, and volcanism are internal (endogenic) crustal movements that build major relief features.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>(b) Stratosphere</td>
+                    <td>The stratosphere extends from approximately 12 km to 50 km and houses the ozone layer (O3), absorbing harmful solar UV rays.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>(c) Sindhu-Sarasvati (Harappan) Civilisation</td>
+                    <td>Harappan cities like Mohenjo-daro, Harappa, and Dholavira are renowned for their orthogonal grid planning and covered brick drainage.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>(a) Sabha and Samiti</td>
+                    <td>In early Vedic times, the Sabha (council of elders/elites) and Samiti (general tribal assembly) exercised democratic checks on the Rajan.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>(c) Election Commission of India (ECI)</td>
+                    <td>Under Article 324 of the Constitution, the ECI is an independent body that supervises and conducts free and fair elections.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>(c) Fixed Capital</td>
+                    <td>Physical assets like tools, machinery, and structures that persist over multiple production cycles are termed fixed capital.</td>
+                    <td>[1 Mark]</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION B: VERY SHORT ANSWER QUESTIONS (6 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Weather vs. Climate</div>
+                <div class="rubric"><strong>Model Answer & Marking (2 Marks):</strong><br>
+                    Weather: The state of the atmosphere at a particular place over a short period of time (e.g., day-to-day, hour-to-hour fluctuations in temperature, rainfall, or wind). [1 Mark]<br>
+                    Climate: The sum total of weather conditions and variations over a large area over a long period of time (usually 30 years or more). [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Need for Reserved Constituencies</div>
+                <div class="rubric"><strong>Model Answer & Marking (2 Marks):</strong><br>
+                    In an open electoral competition, weaker sections (SCs and STs) may lack the required resources, education, or contacts to win against powerful candidates. [1 Mark]<br>
+                    Reserved constituencies ensure that our representative democracy provides a fair voice and equal legislative representation to marginalized communities in Parliament and State Assemblies. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Fixed Capital vs. Working Capital</div>
+                <div class="rubric"><strong>Model Answer & Marking (2 Marks):</strong><br>
+                    Fixed Capital: Assets used over many production cycles for years without being consumed immediately. Example: Tractors, factory buildings, sewing machines, computers. [1 Mark]<br>
+                    Working Capital: Raw materials and cash in hand that get used up or converted during a single production cycle. Example: Yarn for weavers, clay for potters, cash to pay wages. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION C: SHORT ANSWER QUESTIONS (9 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q10. Harappan Urban Planning & Drainage System</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong> (1 Mark per distinct point, Max 3 Marks)<br>
+                    Grid-Based Town Layout: Cities were divided into two main parts—the elevated Citadel (public buildings) and the Lower Town (residential units). Streets were laid out on a grid pattern cutting at right angles. [1 Mark]<br>
+                    Covered & Underground Drains: Every house had its own drain connected to the street drain. Drains were constructed of baked bricks and covered with stone slabs or bricks. [1 Mark]<br>
+                    Inspection Holes & Sanitary Maintenance: Street drains were laid at gentle slopes and had inspection chambers (manholes) at regular intervals for regular cleaning and desilting. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q11. Role & Powers of the Election Commission of India</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong> (1 Mark for each valid power, Max 3 Marks)<br>
+                    Control and Conduct: ECI takes decisions on all aspects of election conduct, from the notification of election dates to the declaration of final results. [1 Mark]<br>
+                    Enforcement of Model Code of Conduct: ECI enforces the Model Code of Conduct and can penalise/disqualify any candidate or political party that violates rules (e.g., bribing voters, using religious places for campaigning). [1 Mark]<br>
+                    Control over Government Machinery: During election duty, government officials work under the direct administrative control and supervision of the ECI, not the ruling political party. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q12. Market Price Determination & Excess Supply</div>
+                <div class="rubric"><strong>Model Answer & Marking (3 Marks):</strong><br>
+                    Equilibrium Price: Market price is determined at the point of intersection where the quantity demanded by buyers equals the quantity supplied by sellers (Market Equilibrium: Demand = Supply). [1.5 Marks]<br>
+                    Excess Supply (Surplus): If the market price is higher than the equilibrium price, supply exceeds demand. Sellers cannot sell all their stock, leading to competition among sellers to lower prices until the market reaches equilibrium again. [1.5 Marks]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION D: CASE STUDY & LONG ANSWER (9 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q13. Economics Case Study</div>
+                <div class="rubric"><strong>Model Answer & Marking (4 Marks):</strong><br>
+                    (i) Root Cause of Economic Problem [1 Mark]: Scarcity (resources are finite/limited while human wants are unlimited). [1 Mark]<br>
+                    (ii) Two Factors of Production [1 Mark]: Any two of: Land, Labour, Physical Capital, or Enterprise/Organisation (0.5 Mark each). [1 Mark]<br>
+                    (iii) Concept of Opportunity Cost [2 Marks]: Definition: The value of the next best alternative that is given up when a choice is made. [1 Mark]. Example: If a farmer uses a plot of land to cultivate wheat, the opportunity cost is the amount of mustard or vegetables they could have grown on that same land. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q14. Long Answer</div>
+                <div class="rubric"><strong>Option (A): River Landforms & Geomorphic Processes [5 Marks]</strong><br>
+                    (i) Sequential Landforms of a River [3 Marks] (0.75 Mark per stage/landform): Upper/Mountain Course: Steep gradient causes deep vertical erosion forming steep V-shaped valleys, gorges, and waterfalls. Middle Course: As the river enters plains, lateral erosion causes broad curving loops called meanders. Cut-off Stage: Due to continuous erosion and deposition, meander loops narrow and get cut off from the main river, forming crescent-shaped Oxbow lakes. Lower/Coastal Course: Near the sea, the river slows down, splits into distributaries, and deposits sediments to form a fertile Delta.<br>
+                    (ii) Endogenic vs. Exogenic Processes [2 Marks]: Endogenic Forces: Forces operating from inside the Earth (e.g., earthquakes, volcanic eruptions, plate tectonics) that elevate or deform crustal relief. [1 Mark]. Exogenic Forces: Forces operating on the Earth’s surface driven by solar energy and gravity (e.g., weathering, erosion, running water, glaciers, wind) that wear down and level the landscape. [1 Mark]<br><br>
+                    <strong>Option (B): Critical Evaluation of Democracy [5 Marks]</strong><br>
+                    (i) Arguments in Favour of Democracy [3 Marks] (1 Mark per point): More Accountable Form of Government: Rulers are accountable to the citizens and can be voted out of office in regular elections. Improves the Quality of Decision-Making: Democracy involves widespread consultations, discussions, and debates, reducing the likelihood of rash or irresponsible decisions. Enhances the Dignity of Citizens: Based on political equality (one person, one vote, one value), granting equal status to the richest and the poorest alike. Provides a Peaceful Method to Resolve Conflicts: Accommodates diverse social, religious, and linguistic groups without violence.<br>
+                    (ii) Arguments Against Democracy / Limitations [2 Marks] (1 Mark per point): Instability: Frequent changes in political leadership can disrupt long-term policies and governance continuity. Delays in Decision-Making: Because many people have to be consulted, democratic processes can be slow and cumbersome. Political Competition and Corruption: Focus on electoral victory often leads to unethical practices, use of money, and muscle power.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
