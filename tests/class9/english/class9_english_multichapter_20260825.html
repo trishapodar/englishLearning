@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 English (Literature) — Multichapter Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CLASS IX ENGLISH (LITERATURE)</h1>
+        <p><strong>Topic:</strong> Multichapter Assessment</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 25 Aug 2026<br>Time: 60 Minutes (1 Hour) | Max Marks: 30</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper consists of Three Sections:</li>
+            <li>Section A: Reference to Context (RTC) / Extract-Based Questions (10 Marks)</li>
+            <li>Section B: Short Answer Type Questions (8 Marks)</li>
+            <li>Section C: Long Answer / Competency-Based Questions (12 Marks)</li>
+            <li>All questions are compulsory. Internal choices have been provided in Section C.</li>
+            <li>Marks are indicated against each question.</li>
+            <li>Adhere strictly to the prescribed word limit while answering.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">SECTION A: REFERENCE TO CONTEXT</div>
+    <p class="section-sub">Total Marks: 10</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p><strong>Read the given extract from Prose and answer the questions that follow: (5 × 1 = 5 Marks)</strong></p>
+                <p><em>"Ever since Sentila became old enough to accompany her mother to the fields and forests, she began to dream of becoming a pot maker like her mother and grandmother. However Arenla, her mother, wanted her to become a weaver. On days when she managed to stay at home while her parents went to the fields, Sentila approached expert potters to learn the skill. They were at first amused by her persistence, but soon realised that she possessed an innate natural talent for the craft."</em></p>
+                <br>
+                <p><strong>(i) Why did Sentila’s mother, Arenla, discourage her from taking up pottery?</strong></p>
+                <ol type="a">
+                    <li>Pottery was seen as an obsolete and unprofitable craft.</li>
+                    <li>Arenla wanted her daughter to pursue weaving, which was considered safer and prestigious.</li>
+                    <li>Sentila lacked the physical strength required for clay moulding.</li>
+                    <li>There was a strict social ban on women becoming pot makers.</li>
+                </ol>
+                <br>
+                <p><strong>(ii) What does the phrase "innate natural talent" imply about Sentila?</strong></p>
+                <ol type="a">
+                    <li>She learned the skill solely by copying others without understanding it.</li>
+                    <li>She was born with a natural flair and instinctive capability for the craft.</li>
+                    <li>She required years of formal schooling to shape her first pot.</li>
+                    <li>She only made pots to rebel against her family.</li>
+                </ol>
+                <br>
+                <p><strong>(iii) How did the village potters initially react to Sentila’s interest, and what changed their minds? (Answer in one sentence)</strong></p>
+                <div class="ans-space ans-1"></div>
+                <br>
+                <p><strong>(iv) Which character trait of Sentila is most prominently highlighted in the given extract?</strong></p>
+                <ol type="a">
+                    <li>Defiance and disrespect</li>
+                    <li>Determination and dedication</li>
+                    <li>Impatience and arrogance</li>
+                    <li>Hesitance and fear</li>
+                </ol>
+                <br>
+                <p><strong>(v) Find a word from the extract that is an antonym of "acquired/learned":</strong></p>
+                <ol type="a">
+                    <li>accompany</li>
+                    <li>persistence</li>
+                    <li>innate</li>
+                    <li>amused</li>
+                </ol>
+            </div>
+            <div class="q-marks">[5]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p><strong>Read the given extract from Poetry and answer the questions that follow: (5 × 1 = 5 Marks)</strong></p>
+                <p><em>"Palette of earth, rich and deep,<br>
+                Where dreams of gardeners seep.<br>
+                Brushstrokes of seeds, planted true,<br>
+                Awaiting spring’s vibrant hue.<br>
+                Blossoms bloom, a painted sight,<br>
+                Dancing in the morning light.<br>
+                Each plot, a canvas wide,<br>
+                Where art and life coincide."</em></p>
+                <br>
+                <p><strong>(i) Identify the extended metaphor running through the extract.</strong></p>
+                <ol type="a">
+                    <li>Gardening is compared to writing poetry.</li>
+                    <li>Gardening and farming are compared to painting on a canvas.</li>
+                    <li>The sunrise is compared to a theatre stage.</li>
+                    <li>Earth is compared to a book of ancient legends.</li>
+                </ol>
+                <br>
+                <p><strong>(ii) What is the significance of the phrase "Brushstrokes of seeds"?</strong></p>
+                <ol type="a">
+                    <li>Seeds are thrown randomly across the soil.</li>
+                    <li>Sowing seeds is depicted as deliberate, creative artistic strokes.</li>
+                    <li>The gardener uses paintbrushes instead of tools to farm.</li>
+                    <li>The seeds create artificial colours in the garden.</li>
+                </ol>
+                <br>
+                <p><strong>(iii) What poetic device is used in the line "Blossoms bloom, a painted sight / Dancing in the morning light"?</strong></p>
+                <ol type="a">
+                    <li>Simile and Pun</li>
+                    <li>Personification and Alliteration</li>
+                    <li>Oxymoron and Irony</li>
+                    <li>Hyperbole and Onomatopoeia</li>
+                </ol>
+                <br>
+                <p><strong>(iv) What is the rhyme scheme of the first four lines of the poem?</strong></p>
+                <ol type="a">
+                    <li>ABAB</li>
+                    <li>ABBA</li>
+                    <li>AABB</li>
+                    <li>ABCB</li>
+                </ol>
+                <br>
+                <p><strong>(v) Explain what the poet means by "Where art and life coincide". (Answer in one sentence)</strong></p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[5]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION B: SHORT ANSWER QUESTIONS</div>
+    <p class="section-sub">Answer in 30–40 words each. Each question carries 2 marks. (Total Marks: 8)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>Why was Krishtakka (the grandmother) determined to learn the Kannada alphabet at the age of sixty-two in "How I Taught My Grandmother To Read"?</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>In the poem "Bharat Our Land", what does the refrain "she’s peerless, let’s praise her!" signify, and why does the poet repeat it?</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>How do traditional handmade fans in "Winds of Change" reflect both environmental sustainability and indigenous craftsmanship?</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>How does the poem "Gifts of Grace: Honouring Our Vocations" celebrate the dignity of labour across different everyday professions?</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">SECTION C: LONG ANSWER / COMPETENCY-BASED QUESTIONS</div>
+    <p class="section-sub">Answer in 100–120 words each. Each question carries 6 marks. (Total Marks: 12)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p><strong>[Prose Analysis] Answer EITHER (A) OR (B):</strong><br><br>
+                <strong>(A)</strong> “For learning there is no age bar.” Justify this statement with close reference to Krishtakka’s transformation and dedication in Sudha Murty’s "How I Taught My Grandmother To Read". Discuss how respect, humility, and determination redefine the student-teacher dynamic in the story.<br><br>
+                <strong>OR</strong><br><br>
+                <strong>(B)</strong> Sentila in "The Pot Maker" and the narrator’s grandmother in "How I Taught My Grandmother To Read" both display great willpower against social expectations. Compare how both women follow their passions and overcome societal or familial obstacles to achieve self-reliance.</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[6]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p><strong>[Poetry / Thematic Analysis] Answer EITHER (A) OR (B):</strong><br><br>
+                <strong>(A)</strong> In "Canvas of Soil", the poet presents nature and human cultivation as a harmonious masterpiece. Discuss how Maya Anthony blends visual imagery, colour symbolism, and the metaphor of painting to convey the spiritual joy of nurturing living things.<br><br>
+                <strong>OR</strong><br><br>
+                <strong>(B)</strong> Both "Bharat Our Land" by Subramania Bharati and "Gifts of Grace: Honouring Our Vocations" present a vision of national pride. Contrast how Subramania Bharati celebrates Bharat’s natural and spiritual legacy while "Gifts of Grace" celebrates the everyday working hands and vocations of its people.</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[6]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: Extract-Based (10M) | Section B: Short Answer (8M) | Section C: Long Answer (12M)
+        &nbsp;|&nbsp; <strong>Total: 30 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 English (Literature) — Multichapter Assessment &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. Accept well-reasoned alternative expressions.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>SECTION A: REFERENCE TO CONTEXT (10 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. Prose Extract (The Pot Maker)</div>
+                <div class="rubric">
+                    (i) (b) Arenla wanted her daughter to pursue weaving, which was considered safer and prestigious. [1 Mark]<br>
+                    (ii) (b) She was born with a natural flair and instinctive capability for the craft. [1 Mark]<br>
+                    (iii) The potters were initially amused by her persistent visits, but upon observing her work, they recognised her natural talent and precision with clay. [1 Mark] (0.5 mark for initial amusement + 0.5 mark for recognising talent).<br>
+                    (iv) (b) Determination and dedication. [1 Mark]<br>
+                    (v) (c) innate. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. Poetry Extract (Canvas of Soil)</div>
+                <div class="rubric">
+                    (i) (b) Gardening and farming are compared to painting on a canvas. [1 Mark]<br>
+                    (ii) (b) Sowing seeds is depicted as deliberate, creative artistic strokes. [1 Mark]<br>
+                    (iii) (b) Personification and Alliteration (Blossoms bloom = Alliteration; Dancing in the morning light = Personification). [1 Mark]<br>
+                    (iv) (c) AABB (deep/seep - A, true/hue - B). [1 Mark]<br>
+                    (v) It means that the living biological growth of plants (life) and the creative aesthetic design of the gardener (art) merge together in a garden. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION B: SHORT ANSWER QUESTIONS (8 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. Krishtakka's Determination</div>
+                <div class="rubric"><strong>Key Value Points:</strong><br>
+                    When the narrator was away at a wedding, Krishtakka was unable to read the next instalment of the serialized novel Kashi Yatre in the magazine Karmaveera. She felt helpless, illiterate, and dependent on others to know the story. This made her realize that dependency is a sorrow, inspiring her resolution to learn to read Kannada independently before Saraswati Puja (Dussehra).<br>
+                    <strong>Marking Breakdown:</strong> [1 Mark] Content. [1 Mark] Grammar and expression.
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. Refrain in "Bharat Our Land"</div>
+                <div class="rubric"><strong>Key Value Points:</strong><br>
+                    "She’s peerless, let’s praise her!" highlights that India is incomparable, unique, and supreme in natural splendour, valour, and spiritual wisdom. The repetition (refrain) instils patriotic fervor, reinforces reverence for the motherland, and establishes a rhythmic musicality throughout the poem.<br>
+                    <strong>Marking Breakdown:</strong> [1 Mark] Content. [1 Mark] Language accuracy.
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Environmental & Craft Value of Fans (Winds of Change)</div>
+                <div class="rubric"><strong>Key Value Points:</strong><br>
+                    Handcrafted fans (pankhas/bijnan) use natural, biodegradable materials like palm leaves, bamboo, Moonj grass, and cotton cloth without consuming electricity. They represent generations of indigenous artistic heritage, empowering rural craftspersons and preserving regional identity.<br>
+                    <strong>Marking Breakdown:</strong> [1 Mark] Content. [1 Mark] Proper sentence structure.
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. Dignity of Labour in "Gifts of Grace"</div>
+                <div class="rubric"><strong>Key Value Points:</strong><br>
+                    The poem pays equal tribute to all working hands—masons, carpenters, electricians, boatmen, shoemakers, cooks, and artisans. It asserts that every vocation has its own voice, rhythm, and dignity, collectively building the nation's fabric without hierarchy.<br>
+                    <strong>Marking Breakdown:</strong> [1 Mark] Content. [1 Mark] Expression and coherence.
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>SECTION C: LONG ANSWER / COMPETENCY-BASED QUESTIONS (12 MARKS)</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Prose Long Answer</div>
+                <div class="rubric"><strong>Option (A): "For learning there is no age bar"</strong><br>
+                    Context: Krishtakka was married young, lost her mother early, and remained illiterate due to traditional domestic duties, but had an unquenchable thirst for knowledge. Dedication: At 62, setting aside embarrassment, she took lessons from her 12-year-old granddaughter. She read, repeated, wrote, and recited slate exercises tirelessly. Reversal of Roles & Mutual Respect: The granddaughter became the respected Guru, and the grandmother became the obedient student. Climax: On Dussehra day, she touched the feet of her young granddaughter out of respect for the teacher and successfully read the novel Kashi Yatre independently.<br>
+                    <strong>Marking Distribution:</strong> [3 Marks] Content. [2 Marks] Fluency and paragraph structure. [1 Mark] Grammatical accuracy.<br><br>
+                    <strong>Option (B): Comparative Analysis — Sentila & Krishtakka</strong><br>
+                    Sentila: Chose pottery over the socially expected craft of weaving. Despite her mother Arenla’s discouragement, she secretly learned clay preparation and pottery wheel dynamics through perseverance until her parents acknowledged her mastery. Krishtakka: Overcame the age barrier and societal assumptions that older women cannot learn to read. Refused to remain dependent on others to read stories. Common Thread: Both characters show unyielding internal motivation, defying conventional expectations to achieve personal growth and creative self-expression.<br>
+                    <strong>Marking Distribution:</strong> [3 Marks] Content. [2 Marks] Organisation. [1 Mark] Grammatical accuracy.
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Poetry Long Answer</div>
+                <div class="rubric"><strong>Option (A): Visual Imagery & Metaphor in "Canvas of Soil"</strong><br>
+                    Core Concept: The poem establishes an extended metaphor equating soil to a painter's canvas and the gardener to an artist. Visual Imagery & Colour Palettes: "Palette of earth, rich and deep" – rich brown soil as the mixing board. "Brushstrokes of seeds" – precise, careful planting likened to brush movements. "Vibrant hue / Shades of green, red, and blue" – blossoming flowers representing rich paint strokes. Philosophical Insight: Art is not restricted to paint and paper; gardening is living art where life, patience, and aesthetics coincide in harmony.<br>
+                    <strong>Marking Distribution:</strong> [3 Marks] Content. [2 Marks] Coherence and analytical depth. [1 Mark] Grammatical accuracy.<br><br>
+                    <strong>Option (B): Contrast between "Bharat Our Land" & "Gifts of Grace"</strong><br>
+                    "Bharat Our Land": Focuses on timeless macro-heritage: physical landmarks (Himavant, Ganga), ancient scriptures (Upanishads), sages, warriors, and philosophical truths (Buddha's Dhamma). Tone is epic, grand, and classical patriotism. "Gifts of Grace": Focuses on the dynamic micro-reality: everyday working-class citizens (electricians, carpenters, boatmen, weavers, shoemakers). Tone is democratic, celebrating the dignity of human labour that sustains modern society. Synthesis: While Bharati honours the spiritual and natural soul of India, Gifts of Grace honours the hands and hearts that build India daily.<br>
+                    <strong>Marking Distribution:</strong> [3 Marks] Content. [2 Marks] Reasoning and comparative transitions. [1 Mark] Grammatical precision.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

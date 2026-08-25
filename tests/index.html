@@ -339,6 +339,16 @@
     <input type="text" id="search-input" placeholder="Search by topic, class, or test name…">
   </div>
 
+  <!-- Date Filter -->
+  <div class="filter-section">
+    <div class="filter-label">Created On or After</div>
+    <div style="display: flex; gap: 10px; align-items: center;">
+      <input type="date" id="date-after-input"
+        style="padding: 8px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); color: var(--text); font-family: inherit; font-size: .9rem; outline: none; transition: border-color .2s; cursor: pointer;">
+      <button id="clear-date-btn" class="nav-btn" style="padding: 6px 12px; display: none;">Clear</button>
+    </div>
+  </div>
+
   <!-- Subject Filter -->
   <div class="filter-section">
     <div class="filter-label">Subject</div>
@@ -924,13 +934,241 @@
         date: "26 Jul 2026",
         model: "NCERT MCP",
         url: "./class9/social_science/class9_social_science_ch1_test_20260726.html"
+      },
+      {
+        id: "MAT-018",
+        title: "Mathematics — Weekly Assessment Test",
+        subject: "Maths",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Chapter 4: Exploring Algebraic Identities"],
+        marks: 20,
+        date: "02 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/maths/class9_maths_ch4_test_20260802.html"
+      },
+      {
+        id: "SCI-011",
+        title: "Science (Chemistry) — Weekly Assessment Test",
+        subject: "Science",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Chapter 8: Journey Inside the Atom"],
+        marks: 20,
+        date: "02 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/science/class9_science_ch8_test_20260802.html"
+      },
+      {
+        id: "SCI-011",
+        title: "Science (Physics) — Weekly Assessment Test",
+        subject: "Science",
+        class: "Class 9",
+        type: "Weekly Test",
+        topics: ["Chapter 4: Describing Motion Around Us / Motion"],
+        marks: 20,
+        date: "02 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/science/physics/class9_science_physics_ch4_test_20260802.html"
+      },
+      {
+        id: "SCI-017",
+        title: "Science — Tissues in Action Exam",
+        subject: "Science",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Tissues in Action"],
+        marks: 20,
+        date: "09 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/science/class9_science_tissues_in_action_20260809.html"
+      },
+      {
+        id: "SST-004",
+        title: "Social Science (Political Science) — Elections",
+        subject: "Social Science",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Elections"],
+        marks: 20,
+        date: "09 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/social_science/class9_social_science_elections_20260809.html"
+      },
+      {
+        id: "HIN-002",
+        title: "Hindi — Kya Likhu Exam",
+        subject: "Hindi",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Kya Likhu (Padumlal Punnalal Bakshi)"],
+        marks: 20,
+        date: "09 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/hindi/class9_hindi_kya_likhu_20260809.html"
+      },
+      {
+        id: "SST-005",
+        title: "Social Studies (Geography) — Imaginary Lines & Movements",
+        subject: "Social Science",
+        class: "Class 5",
+        type: "Periodic Assessment",
+        topics: ["Imaginary Lines on Earth (Map Reading)", "Movements of the Earth"],
+        marks: 20,
+        date: "15 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class5/social_studies/geography/class5_sst_geography_lines_movements_20260815.html"
+      },
+      {
+        id: "SCI-019",
+        title: "Science — Periodic Assessment (Moon, Plants, Animals)",
+        subject: "Science",
+        class: "Class 5",
+        type: "Periodic Assessment",
+        topics: ["The Moon", "Growing Plants", "The World of Animals"],
+        marks: 20,
+        date: "15 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class5/science/class5_science_moon_plants_animals_20260815.html"
+      },
+      {
+        id: "MATH-012",
+        title: "Mathematics — Periodic Assessment (Numbers & Fractions)",
+        subject: "Maths",
+        class: "Class 5",
+        type: "Periodic Assessment",
+        topics: ["Numbers", "Operations on Large Numbers", "Factors & Multiples", "Fractions"],
+        marks: 20,
+        date: "15 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class5/maths/class5_maths_numbers_fractions_20260815.html"
+      },
+      {
+        id: "SCI-009",
+        title: "Science (Physics) — Force and Laws of Motion",
+        subject: "Science",
+        class: "Class 9",
+        type: "Chapter Assessment",
+        topics: ["Force", "Laws of Motion", "Inertia", "Momentum"],
+        marks: 20,
+        date: "15 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/science/class9_physics_force_laws_20260815.html"
+      },
+      {
+        id: "SST-006",
+        title: "Social Science (Economics) — The Price Puzzle",
+        subject: "Social Science",
+        class: "Class 9",
+        type: "Chapter Assessment",
+        topics: ["Demand", "Supply", "Market Equilibrium", "Price Puzzle"],
+        marks: 20,
+        date: "15 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/social_science/class9_social_science_economics_price_puzzle_20260815.html"
+      },
+      {
+        id: "ENG-007",
+        title: "English — Gifts of Grace",
+        subject: "English",
+        class: "Class 9",
+        type: "Unit Assessment",
+        topics: ["Poetry", "Gifts of Grace", "Vocations", "Dignity of Labour"],
+        marks: 20,
+        date: "15 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/english/class9_english_gifts_of_grace_20260815.html"
+      },
+      {
+        id: "SST-007",
+        title: "Social Science (History) — Early Humans and Beginning of Civilisation",
+        subject: "Social Science",
+        class: "Class 9",
+        type: "Chapter Assessment",
+        topics: ["Early Humans", "Neolithic Revolution", "Civilisation"],
+        marks: 20,
+        date: "20 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/social_science/class9_social_science_history_early_humans_20260820.html"
+      },
+      {
+        id: "SST-008",
+        title: "Social Science (History) — State and Society up to 1000 CE",
+        subject: "Social Science",
+        class: "Class 9",
+        type: "Chapter Assessment",
+        topics: ["Political Developments", "State Formation", "Ideals of Kingship", "Administrative Systems"],
+        marks: 20,
+        date: "23 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/social_science/class9_social_science_history_state_society_20260823.html"
+      },
+      {
+        id: "SCI-012",
+        title: "Science — Term Exam II",
+        subject: "Science",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Motion", "Forces", "Atom", "Cell", "Tissues"],
+        marks: 30,
+        date: "25 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/science/class9_science_multichapter_20260825.html"
+      },
+      {
+        id: "SST-009",
+        title: "Social Science — Term Exam II",
+        subject: "Social Science",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Earth", "Climate", "Early Humans", "Democracy", "Economics"],
+        marks: 30,
+        date: "25 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/social_science/class9_social_science_multichapter_20260825.html"
+      },
+      {
+        id: "ENG-008",
+        title: "English (Literature) — Term Exam II",
+        subject: "English",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Prose", "Poetry", "Literature"],
+        marks: 30,
+        date: "25 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/english/class9_english_multichapter_20260825.html"
+      },
+      {
+        id: "MAT-010",
+        title: "Mathematics — Term Exam II",
+        subject: "Mathematics",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Coordinates", "Linear Polynomials", "Numbers", "Algebraic Identities", "Area & Perimeter", "Probability", "Sequences & Progressions"],
+        marks: 30,
+        date: "25 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/mathematics/class9_mathematics_multichapter_20260825.html"
+      },
+      {
+        id: "HIN-003",
+        title: "Hindi — Term Exam II",
+        subject: "Hindi",
+        class: "Class 9",
+        type: "Term Exam",
+        topics: ["Raidas", "Bharat Mata", "Ghar Ki Yaad", "Kya Likhu", "Samvaad Heen"],
+        marks: 30,
+        date: "25 Aug 2026",
+        model: "NCERT MCP",
+        url: "./class9/hindi/class9_hindi_multichapter_20260825.html"
       }
     ];
 
     // ══════════════════════════════════════════════════════════════
     // FILTER STATE
     // ══════════════════════════════════════════════════════════════
-    const state = { subject: "All", class: "All", type: "All", search: "" };
+    const state = { subject: "All", class: "All", type: "All", search: "", dateAfter: null };
 
     function unique(key) {
       return ["All", ...new Set(TESTS.map(t => t[key]).sort())];
@@ -990,6 +1228,12 @@
         if (state.subject !== "All" && t.subject !== state.subject) return false;
         if (state.class !== "All" && t.class !== state.class) return false;
         if (state.type !== "All" && t.type !== state.type) return false;
+        if (state.dateAfter) {
+          if (!t.date) return false;
+          const tDate = new Date(t.date).setHours(0, 0, 0, 0);
+          const filterDate = new Date(state.dateAfter.replace(/-/g, '/')).setHours(0, 0, 0, 0);
+          if (tDate < filterDate) return false;
+        }
         if (q && !t.title.toLowerCase().includes(q) &&
           !(t.id && t.id.toLowerCase().includes(q)) &&
           !t.topics.join(" ").toLowerCase().includes(q) &&
@@ -1065,6 +1309,22 @@
 
     document.getElementById("search-input").addEventListener("input", e => {
       state.search = e.target.value;
+      render();
+    });
+
+    const dateInput = document.getElementById("date-after-input");
+    const clearDateBtn = document.getElementById("clear-date-btn");
+
+    dateInput.addEventListener("change", e => {
+      state.dateAfter = e.target.value || null;
+      clearDateBtn.style.display = state.dateAfter ? "block" : "none";
+      render();
+    });
+
+    clearDateBtn.addEventListener("click", () => {
+      dateInput.value = "";
+      state.dateAfter = null;
+      clearDateBtn.style.display = "none";
       render();
     });
 

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Social Science — Elections Exam</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 9 SOCIAL SCIENCE (POLITICAL SCIENCE)</h1>
+        <p><strong>Chapter:</strong> Elections</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 09 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper consists of 10 questions divided into 4 sections:</li>
+            <li>Section A: Questions 1 to 4 are Objective / Very Short Answer type questions carrying 1 mark each.</li>
+            <li>Section B: Questions 5 to 7 are Short Answer Type-I questions carrying 2 marks each.</li>
+            <li>Section C: Questions 8 and 9 are Short Answer Type-II questions carrying 3 marks each.</li>
+            <li>Section D: Question 10 is a Case-Based / Competency-Focused question carrying 4 marks (with internal choice in sub-question iii).</li>
+            <li>All questions are compulsory. Internal choices have been provided in select questions.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A (Objective / Very Short Answer)</div>
+    <p class="section-sub">Each question carries 1 mark. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>Which constitutional body is responsible for conducting elections to local self-government bodies (Panchayats and Municipal Corporations) in India?</p>
+                <ol type="a">
+                    <li>Election Commission of India (ECI)</li>
+                    <li>State Election Commission (SEC)</li>
+                    <li>Union Ministry of Home Affairs</li>
+                    <li>NITI Aayog</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>Under the First-Past-The-Post (FPTP) electoral system used in Indian Lok Sabha and Vidhan Sabha elections, a candidate is declared a winner if they:</p>
+                <ol type="a">
+                    <li>Secure more than 50% of the total registered voters in the constituency</li>
+                    <li>Secure an absolute majority (50% + 1) of all valid votes polled</li>
+                    <li>Secure the highest number of valid votes among all contesting candidates in that constituency</li>
+                    <li>Win the pre-calculated Single Transferable Vote (STV) quota</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>Assertion (A): The Model Code of Conduct (MCC) comes into force immediately upon the announcement of the election schedule by the Election Commission.<br>
+                Reason (R): The MCC ensures a level playing field by preventing the party in power from misusing official machinery and announcing major policy decisions or financial grants to influence voters.</p>
+                <ol type="a">
+                    <li>Both (A) and (R) are true, and (R) is the correct explanation of (A).</li>
+                    <li>Both (A) and (R) are true, but (R) is not the correct explanation of (A).</li>
+                    <li>(A) is true, but (R) is false.</li>
+                    <li>(A) is false, but (R) is true.</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p>On which date is National Voters' Day celebrated across India every year, and what constitutional milestone does it commemorate?</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section B (Short Answer Type-I)</div>
+    <p class="section-sub">Each question carries 2 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>Differentiate between Direct Elections and Indirect Elections in India with one example of an elected office/body for each.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>The Election Commission of India (ECI) enjoys a high degree of constitutional autonomy similar to the Judiciary. State any two constitutional safeguards that ensure the independence of the Chief Election Commissioner (CEC) and the Commission.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>The Representation of the People Act, 1951 lays down rules to curb electoral offences. State any two practices that are strictly prohibited and classified as corrupt electoral practices during campaigning.</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section C (Short Answer Type-II)</div>
+    <p class="section-sub">Each question carries 3 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>Compare the First-Past-The-Post (FPTP) system with the Proportional Representation (PR) system on the following three parameters:<br>
+                (i) Demarcation of constituencies (Single-member vs Multi-member/Entire country)<br>
+                (ii) Choice of the voter (Voting for an individual candidate vs Voting for a party list)<br>
+                (iii) Correlation between percentage of votes won and percentage of seats allotted</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>To realize the guiding philosophy of "No Voter to Be Left Behind", the Election Commission of India has introduced several inclusive measures and modern technologies. Explain three such initiatives designed to assist differently-abled citizens (PwDs), senior citizens, and service personnel.</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D (Case-Based / Competency Question)</div>
+    <p class="section-sub">Each question carries 4 marks. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">10.</div>
+            <div class="q-body">
+                <p>Read the passage below and answer the questions that follow:<br><br>
+                Elections are the cornerstone of a representative democracy. Through regular, free, and fair elections, citizens exercise their fundamental right to hold their government accountable, grant political legitimacy, and ensure peaceful transfers of power. However, modern electoral democracy faces challenges such as the excessive influence of money power, criminalization of politics, hate speech, voter apathy, and the spread of digital misinformation.<br><br>
+                To safeguard the integrity of the electoral process, Articles 324 to 329 of the Constitution entrust the superintendence, direction, and control of elections to an autonomous Election Commission. The Commission enforces the Model Code of Conduct, registers political parties, allots unique election symbols, maintains updated electoral rolls, and deploys citizen-centric mobile platforms such as cVIGIL and Suvidha to empower electors and candidates.<br><br>
+                (i) Name the digital mobile application launched by the Election Commission of India (ECI) that empowers citizens to report live violations of the Model Code of Conduct within minutes using geo-tagged photographic/video evidence. [1 Mark]<br>
+                (ii) What condition must a political party satisfy to be recognized as a State Party in terms of vote share and assembly seats in a state? [1 Mark]<br>
+                (iii) Analyze why the misuse of money power (vote buying, illicit distribution of gifts/liquor) poses a severe threat to genuine democratic representation, and propose one structural reform to curb this practice. [2 Marks]<br>
+                <br>OR<br><br>
+                (iii) Explain what an Electoral Roll (Voters' List) is, and state why its continuous revision prior to every election is essential for maintaining democratic fairness. [2 Marks]</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[4]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 4 Objective (4M) | Section B: 3 SAQ-I (6M) | Section C: 2 SAQ-II (6M) | Section D: 1 CBQ (4M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 Social Science — Elections Exam &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. For multi-step questions award marks stepwise for correct reasoning.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. (b) State Election Commission (SEC)</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    [1 Mark for correct option]<br>
+                    Explanation: The Election Commission of India (ECI) conducts elections for Parliament, State Legislatures, President, and Vice President. Elections to local bodies (Panchayats and Municipalities) are conducted independently by the respective State Election Commissions under Articles 243K and 243ZA.
+                </div>
+            </div>
+
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. (c) Secure the highest number of valid votes among all contesting candidates in that constituency</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    [1 Mark for correct option]<br>
+                    Explanation: In FPTP (plurality system), the candidate who gets more votes than any other single opponent is elected, even without winning an absolute majority of total votes cast.
+                </div>
+            </div>
+
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. (a) Both (A) and (R) are true, and (R) is the correct explanation of (A).</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    [1 Mark for correct option]
+                </div>
+            </div>
+
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. National Voters' Day</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    [Total: 1 Mark]<br>
+                    Date: 25th January [0.5 Mark]<br>
+                    Milestone: It marks the foundation day of the Election Commission of India (ECI), which was established on 25 January 1950. [0.5 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Direct vs Indirect Elections</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    Meaning: Direct Elections - Citizens directly cast their votes to elect their representatives to public office. [0.5 Mark] | Indirect Elections - Citizens elect intermediate representatives (like MPs/MLAs), who in turn vote to elect the leader/representative. [0.5 Mark]<br>
+                    Example: Direct Elections - Lok Sabha / State Legislative Assembly (Vidhan Sabha) / Panchayat members. [0.5 Mark] | Indirect Elections - President of India / Vice President of India / Rajya Sabha members. [0.5 Mark]
+                </div>
+            </div>
+
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. Independence of the Election Commission</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    (Any two of the following points, 1 Mark each):<br>
+                    Security of Tenure: The Chief Election Commissioner (CEC) is appointed by the President but cannot be removed from office arbitrarily; removal requires a special majority in both Houses of Parliament on grounds of proved misbehaviour or incapacity (same procedure as a Supreme Court Judge). [1 Mark]<br>
+                    Service Conditions: The conditions of service and salary of the CEC cannot be varied to their disadvantage after appointment. [1 Mark]<br>
+                    Operational Control: During election periods, administrative and police officers on election duty work under the direct operational command and superintendence of the ECI, not the ruling government. [1 Mark]
+                </div>
+            </div>
+
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Corrupt Electoral Practices</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    (Any two points from Representation of the People Act, 1951, 1 Mark each):<br>
+                    Bribery / Gratification: Offering money, gifts, liquor, or promises to persuade voters to vote, refrain from voting, or withdraw candidacy. [1 Mark]<br>
+                    Appealing to Religion/Caste: Seeking votes or threatening social boycotts based on religion, caste, community, or race, or using places of worship for election propaganda. [1 Mark]<br>
+                    Misuse of Official Machinery: Using government transport, state funds, or public resources for election campaigning by ruling party ministers. [1 Mark]<br>
+                    Proximity and Time Restrictions: Campaigning within 100 metres of a polling booth or holding public rallies within the 48-hour silence period before the close of poll. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. FPTP vs PR System</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    (i) Constituencies: FPTP - Country is divided into small, single-member constituencies; each elects one representative. [0.5 Mark] | PR - The entire country or large multi-member zones serve as a single constituency. [0.5 Mark]<br>
+                    (ii) Voter Choice: FPTP - Voter votes for a specific individual candidate. [0.5 Mark] | PR - Voter primarily votes for a political party list (or ranks candidates by preference). [0.5 Mark]<br>
+                    (iii) Vote Share vs Seat Share: FPTP - A party may win a disproportionately large share of seats with even a modest percentage of total votes. [0.5 Mark] | PR - Seats are allocated in close direct proportion to the percentage of total votes polled by each party. [0.5 Mark]
+                </div>
+            </div>
+
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Inclusive measures by ECI</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    (Any three initiatives/technologies, 1 Mark each):<br>
+                    Braille-Enabled EVMs & Voter Slips: Electronic Voting Machines (EVMs) and voter information slips feature embossed Braille lettering alongside party symbols and candidate serial numbers to allow visually impaired voters to cast their vote independently and secretly. [1 Mark]<br>
+                    Home Voting Facility for Senior Citizens & PwDs: The ECI provides optional postal voting directly from home for electors aged 85+ and Persons with Disabilities (40%+ benchmark disability) with full videography and party agent presence. [1 Mark]<br>
+                    ETPBS (Electronically Transmitted Postal Ballot System): Enables armed forces personnel and government servants posted in remote borders or diplomatic missions abroad ("Service Voters") to receive postal ballots electronically and cast their franchise securely. [1 Mark]<br>
+                    Accessible Polling Stations: Mandatory provision of ramps, wheelchairs, transport assistance (via the Saksham app), and dedicated volunteers at every polling station. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q10. Elections and Electoral Commission</div>
+                <div class="rubric"><strong>Marking Scheme / Steps:</strong>
+                    (i) Application Name: cVIGIL app (Citizen Vigilance app). [1 Mark]<br>
+                    (ii) State Party Recognition Criteria: A party must secure at least 6% of the total valid votes polled in the State Legislative Assembly election AND win at least 2 seats in the Legislative Assembly of that state (OR secure 3% of total assembly seats / minimum 3 seats, whichever is more). [1 Mark]<br>
+                    (iii) Why Money Power is a Threat:<br>
+                    It undermines equality by creating an unlevel playing field where wealthy candidates and corporate-funded parties outspend honest candidates with limited resources. [0.5 Mark]<br>
+                    It distorts free will through voter bribing and turns elected representatives into servants of private moneyed interests rather than the public interest. [0.5 Mark]<br>
+                    Remedial Measure: State funding of elections / strict public disclosure of political party donations / rigorous audit of campaign expenditures by independent ECI accounting teams. [1 Mark]<br>
+                    <br>OR<br><br>
+                    (iii) Definition of Electoral Roll: An Electoral Roll (Voters' List) is the official, legally recognized register prepared by the Election Commission containing the names, photographs, and polling details of all citizens qualified to vote in a given constituency under Universal Adult Suffrage. [1 Mark]<br>
+                    Importance of Periodic Revision:<br>
+                    It ensures all newly eligible youth turning 18 years old are enrolled. [0.5 Mark]<br>
+                    It deletes the names of deceased electors or citizens who have permanently relocated, preventing fraudulent voting, impersonation, and bogus entries. [0.5 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

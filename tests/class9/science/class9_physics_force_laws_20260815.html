@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Science (Physics) — Chapter Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 9 SCIENCE (PHYSICS)</h1>
+        <p><strong>Topic:</strong> Chapter Assessment: Force and Laws of Motion (How Forces Affect Motion)</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 15 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>The question paper contains 4 Sections: A, B, C, and D.</li>
+            <li>Section A comprises 4 objective questions of 1 mark each.</li>
+            <li>Section B comprises 2 very short answer/numerical questions of 2 marks each.</li>
+            <li>Section C comprises 2 short answer/derivation questions of 3 marks each.</li>
+            <li>Section D comprises 1 case-based comprehensive question of 6 marks.</li>
+            <li>All questions are compulsory.</li>
+            <li>Write clear formulas, substitution steps, and standard SI units for all calculations.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A: Objective & Assertion-Reason</div>
+    <p class="section-sub">Each question carries 1 mark. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>An iron block and a wooden block of the identical volume and shape are placed on a flat surface. Which of the following statements is correct regarding their inertia?</p>
+                <ol type="a">
+                    <li>The wooden block has more inertia because it is lighter.</li>
+                    <li>The iron block has more inertia because it has greater mass.</li>
+                    <li>Both blocks have the same inertia because their volumes are equal.</li>
+                    <li>Neither block possesses inertia while remaining at rest.</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>When an unbalanced net force acting on a moving object is doubled while keeping the mass of the object constant, the acceleration produced will:</p>
+                <ol type="a">
+                    <li>Remain unchanged</li>
+                    <li>Be reduced to half</li>
+                    <li>Be doubled</li>
+                    <li>Become four times</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>According to Newton's Third Law of Motion, action and reaction forces:</p>
+                <ol type="a">
+                    <li>Act on the same body in opposite directions</li>
+                    <li>Act on two different bodies in opposite directions</li>
+                    <li>Act on two different bodies in the same direction</li>
+                    <li>Act on the same body in the same direction</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p><strong>Directions for Q4: Select the correct option:</strong><br>
+                (a) Both Assertion (A) and Reason (R) are true, and R is the correct explanation of A.<br>
+                (b) Both Assertion (A) and Reason (R) are true, but R is NOT the correct explanation of A.<br>
+                (c) Assertion (A) is true, but Reason (R) is false.<br>
+                (d) Assertion (A) is false, but Reason (R) is true.<br><br>
+                <strong>Assertion (A):</strong> A fielder in a cricket match pulls their hands backward while catching a fast-moving ball.<br>
+                <strong>Reason (R):</strong> Increasing the time of the catch reduces the rate of change of momentum, thereby decreasing the impact force on the hands.</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section B: Very Short Answer Questions</div>
+    <p class="section-sub">Each question carries 2 marks. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>(a) Distinguish between balanced and unbalanced forces in terms of net resultant force and their ability to change the state of motion of an object. (1 Mark)<br>
+                (b) Give one real-life example where balanced forces act on an object. (1 Mark)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>A car of mass 1200 kg is traveling along a straight highway with a uniform speed of 72 km/h. When the driver applies the brakes, the car comes to a complete halt in 5 seconds.<br>
+                (i) Convert the initial speed into m/s.<br>
+                (ii) Calculate the magnitude of the braking force exerted on the car. (2 Marks)</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="section-head">Section C: Short Answer & Derivations</div>
+    <p class="section-sub">Each question carries 3 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>(a) State Newton's Second Law of Motion. (1 Mark)<br>
+                (b) A body of constant mass "m" is moving with an initial velocity "u". A constant force "F" is applied on it for time "t", changing its velocity to "v". Mathematically derive the relation: F = m × a (2 Marks)</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>A bullet of mass 20 g is fired horizontally from a rifle of mass 4 kg with a muzzle velocity of 150 m/s.<br>
+                (a) State the Law of Conservation of Linear Momentum. (1 Mark)<br>
+                (b) Calculate the recoil velocity of the rifle. (2 Marks)</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D: Case-Based / Long Answer Question</div>
+    <p class="section-sub">Total Marks: 6</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>Read the passage and answer the following questions:<br><br>
+                Modern road safety engineering relies heavily on the laws of motion formulated by Sir Isaac Newton. When a vehicle traveling at high speed encounters a collision or sudden braking, passengers experience an abrupt shift relative to the vehicle's interior. Safety systems such as seatbelts, collapsible steering columns, and inflatable airbags are specifically engineered to manage inertia and the duration over which momentum changes, significantly reducing injuries.<br><br>
+                (a) Name and define the specific property of matter that causes passengers to lurch forward when a moving car stops abruptly. (1.5 Marks)<br><br>
+                (b) Using the principle of Newton's Second Law of Motion, explain how the deployment of an airbag protects a passenger from severe injury during a crash. (1.5 Marks)<br><br>
+                (c) A loaded delivery van of mass 2000 kg and a compact car of mass 800 kg are traveling side-by-side at a uniform speed of 20 m/s.<br>
+                (i) Calculate the linear momentum of both vehicles and state which vehicle has greater momentum. (1.5 Marks)<br>
+                (ii) If an identical braking force of 4000 N is applied to both vehicles simultaneously, calculate the time taken by each vehicle to come to a complete stop. Which vehicle takes longer? (1.5 Marks)</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[6]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 4 Objective (4M) | Section B: 2 Very Short Answer (4M) | Section C: 2 Short Answer (6M) | Section D: 1 Case-Based (6M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 Science (Physics) — Force and Laws of Motion &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. For multi-step questions award marks stepwise for correct reasoning.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. (b) The iron block has more inertia because it has greater mass.</div>
+                <div class="rubric"><strong>Explanation:</strong> Inertia is the natural tendency of an object to resist a change in its state of rest or uniform motion. Mass is the direct quantitative measure of inertia. Since iron has a much higher density and therefore greater mass than the wooden block of identical volume, the iron block has greater inertia.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for correct option (b) with mention of mass.
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. (c) Be doubled</div>
+                <div class="rubric"><strong>Explanation:</strong> From Newton's Second Law, F = m × a, which gives a = F / m. If force F is doubled while mass m remains constant, the acceleration a also doubles.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for correct option (c).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. (b) Act on two different bodies in opposite directions</div>
+                <div class="rubric"><strong>Explanation:</strong> Newton's Third Law states that action and reaction forces always act on two different interacting bodies in opposite directions simultaneously.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for correct option (b).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. (a) Both Assertion (A) and Reason (R) are true, and R is the correct explanation of A.</div>
+                <div class="rubric"><strong>Explanation:</strong> Both statements are true. By pulling the hands backward, the fielder increases the contact time t, which decreases the rate of change of momentum (Δp / t). Since force F equals the rate of change of momentum, the force exerted on the palms is significantly reduced.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for correct option (a).
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Balanced vs Unbalanced Forces</div>
+                <div class="rubric"><strong>Model Answer:</strong>
+                    (a) Difference: Balanced Forces: The net resultant of all forces acting on the body is zero (F_net = 0). They cannot change the state of rest or uniform motion of a body (no acceleration). [0.5 Mark] | Unbalanced Forces: The net resultant force is non-zero (F_net ≠ 0). They cause acceleration, changing the speed or direction of motion of the body. [0.5 Mark]<br>
+                    (b) Example of Balanced Forces: A heavy book resting on a table (downward gravitational force balanced by the upward normal reaction force from the table), or a tug-of-war game where neither team moves because both pull with equal force. [1 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. Acceleration and Braking Force</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    Given Data: Mass of car (m) = 1200 kg. Initial velocity (u) = 72 km/h. Final velocity (v) = 0 m/s. Time taken (t) = 5 s.<br>
+                    (i) Unit Conversion: u = 72 × (5 / 18) = 20 m/s [0.5 Mark]<br>
+                    (ii) Acceleration & Braking Force Calculation: Using the first equation of motion: a = (v - u) / t = (0 - 20) / 5 = -4 m/s² [0.5 Mark]. Using Newton's Second Law: F = m × a = 1200 kg × (-4 m/s²) = -4800 N [0.5 Mark]. Magnitude of the braking force = 4800 N (The negative sign indicates retarding force). [0.5 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Newton's Second Law & Derivation</div>
+                <div class="rubric"><strong>Model Answer & Derivation:</strong>
+                    (a) Statement: The rate of change of momentum of an object is directly proportional to the applied unbalanced force and takes place in the direction in which the force acts. [1 Mark]<br>
+                    (b) Mathematical Derivation: Let an object of mass m have initial velocity u and final velocity v after time t. Initial momentum, p1 = m × u [0.5 Mark]. Final momentum, p2 = m × v. Change in momentum, Δp = p2 - p1 = m(v - u) [0.5 Mark]. Rate of change of momentum = m(v - u) / t. According to the law: F ∝ m(v - u) / t. Since acceleration a = (v - u) / t: F ∝ m × a. F = k × m × a [0.5 Mark]. In SI units, 1 unit of force is defined such that constant k = 1. Therefore: F = m × a [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Conservation of Momentum & Recoil Velocity</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    (a) Law of Conservation of Linear Momentum: In an isolated system with no external unbalanced force, the total linear momentum of the interacting bodies remains constant (conserved) before and after interaction. [1 Mark]<br>
+                    (b) Recoil Velocity Calculation: Given Data: Mass of bullet (m1) = 20 g = 0.02 kg. Velocity of bullet (v1) = 150 m/s. Mass of rifle (m2) = 4 kg. Initial velocities (u1 = u2) = 0 m/s (at rest before firing). Recoil velocity of rifle = v2.<br>
+                    Applying Conservation of Momentum: Total momentum before firing = m1 × u1 + m2 × u2 = 0 [0.5 Mark]. Total momentum after firing = m1 × v1 + m2 × v2. 0 = (0.02 kg × 150 m/s) + (4 kg × v2) [0.5 Mark]. 0 = 3 kg·m/s + 4 × v2. 4 × v2 = -3. v2 = -3 / 4 = -0.75 m/s [0.5 Mark].<br>
+                    Final Answer: The recoil velocity of the rifle is 0.75 m/s in the direction opposite to the bullet's motion. [0.5 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Case-Based Model Answers</div>
+                <div class="rubric"><strong>Case-Based Model Answers:</strong>
+                    Part (a) [1.5 Marks]: Property: Inertia of Motion. [0.5 Mark]. Definition/Explanation: It is the inherent property of a body by virtue of which it resists any change in its state of uniform motion. When brakes are applied, the lower part of the passenger's body in contact with the car comes to rest immediately, while the upper part continues moving forward due to inertia of motion. [1 Mark]<br><br>
+                    Part (b) [1.5 Marks]: Mechanism: From F = Δp / Δt, force is inversely proportional to the time taken for momentum to reduce to zero. [0.5 Mark]. The airbag cushions the passenger, significantly increasing the time duration (Δt) over which the momentum of the head and torso becomes zero. [0.5 Mark]. As time increases, the rate of change of momentum drops, drastically reducing the impact force on the passenger and preventing fatal injuries. [0.5 Mark]<br><br>
+                    Part (c)(i) Momentum Calculation [1.5 Marks]: Formula: Momentum (p) = Mass (m) × Velocity (v). Delivery Van: p_van = 2000 kg × 20 m/s = 40000 kg·m/s [0.5 Mark]. Compact Car: p_car = 800 kg × 20 m/s = 16000 kg·m/s [0.5 Mark]. Conclusion: The delivery van has significantly greater momentum (40000 kg·m/s > 16000 kg·m/s) due to its larger mass. [0.5 Mark]<br><br>
+                    Part (c)(ii) Stopping Time Calculation [1.5 Marks]: Formula: From Newton's Second Law: Braking Force (F) = Initial Momentum / Stopping Time (t). t = p / F [0.5 Mark]. Time for Delivery Van: t_van = 40000 kg·m/s / 4000 N = 10 seconds [0.5 Mark]. Time for Compact Car: t_car = 16000 kg·m/s / 4000 N = 4 seconds. Conclusion: The delivery van takes longer to come to a complete stop (10 s compared to 4 s for the car) because of its larger initial momentum against the same braking force. [0.5 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

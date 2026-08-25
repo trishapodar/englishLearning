@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class 9 Social Science (Economics) — Chapter Assessment</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 12pt;
+            color: #000;
+            background: #fff;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 2cm 2.2cm;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 15pt;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 13pt;
+            margin: 20px 0 6px;
+        }
+
+        h3 {
+            font-size: 12pt;
+            margin: 14px 0 4px;
+        }
+
+        h4 {
+            font-size: 12pt;
+            margin: 12px 0 4px;
+        }
+
+        p {
+            margin: 4px 0;
+        }
+
+        ol {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            border: 1px solid #555;
+            padding: 5px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #e8e8e8;
+        }
+
+        .school-header {
+            text-align: center;
+            border-bottom: 3px double #000;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .meta-table {
+            width: 100%;
+            margin: 10px 0 16px;
+            font-size: 11pt;
+            border-collapse: collapse;
+        }
+
+        .meta-table td {
+            border: none;
+            padding: 3px 6px;
+            vertical-align: top;
+        }
+
+        .meta-right {
+            text-align: right;
+        }
+
+        .instructions {
+            border: 1px solid #000;
+            padding: 8px 14px;
+            margin-bottom: 18px;
+            font-size: 11pt;
+        }
+
+        .instructions ol {
+            margin-top: 4px;
+        }
+
+        .instructions li {
+            margin-bottom: 2px;
+        }
+
+        .section-head {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            font-size: 11.5pt;
+            font-weight: bold;
+            margin: 20px 0 10px;
+        }
+
+        .section-sub {
+            font-size: 10pt;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .question {
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .q-row {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+
+        .q-num {
+            font-weight: bold;
+            min-width: 32px;
+            flex-shrink: 0;
+        }
+
+        .q-body {
+            flex: 1;
+        }
+
+        .q-marks {
+            font-weight: bold;
+            white-space: nowrap;
+            min-width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+            font-size: 10.5pt;
+        }
+
+        .ans-space {
+            border-bottom: 1px dashed #aaa;
+            margin-top: 6px;
+        }
+
+        .ans-1 {
+            height: 1.5cm;
+        }
+
+        .ans-2 {
+            height: 3cm;
+        }
+
+        .ans-3 {
+            height: 5cm;
+        }
+
+        .ans-4 {
+            height: 7cm;
+        }
+
+        .ans-5 {
+            height: 9cm;
+        }
+
+        hr.thin {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 18px 0;
+        }
+
+        .answer-key {
+            border-top: 4px double #000;
+            padding-top: 18px;
+            margin-top: 30px;
+        }
+
+        .answer-key h2 {
+            text-align: center;
+            font-size: 15pt;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .ak-subtitle {
+            text-align: center;
+            font-size: 10pt;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        .ak-section {
+            margin-top: 18px;
+        }
+
+        .ak-section h3 {
+            font-size: 12pt;
+            border-bottom: 1.5px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
+        }
+
+        .ak-q {
+            margin-bottom: 14px;
+            padding-left: 12px;
+            border-left: 3px solid #ccc;
+        }
+
+        .ak-q-head {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .rubric {
+            margin-top: 6px;
+            font-size: 10pt;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 5px 10px;
+        }
+
+        .rubric strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        @media print {
+            body {
+                padding: 1.2cm 1.5cm;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="school-header">
+        <h1>CBSE CLASS 9 SOCIAL SCIENCE (ECONOMICS)</h1>
+        <p><strong>Topic:</strong> Chapter Assessment: "The Price Puzzle: What Drives the Market" (Chapter 9)</p>
+    </div>
+    <table class="meta-table">
+        <tr>
+            <td>School: ________________________<br>Name: ________________________<br>Roll No.: ________________________
+            </td>
+            <td class="meta-right">Class & Section: 9 — ___<br>Date: 15 Aug 2026<br>Time: 45 Minutes | Max Marks: 20</td>
+        </tr>
+    </table>
+
+    <div class="instructions">
+        <strong>General Instructions:</strong>
+        <ol>
+            <li>This question paper is divided into 4 Sections: A, B, C, and D.</li>
+            <li>Section A comprises 4 objective questions of 1 mark each.</li>
+            <li>Section B comprises 2 very short answer/conceptual questions of 2 marks each.</li>
+            <li>Section C comprises 2 short answer/data-interpretation questions of 3 marks each.</li>
+            <li>Section D comprises 1 case-based comprehensive question of 6 marks.</li>
+            <li>All questions are compulsory.</li>
+            <li>Support your answers with clear economic terms, cause-and-effect reasoning, and relevant real-world examples.</li>
+        </ol>
+    </div>
+
+    <!-- QUESTIONS -->
+    <div class="section-head">Section A: Objective & Assertion-Reason</div>
+    <p class="section-sub">Each question carries 1 mark. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">1.</div>
+            <div class="q-body">
+                <p>If the price of coffee rises sharply in the market, what is the most likely immediate effect on the demand for tea (assuming tea is a close substitute for coffee)?</p>
+                <ol type="a">
+                    <li>The demand for tea will decrease.</li>
+                    <li>The demand for tea will increase.</li>
+                    <li>The demand for tea will remain unaffected.</li>
+                    <li>The supply of tea will drop to zero.</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">2.</div>
+            <div class="q-body">
+                <p>A market situation where the quantity demanded by buyers exceeds the quantity supplied by sellers at the current market price is called:</p>
+                <ol type="a">
+                    <li>Market Equilibrium</li>
+                    <li>Excess Supply (Surplus)</li>
+                    <li>Excess Demand (Shortage)</li>
+                    <li>Price Ceiling</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">3.</div>
+            <div class="q-body">
+                <p>The government announces a "Minimum Support Price" (MSP) for agricultural crops like wheat and paddy prior to the sowing season. The main objective of this policy is to:</p>
+                <ol type="a">
+                    <li>Keep retail food prices artificially high for consumers.</li>
+                    <li>Guarantee a price floor that protects farmers from distress selling during bumper harvests.</li>
+                    <li>Restrict private traders from entering agricultural markets.</li>
+                    <li>Reduce agricultural production across the country.</li>
+                </ol>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">4.</div>
+            <div class="q-body">
+                <p><strong>Directions for Q4: Select the correct option:</strong><br>
+                (a) Both Assertion (A) and Reason (R) are true, and R is the correct explanation of A.<br>
+                (b) Both Assertion (A) and Reason (R) are true, but R is NOT the correct explanation of A.<br>
+                (c) Assertion (A) is true, but Reason (R) is false.<br>
+                (d) Assertion (A) is false, but Reason (R) is true.<br><br>
+                <strong>Assertion (A):</strong> During festive seasons, the prices of decorative lights, gift boxes, and sweets generally rise.<br>
+                <strong>Reason (R):</strong> A sudden surge in consumer demand without a simultaneous equal increase in supply creates excess demand, driving the equilibrium price upward.</p>
+                <div class="ans-space ans-1"></div>
+            </div>
+            <div class="q-marks">[1]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section B: Very Short Answer Questions</div>
+    <p class="section-sub">Each question carries 2 marks. (Total Marks: 4)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">5.</div>
+            <div class="q-body">
+                <p>(a) State the Law of Demand. (1 Mark)<br>
+                (b) List any two factors (other than the price of the good itself) that can cause a shift in consumer demand. (1 Mark)</p>
+                <div class="ans-space ans-2"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">6.</div>
+            <div class="q-body">
+                <p>Why do vegetable vendors in local open-air markets frequently sell perishable items (such as tomatoes or spinach) at a lower price in the late evening compared to the morning? Explain using the concept of demand, supply, and perishability.</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[2]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section C: Short Answer & Data Interpretation</div>
+    <p class="section-sub">Each question carries 3 marks. (Total Marks: 6)</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">7.</div>
+            <div class="q-body">
+                <p>(a) What is meant by "Market Equilibrium"? (1 Mark)<br>
+                (b) Study the hypothetical demand and supply schedule for apples given below:</p>
+                <table>
+                    <tr>
+                        <th>Price per kg (in ₹)</th>
+                        <th>Quantity Demanded (in kg)</th>
+                        <th>Quantity Supplied (in kg)</th>
+                    </tr>
+                    <tr>
+                        <td>₹40</td>
+                        <td>120</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>₹60</td>
+                        <td>90</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>₹80</td>
+                        <td>70</td>
+                        <td>70</td>
+                    </tr>
+                    <tr>
+                        <td>₹100</td>
+                        <td>50</td>
+                        <td>90</td>
+                    </tr>
+                    <tr>
+                        <td>₹120</td>
+                        <td>20</td>
+                        <td>120</td>
+                    </tr>
+                </table>
+                <p>(i) Identify the Equilibrium Price and the Equilibrium Quantity.<br>
+                (ii) What market condition occurs if sellers attempt to charge ₹120 per kg, and how will prices naturally adjust? (2 Marks)</p>
+                <div class="ans-space ans-3"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">8.</div>
+            <div class="q-body">
+                <p>Differentiate between a Price Ceiling and a Price Floor (MSP). Give one real-life example of each to illustrate why government intervention in a free market is necessary.</p>
+                <div class="ans-space ans-4"></div>
+            </div>
+            <div class="q-marks">[3]</div>
+        </div>
+    </div>
+
+
+    <div class="section-head">Section D: Case-Based / Long Answer Question</div>
+    <p class="section-sub">Total Marks: 6</p>
+
+    <div class="question">
+        <div class="q-row">
+            <div class="q-num">9.</div>
+            <div class="q-body">
+                <p>Read the passage and answer the questions that follow:<br><br>
+                In October, unseasonal torrential rains in key agricultural belts damaged standing crops and disrupted highway logistics. As fresh arrivals of onions in wholesale mandis fell sharply, retail prices jumped from ₹25 per kg to ₹90 per kg within three weeks. As household budgets were strained, the government intervened by imposing stock limits on private wholesale traders to curb hoarding, while simultaneously releasing buffer stocks of onions through state-run cooperative outlets at subsidized rates of ₹35 per kg.<br><br>
+                (a) Using economic terminology, explain why the damaged crops caused retail prices to rise from ₹25 to ₹90 per kg. (1 Mark)<br><br>
+                (b) Explain how hoarding by traders worsens a market shortage, and how releasing government buffer stocks helps stabilize the price. (2 Marks)<br><br>
+                (c)<br>
+                (i) Differentiate between Substitute Goods and Complementary Goods with one example for each. (2 Marks)<br>
+                (ii) If the price of smartphones falls significantly, what will happen to the demand for smartphone back covers and mobile data services? Justify your answer. (1 Mark)</p>
+                <div class="ans-space ans-5"></div>
+            </div>
+            <div class="q-marks">[6]</div>
+        </div>
+    </div>
+
+
+    <!-- SECTION SUMMARY -->
+    <div style="margin-top:30px; border-top:2px solid #000; padding-top:10px; font-size:10.5pt;">
+        <strong>Section Summary:</strong>&nbsp;|&nbsp;
+        Section A: 4 Objective (4M) | Section B: 2 Very Short Answer (4M) | Section C: 2 Short Answer (6M) | Section D: 1 Case-Based (6M)
+        &nbsp;|&nbsp; <strong>Total: 20 Marks</strong>
+    </div>
+
+    <!-- ANSWER KEY -->
+    <div class="answer-key">
+        <h2>⁂ &nbsp; ANSWER KEY &nbsp; ⁂</h2>
+        <p class="ak-subtitle">Class 9 Social Science (Economics) — The Price Puzzle &nbsp;|&nbsp; CBSE Marking Scheme</p>
+        <p style="font-size:10pt; text-align:center; margin-bottom:14px;">
+            <em>Award marks as indicated. For multi-step questions award marks stepwise for correct reasoning.</em>
+        </p>
+
+        <div class="ak-section">
+            <h3>Section A</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q1. (b) The demand for tea will increase.</div>
+                <div class="rubric"><strong>Explanation:</strong> Coffee and tea are substitute goods. When the price of coffee rises, coffee becomes relatively more expensive, prompting consumers to switch to tea, which increases the demand for tea.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (b).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q2. (c) Excess Demand (Shortage)</div>
+                <div class="rubric"><strong>Explanation:</strong> When buyers want to purchase more units than sellers are offering at a given price (Quantity Demanded > Quantity Supplied), a condition of Excess Demand (Shortage) exists.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (c).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q3. (b) Guarantee a price floor that protects farmers from distress selling during bumper harvests.</div>
+                <div class="rubric"><strong>Explanation:</strong> Minimum Support Price (MSP) acts as a price floor set above the free-market crash price to guarantee fair returns to farmers.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (b).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q4. (a) Both Assertion (A) and Reason (R) are true, and R is the correct explanation of A.</div>
+                <div class="rubric"><strong>Explanation:</strong> Both statements are true and Reason (R) correctly explains Assertion (A). High festive demand shifts the demand curve to the right, causing a shortage at old prices and pushing the equilibrium price up.<br>
+                    <strong>Marking Scheme:</strong> [1 Mark] for option (a).
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section B</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q5. Law of Demand and Determinants</div>
+                <div class="rubric"><strong>Model Answer & Marking Scheme:</strong>
+                    (a) Law of Demand: Other factors remaining constant (ceteris paribus), as the price of a good increases, the quantity demanded decreases, and as the price falls, quantity demanded increases (an inverse relationship). [1 Mark]<br>
+                    (b) Non-Price Determinants of Demand (Any two): Consumer income levels. [0.5 Mark]. Consumer tastes, preferences, and fashion trends. [0.5 Mark]. (Also accept: Prices of related goods / Seasonal changes / Future price expectations).
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q6. Supply, Demand, and Perishability</div>
+                <div class="rubric"><strong>Model Answer & Marking Scheme:</strong>
+                    Perishability & Storage Constraint: Vegetables are perishable and spoil quickly without refrigeration; vendors cannot store them overnight without loss. [0.5 Mark]<br>
+                    Shift in Market Dynamics: By late evening, the footfall of morning buyers drops (demand decreases), while vendors are eager to clear remaining inventory before it rots (supply pressure). [0.5 Mark]<br>
+                    Price Adjustment: To induce buyers to purchase the remaining stock, vendors lower prices, moving down the demand curve to clear excess supply. [1 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section C</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q7. Market Equilibrium and Data Interpretation</div>
+                <div class="rubric"><strong>Model Answer & Step-by-Step Marks:</strong>
+                    (a) Definition of Market Equilibrium: Market Equilibrium is the state where the quantity demanded by consumers equals the quantity supplied by producers at a specific price (Demand = Supply), leaving neither shortage nor surplus. [1 Mark]<br>
+                    (b)(i) Equilibrium Identification: Equilibrium Price: ₹80 per kg [0.5 Mark]. Equilibrium Quantity: 70 kg [0.5 Mark]<br>
+                    (b)(ii) Price Adjustment at ₹120 per kg: At ₹120 per kg, Quantity Supplied (120 kg) > Quantity Demanded (20 kg), creating an Excess Supply (Surplus) of 100 kg. [0.5 Mark]. To sell their unsold stock, sellers will compete by lowering prices until the price falls back to the equilibrium level of ₹80 per kg. [0.5 Mark]
+                </div>
+            </div>
+            <div class="ak-q">
+                <div class="ak-q-head">Q8. Price Ceiling vs. Price Floor (MSP)</div>
+                <div class="rubric"><strong>Model Answer & Comparison:</strong>
+                    Price Ceiling: Legal maximum price set by the government below the equilibrium price. [0.5 Mark]. Beneficiary: Protects low-income consumers from price gouging. [0.5 Mark]. Example: Price caps on life-saving medicines, LPG cylinders, or ration grain. [0.5 Mark]<br>
+                    Price Floor / MSP: Legal minimum price set by the government above the equilibrium price. [0.5 Mark]. Beneficiary: Protects producers/farmers from income collapse. [0.5 Mark]. Example: MSP for wheat, rice, sugarcane, or minimum wage laws. [0.5 Mark]
+                </div>
+            </div>
+        </div>
+
+        <div class="ak-section">
+            <h3>Section D</h3>
+            <div class="ak-q">
+                <div class="ak-q-head">Q9. Case-Based Model Answers</div>
+                <div class="rubric"><strong>Case-Based Model Answers:</strong>
+                    Part (a) Supply Shock & Price Rise [1 Mark]: Heavy rains destroyed crops and blocked roads, causing a sharp drop in market supply (a leftward shift of the supply curve). At the initial price of ₹25, there was severe excess demand (shortage). Competition among buyers pushed the price up to ₹90 until supply and demand balanced at a higher equilibrium. [1 Mark]<br><br>
+                    Part (b) Hoarding & Buffer Stocks [2 Marks]: Effect of Hoarding: Speculative traders hide stock from the market to create artificial scarcity, shifting the supply curve further left and driving prices higher for unfair profits. [1 Mark]. Effect of Buffer Stocks: When the government releases stored onions into the market at ₹35, it directly injects additional supply, eliminating artificial shortage and pulling market prices down towards affordable levels. [1 Mark]<br><br>
+                    Part (c)(i) Substitute vs. Complementary Goods [2 Marks]: Substitute Goods: Goods that can be used in place of each other (e.g., Tea and Coffee, Coke and Pepsi). An increase in the price of one increases the demand for the other. [1 Mark]. Complementary Goods: Goods that are used together to satisfy a single want (e.g., Car and Petrol, Pen and Ink, Smartphone and SIM Card). An increase in the price of one decreases the demand for the other. [1 Mark]<br><br>
+                    Part (c)(ii) Complementary Goods Application [1 Mark]: Since back covers and mobile data are complementary goods to smartphones, a drop in smartphone prices will increase smartphone sales, which in turn will increase the demand for back covers and mobile data services. [1 Mark]
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
